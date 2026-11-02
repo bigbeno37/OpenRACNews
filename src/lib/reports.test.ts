@@ -73,6 +73,13 @@ test('text for a feed is escaped, so a reader shows markup instead of running it
   assert.equal(toEscapedHtml('a <script>x</script>\n\nb & c'), '<p>a &lt;script&gt;x&lt;/script&gt;</p><p>b &amp; c</p>');
 });
 
+test('anything resembling a credential is rejected, even in a code span', () => {
+  for (const secret of ['sk-abcdefghijklmnopqrstuv', 'ghp_abcdefghijklmnopqrstuv', 'github_pat_abcdefghijklmnopqrstuv', 'AKIAABCDEFGHIJKLMNOP']) {
+    assert.match(checkBranchReport(report({ summary: `The key is \`${secret}\`.` }), known).join(), /looks like a credential/);
+  }
+  assert.deepEqual(checkBranchReport(report({ summary: 'Function `func_00292078` and the task-based sk-ipped path.' }), known), []);
+});
+
 test('an overview must say which repo a reference belongs to', () => {
   const overview = (summary: string): Overview => ({ date: '2026-11-01', headline: 'h', summary, writtenBy: 'test' });
   assert.deepEqual(checkOverview(overview('Tests got faster, OpenRAC#198.'), known), []);

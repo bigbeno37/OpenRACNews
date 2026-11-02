@@ -38,12 +38,12 @@ Edit `config/tracking.json`. It's the only place that lists repositories and bra
 
 1. Push this repository to GitHub, with `main` as the default branch.
 2. In **Settings > Pages**, set **Source** to **GitHub Actions**.
-3. To get written reports, add one repository secret under **Settings > Secrets and variables > Actions**: `ANTHROPIC_API_KEY`, or `CLAUDE_CODE_OAUTH_TOKEN` from `claude setup-token`. Without either, the site runs without written reports.
+3. To get written reports, add a repository secret named `OPENAI_API_KEY` under **Settings > Secrets and variables > Actions**. Without it, the site runs without written reports.
 4. Run the **Daily news** workflow from the **Actions** tab, or wait for the next scheduled run.
 
 The site's address and base path come from GitHub Pages, so the repository name and any custom domain need no code changes.
 
-Two optional repository variables control the agent: `REPORT_MODEL` (default `claude-opus-5-5`) and `REPORT_BUDGET_USD`, its spending cap per run (default `5`). As a guide, writing the 7 files for one busy day (1 November 2026) cost $1.48 on the default model. If a run hits the cap, the next run picks up what's left.
+Reports are written by GPT 6.1 Sol at low effort through the Codex CLI. Two optional repository variables change that: `REPORT_MODEL` (default `gpt-6.1-sol`) and `REPORT_EFFORT` (default `low`). Codex has no spending cap of its own, so set one in your OpenAI account. As a guide, one busy day took about 240,000 input tokens, most of them cached, and 2,200 output tokens. The experiments behind these choices are in `experiments/`.
 
 ## Local development
 
@@ -54,7 +54,7 @@ pnpm install
 pnpm dev                                # the site, at http://localhost:4321
 pnpm snapshot --days 3                  # collect recent days (uses GH_TOKEN, or your gh login)
 pnpm --silent reports:todo              # list the reports still to write
-CLAUDE_BIN=claude pnpm reports:write    # have an agent write them
+CODEX_BIN=codex pnpm reports:write      # have an agent write them
 pnpm --silent reports:check             # validate the reports
 pnpm test && pnpm check && pnpm build
 ```

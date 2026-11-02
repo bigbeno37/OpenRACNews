@@ -33,7 +33,7 @@ jobs:
     permissions:
       contents: write
     env:
-      HAS_AGENT_CREDENTIALS: ${{ secrets.ANTHROPIC_API_KEY != '' || secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
+      HAS_AGENT_CREDENTIALS: ${{ secrets.OPENAI_API_KEY != '' }}
     steps:
       # The token isn't kept in the checkout, so nothing later can use it by accident. Only the final
       # step, which pushes, is given it.
@@ -61,10 +61,9 @@ jobs:
         timeout-minutes: 30
         run: pnpm --silent reports:write
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          REPORT_MODEL: ${{ vars.REPORT_MODEL || 'claude-opus-5-5' }}
-          REPORT_BUDGET_USD: ${{ vars.REPORT_BUDGET_USD || '5' }}
+          CODEX_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          REPORT_MODEL: ${{ vars.REPORT_MODEL || 'gpt-6.1-sol' }}
+          REPORT_EFFORT: ${{ vars.REPORT_EFFORT || 'low' }}
 
       # This runs whatever the agent did, and removes any report that fails the checks.
       - name: Check reports

@@ -1,41 +1,37 @@
 #!/usr/bin/env bash
-# Has an agent write whatever reports are missing. Used by the daily workflow, and works the same
-# locally: `CLAUDE_BIN=claude pnpm reports:write`.
+# Has an agent write whatever reports are missing, using GPT 6.1 Sol at low effort through the Codex CLI.
+# Used by the daily workflow, and works the same locally: `CODEX_BIN=codex pnpm reports:write`. Set
+# REPORT_DATE to write one day, and REPORT_ARGS to pass more options to Codex.
 #
-# The snapshots it reads contain text anyone can write, so the agent gets as little as the job allows:
-# it can read the repository, write under data/, and run the two report commands. It has no general
-# shell and no network tools, and it never sees a GitHub token.
+# The snapshots it reads contain text anyone can write, so the agent gets as little as the job allows.
+# Its sandbox has no network and can only write inside this checkout, its commands don't inherit
+# credentials, and it never sees a GitHub token. The workflow then checks its reports and commits only
+# data/, so nothing else it wrote can reach the repository.
 set -euo pipefail
 
-model="${REPORT_MODEL:-claude-opus-5-5}"
-budget="${REPORT_BUDGET_USD:-5}"
-claude_bin="${CLAUDE_BIN:-pnpm dlx @anthropic-ai/claude-code@2.1.316}"
+model="${REPORT_MODEL:-gpt-6.1-sol}"
+effort="${REPORT_EFFORT:-low}"
+codex_bin="${CODEX_BIN:-pnpm dlx @openai/codex@0.166.0}"
+todo="pnpm --silent reports:todo${REPORT_DATE:+ --date $REPORT_DATE}"
 
-# In GitHub Actions a secret that isn't set arrives as an empty string. An empty credential must not
-# be mistaken for a real one, so only the one that was configured stays set.
-[[ -n "${ANTHROPIC_API_KEY:-}" ]] || unset ANTHROPIC_API_KEY
-[[ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ]] || unset CLAUDE_CODE_OAUTH_TOKEN
-
-if [[ "$(pnpm --silent reports:todo)" == "Nothing to write." ]]; then
+# shellcheck disable=SC2086 # todo is deliberately split into a command and its arguments.
+if [[ "$($todo)" == "Nothing to write." ]]; then
   echo "Nothing to write."
   exit 0
 fi
 
 read -r -d '' prompt <<EOF || true
-Write the missing reports for this site, following the "Writing reports" section of AGENTS.md. Start with config/tracking.json and AGENTS.md, then run: pnpm --silent reports:todo
+Write the missing reports for this site, following the "Writing reports" section of AGENTS.md. Start with config/tracking.json and AGENTS.md, then run: $todo
 
-Use "$model" as writtenBy. Finish by running: pnpm --silent reports:check
+Use "$model" as writtenBy. Only write under data/, do the writing yourself, and don't commit. Finish by running: pnpm --silent reports:check
 EOF
 
-# shellcheck disable=SC2086 # claude_bin is deliberately split into a command and its arguments.
-$claude_bin -p "$prompt" \
+# shellcheck disable=SC2086 # codex_bin and REPORT_ARGS are deliberately split into separate arguments.
+$codex_bin exec "$prompt" \
   --model "$model" \
-  --effort medium \
-  --max-budget-usd "$budget" \
-  --tools Read Write Edit Glob Grep Bash \
-  --allowedTools Read Glob Grep 'Write(data/**)' 'Edit(data/**)' 'Bash(pnpm --silent reports:todo)' 'Bash(pnpm --silent reports:check)' \
-  --permission-mode dontAsk \
-  --setting-sources project \
-  --strict-mcp-config \
-  --no-session-persistence \
-  --output-format "${REPORT_OUTPUT_FORMAT:-text}"
+  --config "model_reasoning_effort=\"$effort\"" \
+  --config 'shell_environment_policy.inherit="core"' \
+  --sandbox workspace-write \
+  --ignore-user-config \
+  --ephemeral \
+  ${REPORT_ARGS:-}

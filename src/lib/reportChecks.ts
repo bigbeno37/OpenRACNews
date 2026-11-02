@@ -7,6 +7,8 @@ import type { BranchReport, BranchSnapshot, Overview, RepoSnapshot } from './sch
 
 const URL_LIKE = /\bhttps?:\/\//i;
 const TAG_LIKE = /<\/?[a-z!][^>]*>/i;
+// The agent's commands don't inherit credentials, but a published secret can't be taken back, so this is checked too.
+const SECRET_LIKE = /\b(sk-[A-Za-z0-9_-]{16,}|gh[pousr]_[A-Za-z0-9]{16,}|github_pat_[A-Za-z0-9_]{16,}|AKIA[0-9A-Z]{16})\b/;
 
 /** The text with its code spans taken out: `vector<int>` belongs in one, a bare <img> doesn't. */
 const outsideCode = (text: string) =>
@@ -42,6 +44,7 @@ export function knownNumbers(branches: BranchSnapshot[], repo: RepoSnapshot | un
 
 function checkText(text: string, ownRepo: string | null, known: Map<string, Set<number>>): string[] {
   const errors: string[] = [];
+  if (SECRET_LIKE.test(text)) errors.push('contains what looks like a credential');
   if (URL_LIKE.test(text)) errors.push(`contains a URL, which reports must not: "${text.slice(0, 60)}"`);
   if (TAG_LIKE.test(outsideCode(text))) errors.push(`contains markup, which reports must not: "${text.slice(0, 60)}"`);
   for (const { repo, number } of referencesIn(text)) {
