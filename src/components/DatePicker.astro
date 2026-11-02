@@ -5,7 +5,6 @@
 import { calendarMonths } from '../lib/calendar.ts';
 import { formatDay, formatDayMonthShort, formatDayShort } from '../lib/days.ts';
 import { count } from '../lib/format.ts';
-import { url } from '../lib/links.ts';
 
 interface Props {
   date: string;
@@ -124,6 +123,5 @@ const monthButton = 'flex size-8 cursor-pointer items-center justify-center roun
   <p class="mt-3 text-[12px] text-dim">Brighter days had more commits.</p>
   <div class="mt-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[13px]">
     {date !== latest ? <a href={hrefFor(latest)} class="font-semibold text-amber no-underline hover:underline">Go to the latest day</a> : <span class="text-dim">This is the latest day</span>}
-    <a href={url('/archive/')} class="text-amber no-underline hover:underline">List every day</a>
   </div>
 </div>
