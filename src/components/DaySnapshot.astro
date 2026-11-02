@@ -9,6 +9,7 @@ import Hero from './Hero.astro';
 import Prose from './Prose.astro';
 import RepoEvents from './RepoEvents.astro';
 import Section from './Section.astro';
+import SectionArt from './SectionArt.astro';
 import StatusCard from './StatusCard.astro';
 
 interface Props {
@@ -30,36 +31,43 @@ const stats: [number, string][] = [
 <Hero eyebrow={formatDay(date)} compact>
   <Fragment slot="title">{overview ? <Prose text={overview.headline} inline /> : dayFacts(day)}</Fragment>
 
-  <div class="mt-7 grid max-w-[900px] animate-rise grid-cols-2 gap-2.5 [animation-delay:.2s] min-[560px]:grid-cols-4 sm:gap-3.5">
-    {
-      stats.map(([value, label]) => (
-        <div class="surface px-3 py-3 sm:px-[18px] sm:py-4">
-          <b class="block whitespace-nowrap font-orbitron text-[clamp(15px,4.2vw,26px)] font-bold leading-tight tabular-nums text-gold">{formatNumber(value)}</b>
-          <span class="mt-0.5 block text-[12px] leading-snug text-dim sm:text-[13px]">{label}</span>
+  <div class:list={['mt-7 grid gap-8 sm:mt-9', overview && 'min-[800px]:grid-cols-[minmax(0,1fr)_220px] min-[800px]:gap-12 lg:grid-cols-[minmax(0,1fr)_242px] lg:gap-[68px]']}>
+    {overview && (
+      <section id="in-brief" aria-labelledby="in-brief-heading" class="min-w-0">
+        <div class="mb-4 flex items-center gap-2.5">
+          <SectionArt id="activity" class="h-10 w-[50px]" />
+          <h2 id="in-brief-heading" class="font-audiowide text-[clamp(20px,3vw,22px)] leading-snug text-hi">The day in brief</h2>
         </div>
-      ))
-    }
+        <div class="grid gap-4 text-[15px] leading-[1.7] text-soft sm:text-base">
+          {paragraphs(overview.summary).map((paragraph) => (
+            <p><Prose text={paragraph} inline /></p>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <aside aria-labelledby="day-numbers-heading" class:list={[overview && 'border-t border-line pt-5 min-[800px]:border-l min-[800px]:border-t-0 min-[800px]:border-brand/35 min-[800px]:pl-6 min-[800px]:pt-0']}>
+      <h2 id="day-numbers-heading" class="font-orbitron text-[10px] font-bold uppercase tracking-[.18em] text-brand">The day in numbers</h2>
+      <dl class:list={['mt-4 grid grid-cols-2 gap-x-5 gap-y-6', overview ? 'min-[800px]:grid-cols-1 min-[800px]:gap-y-0' : 'max-w-[900px] min-[560px]:grid-cols-4']}>
+        {
+          stats.map(([value, label]) => (
+            <div class:list={['flex flex-col gap-1', overview && 'min-[800px]:border-t min-[800px]:border-line min-[800px]:py-4 min-[800px]:first:border-0 min-[800px]:first:pt-0 min-[800px]:last:pb-0']}>
+              <dt class="text-xs leading-snug text-dim sm:text-[13px]">{label}</dt>
+              <dd class="-order-1 whitespace-nowrap font-orbitron text-[25px] font-bold leading-tight tabular-nums text-gold min-[800px]:text-[31px]">{formatNumber(value)}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </aside>
   </div>
 </Hero>
 
-{
-  overview && (
-    <Section id="in-brief" art="activity" title="The day in brief">
-      <div class="surface grid max-w-[820px] gap-3 p-5 text-soft sm:p-6">
-        {paragraphs(overview.summary).map((paragraph) => (
-          <p>
-            <Prose text={paragraph} inline />
-          </p>
-        ))}
-      </div>
-    </Section>
-  )
-}
-
-<Section id="projects" art="progress" title="Every project" sub="As each one stood at the end of this UTC day. Percentages are matched code from the project's own report, the same figure openrac.dev shows. A fainter second bar is matched data.">
-  <div class="grid gap-3 sm:gap-4 md:grid-cols-2">
-    {projects.map((project) => <StatusCard project={project} />)}
-  </div>
-</Section>
+<div class="mt-6 border-t border-line [&>section]:pt-8 sm:[&>section]:pt-9">
+  <Section id="projects" art="progress" title="Every project" sub="As each one stood at the end of this UTC day. Percentages are matched code from the project's own report, the same figure openrac.dev shows. A fainter second bar is matched data.">
+    <div class="grid gap-3 sm:gap-4 md:grid-cols-2">
+      {projects.map((project) => <StatusCard project={project} />)}
+    </div>
+  </Section>
+</div>
 
 <RepoEvents repos={day.repos} tagged />
