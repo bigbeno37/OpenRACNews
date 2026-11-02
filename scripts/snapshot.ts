@@ -12,6 +12,7 @@ import {
   excerpt,
   firstParentLine,
   issueEventsOn,
+  keepFirstCapture,
   landingRanges,
   pullRequestEventsOn,
   sameSnapshot,
@@ -269,6 +270,9 @@ function releasesOn(all: any[], day: string): Release[] {
     .sort((a, b) => a.publishedAt.localeCompare(b.publishedAt));
 }
 
+const readIfPresent = <T>(path: string, schema: { parse(value: unknown): T }): T | undefined =>
+  existsSync(path) ? schema.parse(JSON.parse(readFileSync(path, 'utf8'))) : undefined;
+
 /** Writes only when the facts changed, so a re-run leaves no noise in git. */
 function save(path: string, value: Record<string, unknown>): 'written' | 'unchanged' {
   if (existsSync(path) && sameSnapshot(JSON.parse(readFileSync(path, 'utf8')), value)) return 'unchanged';
@@ -286,6 +290,7 @@ async function snapshotBranch(repo: TrackedRepo, branch: TrackedBranch, days: st
 
     const warnings: string[] = [];
     const commits = await commitsFor(repo.name, pushesToday, warnings);
+    const path = join(DATA_DIR, date, 'branches', `${branchKey(repo.name, branch.name)}.json`);
     const snapshot = branchSnapshotSchema.parse({
       date,
       repo: repo.name,
@@ -294,10 +299,9 @@ async function snapshotBranch(repo: TrackedRepo, branch: TrackedBranch, days: st
       totals: totalsFor(commits, pushesToday),
       warnings,
       pushes: pushesToday,
-      pullRequests,
+      pullRequests: keepFirstCapture(readIfPresent(path, branchSnapshotSchema)?.pullRequests, pullRequests, (pr) => pr.number),
       commits,
     });
-    const path = join(DATA_DIR, date, 'branches', `${branchKey(repo.name, branch.name)}.json`);
     const { commits: c, merges: m } = snapshot.totals;
     console.log(`  ${date} ${branch.name}: ${c} commits, ${m} merges, ${pullRequests.length} PRs (${save(path, snapshot)})`);
   }
@@ -315,14 +319,15 @@ async function snapshotRepo(repo: TrackedRepo, days: string[], since: string) {
     const issuesToday = issuesOn(issues, date);
     const releasesToday = releasesOn(releases, date);
     if (issuesToday.length === 0 && releasesToday.length === 0) continue;
+    const path = join(DATA_DIR, date, 'repos', `${repo.name}.json`);
+    const earlier = readIfPresent(path, repoSnapshotSchema);
     const snapshot = repoSnapshotSchema.parse({
       date,
       repo: repo.name,
       capturedAt: new Date().toISOString(),
-      issues: issuesToday,
-      releases: releasesToday,
+      issues: keepFirstCapture(earlier?.issues, issuesToday, (issue) => issue.number),
+      releases: keepFirstCapture(earlier?.releases, releasesToday, (release) => release.tag),
     });
-    const path = join(DATA_DIR, date, 'repos', `${repo.name}.json`);
     console.log(`  ${date} repo: ${issuesToday.length} issues, ${releasesToday.length} releases (${save(path, snapshot)})`);
   }
 }

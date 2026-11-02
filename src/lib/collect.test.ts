@@ -4,6 +4,7 @@ import {
   excerpt,
   firstParentLine,
   issueEventsOn,
+  keepFirstCapture,
   landingRanges,
   pullRequestEventsOn,
   sameSnapshot,
@@ -148,6 +149,21 @@ test('snapshots serialise to valid JSON with one list item per line', () => {
   const text = stringifySnapshot(value);
   assert.deepEqual(JSON.parse(text), value);
   assert.match(text, /\n {4}\{"sha":"a"\},\n {4}\{"sha":"b"\}\n/);
+});
+
+test('a pull request that keeps growing does not change the day it was recorded on', () => {
+  const key = (pr: { number: number }) => pr.number;
+  const earlier = [{ number: 191, events: ['opened'], additions: 100 }];
+  assert.deepEqual(keepFirstCapture(earlier, [{ number: 191, events: ['opened'], additions: 999 }], key), earlier);
+});
+
+test('something new on that day still gets through', () => {
+  const key = (pr: { number: number }) => pr.number;
+  const earlier = [{ number: 5, events: ['opened'], additions: 100 }];
+  const merged = { number: 5, events: ['opened', 'merged'], additions: 120 };
+  const added = { number: 6, events: ['opened'], additions: 1 };
+  assert.deepEqual(keepFirstCapture(earlier, [merged, added], key), [merged, added]);
+  assert.deepEqual(keepFirstCapture(undefined, [added], key), [added]);
 });
 
 test('re-capturing the same facts is not a change', () => {

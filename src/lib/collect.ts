@@ -119,6 +119,19 @@ export function stringifySnapshot(value: Record<string, unknown>): string {
   return `{\n${lines.join('\n')}\n}\n`;
 }
 
+/**
+ * Keeps what a snapshot first recorded. A pull request that's still open goes on growing and can be
+ * retitled long after the day it opened, so without this, revisiting a recent day would rewrite it. An
+ * item only changes if something new happened to it on that day, which shows up in its events.
+ */
+export function keepFirstCapture<T extends { events?: readonly string[] }>(earlier: T[] | undefined, fresh: T[], key: (item: T) => string | number): T[] {
+  const first = new Map((earlier ?? []).map((item) => [key(item), item]));
+  return fresh.map((item) => {
+    const kept = first.get(key(item));
+    return kept && JSON.stringify(kept.events) === JSON.stringify(item.events) ? kept : item;
+  });
+}
+
 /** Whether two snapshots say the same thing, ignoring when each was taken. */
 export function sameSnapshot(a: Record<string, unknown>, b: Record<string, unknown>): boolean {
   const facts = ({ capturedAt: _, ...rest }: Record<string, unknown>) => JSON.stringify(rest);
