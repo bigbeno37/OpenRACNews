@@ -34,4 +34,5 @@ $codex_bin exec "$prompt" \
   --sandbox workspace-write \
   --ignore-user-config \
   --ephemeral \
-  ${REPORT_ARGS:-}
+  ${REPORT_ARGS:-} \
+  </dev/null # Otherwise Codex waits on stdin for more of the prompt, and never starts.
