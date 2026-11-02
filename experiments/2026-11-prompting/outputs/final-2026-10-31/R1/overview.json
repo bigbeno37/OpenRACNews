@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-31",
+  "headline": "Archipelago multiworld arrives as Development builds fix flights and controllers",
+  "summary": "Archipelago v1.0.0 lets Ratchet & Clank players join multiworld games and finish by beating Drek (openrac-mods#5). Launcher Development builds fix PAL flights to Quartu, controller selection through docks and rendering faults, while expanded modded-map limits land alongside unfinished enhanced-rendering work (OpenRAC#148, OpenRAC#149, OpenRAC#151, OpenRAC#154). Going Commando reaches 66.51% matched code by size on USA v1.01, with more Yeedil and Aranos prison routines reconstructed. Matching means compiling to exactly the original game's bytes. Deadlocked's final totals reach 4,475 matched functions for NTSC-U v1.00 and 5,138 for PAL, while the original game's change corrects documentation of Screamer behavior.",
+  "writtenBy": "gpt-6.1-sol"
+}

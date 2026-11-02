@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked reaches 6.07% matched code for NTSC-U v1.00",
+  "summary": "Deadlocked\u2019s NTSC-U v1.00 rises from 5.57% to 6.07% matched code, reaching 4,475 of 18,085 matched functions. Two independent batches add 157 and 167 matches across game, engine and network code (#50, #51). PAL has its own final total of 5,138 of 18,113 matched functions.",
+  "highlights": [
+    "PAL batches of 210 and 50 functions merge in #52 and #53. Integration fixes add a missing header and remove duplicate PAL implementations.",
+    "A tool correction reproduces how the original assembler loads floating-point constants, unblocking C for 27 PAL functions (#49). A separate PAL-only Tempus Station function lands in #48.",
+    "The batches also retain non-matching C drafts for further work (#50, #51). Another 30-function PAL proposal opened but has not merged (#54)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

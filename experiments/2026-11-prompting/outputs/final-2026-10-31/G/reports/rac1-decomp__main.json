@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Screamer documentation corrected; PAL v2.00 remains fully code-matched",
+  "summary": "Contributors now have corrected Screamer behavior notes: it retreats to its spawn point after diving and dies only when lethal damage depletes its health. This was a comment correction, with no gameplay change. PAL v2.00 remains at 100.00% matched code, or 3,713,096 of 3,713,096 bytes, and 5,116 of 5,116 functions; matched code compiles to exactly the original game's bytes.",
+  "highlights": [
+    "PAL v2.00 data matching stands at 0.57%. The readability proposal #161 closed without merging.",
+    "New reports cover Linux visual glitches in OpenRAC 0.10.0 (#162), a surround-sound request (#163), launcher freezes on Kubuntu 26.04 LTS (#164) and disc extraction failure (#165)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

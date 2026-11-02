@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-01",
+  "headline": "Going Commando USA v1.01 reaches 84.74% matched code as launcher mod tools expand",
+  "summary": "Going Commando\u2019s USA v1.01 decompilation reaches 84.74% matched code by size and 7,760 of 8,579 functions; matching reproduces the original game\u2019s bytes. Launcher Development builds gain mod installation, dependencies and automatic updates, though that work still needs Windows, macOS and Android testing (OpenRAC#161). Stable receives a direct PAL level 11 lighting-bake fix rather than its usual release update (OpenRAC#189). Ratchet & Clank\u2019s source cleanup preserves its complete code match, while PAL Gladiator gains reconstructed helpers and easier disc access. Mod SDK 1.11.0 and Archipelago v2.1.0, item-randomizer v1.0.4 and difficulty v1.2.4 are released; Archipelago protects saves from the wrong seed and Difficulty repairs Blarg Station spawns, with logic play-testing requested in openrac-mods#25.",
+  "writtenBy": "gpt-6.1-sol"
+}

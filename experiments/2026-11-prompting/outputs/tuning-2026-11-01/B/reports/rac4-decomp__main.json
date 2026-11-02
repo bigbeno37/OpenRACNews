@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked gains PAL drawing, object and lookup routines in matching C",
+  "summary": "Deadlocked merged PAL reconstruction work covering drawing, object state, table lookups and movement calculations. These matched functions compile to the same bytes as the original game. The snapshot's project measure stands at 6.07% matched code by size, with 4,475 of 18,085 functions matched.",
+  "highlights": [
+    "#54 adds 30 PAL functions, while #57 through #70 cover drawing wrappers, object access, interpolation and state helpers.",
+    "#72 adds seventeen fixed-size hash lookups totaling 1,952 bytes.",
+    "#74 adds five lookup and state-write functions; #75 adds 22 game functions totaling 1,056 bytes.",
+    "#56 lets contributors extract a disc image from an explicit path.",
+    "#71 remains a draft awaiting PAL mapping; #55, #77, #78 and #79 are open contributions rather than merged work."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

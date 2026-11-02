@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "PAL Gladiator gains matching game helpers and easier disc-image access",
+  "summary": "Contributors gain matching PAL SCES_532.85 code for drawing, point transforms, smoothing, object state and table lookups. A match compiles to the original game\u2019s bytes. The day\u2019s aggregate still reports 6.07% matched code and 4,475 of 18,085 functions without naming its release, so it should not be read as the PAL result.",
+  "highlights": [
+    "#54 merges 30 PAL functions; #72 adds seventeen PAL hash lookups covering 1,952 retail bytes. #74 adds five PAL functions covering 128 bytes, and #75 adds 22 covering 1,056 bytes.",
+    "Contributors can supply a disc-image path for extraction and configuration without copying the ISO into the checkout; checking still uses extracted dumps (#56).",
+    "The 45 NTSC-U helpers in #71 remain a draft awaiting PAL mapping. PAL batches #55, #77, #78 and #79 are also open, not merged.",
+    "Issue #73 shares reconstruction evidence and remaining drafts. Its 13,713 generated ranges are explicitly not a count of decompiled functions."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

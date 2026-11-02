@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Multiplayer shares campaign unlocks and smooths remote movement; Android builds released",
+  "summary": "Co-op players now share owned items, gold bolts and unlocked planets, while bolts come from the host's world and fly to the nearest player. Remote figures and world objects move more smoothly over slow links, standing figures stop bobbing, and held items animate between received poses. Multiplayer v0.7.1 and v0.7.3 were released, with the final native-mod releases adding Android builds through SDK 1.10.1.",
+  "highlights": [
+    "The public OpenRAC server is now the default; players can still configure their own server.",
+    "Other players see collected bolts fly to their taker before disappearing, even away from the camera. A Ready toggle no longer gets overwritten by an older host update.",
+    "Android releases include difficulty v1.2.3, item-randomizer v1.0.3, lock-strafe v1.0.2, live-splits v1.0.2 and keyboard-mouse v1.2.4.",
+    "Android builds also ship for ammo-max v1.0.2, xbox-icons v1.0.1 and dualsense v1.0.2; these patch releases leave mod code unchanged.",
+    "Earlier releases include difficulty v1.2.2, button-swap v1.0.0 and xbox-icons v1.0.0. Contributors gain verbose pose diagnostics and simulated network lag for testing."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

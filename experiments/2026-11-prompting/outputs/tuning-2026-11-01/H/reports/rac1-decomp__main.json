@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank source becomes easier to navigate while every function stays matched",
+  "summary": "Contributors can work with named game states, buttons, levels and shared structures instead of many raw numbers and private views. Lynder063\u2019s cleanup preserves the reported 5,116 of 5,116 matched functions and 100.00% matched code; matching means compiling to the original game\u2019s bytes. The brief does not identify a release for that aggregate. Reported data progress is 73.94%, while the data work generates values locally from each contributor\u2019s own disc.",
+  "highlights": [
+    "The large line totals mainly reflect formatting: #169 adds 169,328 lines and removes 147,550 without changing loaded bytes.",
+    "Core files now have readable names and library folders; game code is grouped by system, with shared headers and clearer contribution documentation (#191, #192, #210).",
+    "Data blocks and pointer references now build from C without committing retail values (#196, #197, #198).",
+    "Checks guard against lost matches and new syntax errors. Some addressing-sensitive declarations and compiler workarounds remain with documented reasons (#200, #201, #202, #204).",
+    "The disc extraction issue reporting an ISO range outside the image was closed as completed (#165)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

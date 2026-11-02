@@ -43,7 +43,7 @@ Edit `config/tracking.json`. It's the only place that lists repositories and bra
 
 The site's address and base path come from GitHub Pages, so the repository name and any custom domain need no code changes.
 
-Reports are written by GPT 6.1 Sol at low effort through the Codex CLI. Two optional repository variables change that: `REPORT_MODEL` (default `gpt-6.1-sol`) and `REPORT_EFFORT` (default `low`). Codex has no spending cap of its own, so set one in your OpenAI account. As a guide, one busy day took about 240,000 input tokens, most of them cached, and 2,200 output tokens. The experiments behind these choices are in `experiments/`.
+Reports are written by GPT 6.1 Sol at low effort through the Codex CLI. Two optional repository variables change that: `REPORT_MODEL` (default `gpt-6.1-sol`) and `REPORT_EFFORT` (default `low`). Codex has no spending cap of its own, so set one in your OpenAI account. As a guide, one busy day (1 November 2026) took about 614,000 input tokens, of which 48,000 weren't cached, and 5,800 output tokens. The experiments behind these choices are in `experiments/`.
 
 ## Local development
 

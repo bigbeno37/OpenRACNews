@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Mod installs and updates reach Development, alongside graphics, sound and control fixes",
+  "summary": "Development builds gain a signed mod index, dependency installation, automatic updates with rollback and setup sharing (#161). That launcher work has not yet been run on Windows, macOS or Android. Players also get diagonal stick movement fixes, fewer Windows sound gaps and corrected underwater visibility on Pokitaru; Vulkan becomes the default renderer (#168, #188, #194). The source import in #160 accounts for 111,618 of the day\u2019s 138,618 added lines.",
+  "highlights": [
+    "Steam library setup adds pictures; tested on Linux, it still needs Windows and macOS checks and refuses Flatpak Steam (#184). Mod hub links and listing badges also land (#182).",
+    "Android Enhanced graphics uses ASR or no upscaler, with cheaper Vulkan passes; its drawer gains texture upscaling, motion blur, colour correction and reset controls (#165, #183).",
+    "Windows fixes restore Orxon\u2019s electric barrier strands and Batalia explosion colours, and prevent an animated shadow-pass crash (#171, #178, #186).",
+    "Contributors gain an Object Viewer, Freecam and culling inspection; experimental light editing requires a build flag that defaults off (#195, #196). Crash reports gain symbols and activity trails (#175, #193).",
+    "Mod SDK 1.11.0 adds per-mod storage and the current save slot (#172). Fullscreen first start, overlay scaling and Steam Controller support without Steam also land (#177).",
+    "Audio replacement remains an open proposal (#164). Cross-region co-op (#166) and the USA v1.01 Going Commando port (#191) remain unmerged drafts; the latter runs but is not playable, with ship controls incomplete and most menus untested."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

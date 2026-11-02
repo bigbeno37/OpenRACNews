@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Controller switching, Quartu travel and larger custom maps improve on develop",
+  "summary": "Players can switch controllers by pressing one after the active pad has been idle, and controllers behind USB-C docks can take the main port (#149). PAL flights from Kalebo to Quartu no longer freeze, and Blarg Station landings skip missing actors rather than crashing with extra enemies (#151, #147). Mod authors gain larger custom-map streams, expanded memory for mods and higher object and collision capacities; ordinary games retain their original memory arena (#148). Enhanced rendering gains a native preparation pipeline, compressed lighting probes and water/material changes, explicitly described as very work in progress (#154).",
+  "highlights": [
+    "Frame limiting uses more precise waits; Intel Arc menu text with anti-aliasing and Adreno panels without it receive fixes (#146, #145, #157).",
+    "The Suck Cannon gauge works with HUD: Edges; flight destination names and full-screen black fills draw correctly (#150, #156, #155).",
+    "Level preparation leaves CPU capacity free. Linux tab lists fade correctly, and ordinary sessions regain the retail object-class limit (#144, #153, #158).",
+    "#152 closes #39, #48, #66, #127, #135 and #141: Quartu drowning, texture packs, Going Commando PAL extraction, mod assets, remapping and NTSC lighting preparation. A new lighting-region-limit report remains open (#159).",
+    "Of 49,720 added lines, 35,333 come from the enhanced-rendering pull request (#154).",
+    "Mod installs, dependencies and auto-update remain proposed in #161, tested but not yet run on Windows, macOS or Android. Decomp import #160 and Vulkan test acceleration #163 also remain unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

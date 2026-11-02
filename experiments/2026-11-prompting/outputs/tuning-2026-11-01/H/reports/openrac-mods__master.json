@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-01",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Archipelago remembers save-slot rooms; Difficulty fixes Blarg Station spawns",
+  "summary": "Archipelago v2.1.0, item-randomizer v1.0.4 and difficulty v1.2.4 were released against Mod SDK 1.11.0. Archipelago now remembers each save slot\u2019s room and rejects another seed\u2019s save, alongside logic, reconnect and client fixes (#24, #26). Difficulty leaves space for Blarg Station\u2019s own objects, preventing extra enemies from making the ship and Clank disappear (#34).",
+  "highlights": [
+    "Players are asked to play-test randomizer and Archipelago access logic, including Trespasser checks on return Veldin, Aridia and Batalia (#25).",
+    "Listings now state AI assistance per mod, and releases trigger index rebuilding directly (#33, #27). The listing bot rejects a broken newest release instead of silently offering an older one (#32).",
+    "Co-op cross-region play, separate saves, reconnect and host takeover remain in an unmerged draft, not ready for review (#22)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Archipelago remembers save-slot rooms and Difficulty preserves Blarg Station's landing",
+  "summary": "Archipelago now remembers the room associated with each memory-card save slot and refuses saves from another seed. Its logic and reconnect handling also received fixes. Difficulty reserves room for Blarg Station's own objects, addressing a landing that could lose the ship and Clank when extra enemies filled the object pool.",
+  "highlights": [
+    "#24 corrects Archipelago logic and client handling; #26 adds save-slot room checks using SDK 1.11.",
+    "#34 leaves Blarg Station's object pool available for its own spawns.",
+    "#27 rebuilds the mod index after releases; #30 and #32 improve listing validation and error messages.",
+    "#33 records AI assistance per mod listing; #21 alerts maintainers when index publication fails and recovers.",
+    "Co-op proposal #22 remains a draft."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Screamer documentation corrected, with PAL v2.00 still fully code-matched",
+  "summary": "The Screamer enemy\u2019s documentation now says it retreats to its spawn point after diving at a target, rather than dying. It only enters its death state after lethal damage. This changes comments only, leaving PAL v2.00 at 100.00% matched code and 5,116 of 5,116 matched functions.",
+  "highlights": [
+    "The generated-name readability proposal #161 closed without merging.",
+    "New reports describe Linux visual glitches and launcher freezes in OpenRAC 0.10.0 (#162, #164). Separate issues request surround sound and HRTF (#163) and report a disc-extraction failure (#165)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

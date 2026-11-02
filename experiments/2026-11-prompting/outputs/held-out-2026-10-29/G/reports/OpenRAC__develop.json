@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-29",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Development builds gain reflections, editor controls and working Drone Device spawns",
+  "summary": "Players on the Development channel gain environment reflections, optional fresher controller input and lower-latency frames. The Drone Device now creates drones on PAL and NTSC-U, and Novalis sparks no longer pile up at Ratchet's feet. Contributors can restart level extraction from the launcher and follow a single editor status panel; installed tools now preserve typed object-property edits.",
+  "highlights": [
+    "#119 adds enhanced water and chrome/glass reflections, playable-area probe placement and rendering options; it accounts for 19,210 of the day's 38,239 added lines.",
+    "#104 lands custom ship destinations and cross-level static imports, but the carried description supports PAL only: NTSC-U support and manual gameplay testing were still outstanding.",
+    "#99 keeps co-op worlds present under pause menus; #120 makes remote gloves animate. #103 adds persistent savestate support for external mods, with the same build and disc required.",
+    "#121 repairs NTSC-U save-overwrite prompts and Exit; #126 preserves the player's language and menu text after Quit Game.",
+    "#111 makes Development updates follow develop. SDK 1.10.1 adds Android native mods (#117, #118); SDK 1.10.0 was also released.",
+    "#114 guards unusable cameras, but the reported NTSC-U 0.9.0 black screen was not reproduced. Mod-update prompts and pad bindings in #123 remain unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

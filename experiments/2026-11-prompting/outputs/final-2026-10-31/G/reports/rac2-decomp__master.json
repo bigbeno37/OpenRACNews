@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Yeedil and Aranos prison matching brings USA v1.01 to 66.51% of code",
+  "summary": "Contributors landed matching C for Yeedil, Aranos prison, Dobbo, Snivelak and shared game routines. USA v1.01 reaches 66.51% matched code by size, or 3,674,960 of 5,525,784 bytes, with 7,152 of 8,578 functions. A matched function compiles to exactly the same bytes as the original game; USA v2.00 separately has 6,692 of 8,634 functions matched, and PAL has 4,995 of 8,672.",
+  "highlights": [
+    "#381 matches 44 USA v1.01 functions: 29 in Yeedil, 11 in Aranos prison and four shared between levels.",
+    "#372 adds Dobbo and Snivelak routines; #373 adds four routines and repairs a wrongly trimmed callback entry.",
+    "Object-slot lookup and the hero's held-object handling gain matching C (#370, #371).",
+    "`func_L20_00445738` stays in assembly for PAL and USA v2.00 because its C matches only USA v1.01.",
+    "Closed proposals for movie playback, text, overlays and subtitles are not merged matches (#375, #378, #379, #380, #382). USA v1.01 data matching remains 0.00%."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

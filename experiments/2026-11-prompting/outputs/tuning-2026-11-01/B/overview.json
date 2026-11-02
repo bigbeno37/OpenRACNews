@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-01",
+  "headline": "OpenRAC gains mod browsing and updates as Going Commando reaches 84.74% matched code",
+  "summary": "OpenRAC's development branch gained mod browsing, dependency installation and automatic updates, alongside fixes for diagonal movement, Windows sound gaps and underwater visibility. The stable branch received a PAL level 11 Enhanced lighting-bake fix in OpenRAC#189. Going Commando reached 84.74% matched code by size and 7,760 of 8,579 matched functions, while Ratchet & Clank reorganized its source without losing its 100% code match and Deadlocked added PAL routines. Mod SDK 1.11.0 and Archipelago 2.1.0 were released, with Archipelago remembering each save slot's room; Difficulty 1.2.4 addresses missing landing objects on Blarg Station.",
+  "writtenBy": "gpt-6.1-sol"
+}

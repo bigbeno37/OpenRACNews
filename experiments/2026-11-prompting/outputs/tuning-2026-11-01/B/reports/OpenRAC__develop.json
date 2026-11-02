@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Mod browsing and updates arrive alongside sound, controls and graphics fixes",
+  "summary": "The launcher gained a signed mod index, dependency installation, automatic updates with rollback and setup sharing. Ratchet's diagonal stick movement now keeps pace with straight pushes, while Windows audio gaps and several rendering faults were addressed. Enhanced graphics gained phone GPU optimizations, and developers gained object inspection and a free camera.",
+  "highlights": [
+    "#161 and #182 connect mod browsing and install prompts to the mod hub, with region, safety and AI assistance badges.",
+    "#168 corrects diagonal stick speed; #188 moves audio mixing ahead of playback, keeps OpenGL programs and makes Vulkan the default.",
+    "#165 adds Arm ASR on Qualcomm GPUs and reduces rendering overhead; #183 exposes more Enhanced settings in the Android drawer.",
+    "#171 restores Orxon's barrier strands in Windows builds, #178 fixes particle colours, and #194 hides rooms beneath Pokitaru's sea floor.",
+    "#184 adds a Steam library shortcut with artwork; #177 improves display scaling and Steam Controller support.",
+    "#195 and #196 add object previews and freecam inspection. Audio replacement #164 and co-op #166 remain unmerged; the Going Commando port #191 is a draft."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

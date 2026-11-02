@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-29",
+  "headline": "Development builds gain reflections as co-op shares unlocks and decompilation batches land",
+  "summary": "OpenRAC develop gained environment reflections, editor controls, Drone Device repairs and optional lower-latency input, while stable v0.10.0 remains an open release proposal (OpenRAC#116). Custom ship destinations landed with PAL-only support and manual gameplay testing still outstanding in their description. Multiplayer releases share items, gold bolts and planets, smooth remote movement and add Android builds alongside other native mods.\n\nGoing Commando's USA v1.01 reaches 65.83% matched code and 7,100 of 8,578 functions, driven by an 842-function carry-over (rac2-decomp#368). Deadlocked gains US and PAL matches across menus, networking and libraries, and Up Your Arsenal lands NTSC-U frontend routines; Ratchet & Clank's readability proposal remains unmerged.",
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Smoother frame caps, controller switching and fixes for Quartu land in Development",
+  "summary": "Development gains more precise frame timing and controller selection by first press, addressing gamepads overlooked behind USB-C docks (#146, #149). Ratchet & Clank fixes cover the PAL flight to Quartu, a ship-landing crash with extra enemies, and missing Suck Cannon gauge graphics with the HUD at the edges (#151, #147, #150). Larger modded maps gain expanded memory and authoring support (#148). Enhanced rendering gains a native preparation pipeline, compressed lighting probes and water material improvements, but its author calls it very work in progress (#154).",
+  "highlights": [
+    "#152 closes #39, #48, #66, #127, #135 and #141 with Quartu drowning, texture-pack, Going Commando PAL extraction, mod-asset, remapping and NTSC lighting preparation fixes. A new lighting-region limit failure is reported in #159.",
+    "Menu text with anti-aliasing on Intel Arc and menu flicker without it on Adreno get fixes. Collision queries can now be checked against the original game code (#145, #157).",
+    "Flights show the destination name and shorten the stop afterward. Black fills reach the screen edges, level preparation runs at lower priority, and Linux launcher lists fade in correctly (#156, #155, #144, #153).",
+    "Ordinary sessions retain the original 32 MiB memory arena. A follow-up restores their original actor-class capacity after the modded-map expansion (#148, #158).",
+    "Proposed mod install links, dependency handling and auto-update remain unmerged. Their author has not tested Windows, macOS or Android (#161). The decompilation import and faster Vulkan tests are also only proposals (#160, #163).",
+    "The enhanced-rendering work accounts for most of the day\u2019s added lines (#154). Repository references now use openrac-mods (#162)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

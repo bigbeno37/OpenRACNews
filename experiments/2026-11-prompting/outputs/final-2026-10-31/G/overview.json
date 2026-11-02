@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-31",
+  "headline": "Archipelago multiworld released as develop fixes controllers and Quartu travel",
+  "summary": "Ratchet & Clank gains Archipelago v1.0.0 multiworld play, while lock-strafe v1.0.3 restores hoverboard tricks (openrac-mods#5, openrac-mods#4). OpenRAC develop fixes controller selection, PAL travel to Quartu and extra-enemy landing crashes, expands custom-map authoring and lands enhanced-rendering work still described as very work in progress (OpenRAC#149, OpenRAC#151, OpenRAC#147, OpenRAC#148, OpenRAC#154). Going Commando USA v1.01 reaches 66.51% matched code, with Yeedil and Aranos prison among the additions; Deadlocked NTSC-U v1.00 reaches 6.07%, while its PAL release separately reaches 5,138 of 18,113 matched functions. Ratchet & Clank PAL v2.00 remains fully code-matched after a Screamer comment correction; new reports describe Linux visual and launcher problems and an extraction failure. The signed mod catalogue also lands, while launcher dependency installs and auto-update remain an unmerged proposal not yet run on Windows, macOS or Android (openrac-mods#7, OpenRAC#161).",
+  "writtenBy": "gpt-6.1-sol"
+}

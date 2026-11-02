@@ -53,6 +53,12 @@ jobs:
           DAYS: ${{ inputs.days }}
           GH_TOKEN: ${{ github.token }}
 
+      # Codex's sandbox uses user namespaces, which Ubuntu 24.04 restricts by default. This changes only
+      # this throwaway machine, and it's what lets the sandbox below run at all.
+      - name: Allow the agent's sandbox
+        if: env.HAS_AGENT_CREDENTIALS == 'true'
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
       # A failure here must not cost the day: the snapshot is still saved, the site still deploys with
       # the numbers on show, and the next run writes whichever reports are still missing.
       - name: Write reports

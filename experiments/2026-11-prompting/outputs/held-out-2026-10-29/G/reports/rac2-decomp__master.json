@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reaches 7,100 matched functions on USA v1.01",
+  "summary": "Contributors integrated a large batch of reconstructed C, taking USA v1.01 to 65.83% matched code by size and 7,100 of 8,578 functions. USA v2.00 ends at 6,646 of 8,634 matched functions, and PAL at 4,979 of 8,672. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#368 carries over 842 functions from a contributor's fork: 158 boot and 684 level functions, covering 609,116 USA v1.01 code bytes. Its 73,572 additions and 59,161 deletions dominate the day's 105,041 additions and 68,398 deletions.",
+    "The earlier refresh in #367 records matched code at 54.81% for USA v1.01, 32.09% for USA v2.00 and 17.49% for PAL, before the large carry-over.",
+    "#364 adds 21 matches; #366 integrates reviewed contributor work while retaining a function with an initialization concern as a near miss.",
+    "Parallel builds now give each program its own Wine prefix, avoiding a shared single-threaded bottleneck. #369 fixes the accounting of fully linked code units.",
+    "Object-slot and held-object reconstructions in #370 and #371 remain open."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

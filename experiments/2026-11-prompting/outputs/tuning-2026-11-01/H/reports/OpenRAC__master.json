@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "PAL level 11 lighting bake fixed directly on the stable branch",
+  "summary": "PAL level 11 can finish its Enhanced lighting bake after #189 makes path-clearance checks work in both directions. The fix baked all 254 lighting regions with the existing traversal settings. Unlike this branch\u2019s usual release pull request from develop, this was a direct bug fix; no launcher release appears in the day\u2019s snapshot.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

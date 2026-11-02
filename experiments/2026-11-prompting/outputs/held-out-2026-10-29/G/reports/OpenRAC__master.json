@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-29",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Stable v0.10.0 proposed, with no release merged",
+  "summary": "The stable branch received no commits. Release PR #116 opened for v0.10.0, but still requires the version bump in #115 to merge into develop first; without it, the proposed release would identify itself as 0.9.0.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

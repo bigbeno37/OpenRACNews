@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "NTSC-U frontend routines land in Up Your Arsenal",
+  "summary": "Contributors added native NTSC-U frontend routines for state updates, timers, fades and dialog handling through #1. The NTSC-U progress commit reports 5,677 of 16,222 functions and 8.38% matched code; the snapshot's separate headline progress remains at 5,807 of 16,164 functions and 8.72% code, so those figures describe different reports.",
+  "highlights": [
+    "#1 describes six native routines in eight program placements, with NTSC validation. Matching means compiling to the original game's exact bytes."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

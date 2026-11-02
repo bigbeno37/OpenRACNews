@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "PAL level 11 lighting preparation gets a clearance fix",
+  "summary": "The stable branch received a fix for Enhanced lighting preparation on PAL level 11. Clearance is now checked in both directions before accepting a path connection, addressing a bake failure caused by an obstacle missed in one direction.",
+  "highlights": [
+    "#189 reports that PAL level 11 bakes all 254 regions with the fix and unchanged traversal settings."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

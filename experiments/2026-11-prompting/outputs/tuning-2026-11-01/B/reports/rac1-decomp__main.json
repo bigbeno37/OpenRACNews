@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's source becomes easier to read while keeping its full code match",
+  "summary": "Ratchet & Clank's decompiled source gained readable names, shared types and folders grouped by game system. All 5,116 functions remain matched: they compile to exactly the same bytes as the original game, with matched code by size at 100%. Data blocks and pointers also moved into C, using values generated from each contributor's own game copy.",
+  "highlights": [
+    "#188, #189 and #190 replace button, level and hero-state numbers with names.",
+    "#171 removes 8,730 unused declarations; #172 consolidates shared function declarations into headers.",
+    "#196, #197 and #198 move data into C; the last batch reports compiled data reaching 74%.",
+    "#194 and #195 identify compiler workarounds and remove 48 that were unnecessary, preserving the match.",
+    "#204 adds checks that detect matching regressions, while #210 documents the reorganized source and remaining work."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

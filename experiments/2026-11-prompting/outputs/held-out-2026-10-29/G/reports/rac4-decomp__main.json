@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked gains US and PAL matches across menus, networking and engine code",
+  "summary": "Contributors landed matching work across game code, networking, menus and libraries. US SCUS_974.65 finishes at 4,151 of 18,085 functions and 5.57% matched code by size; PAL SCES_532.85 finishes at 4,553 of 18,113 functions. Matching means the reconstructed C compiles to exactly the original game's bytes.",
+  "highlights": [
+    "#45 contributes 450 PAL reconstructions in batches; its stated 1,000-function target still has 550 outstanding. #43 adds 57 PAL functions, including resident and multiplayer menus.",
+    "#46 covers 276 functions across game, network and engine code; #47 adds 56 engine/library functions, also matching 53 PAL functions.",
+    "Duplicate PAL copies were removed where shared C already matched, resolving object-name collisions and false relocation-audit mismatches.",
+    "#41 matches console read/write wrappers on both US and PAL. The Tempus Station function in #48 and assembler changes with 27 PAL functions in #49 remain unmerged; #44 closed as a draft."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

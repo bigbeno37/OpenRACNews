@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-31",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Development builds fix Quartu flights, controller switching and missing menu text",
+  "summary": "Players on the Development channel gain smoother frame limiting, working controller selection through USB-C docks, and a fix for PAL flights from Kalebo to Quartu freezing (#146, #149, #151). Larger modded Ratchet & Clank maps gain expanded memory and object limits while vanilla sessions keep their original limits (#148, #158). Enhanced rendering gains a native preparation pipeline, compressed lighting probes and water materials, but its author calls it very unfinished work (#154). That pull request accounts for 35,333 of the day's 49,720 added lines, so the line count largely reflects renderer work.",
+  "highlights": [
+    "Intel Arc menu text with anti-aliasing and Adreno menu panels without it receive fixes (#145, #157). Full-screen fades reach the edges, flight destinations stay visible, and the Suck Cannon gauge works with HUD: Edges (#150, #155, #156).",
+    "Blarg Station landings no longer crash when extra enemies fill the actor pool (#147). Level preparation runs below normal priority to keep the computer responsive (#144), and Linux tab lists gain their intended fade (#153).",
+    "#152 closes Quartu drowning, texture-pack, Going Commando PAL disc recognition, mod asset, controller remapping and NTSC lighting preparation issues (#39, #48, #66, #127, #135, #141). A new lighting-region-limit report remains open (#159).",
+    "The proposed signed mod index integration, install links, dependencies and automatic updates remain unmerged (#161). Its author has not run it on Windows, macOS or Android.",
+    "The decompilation import and faster Vulkan regression tests remain proposals (#160, #163). Repository references now use openrac-mods (#162)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

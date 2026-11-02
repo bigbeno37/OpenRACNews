@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-31",
+  "headline": "Archipelago multiworld arrives as launcher fixes and matching work land",
+  "summary": "Archipelago v1.0.0 brings Ratchet & Clank to multiworld play, with beating Drek as the goal, while lock-strafe v1.0.3 restores hoverboard tricks (openrac-mods#5, openrac-mods#4). OpenRAC Development gains smoother frame caps, controller switching, Quartu fixes and larger modded-map support, alongside enhanced-rendering work still described as very work in progress (OpenRAC#146, OpenRAC#149, OpenRAC#151, OpenRAC#152, OpenRAC#148, OpenRAC#154). Going Commando\u2019s USA v1.01 rises from 65.83% to 66.51% matched code, while Deadlocked\u2019s NTSC-U v1.00 rises from 5.57% to 6.07%. A matched function compiles to exactly the same bytes as the original game. Ratchet & Clank\u2019s PAL v2.00 stays at 100.00% matched code after a comment correction, while new user reports describe Linux visual glitches and launcher freezes in OpenRAC 0.10.0 (rac1-decomp#162, rac1-decomp#164).",
+  "writtenBy": "gpt-6.1-sol"
+}
