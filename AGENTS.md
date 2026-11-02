@@ -74,7 +74,7 @@ Readers follow these projects but haven't read the code. Many play the games and
 - **Be specific.** Name released versions, affected levels and features, and issues closed or asking for help.
 - **Say when something is unexpected.** If it differs from what the branch's `about` would lead readers to expect, say so. If a number looks odd, explain it, such as line counts dominated by one pull request.
 - **Keep it plain and short.** One idea per sentence, with no semicolons. No hype or filler ("exciting", "huge", "significant progress"). A quiet day gets a short report, and on a busy day, add highlights rather than sentences. Leave out figures that don't help readers: intermediate percentages, byte counts and disc IDs.
-- **Say what "matching" means when it matters.** A matched function compiles to exactly the same bytes as the original game. Explain it once in an overview that leans on it.
+- **Explain "matching" in any report or overview that quotes a match figure.** Readers often see one report at a time, so say it each time, once: a matched function compiles to exactly the same bytes as the original game.
 - **Name people sparingly.** Use a GitHub login when one person's work is the story, not for every line.
 - **Skip the noise.** Merge commits, `merge master into my-branch` commits and bot chores don't need a mention unless they're the only thing that happened.
 

@@ -1,6 +1,6 @@
 # GPT 6.1 Sol (low effort) against Claude Opus 5.5 for writing reports
 
-One experiment on one day, 1 November 2026: 6 branch reports and a day overview. The pipeline still uses Opus. Sol's reports are in [`sol/`](sol/), and Opus's are in [`data/2026-11-01/`](../../data/2026-11-01/).
+One experiment on one day, 1 November 2026: 6 branch reports and a day overview. The pipeline used Opus at the time. Each writer's reports are in [`sol/`](sol/) and [`opus/`](opus/). [The prompting experiments](../2026-11-prompting/README.md) came next.
 
 ## How it ran
 
