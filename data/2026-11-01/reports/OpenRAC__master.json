@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Stable line gets a fix for a failing Enhanced graphics lighting bake on PAL level 11",
+  "summary": "The stable line moved once, and it was a single fix (#189) rather than a release pull request from develop. Preparing the lighting for Enhanced graphics could fail on PAL level 11 because a path check gave different answers depending on its direction. Both directions must now be clear, and the pull request's author reports that the level then bakes all 254 regions. Issue #173, which reported this error, was closed the same day.",
+  "highlights": [],
+  "writtenBy": "claude-opus-5-5"
+}

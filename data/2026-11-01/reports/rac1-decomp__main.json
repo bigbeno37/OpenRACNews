@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's source gets a full cleanup, with all 5116 functions still matching",
+  "summary": "Nothing changes for players today: this was a cleanup of the source code, in 45 pull requests merged by Lynder063. A matched function compiles to exactly the same bytes as the original game, and the pull requests report that all 5116 functions still match after the work.\n\nThe code is now easier to read. Bare numbers became names, files moved into folders by what they do, and much of the game's data moved into C. The line counts are large (231369 added, 208167 removed) mostly because #169 reformatted all the C code.",
+  "highlights": [
+    "Game data moved into C: compiled data went from 0.57% to 74% across #196, #197 and #198. The values are generated from each contributor's own copy of the game, so no original game bytes are committed.",
+    "Numbers became names: 7249 hero states, 967 controller button checks and 474 level numbers now read like `HERO_STATE_JUMP`, `PAD_CROSS` and `LEVEL_RILGAR` (#190, #188, #189).",
+    "Files got proper homes: 53 hex-named core files now have real names (#191), the game code is sorted into folders by system (#192), and headers are sorted by kind (#178).",
+    "Clutter went: 8730 unused declarations were removed (#171), and repeated declarations moved into shared headers (#172, #181).",
+    "Code tricks kept only to force a match were audited: #194 tagged 118 suspect sites, #195 removed 48 the match never needed, and later pull requests gave reasons for those that stay.",
+    "New automatic checks parse the C, run tool tests and lint, and fail if a refactor count goes up (#168). A new tool reverts files that break a match (#204)."
+  ],
+  "writtenBy": "claude-opus-5-5"
+}

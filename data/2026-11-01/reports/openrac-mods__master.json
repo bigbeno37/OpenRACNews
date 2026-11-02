@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Archipelago mod remembers each save's room, and three mods get new releases",
+  "summary": "Eight pull requests from Lynder063 landed, with the Archipelago mod getting the most attention. It now remembers which room each memory card slot belongs to and refuses a save from another seed (#26), on top of a round of logic and client fixes (#24).\n\nThree mods were released: `archipelago-v2.1.0`, `item-randomizer-v1.0.4` and `difficulty-v1.2.4`. Issue #25 asks players to help check the Archipelago and item randomizer logic by play-testing.",
+  "highlights": [
+    "#24 corrects Archipelago logic rows checked against the decompilation, and fixes the client's seed check, reconnecting, compression and location ids.",
+    "#34 fixes the difficulty mod at enemy count 2, where extra enemies filled Blarg Station's object pool and the landing lost the ship and Clank.",
+    "#33 adds a listing field stating whether AI assisted a mod, required as a yes or no answer when submitting, and marks the 11 current mods.",
+    "The listing bot handles unchanged listings and missing repositories properly (#30), and now fails with a reason when a mod's newest release can't be listed (#32).",
+    "The mod index now rebuilds after a release (#27), and a failed publish alerts the maintainers on Discord (#21).",
+    "Draft #22 opened for round 3 of Ratchet & Clank co-op and has not merged."
+  ],
+  "writtenBy": "claude-opus-5-5"
+}

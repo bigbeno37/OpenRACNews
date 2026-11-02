@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac1-decomp",
+  "capturedAt": "2026-11-02T05:50:30.814Z",
+  "issues": [
+    {"number":165,"title":"Get the levels ready","author":"Riflewarrior02","events":["closed"],"closedAs":"COMPLETED","body":"$ \"C:\\Users\\Name\\AppData\\Local\\OpenRAC Launcher\\openrac\\python\\python.exe\" editor/extract.py port C:\\Users\\Name\\OpenRAC\\active\\rac1\\data\\iso_data\\rac1\\disc.iso C:\\Users\\Name\\OpenRAC\\active\\rac1\\data/port/pal --anywhere --replace\nopenrac-error: disc-data\nextract: disc range 0xbb971800+0x0 outside the ISO"}
+  ],
+  "releases": []
+}

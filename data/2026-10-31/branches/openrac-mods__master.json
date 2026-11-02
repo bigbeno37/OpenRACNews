@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-31",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-02T05:51:19.430Z",
+  "totals": {"commits":9,"merges":4,"landed":7,"additions":12631,"deletions":516,"pushes":7,"forcePushes":0,"authors":["github-actions[bot]","Lynder063"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-31T09:31:30Z","type":"pr_merge","actor":"Lynder063","before":"892c17401da544daf7efa229b5e672f892e2fe46","after":"04f8619a4058a6d856ccf66bcf70d3e3f87c031c"},
+    {"at":"2026-10-31T11:15:41Z","type":"pr_merge","actor":"Lynder063","before":"04f8619a4058a6d856ccf66bcf70d3e3f87c031c","after":"51ed6472d3dacae5a4ddc2f041506aa1bf32fa91"},
+    {"at":"2026-10-31T11:38:01Z","type":"pr_merge","actor":"Lynder063","before":"51ed6472d3dacae5a4ddc2f041506aa1bf32fa91","after":"7bec488c820ef01a450a9f2064a2a983823f3e87"},
+    {"at":"2026-10-31T22:03:09Z","type":"pr_merge","actor":"Lynder063","before":"7bec488c820ef01a450a9f2064a2a983823f3e87","after":"a992ce75355f1fc0d2bf5e036fd01a11e751207f"},
+    {"at":"2026-10-31T22:50:17Z","type":"push","actor":"github-actions[bot]","before":"a992ce75355f1fc0d2bf5e036fd01a11e751207f","after":"50d4ad41252a475a5d66b2daa3c9ad6d353cb6dd"},
+    {"at":"2026-10-31T23:14:49Z","type":"pr_merge","actor":"Lynder063","before":"50d4ad41252a475a5d66b2daa3c9ad6d353cb6dd","after":"f435bc3447c2c83bea132c29bd22b817f8dd353c"},
+    {"at":"2026-10-31T23:26:34Z","type":"pr_merge","actor":"Lynder063","before":"f435bc3447c2c83bea132c29bd22b817f8dd353c","after":"516eea46270cba027e3896cac61df33b26ad6729"}
+  ],
+  "pullRequests": [
+    {"number":4,"title":"fix(lock-strafe): keep L2 and R2 for hoverboard tricks","author":"Lynder063","draft":false,"head":"fix/lock-strafe-hoverboard","events":["opened","merged"],"mergedBy":"Lynder063","additions":24,"deletions":7,"changedFiles":5,"body":"The strafe mod turns off on the hoverboard (control mode 0x16), so L2 and R2 do tricks.\nIt turns back on when Ratchet gets off the board.\n🤖 Generated with Claude Code"},
+    {"number":5,"title":"feat(archipelago): Archipelago multiworld support","author":"Lynder063","draft":false,"head":"feat/archipelago","events":["opened","merged"],"mergedBy":"Lynder063","additions":4298,"deletions":4,"changedFiles":26,"body":"Adds the archipelago mod: plays RAC1 in an Archipelago multiworld, beat Drek to finish.\nAdds rac1.apworld, built and tested in CI against Archipelago 0.6.8.\n🤖 Generated with Claude Code"},
+    {"number":6,"title":"fix(ci): put rac1.apworld in the release","author":"Lynder063","draft":false,"head":"fix/release-apworld","events":["opened","merged"],"mergedBy":"Lynder063","additions":1,"deletions":0,"changedFiles":1,"body":"The merge job did not upload rac1.apworld, so releases missed it.\nIt now uploads dist/*.apworld with the zips.\n🤖 Generated with Claude Code"},
+    {"number":7,"title":"feat(index): signed mod index, submission bot and media pipeline","author":"Lynder063","draft":false,"head":"feat/mod-index","events":["opened","merged"],"mergedBy":"Lynder063","additions":7717,"deletions":0,"changedFiles":98,"body":"Builds and signs index.json (the mod list openrac.dev and the launcher read) and publishes it on the index pre-release.\nAdds the submission issue forms and bot, picture pipeline, native cool-down and Discussions; tests: python3 -m unittest discover -s tools/tests."},
+    {"number":19,"title":"chore: rename rac1-mods to openrac-mods","author":"Lynder063","draft":false,"head":"chore/rename-openrac-mods","events":["opened","merged"],"mergedBy":"Lynder063","additions":480,"deletions":480,"changedFiles":79,"body":"Every rac1-mods reference (index source and media address, mod homepages, READMEs, forms, tests and fixtures) now names openrac-mods.\nVerified: python3 -m unittest discover -s tools/tests passes; the shared fixture changed, so the site and launcher copies follow."},
+    {"number":20,"title":"feat(bot): act as openrac-bot, the organization's GitHub App","author":"Lynder063","draft":false,"head":"feat/openrac-bot","events":["opened","merged"],"mergedBy":"Lynder063","additions":98,"deletions":24,"changedFiles":5,"body":"The submission, review, Discussions and broken-index jobs now act as openrac-bot (its name and logo, and its PRs start CI), each with a one-hour token scoped to that job; the default workflow token drops to read-only there.\nVerified: python3 -m unittest discover -s tools/tests passes, both workflows parse; actionlint and zizmor run in this PR's CI."}
+  ],
+  "commits": [
+    {"sha":"01c5c3055e7c9dc8e0c884a71acb0d5e886ff5d1","headline":"fix(lock-strafe): keep L2 and R2 for hoverboard tricks, version 1.0.3","author":"Lynder063","committedAt":"2026-10-31T09:27:56Z","merge":false,"landed":false},
+    {"sha":"04f8619a4058a6d856ccf66bcf70d3e3f87c031c","headline":"Merge pull request #4 from OpenRAC/fix/lock-strafe-hoverboard","author":"Lynder063","committedAt":"2026-10-31T09:31:29Z","merge":true,"landed":true,"additions":24,"deletions":7,"body":"fix(lock-strafe): keep L2 and R2 for hoverboard tricks"},
+    {"sha":"6bd193315fb9502e975b2aabc57bba75364c5fa3","headline":"feat(archipelago): Archipelago multiworld mod and APWorld","author":"Lynder063","committedAt":"2026-10-31T11:04:00Z","merge":false,"landed":false},
+    {"sha":"d6e8f59d2c17402f57f8b62bfef2a48172910852","headline":"fix(archipelago): Windows include order, no apworld when cross-compiling","author":"Lynder063","committedAt":"2026-10-31T11:07:42Z","merge":false,"landed":false},
+    {"sha":"1aad126b6d4c8417950cb5edcd95e1521ad5378f","headline":"fix(archipelago): winsock2 in the Windows load test","author":"Lynder063","committedAt":"2026-10-31T11:11:25Z","merge":false,"landed":false},
+    {"sha":"51ed6472d3dacae5a4ddc2f041506aa1bf32fa91","headline":"Merge pull request #5 from OpenRAC/feat/archipelago","author":"Lynder063","committedAt":"2026-10-31T11:15:41Z","merge":true,"landed":true,"additions":4298,"deletions":4,"body":"feat(archipelago): Archipelago multiworld support"},
+    {"sha":"3081a21327f4441f652990ea2e33c349d6b98dcb","headline":"fix(ci): put rac1.apworld in the release","author":"Lynder063","committedAt":"2026-10-31T11:27:34Z","merge":false,"landed":false},
+    {"sha":"7bec488c820ef01a450a9f2064a2a983823f3e87","headline":"Merge pull request #6 from OpenRAC/fix/release-apworld","author":"Lynder063","committedAt":"2026-10-31T11:38:01Z","merge":true,"landed":true,"additions":1,"deletions":0,"body":"fix(ci): put rac1.apworld in the release"},
+    {"sha":"8db99abab034fff66439bfabef9c075fea8b9d9b","headline":"feat(index): signed mod index, submission bot and media pipeline","author":"Lynder063","committedAt":"2026-10-31T21:48:13Z","merge":false,"landed":false},
+    {"sha":"a992ce75355f1fc0d2bf5e036fd01a11e751207f","headline":"Merge pull request #7 from OpenRAC/feat/mod-index","author":"Lynder063","committedAt":"2026-10-31T22:03:09Z","merge":true,"landed":true,"additions":7717,"deletions":0,"body":"feat(index): signed mod index, submission bot and media pipeline"},
+    {"sha":"50d4ad41252a475a5d66b2daa3c9ad6d353cb6dd","headline":"chore(index): discussion numbers","author":"github-actions[bot]","committedAt":"2026-10-31T22:50:16Z","merge":false,"landed":true,"additions":13,"deletions":1},
+    {"sha":"f435bc3447c2c83bea132c29bd22b817f8dd353c","headline":"chore: rename rac1-mods to openrac-mods (#19)","author":"Lynder063","committedAt":"2026-10-31T23:14:49Z","merge":false,"landed":true,"additions":480,"deletions":480,"body":"Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>"},
+    {"sha":"516eea46270cba027e3896cac61df33b26ad6729","headline":"feat(bot): act as openrac-bot, the organization's GitHub App (#20)","author":"Lynder063","committedAt":"2026-10-31T23:26:33Z","merge":false,"landed":true,"additions":98,"deletions":24,"body":"Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>"}
+  ]
+}

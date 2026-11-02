@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-02T05:51:20.484Z",
+  "issues": [
+    {"number":25,"title":"Archipelago logic play-test","author":"Lynder063","events":["opened"],"closedAs":null,"body":"Help check the Archipelago and item randomizer logic. Each line is one question: can you get it without the item?\nPlay with the item randomizer or the Archipelago mod. Its spoiler tells you what you hold. Reply with the line and yes/no.\nTrespasser\n\n Veldin (return): reach and beat Drek without the Trespasser\n Veldin (return): gold bolt 1 without the Trespasser\n Aridia: gold bolt 4 without the Trespasser\n Batalia: gold bolt 2 without the Trespasser\n Eudora: the warp pad (Suck Cannon) and the…"},
+    {"number":28,"title":"Submit: [TEST] item-randomizer, bot check, do not merge the PR","author":"Lynder063","events":["opened","closed"],"closedAs":"NOT_PLANNED","body":"Kind\nMod\nRepository\nhttps://github.com/OpenRAC/openrac-mods\nMod ids\nitem-randomizer\nShort description\nShuffles gadgets, weapons, vendor stock, gold bolts and infobots, with logic so every seed can be finished. Share a seed's code; a spoiler log is written for each seed. Test edit, do not merge.\nContent rules\n\n My mod follows the content rules"},
+    {"number":31,"title":"Submit: [TEST] item-randomizer unchanged, bot check, please ignore","author":"Lynder063","events":["opened","closed"],"closedAs":"NOT_PLANNED","body":"Kind\nMod\nRepository\nhttps://github.com/OpenRAC/openrac-mods\nMod ids\nitem-randomizer\nShort description\nShuffles gadgets, weapons, vendor stock, gold bolts and infobots, with logic so every seed can be finished. Share a seed's code; a spoiler log is written for each seed.\nContent rules\n\n My mod follows the content rules"}
+  ],
+  "releases": [
+    {"tag":"archipelago-v2.1.0","name":"archipelago-v2.1.0","prerelease":false,"publishedAt":"2026-11-01T11:41:58Z","author":"github-actions[bot]","body":"Built by the build workflow from 6866416cd0361d6c836d6c30f922c3231295039a, against the OpenRAC mod SDK 1.11.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"item-randomizer-v1.0.4","name":"item-randomizer-v1.0.4","prerelease":false,"publishedAt":"2026-11-01T12:08:57Z","author":"github-actions[bot]","body":"Built by the build workflow from 72f3074a1b0ebdfb063e14668e54d3fa26aeb69a, against the OpenRAC mod SDK 1.11.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"difficulty-v1.2.4","name":"difficulty-v1.2.4","prerelease":false,"publishedAt":"2026-11-01T18:24:10Z","author":"github-actions[bot]","body":"Built by the build workflow from ef19b3653f0be827511845cadf1eb03a9df301ef, against the OpenRAC mod SDK 1.11.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."}
+  ]
+}

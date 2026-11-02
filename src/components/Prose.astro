@@ -1,0 +1,42 @@
+---
+// Text written by agents. It's rendered only as text, code spans and links to this repo's GitHub
+// numbers, never as markup: see src/lib/prose.ts for why.
+import { issueUrl } from '../lib/links.ts';
+import { paragraphs, tokenize } from '../lib/prose.ts';
+import { isTracked } from '../lib/tracking.ts';
+
+interface Props {
+  text: string;
+  /** Which repo a bare #123 belongs to. */
+  repo?: string;
+  inline?: boolean;
+  class?: string;
+}
+const { text, repo, inline = false, class: className } = Astro.props;
+
+const render = (paragraph: string) =>
+  tokenize(paragraph).map((token) => {
+    if (token.kind === 'text') return { text: token.text };
+    if (token.kind === 'code') return { code: token.text };
+    const target = token.repo ?? repo;
+    return target && isTracked(target) ? { text: token.text, href: issueUrl(target, token.number) } : { text: token.text };
+  });
+const blocks = inline ? [text] : paragraphs(text);
+---
+
+{
+  blocks.map((block) => {
+    const inner = render(block).map((part) =>
+      'code' in part ? (
+        <code class="text-[.92em] text-gold [overflow-wrap:anywhere]">{part.code}</code>
+      ) : part.href ? (
+        <a href={part.href} class="text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber">
+          {part.text}
+        </a>
+      ) : (
+        part.text
+      ),
+    );
+    return inline ? <Fragment>{inner}</Fragment> : <p class={className}>{inner}</p>;
+  })
+}

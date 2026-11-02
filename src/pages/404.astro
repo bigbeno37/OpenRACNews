@@ -1,0 +1,16 @@
+---
+import Hero from '../components/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import { url } from '../lib/links.ts';
+---
+
+<Layout title="Page not found">
+  <Hero eyebrow="Error 404" compact>
+    <Fragment slot="shine">Page not found.</Fragment>
+    <p class="mt-5 max-w-[600px] text-soft">This address doesn't match a day or a branch on record.</p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a href={url('/')} class="btn btn-primary">See the latest digest</a>
+      <a href={url('/days/')} class="btn">Browse every day</a>
+    </div>
+  </Hero>
+</Layout>

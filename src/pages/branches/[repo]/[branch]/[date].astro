@@ -1,0 +1,119 @@
+---
+import Badge from '../../../../components/Badge.astro';
+import Hero from '../../../../components/Hero.astro';
+import ReportCard from '../../../../components/ReportCard.astro';
+import Row from '../../../../components/Row.astro';
+import Section from '../../../../components/Section.astro';
+import Layout from '../../../../layouts/Layout.astro';
+import { formatDay, formatDayShort } from '../../../../lib/days.ts';
+import { count, formatNumber, sentenceList, timeOf } from '../../../../lib/format.ts';
+import { branchUrl, commitUrl, dayUrl, pullUrl, reportUrl } from '../../../../lib/links.ts';
+import { branchHistory, type BranchDay } from '../../../../lib/news.ts';
+import type { Commit } from '../../../../lib/schema.ts';
+import { branchSlug, trackedBranches } from '../../../../lib/tracking.ts';
+
+export async function getStaticPaths() {
+  const all = await Promise.all(trackedBranches().map(({ repo, branch }) => branchHistory(repo.name, branch.name)));
+  return all.flatMap((history) =>
+    history.map((day, i) => ({
+      params: { repo: day.repo.name, branch: branchSlug(day.branch.name), date: day.date },
+      props: { day, newer: history[i - 1], older: history[i + 1] },
+    })),
+  );
+}
+
+interface Props {
+  day: BranchDay;
+  newer?: BranchDay;
+  older?: BranchDay;
+}
+const { day, newer, older } = Astro.props;
+const { repo, branch, date, facts, report } = day;
+
+const landed = facts.commits.filter((c) => c.landed).reverse();
+const mergedIn = facts.commits.filter((c) => !c.landed).reverse();
+const forcePushes = facts.pushes.filter((p) => p.type === 'force_push');
+const short = (commit: Commit) => commit.sha.slice(0, 7);
+---
+
+<Layout title={`${repo.title} ${branch.name}, ${formatDayShort(date)}`} description={report?.headline} current="branches">
+  <Hero eyebrow={`Branch report · ${formatDay(date)}`} compact>
+    <Fragment slot="shine">{repo.title}</Fragment>
+    <Fragment slot="title">{branch.name}</Fragment>
+    <p class="mt-5 max-w-[680px] text-soft">{branch.about}</p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <a href={dayUrl(date)} class="btn btn-sm">All of {formatDayShort(date)}</a>
+      <a href={branchUrl(repo.name, branch.name)} class="btn btn-sm">This branch's history</a>
+    </div>
+  </Hero>
+
+  <div class="pt-6">
+    <ReportCard day={day} link={false} />
+  </div>
+
+  {
+    (facts.warnings.length > 0 || forcePushes.length > 0) && (
+      <div class="mt-5 rounded-xl border-l-4 border-brand bg-brand/10 px-4 py-3.5 text-soft">
+        {forcePushes.length > 0 && <p>History on this branch was rewritten {count(forcePushes.length, 'time')} on this day, at {sentenceList(forcePushes.map((p) => `${timeOf(p.at)} UTC by ${p.actor ?? 'an unknown account'}`))}.</p>}
+        {facts.warnings.map((warning) => <p>{warning}</p>)}
+      </div>
+    )
+  }
+
+  {
+    facts.pullRequests.length > 0 && (
+      <Section id="pull-requests" art="fresh" title={count(facts.pullRequests.length, 'pull request')} sub={`Opened, merged or closed against ${branch.name} on this day.`}>
+        <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
+          {facts.pullRequests.map((pr) => (
+            <Row href={pullUrl(repo.name, pr.number)} title={pr.title}>
+              <Fragment slot="lead">
+                {pr.events.map((event) => <Badge>{event}</Badge>)}
+                {pr.draft && <Badge>draft</Badge>}
+              </Fragment>
+              <span>#{pr.number}</span>
+              <span>{pr.author}</span>
+              <span>+{formatNumber(pr.additions)} −{formatNumber(pr.deletions)}</span>
+            </Row>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+
+  {
+    facts.commits.length > 0 && (
+      <Section id="commits" art="activity" title={count(facts.totals.commits, 'commit')} sub={mergedIn.length > 0 ? `${count(landed.length, 'commit')} landed directly on ${branch.name}, newest first. The rest came in through merges and are listed at the end. Line counts cover what landed, so merged work isn't counted twice.` : `What landed on ${branch.name}, newest first.`}>
+        <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
+          {landed.map((commit) => (
+            <Row href={commitUrl(repo.name, commit.sha)} title={commit.headline}>
+              <code slot="lead" class="flex-none text-[13px] text-amber">{short(commit)}</code>
+              <span>{commit.author}</span>
+              <span>+{formatNumber(commit.additions ?? 0)} −{formatNumber(commit.deletions ?? 0)}</span>
+            </Row>
+          ))}
+        </ul>
+        {mergedIn.length > 0 && (
+          <details class="surface mt-5">
+            <summary class="flex cursor-pointer items-center gap-3 px-5 py-4 font-orbitron text-[15px] font-bold text-gold sm:px-6">
+              <span aria-hidden="true" class="plus text-xl leading-none text-brand transition-transform">+</span>
+              {count(mergedIn.length, 'commit')} brought in by merges
+            </summary>
+            <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5 px-5 pb-5 sm:px-6">
+              {mergedIn.map((commit) => (
+                <Row href={commitUrl(repo.name, commit.sha)} title={commit.headline}>
+                  <code slot="lead" class="flex-none text-[13px] text-amber">{short(commit)}</code>
+                  <span>{commit.author}</span>
+                </Row>
+              ))}
+            </ul>
+          </details>
+        )}
+      </Section>
+    )
+  }
+
+  <nav aria-label="Other reports for this branch" class="flex flex-wrap justify-between gap-3 py-10">
+    {older ? <a href={reportUrl(repo.name, branch.name, older.date)} class="btn btn-sm">Earlier: {formatDayShort(older.date)}</a> : <span></span>}
+    {newer && <a href={reportUrl(repo.name, branch.name, newer.date)} class="btn btn-sm">Later: {formatDayShort(newer.date)}</a>}
+  </nav>
+</Layout>

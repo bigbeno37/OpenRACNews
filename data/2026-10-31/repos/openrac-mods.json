@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-31",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-02T05:51:20.484Z",
+  "issues": [],
+  "releases": [
+    {"tag":"lock-strafe-v1.0.3","name":"lock-strafe-v1.0.3","prerelease":false,"publishedAt":"2026-10-31T09:42:36Z","author":"github-actions[bot]","body":"Built by the build workflow from 04f8619a4058a6d856ccf66bcf70d3e3f87c031c, against the OpenRAC mod SDK 1.10.1.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"archipelago-v1.0.0","name":"archipelago-v1.0.0","prerelease":false,"publishedAt":"2026-10-31T11:27:04Z","author":"github-actions[bot]","body":"Built by the build workflow from 51ed6472d3dacae5a4ddc2f041506aa1bf32fa91, against the OpenRAC mod SDK 1.10.1.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"index","name":"Mod index","prerelease":true,"publishedAt":"2026-10-31T22:04:49Z","author":"github-actions[bot]","body":"The OpenRAC mod index (index.json, signed), rebuilt every hour. Not a mod release."}
+  ]
+}

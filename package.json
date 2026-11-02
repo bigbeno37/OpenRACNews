@@ -1,0 +1,36 @@
+{
+  "name": "openracnews",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=26.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "test": "node --test \"src/lib/**/*.test.ts\"",
+    "snapshot": "node scripts/snapshot.ts",
+    "reports:todo": "node scripts/reports.ts todo",
+    "reports:check": "node scripts/reports.ts check",
+    "reports:write": "bash scripts/write-reports.sh"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/orbitron": "^5.3.0",
+    "@fontsource/audiowide": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.4",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@types/node": "^26.6.6",
+    "typescript": "^6.0.3"
+  }
+}

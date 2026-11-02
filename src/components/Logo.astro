@@ -1,0 +1,25 @@
+---
+// The OpenRAC logo as openrac.dev draws it (src/components/ui/Logo.tsx): the lombax mark and the name,
+// in the current text colour. `accent` paints the mark gold.
+import paths from '../lib/logoPaths.json';
+
+interface Props {
+  height?: number;
+  accent?: boolean;
+  class?: string;
+}
+const { height = 32, accent = false, class: className = '' } = Astro.props;
+const view = [62, 220, 1253, 334] as const;
+const width = Math.round((height * view[2]) / view[3]);
+---
+
+<svg viewBox={view.join(' ')} width={width} height={height} aria-hidden="true" class={`block shrink-0 overflow-visible fill-current ${className}`}>
+  <g transform="translate(0 768) scale(0.1 -0.1)">
+    <g fill={accent ? '#e8a317' : undefined}>
+      {paths.mark.map((d) => <path d={d} />)}
+    </g>
+    <g>
+      {paths.name.map((d) => <path d={d} />)}
+    </g>
+  </g>
+</svg>

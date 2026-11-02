@@ -1,0 +1,10 @@
+---
+import { tagStyle, themeFor } from '../lib/themes.ts';
+
+interface Props {
+  repo: string;
+}
+const { repo } = Astro.props;
+---
+
+<span class="flex-none rounded-full border px-2.5 py-1 font-orbitron text-[11px] font-semibold tracking-wider" style={tagStyle(repo)}>{themeFor(repo).tag}</span>

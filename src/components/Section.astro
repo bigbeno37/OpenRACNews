@@ -1,0 +1,20 @@
+---
+import SectionArt from './SectionArt.astro';
+
+interface Props {
+  id: string;
+  art: 'progress' | 'activity' | 'how' | 'fresh' | 'all';
+  title: string;
+  sub?: string;
+}
+const { id, art, title, sub } = Astro.props;
+---
+
+<section id={id} class="py-12 sm:py-[72px]">
+  <div class="mb-2 flex items-center gap-3 sm:gap-5">
+    <SectionArt id={art} class="h-14 w-auto sm:h-[76px]" />
+    <h2 class="min-w-0 bg-gradient-to-r from-text to-soft bg-clip-text font-audiowide text-[clamp(26px,4vw,38px)] leading-tight text-transparent">{title}</h2>
+  </div>
+  {sub && <p class="mb-6 max-w-[760px] text-dim sm:mb-8">{sub}</p>}
+  <slot />
+</section>

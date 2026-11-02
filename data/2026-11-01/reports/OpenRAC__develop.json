@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Launcher gains a mod index with auto-updates, and Windows sound gaps are fixed",
+  "summary": "Thirty-two pull requests landed on the development line. The launcher can now install mods from a signed index through install links, resolve their dependencies and update them automatically with rollback (#161); that pull request says it has not yet been run on Windows, macOS or Android. Windows players get a fix for short gaps in the sound (#188), and phones get faster Enhanced graphics (#165).\n\nMost of the day's line count, 111618 of 138618 added lines, is #160 bringing in newer Ratchet & Clank decompilation code.\n\nThree larger pull requests opened and have not merged: an Audio tab for replacing sounds, music and speech (#164), and two drafts, round 3 of co-op (#166) and a native port of Going Commando (#191). That port builds and runs, and the hero walks and jumps in most levels, but it says it is not playable yet.",
+  "highlights": [
+    "Mods: the launcher's Browse view shows safety, region and AI-assisted badges (#182), and mods can now have their own data folder and see the save slot in use (#172).",
+    "Windows fixes: missing strands on Orxon's electric barriers (#171), blue explosion debris on Batalia (#178) and a crash from the sun shadow pass (#186).",
+    "Gameplay and visuals: a diagonal on the stick now moves as fast as a straight push (#168), and swimming on Pokitaru no longer shows the rooms under the sea floor (#194).",
+    "Android: Enhanced graphics options such as motion blur and colour correction are now in the in-game drawer (#183), and the CPU performance hint now targets 85% of a frame (#181).",
+    "Desktop: fullscreen on first start, a larger overlay on 4K and the 2026 Steam Controller without Steam (#177), a button to add the launcher to Steam (#184), and each game's accent colours (#179).",
+    "For developers: an Object Viewer and Forward+ local lighting in Enhanced Vulkan (#195), a freecam (#196), more useful crash reports (#175, #193), sturdier Vulkan error handling (#187) and faster Vulkan tests (#163, #198)."
+  ],
+  "writtenBy": "claude-opus-5-5"
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-30",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T05:50:49.780Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":50,"title":"Match 157 functions","author":"BlindFire1200","draft":false,"head":"pr/batch-2","events":["opened"],"mergedBy":"Veradictus","additions":15148,"deletions":3980,"changedFiles":207,"body":"Matches 157 functions: 126 in game code, 17 in network code (net.text) and 12 in the engine core (core.text). Also adds C for 33 near misses under nonmatching/.\n\n\n\n\nBefore\nAfter\n\n\n\n\nSCUS_974.65 functions (exact)\n4,151 of 18,085\n4,308 of 18,085\n\n\nSCUS_974.65 code (exact)\n5.57%\n5.77%\n\n\nSCES_532.85 functions (exact)\n4,553 of 18,113\n4,696 of 18,113\n\n\nSCES_532.85 code (exact)\n5.95%\n6.14%\n\n\n\nNotes:\n\n13 of these functions already had PAL-only C in src/pal/ from #45, under the same name. The src/ C…"}
+  ],
+  "commits": []
+}

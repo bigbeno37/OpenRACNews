@@ -1,0 +1,64 @@
+---
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Tag from '../../components/Tag.astro';
+import Layout from '../../layouts/Layout.astro';
+import { formatDayShort } from '../../lib/days.ts';
+import { branchUrl } from '../../lib/links.ts';
+import { branchHistory } from '../../lib/news.ts';
+import { tracking } from '../../lib/tracking.ts';
+
+const repos = await Promise.all(
+  tracking.repos.map(async (repo) => ({
+    repo,
+    branches: await Promise.all(repo.branches.map(async (branch) => ({ branch, latest: (await branchHistory(repo.name, branch.name))[0] }))),
+  })),
+);
+
+// The same numbered panels as "How it works" on openrac.dev.
+const steps = [
+  ['Snapshot', 'Just after midnight UTC, a job records what landed on each tracked branch during the day that just ended, along with its pull requests, issues and releases.'],
+  ['Report', 'An AI agent turns that record into a short report per branch and a summary of the day. Each pull request or issue it cites is checked against the record.'],
+  ['Publish', 'The site is rebuilt as plain static pages. A branch with no written report still shows its numbers, its commits and its pull requests.'],
+];
+---
+
+<Layout title="Branches" current="branches" description="The OpenRAC branches this site reports on, and how the daily reports are made.">
+  <Hero eyebrow="What's covered" compact>
+    <Fragment slot="shine">Every branch</Fragment>
+    <Fragment slot="title">we report on.</Fragment>
+    <p class="mt-5 max-w-[600px] text-soft">Each one has its own report for every day it was active. Follow a branch to see only its history.</p>
+  </Hero>
+
+  <div class="grid gap-3 pt-8 sm:gap-4 sm:pt-12">
+    {
+      repos.flatMap(({ repo, branches }) =>
+        branches.map(({ branch, latest }) => (
+          <a href={branchUrl(repo.name, branch.name)} class="surface surface-link grid gap-2 p-5 no-underline sm:p-6">
+            <span class="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+              <Tag repo={repo.name} />
+              <b class="font-orbitron text-[17px] font-bold text-gold">{repo.title}</b>
+              <span class="rounded-full border border-white/15 px-2 py-0.5 text-[10px] uppercase tracking-[.15em] text-dim sm:text-[11px]">{branch.name}</span>
+              <span class="text-[13px] text-dim sm:ml-auto">{latest ? `Last active ${formatDayShort(latest.date)}` : 'No activity on record'}</span>
+            </span>
+            <span class="max-w-[820px] text-soft">{branch.about}</span>
+          </a>
+        )),
+      )
+    }
+  </div>
+
+  <Section id="how" art="how" title="How this works" sub="A day means 00:00 to 23:59 UTC. A commit counts on the day it landed on the branch, whatever date it carries, so a finished day never changes.">
+    <div class="grid gap-4 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] sm:gap-5">
+      {
+        steps.map(([title, text], i) => (
+          <div class="surface relative flex flex-col overflow-hidden p-5 sm:p-6">
+            <span aria-hidden="true" class="absolute -top-1.5 right-3.5 font-orbitron text-[72px] font-bold leading-none text-brand/15 sm:text-[84px]">{i + 1}</span>
+            <h3 class="relative mb-2 font-orbitron text-[19px] font-bold text-gold">{title}</h3>
+            <p class="relative text-soft">{text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+</Layout>

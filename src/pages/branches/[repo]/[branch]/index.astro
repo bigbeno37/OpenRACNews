@@ -1,0 +1,52 @@
+---
+import Hero from '../../../../components/Hero.astro';
+import Row from '../../../../components/Row.astro';
+import Section from '../../../../components/Section.astro';
+import Layout from '../../../../layouts/Layout.astro';
+import { formatDay } from '../../../../lib/days.ts';
+import { count } from '../../../../lib/format.ts';
+import { reportUrl } from '../../../../lib/links.ts';
+import { branchFacts, branchHistory, type BranchDay } from '../../../../lib/news.ts';
+import type { TrackedBranch, TrackedRepo } from '../../../../lib/schema.ts';
+import { branchSlug, trackedBranches } from '../../../../lib/tracking.ts';
+
+export async function getStaticPaths() {
+  return Promise.all(
+    trackedBranches().map(async ({ repo, branch }) => ({
+      params: { repo: repo.name, branch: branchSlug(branch.name) },
+      props: { repo, branch, history: await branchHistory(repo.name, branch.name) },
+    })),
+  );
+}
+
+interface Props {
+  repo: TrackedRepo;
+  branch: TrackedBranch;
+  history: BranchDay[];
+}
+const { repo, branch, history } = Astro.props;
+---
+
+<Layout title={`${repo.title} ${branch.name}`} current="branches" description={branch.about}>
+  <Hero eyebrow={`${repo.name} · ${branch.name}`} compact>
+    <Fragment slot="shine">{repo.title}</Fragment>
+    <Fragment slot="title">{branch.name}</Fragment>
+    <p class="mt-5 max-w-[680px] text-soft">{branch.about}</p>
+  </Hero>
+  <Section id="history" art="activity" title={count(history.length, 'active day')}>
+    {
+      history.length > 0 ? (
+        <ul class="mt-6 grid grid-cols-[minmax(0,1fr)] gap-2.5">
+          {history.map((day) => (
+            <Row href={reportUrl(repo.name, branch.name, day.date)} title={day.report?.headline ?? branchFacts(day.facts)}>
+              <span slot="lead" class="flex-none font-orbitron text-[13px] font-semibold text-gold">{formatDay(day.date)}</span>
+              <span>{count(day.facts.totals.commits, 'commit')}</span>
+            </Row>
+          ))}
+        </ul>
+      ) : (
+        <p class="mt-6 text-dim">Nothing on record for this branch yet. It will appear here the first day something lands on it.</p>
+      )
+    }
+  </Section>
+</Layout>

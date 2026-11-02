@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-01",
+  "headline": "Launcher adds a mod index with auto-updates; Going Commando reaches 7760 of 8579 matches",
+  "summary": "The launcher's development line gained a signed mod index with install links, dependencies and auto-updates (OpenRAC#161), a fix for sound gaps on Windows (OpenRAC#188) and faster Enhanced graphics on phones (OpenRAC#165), while the stable line took one fix for a failing lighting bake on PAL level 11 (OpenRAC#189). Mod SDK 1.11.0 came out, and new versions of the Archipelago, item randomizer and difficulty mods followed (openrac-mods#26, openrac-mods#34).\n\nAmong the decompilations, where a matched function compiles to exactly the same bytes as the original game, Going Commando's USA v1.01 reached 7760 of 8579 functions, with its largest batch also lifting the game's other releases (rac2-decomp#386). Deadlocked's PAL version took 18 pull requests of matching work (rac4-decomp#75), and Ratchet & Clank had a 45-pull-request source cleanup that the pull requests say leaves all 5116 functions matching (rac1-decomp#209).\n\nA draft native port of Going Commando also opened (OpenRAC#191): it builds and runs, but it says it is not playable yet.",
+  "writtenBy": "claude-opus-5-5"
+}

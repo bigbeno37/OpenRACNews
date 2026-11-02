@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T05:51:15.909Z",
+  "issues": [
+    {"number":159,"title":"Enhanced Lighting 19 of 21 levels ready, 2 levels could not be prepared.","author":"Nlwilkins93","events":["closed"],"closedAs":"COMPLETED","body":"Log error:\n\n\nThe level needs too many lighting regions\nThe region plan exceeds the supported limit."},
+    {"number":173,"title":"Enhanced graphics bake fails on PAL level_11: \"invalid medial field connection in room 0 (swimming true)\"","author":"damixadkatakara","events":["opened","closed"],"closedAs":"COMPLETED","body":"Launcher version:0.10.0\nGame: Ratchet & Clank\nOS: Windows\nWhat happens:\nWhen baking the lighting (Enhanced graphics), the bake fails on level_11 with:\nopenrac-bake-error: \"The lighting tool could not finish\", stage \"Bake and verify grids\", level \"level_11\", failed_levels: 1\nThe native baker (openrac-probe-bake.exe, --threads 5, --resume) exits with status 1. The last line of its output is:\nprobe bake: invalid medial field connection in room 0 (swimming true): 404.25 531.75 223 to 405 532…"}
+  ],
+  "releases": [
+    {"tag":"sdk-v1.11.0","name":"Mod SDK 1.11.0","prerelease":false,"publishedAt":"2026-11-01T11:03:17Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.11.0, for the mod interface 1.11 (docs/port/MODS.md). SHA-256 of the archive: 834bf30b81425cc2648145b28df7393067ad4469f1a41cf8176205981a641c93"}
+  ]
+}

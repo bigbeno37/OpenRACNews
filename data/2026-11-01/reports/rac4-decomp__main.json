@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's PAL version gains matched functions as 18 pull requests land together",
+  "summary": "Lynder063 merged 18 pull requests of matching work for the PAL (European) release within about five minutes. A matched function compiles to exactly the same bytes as the original game. The largest are #54 with 30 functions, #75 with 22 and #72 with 17, and most of the rest come from Sumaiter in small groups of related helpers.\n\nMore is waiting: several pull requests opened during the day have not merged, the largest being #78 with 53 functions.",
+  "highlights": [
+    "#75 matches 22 game functions (1,056 bytes), including table reads, flag updates and state changes.",
+    "#72 matches 17 variants of a fixed-size hash table lookup (1,952 bytes).",
+    "Smaller groups include drawing wrappers (#57), 2D point transforms (#60), smoothing routines (#61) and interpolation helpers (#62).",
+    "Issue #73 shares findings from an inspection using PS2Recomp, including 5 matching functions (128 bytes), and #74 lands five functions totalling the same 128 bytes.",
+    "#56 lets contributors read a disc image from any path, without copying it into the project.",
+    "Still open: #78 (53 functions), #55 (21), #77 (6), #79 (1) and draft #71, which has 45 functions for the NTSC-U release and still needs PAL mapping."
+  ],
+  "writtenBy": "claude-opus-5-5"
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "capturedAt": "2026-11-02T05:51:15.908Z",
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":38,"deletions":1,"pushes":1,"forcePushes":0,"authors":["llesieur99"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-01T19:09:15Z","type":"pr_merge","actor":"pezzadev","before":"d015ea1c6925de90b4be91ddb349af83361d9d4b","after":"f53f202aef7ee107b0e97de11b2b2ea188f23cc7"}
+  ],
+  "pullRequests": [
+    {"number":189,"title":"fix(enhanced): require reciprocal clearance for medial paths","author":"llesieur99","draft":false,"head":"codex/fix-level11-probe-connection","events":["opened","merged"],"mergedBy":"pezzadev","additions":38,"deletions":1,"changedFiles":2,"body":"PAL level 11's enhanced-lighting bake can fail with invalid medial field connection in room 0 (swimming true). The same clearance query returns blocked in one direction and clear in the other, while the medial skeleton stores undirected edges. A later traversal then encounters an edge it cannot validate.\nThe padded body/head rays now check both directions. Near-ray bias can hide an obstacle immediately beside the reverse ray's origin, so either direction's occlusion must reject the connection.…"}
+  ],
+  "commits": [
+    {"sha":"f53f202aef7ee107b0e97de11b2b2ea188f23cc7","headline":"fix(enhanced): require reciprocal clearance for medial paths","author":"llesieur99","committedAt":"2026-11-01T19:09:14Z","merge":false,"landed":true,"additions":38,"deletions":1,"body":"The endpoint overlap and near-ray bias can hide an obstacle in one\ndirection of a body sweep. The medial graph is undirected, so smoothing\ncan retain an edge that later fails when simplified from the other end.\nCheck both directions before accepting its body/head clearance.\n\nThe synthetic endpoint-obstacle test fails with the old sweep for both\nwalking and swimming. With the fix, PAL level 11 bakes all 254 regions\nusing unchanged traversal settings. Probe-tool Python tests: 117 pass.\nNative…"}
+  ]
+}

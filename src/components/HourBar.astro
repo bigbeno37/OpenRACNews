@@ -1,0 +1,30 @@
+---
+// The day as 24 segments, drawn like openrac.dev's progress bars: one per UTC hour, brighter the more
+// landed. The steps are fixed (lib/format.ts), so a segment means the same on every card and day.
+import { describeHours, hourLabel, hourOpacity, landingsByHour } from '../lib/format.ts';
+import type { Push } from '../lib/schema.ts';
+
+interface Props {
+  pushes: Push[];
+}
+const hours = landingsByHour(Astro.props.pushes);
+---
+
+<div>
+  <div role="img" aria-label={describeHours(hours)} class="grid grid-cols-24 gap-[2px]">
+    {
+      hours.map((landings, hour) => (
+        <span title={hourLabel(hour, landings)} class="block py-1.5">
+          <span class="relative block h-1.5 overflow-hidden rounded-full bg-white/10">
+            {landings > 0 && <span class="absolute inset-0 rounded-full bg-(--tx)" style={`opacity: ${hourOpacity(landings)}`} />}
+          </span>
+        </span>
+      ))
+    }
+  </div>
+  <div aria-hidden="true" class="flex justify-between text-[11px] tabular-nums text-dim">
+    <span>00:00</span>
+    <span>12:00</span>
+    <span>23:59 UTC</span>
+  </div>
+</div>

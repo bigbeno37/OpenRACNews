@@ -1,0 +1,15 @@
+---
+// A line in a list, as in "Recent activity" on openrac.dev. Slot "lead" goes before the title; the
+// default slot goes after it, on the right.
+interface Props {
+  href: string;
+  title: string;
+}
+const { href, title } = Astro.props;
+---
+
+<li class="flex min-w-0 flex-wrap items-center gap-x-3.5 gap-y-1.5 rounded-xl border border-line bg-panel px-4 py-3">
+  <slot name="lead" />
+  <a href={href} class="order-3 min-w-0 basis-full truncate text-text no-underline hover:text-amber sm:order-none sm:flex-1 sm:basis-0" title={title}>{title}</a>
+  <span class="flex flex-none flex-wrap items-center gap-x-3 gap-y-1 text-[13px] tabular-nums text-dim"><slot /></span>
+</li>

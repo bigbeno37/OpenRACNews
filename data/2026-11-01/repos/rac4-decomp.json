@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac4-decomp",
+  "capturedAt": "2026-11-02T05:50:54.411Z",
+  "issues": [
+    {"number":73,"title":"PAL Gladiator: 5 matching C functions, reconstruction drafts and PS2Recomp findings","author":"Sumaiter","events":["opened"],"closedAs":null,"body":"Sharing PAL Gladiator game reconstruction results from a local PS2Recomp-assisted inspection, compared against OpenRAC main at fe6ec0d2e9d209ad3a84dd33a188120ea12f030c.\nThe contribution is 5 new matching C functions (128 bytes), 3 unmatched C drafts, and a classified index of the translated main/frontend inventory. The 13,713 generated ranges are not claimed as 13,713 decompiled functions.\nSource and evidence\n\nMatching C and map/report changes — commit 73abe1b\nResearch package and complete…"}
+  ],
+  "releases": []
+}

@@ -1,0 +1,25 @@
+---
+// The top of a page, as on openrac.dev: embers, a soft gold glow, a small heading and a large one.
+import Particles from './Particles.astro';
+
+interface Props {
+  eyebrow: string;
+  /** Slot "shine" holds the words in moving gold, in front of the rest of the heading. */
+  compact?: boolean;
+}
+const { eyebrow, compact = false } = Astro.props;
+---
+
+<div class:list={['relative isolate', compact ? 'pb-4 pt-12 sm:pb-6 sm:pt-20' : 'pb-8 pt-12 sm:pb-16 sm:pt-24']}>
+  <Particles />
+  <div aria-hidden="true" class="absolute -right-56 -top-24 -z-10 size-[680px] bg-[radial-gradient(closest-side,rgb(214_160_32/0.3),transparent)] will-change-transform sm:animate-drift"></div>
+
+  <p class="mb-4 font-orbitron text-[clamp(9px,2.35vw,11px)] font-bold uppercase tracking-[.2em] text-brand after:mt-2 after:block after:h-[3px] after:w-11 after:rounded-sm after:bg-brand after:content-[''] sm:text-[13px] sm:tracking-[.28em]">
+    {eyebrow}
+  </p>
+  <h1 class="max-w-[900px] text-balance font-audiowide text-[clamp(28px,5.2vw,52px)] leading-[1.1]">
+    <span class="animate-shine bg-gradient-to-r from-amber via-[#e8a317] to-gold bg-[length:220%_100%] bg-clip-text text-transparent"><slot name="shine" /></span>{' '}
+    <slot name="title" />
+  </h1>
+  <slot />
+</div>

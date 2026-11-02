@@ -1,0 +1,30 @@
+---
+import DayDigest from '../../components/DayDigest.astro';
+import Layout from '../../layouts/Layout.astro';
+import { formatDay, formatDayShort } from '../../lib/days.ts';
+import { dayUrl } from '../../lib/links.ts';
+import { loadDays, type Day } from '../../lib/news.ts';
+
+export async function getStaticPaths() {
+  const days = await loadDays();
+  return days.map((day, i) => ({
+    params: { date: day.date },
+    props: { day, newer: days[i - 1], older: days[i + 1] },
+  }));
+}
+
+interface Props {
+  day: Day;
+  newer?: Day;
+  older?: Day;
+}
+const { day, newer, older } = Astro.props;
+---
+
+<Layout title={formatDay(day.date)} description={day.overview?.headline} current="days">
+  <DayDigest day={day} />
+  <nav aria-label="Other days" class="flex flex-wrap justify-between gap-3 pb-10">
+    {older ? <a href={dayUrl(older.date)} class="btn btn-sm">Earlier: {formatDayShort(older.date)}</a> : <span></span>}
+    {newer && <a href={dayUrl(newer.date)} class="btn btn-sm">Later: {formatDayShort(newer.date)}</a>}
+  </nav>
+</Layout>

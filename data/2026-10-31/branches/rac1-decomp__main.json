@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T05:50:25.640Z",
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":2,"deletions":2,"pushes":1,"forcePushes":0,"authors":["Lynder063"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-31T10:40:39Z","type":"push","actor":"Lynder063","before":"0f0bfcfe98553a7a0ea9a26db94ff00deecf8be5","after":"693667f240575350b3feedc312b10c3d3b4a7b83"}
+  ],
+  "pullRequests": [
+    {"number":161,"title":"refactor(readability): clarify generated names across game code","author":"Lynder063","draft":false,"head":"docs/pal-v2-readability-plan","events":["closed"],"mergedBy":null,"additions":3977,"deletions":4169,"changedFiles":86,"body":"Clarify generated names and comments while preserving descriptive names, types and code placement.\n1,251 executable C functions exact; canonical report build, layout, image and all-version/report checks pass."}
+  ],
+  "commits": [
+    {"sha":"693667f240575350b3feedc312b10c3d3b4a7b83","headline":"fix(l10): correct class 1199 (Screamer) behavior doc comments","author":"Lynder063","committedAt":"2026-10-31T10:40:31Z","merge":false,"landed":true,"additions":2,"deletions":2,"body":"The doc comment incorrectly stated that class 1199 dies upon diving at\nits target. It actually retreats to its spawn point and only enters\ndeath state 13 when health is depleted by lethal damage.\n\nCo-Authored-By: Antigravity"}
+  ]
+}

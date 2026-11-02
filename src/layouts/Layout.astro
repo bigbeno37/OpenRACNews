@@ -1,0 +1,112 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/orbitron';
+import '@fontsource/audiowide';
+import '../styles/global.css';
+import Icons from '../components/Icons.astro';
+import Logo from '../components/Logo.astro';
+import { url } from '../lib/links.ts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  current?: 'latest' | 'days' | 'branches';
+}
+const SITE = 'OpenRAC News';
+const {
+  title,
+  description = 'What happened today across the OpenRAC Ratchet & Clank decompilation projects, the launcher and the mods.',
+  current,
+} = Astro.props;
+const pageTitle = title ? `${title} · ${SITE}` : `${SITE} · Daily digest of the OpenRAC projects`;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+
+const nav = [
+  { id: 'latest', href: url('/'), label: 'Latest' },
+  { id: 'days', href: url('/days/'), label: 'Every day' },
+  { id: 'branches', href: url('/branches/'), label: 'Branches' },
+] as const;
+
+// The same classes as openrac.dev's header: dark text on the gold bar, and a dark pill for the current page.
+const link = 'flex min-h-11 items-center rounded-full px-3.5 text-[17px] font-bold no-underline transition-colors min-[821px]:min-h-9 min-[821px]:whitespace-nowrap min-[821px]:text-[15px]';
+const linkOn = 'bg-white/[.06] text-amber min-[821px]:bg-[#1b1206]';
+const linkOff = 'text-hi hover:bg-white/5 min-[821px]:text-[#2a1800] min-[821px]:hover:bg-black/10';
+const pill = 'flex min-h-11 items-center justify-center gap-2 rounded-full px-4 text-sm font-semibold no-underline transition-colors min-[821px]:min-h-9 min-[821px]:whitespace-nowrap border border-black/25 bg-[#1b1206] text-amber hover:bg-[#2a1800]';
+const footerLink = 'text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#d6a020" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE} />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <link rel="alternate" type="application/rss+xml" title={SITE} href={url('/rss.xml')} />
+  </head>
+  <body class="font-sans text-base leading-relaxed antialiased">
+    <header style="view-transition-name: site-header" class="bar-stripes fixed inset-x-0 top-0 z-30 border-b border-black/30 text-black shadow-[inset_0_1px_0_rgb(255_255_255/0.35),0_4px_24px_rgb(0_0_0/0.45)]">
+      <div class="mx-auto flex h-[50px] max-w-[1080px] items-center gap-6 px-4">
+        <a href={url('/')} class="group flex items-center gap-2.5 text-[#1b1206] no-underline" aria-label="OpenRAC News home">
+          <Logo height={34} class="transition-opacity group-hover:opacity-85" />
+          <span aria-hidden="true" class="font-audiowide text-[17px] leading-none transition-opacity group-hover:opacity-85">News</span>
+        </a>
+
+        <nav aria-label="Main" class="hidden flex-1 items-center gap-1 min-[821px]:flex">
+          {nav.map((item) => <a href={item.href} aria-current={current === item.id ? 'page' : undefined} class={`${link} ${current === item.id ? linkOn : linkOff}`}>{item.label}</a>)}
+        </nav>
+        <div class="hidden items-center gap-2 min-[821px]:flex">
+          <a href={url('/rss.xml')} class={pill}><Icons name="rss" class="size-3.5" />RSS</a>
+          <a href="https://openrac.dev/" class={pill}>openrac.dev</a>
+          <a href="https://github.com/OpenRAC" aria-label="OpenRAC on GitHub" title="OpenRAC on GitHub" class="flex size-9 flex-none items-center justify-center rounded-full bg-[#1b1206] text-text transition-colors hover:bg-[#2a1800]"><Icons name="github" class="size-[18px]" /></a>
+        </div>
+
+        <!-- A details element is all the phone menu needs: it opens and closes without any script. -->
+        <details class="site-menu group/menu ml-auto min-[821px]:hidden">
+          <summary aria-label="Menu" class="relative flex size-10 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-black/10 active:bg-black/15">
+            <span aria-hidden="true" class="absolute left-[11px] top-[19px] h-0.5 w-[18px] rounded bg-[#1b1206] transition before:absolute before:left-0 before:top-[-6px] before:h-0.5 before:w-[18px] before:rounded before:bg-[#1b1206] before:transition before:content-[''] after:absolute after:left-0 after:top-[6px] after:h-0.5 after:w-[18px] after:rounded after:bg-[#1b1206] after:transition after:content-[''] group-open/menu:bg-transparent group-open/menu:before:translate-y-[6px] group-open/menu:before:rotate-45 group-open/menu:after:-translate-y-[6px] group-open/menu:after:-rotate-45"></span>
+          </summary>
+          <nav aria-label="Main" class="absolute inset-x-0 top-full flex flex-col gap-3 border-b border-white/10 bg-ink px-4 pb-[18px] pt-3.5 shadow-[0_20px_30px_rgb(0_0_0/0.4)]">
+            <div class="flex flex-col gap-1">
+              {nav.map((item) => <a href={item.href} aria-current={current === item.id ? 'page' : undefined} class={`${link} ${current === item.id ? linkOn : linkOff}`}>{item.label}</a>)}
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a href={url('/rss.xml')} class={pill}><Icons name="rss" class="size-3.5" />RSS</a>
+              <a href="https://openrac.dev/" class={pill}>openrac.dev</a>
+            </div>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <!-- Glows in the hero reach past the viewport; clip them so phones never scroll sideways. -->
+    <div class="overflow-x-clip">
+      <main class="mx-auto min-h-[70vh] max-w-[1080px] px-4 pt-[50px]">
+        <slot />
+      </main>
+    </div>
+
+    <footer class="mt-8 border-t border-line bg-ink-deep py-10 text-[13px] text-dim">
+      <div class="mx-auto grid max-w-[1080px] gap-5 px-4 sm:grid-cols-[auto_1fr] sm:gap-x-10">
+        <a href={url('/')} aria-label="OpenRAC News home" class="w-fit text-hi no-underline opacity-90 hover:opacity-100"><Logo height={26} accent /></a>
+        <div class="grid gap-2">
+          <p class="max-w-[820px]">
+            OpenRAC News · unofficial community project · <a class={footerLink} href="https://openrac.dev/">openrac.dev</a> · <a class={footerLink} href="https://github.com/OpenRAC">GitHub</a> · <a class={footerLink} href={url('/rss.xml')}>RSS</a>
+          </p>
+          <p class="max-w-[820px]">
+            Each day runs from 00:00 to 23:59 UTC. Numbers come straight from GitHub. The written reports are generated by AI from those numbers, so check the linked commits and pull requests for the details. <a class={footerLink} href={url('/branches/#how')}>How this works</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

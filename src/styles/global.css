@@ -1,0 +1,142 @@
+/* The design system of openrac.dev (OpenRAC/openrac-site, src/app/globals.css, MIT licence), trimmed to
+   what this site uses. Keep names and values the same as there, so the two can stay in step. */
+@import "tailwindcss";
+
+/* Snapshots are full of text that looks like class names. */
+@source not "../../data";
+
+@theme inline {
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-audiowide: "Audiowide", "Inter Variable", sans-serif;
+  --font-orbitron: "Orbitron Variable", "Inter Variable", sans-serif;
+}
+
+@theme {
+  /* Neutral darks with a hair of violet: the page, raised panels, the footer. */
+  --color-ink: #12121a;
+  --color-ink-deep: #0c0c12;
+  --color-panel: #1d1d27;
+  --color-panel-hi: #23232f;
+  --color-brand: #d6a020;
+  --color-amber: #f5c040;
+  --color-gold: #ffe08f;
+  /* Text, light to quiet. Neutral rather than blue, so the gold is the only accent. */
+  --color-hi: #e6e6ec;
+  --color-soft: #b4b4bf;
+  --color-dim: #8b8b98;
+  --color-text: #efeff3;
+  --color-body: #cacad3;
+  --color-line: rgb(255 255 255 / 0.09);
+
+  --animate-rise: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-drift: drift 16s ease-in-out infinite alternate;
+  --animate-shine: shine 6s linear infinite;
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(26px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes drift {
+    to { transform: translate3d(50px, 36px, 0) scale(1.12); }
+  }
+  @keyframes shine {
+    to { background-position: 220% 0; }
+  }
+}
+
+/* Hover effects only for a real pointer: on touch screens a tap leaves :hover stuck under the finger. */
+@custom-variant hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
+/* The header bar: wide stripes of two close golds, as the launcher draws it. */
+@utility bar-stripes {
+  background: repeating-linear-gradient(35deg, #c99222 0 20px, #bd8619 20px 40px);
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgb(255 255 255 / 0.18);
+    background: color-mix(in srgb, white 3%, var(--color-ink));
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, filter 0.2s ease;
+  }
+  .btn-primary {
+    border-color: var(--color-amber);
+    background: linear-gradient(to bottom, var(--color-amber), #e8a317);
+    color: #1a0d00;
+    box-shadow: 0 6px 24px rgb(232 163 23 / 0.3);
+  }
+  .btn-sm {
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover { transform: translateY(-2px); border-color: var(--color-amber); box-shadow: 0 8px 24px rgb(0 0 0 / 0.4); }
+    .btn-primary:hover { filter: brightness(1.08); box-shadow: 0 8px 28px rgb(232 163 23 / 0.4); }
+  }
+
+  /* A raised panel. */
+  .surface {
+    border-radius: 1rem;
+    border: 1px solid var(--color-line);
+    background: color-mix(in srgb, white 1.8%, var(--color-ink));
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .surface-link:hover { transform: translateY(-3px); border-color: var(--color-brand); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* The fixed header (50 px) covers the top of the page; anchors stop below it. */
+  scroll-padding-top: 66px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-ink);
+}
+body { background: var(--color-ink); color: var(--color-text); }
+::selection { background: rgb(245 192 64 / 0.35); color: #fff; }
+:focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; }
+
+details[open] > summary .plus { transform: rotate(45deg); }
+/* Not the phone menu: it must cover the page completely from the moment it opens. */
+details:not(.site-menu)[open] > :not(summary) { animation: rise 0.35s ease both; }
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* A full page load within the site crossfades, and the header stays put. No script needed. */
+@view-transition { navigation: auto; }
+::view-transition-group(site-header) { animation: none; z-index: 100; }
+::view-transition-old(site-header) { display: none; }
+::view-transition-new(site-header) { animation: none; }
+::view-transition { pointer-events: none; }
+::view-transition-old(root) { animation: 160ms ease-in both vt-fade reverse; }
+::view-transition-new(root) { animation: 260ms ease-out 100ms both vt-fade, 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both vt-rise; }
+@keyframes vt-fade { from { opacity: 0; } }
+@keyframes vt-rise { from { translate: 0 14px; } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

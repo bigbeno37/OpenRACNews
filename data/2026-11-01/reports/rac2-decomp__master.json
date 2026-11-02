@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 reaches 7760 of 8579 matched functions",
+  "summary": "Five batches of matching work landed. A matched function compiles to exactly the same bytes as the original game. For USA v1.01, the progress commit after #384 reported 7605 of 8578 functions, and the day's last one reports 7760 of 8579.\n\nThe other releases moved further. The table in #386 puts USA v2.00 at 7,586 of 8,634 functions and 80.93% of code, up from 50.40%, and Europe/Australia at 6,992 of 8,672 functions and 54.14% of code, up from 22.85%.",
+  "highlights": [
+    "#386 is the day's largest batch. Besides the release gains above, it covers the lock-on tether family, including a commit of 27 functions, and two compiler fixes.",
+    "#384 matches 453 functions: 106 in the boot program and 347 in levels.",
+    "#387 matches 13 more functions in the Yeedil and Aranos prison levels, and fixes an earlier function for the Europe/Australia and USA v2.00 releases.",
+    "#385 matches 3 level functions, including a trail drawer and a dust puff state, and adds 11 notes on functions that are close to matching but not there yet.",
+    "#388 matches `func_00292078` at all 28 places it appears in USA v1.01.",
+    "#389 opened as a draft and has not merged. It holds working, non-matching C for the native port in OpenRAC, and adds no functions to the match count."
+  ],
+  "writtenBy": "claude-opus-5-5"
+}
