@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { renderBranchBrief, renderRepoBrief } from './brief.ts';
 import { calendarMonths } from './calendar.ts';
 import { allProjectsDayOpacity, dayOpacity, describeHours, formatChange, formatPercent, hourOpacity, landingsByHour } from './format.ts';
 import { paragraphs, referencesIn, tokenize, toEscapedHtml } from './prose.ts';
@@ -103,6 +104,49 @@ test('progress figures read as openrac.dev shows them', () => {
   assert.equal(formatChange(-0.02), '−0.02');
   assert.equal(formatChange(0.001), undefined);
   assert.equal(formatChange(-0.001), undefined);
+});
+
+test('a brief keeps everything a writer needs, and says repeated things once', () => {
+  const snapshot = {
+    date: '2026-11-01',
+    repo: 'OpenRAC',
+    branch: 'develop',
+    capturedAt: 'x',
+    progress: { sha: 'abc', code: { done: 75, total: 100 }, functions: { done: 3, total: 4 }, data: null },
+    totals: { commits: 2, merges: 1, landed: 2, additions: 10, deletions: 2, pushes: 1, forcePushes: 1, authors: ['amy'] },
+    warnings: ['Could not compare'],
+    pushes: [],
+    pullRequests: [{ number: 7, title: 'Add a thing', author: 'amy', draft: true, head: 'x', events: ['opened', 'merged'], mergedBy: 'amy', additions: 10, deletions: 2, changedFiles: 3, body: 'Not yet run on\nWindows.' }],
+    commits: [
+      { sha: '1234567890', headline: 'Add a thing (#7)', author: 'amy', committedAt: 'x', merge: false, landed: true, additions: 10, deletions: 2, body: 'Repeats the pull request.' },
+      { sha: 'abcdefabcd', headline: 'Direct fix', author: 'amy', committedAt: 'x', merge: false, landed: true, additions: 1, deletions: 0, body: 'Explains itself.' },
+      { sha: 'ffffffffff', headline: 'From a branch', author: 'amy', committedAt: 'x', merge: false, landed: false },
+      { sha: 'eeeeeeeeee', headline: "Merge branch 'main'", author: 'amy', committedAt: 'x', merge: true, landed: false },
+    ],
+  } as unknown as BranchSnapshot;
+  const text = renderBranchBrief(snapshot, 'Where work lands.', { date: '2026-10-31', progress: { sha: 'old', code: { done: 50, total: 100 }, functions: null, data: null } });
+  assert.match(text, /What this branch is: Where work lands\./);
+  assert.match(text, /75\.00% of code .*3 of 4 functions\. Previously 50\.00% of code on 2026-10-31\./);
+  assert.match(text, /#7 \[opened, merged, draft\] by amy, \+10 -2 in 3 files: Add a thing/);
+  assert.match(text, /Not yet run on Windows\./);
+  assert.match(text, /Warning: Could not compare/);
+  assert.match(text, /History was rewritten 1 times/);
+  assert.match(text, /Explains itself\./);
+  assert.doesNotMatch(text, /Repeats the pull request/);
+  assert.match(text, /- From a branch/);
+  assert.doesNotMatch(text, /Merge branch/);
+});
+
+test('a brief for a repo lists its releases and issues', () => {
+  const text = renderRepoBrief({
+    date: '2026-11-01',
+    repo: 'OpenRAC',
+    capturedAt: 'x',
+    releases: [{ tag: 'v1', name: 'One', prerelease: true, publishedAt: 'x', author: null, body: 'Notes' }],
+    issues: [{ number: 3, title: 'Bug', author: 'amy', events: ['closed'], closedAs: 'COMPLETED' }],
+  });
+  assert.match(text, /v1 \(One\) \[prerelease\]\n {2}Notes/);
+  assert.match(text, /#3 \[closed, COMPLETED\] by amy: Bug/);
 });
 
 test('a calendar month starts on the right weekday and fills out its weeks', () => {

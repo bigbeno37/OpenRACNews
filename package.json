@@ -16,6 +16,7 @@
     "test": "node --test \"src/lib/**/*.test.ts\"",
     "snapshot": "node scripts/snapshot.ts",
     "reports:todo": "node scripts/reports.ts todo",
+    "reports:brief": "node scripts/reports.ts brief",
     "reports:check": "node scripts/reports.ts check",
     "reports:write": "bash scripts/write-reports.sh"
   },

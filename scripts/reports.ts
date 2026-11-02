@@ -2,10 +2,13 @@
 //
 //   pnpm --silent reports:todo         what still needs writing, for days within `lookbackDays`
 //   pnpm --silent reports:todo --all   the same across every day on record
+//   pnpm --silent reports:todo --date 2026-11-01   the same for one day
+//   pnpm --silent reports:brief data/2026-11-01/branches/OpenRAC__develop.json   a snapshot, compact, to write from
 //   pnpm --silent reports:check        validates everything written so far
 //   pnpm --silent reports:check --prune   as above, then deletes whatever failed
 import { existsSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
+import { renderBranchBrief, renderRepoBrief } from '../src/lib/brief.ts';
 import { recentDays } from '../src/lib/days.ts';
 import { checkBranchReport, checkOverview, knownNumbers } from '../src/lib/reportChecks.ts';
 import type { BranchSnapshot, RepoSnapshot } from '../src/lib/schema.ts';
@@ -23,9 +26,35 @@ const allDays = () =>
         .sort()
     : [];
 
-function todo(everyDay: boolean) {
+/** Prints a snapshot as a compact brief for writing from. */
+function brief(path: string | undefined) {
+  if (!path || !existsSync(path)) {
+    console.error(`No snapshot at ${path ?? '(no path given)'}. Pass a file under data/<date>/branches/ or data/<date>/repos/.`);
+    process.exitCode = 2;
+    return;
+  }
+  if (path.includes('/repos/')) {
+    console.log(renderRepoBrief(repoSnapshotSchema.parse(readJson(path))));
+    return;
+  }
+  const snapshot = branchSnapshotSchema.parse(readJson(path));
+  const about = trackedBranches().find(({ repo, branch }) => repo.name === snapshot.repo && branch.name === snapshot.branch)?.branch.about ?? '';
+  // The newest earlier figures, so the brief can say how far they moved.
+  const file = `${branchKey(snapshot.repo, snapshot.branch)}.json`;
+  const previous = allDays()
+    .filter((day) => day < snapshot.date)
+    .reverse()
+    .flatMap((day) => {
+      const earlier = join(DATA_DIR, day, 'branches', file);
+      const progress = existsSync(earlier) ? branchSnapshotSchema.parse(readJson(earlier)).progress : undefined;
+      return progress ? [{ date: day, progress }] : [];
+    })[0];
+  console.log(renderBranchBrief(snapshot, about, previous));
+}
+
+function todo(everyDay: boolean, onlyDate?: string) {
   const window = new Set(recentDays(tracking.lookbackDays));
-  const days = allDays().filter((day) => everyDay || window.has(day));
+  const days = allDays().filter((day) => (onlyDate ? day === onlyDate : everyDay || window.has(day)));
   const lines: string[] = [];
   for (const day of days) {
     const dir = join(DATA_DIR, day);
@@ -104,9 +133,12 @@ function check(prune: boolean) {
 }
 
 const [command, ...flags] = process.argv.slice(2);
-if (command === 'todo') todo(flags.includes('--all'));
-else if (command === 'check') check(flags.includes('--prune'));
+if (command === 'todo') {
+  const dateFlag = flags.indexOf('--date');
+  todo(flags.includes('--all'), dateFlag >= 0 ? flags[dateFlag + 1] : undefined);
+} else if (command === 'check') check(flags.includes('--prune'));
+else if (command === 'brief') brief(flags[0]);
 else {
-  console.error('Usage: reports.ts todo [--all] | check [--prune]');
+  console.error('Usage: reports.ts todo [--all | --date YYYY-MM-DD] | check [--prune] | brief <snapshot file>');
   process.exitCode = 2;
 }
