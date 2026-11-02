@@ -20,7 +20,8 @@ permissions='{news={filesystem={":minimal"="read","/nix/store"="read","/etc/nixo
 if [[ -n "${REPORT_DATE:-}" ]]; then
   days="$REPORT_DATE"
 else
-  days="$(pnpm --silent reports:todo | grep -oE 'data/[0-9]{4}-[0-9]{2}-[0-9]{2}' | cut -d/ -f2 | sort -u)"
+  # grep finds nothing when everything's written, which isn't a failure.
+  days="$(pnpm --silent reports:todo | { grep -oE 'data/[0-9]{4}-[0-9]{2}-[0-9]{2}' || true; } | cut -d/ -f2 | sort -u)"
 fi
 
 if [[ -z "$days" ]]; then
