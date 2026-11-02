@@ -5,8 +5,7 @@
 //   pnpm --silent reports:todo --date 2026-11-01   the same for one day
 //   pnpm --silent reports:brief data/2026-11-01/branches/OpenRAC__develop.json   a snapshot, compact, to write from
 //   pnpm --silent reports:check        validates everything written so far
-//   pnpm --silent reports:check --prune   as above, then deletes whatever failed
-import { existsSync, readdirSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { renderBranchBrief, renderRepoBrief } from '../src/lib/brief.ts';
 import { recentDays } from '../src/lib/days.ts';
@@ -108,7 +107,7 @@ function issuesIn(path: string, day: string, known: Map<string, Set<number>>): s
   return [...errors, ...checkBranchReport(report, known)];
 }
 
-function check(prune: boolean) {
+function check() {
   let failed = 0;
   let checked = 0;
   for (const day of allDays()) {
@@ -122,23 +121,19 @@ function check(prune: boolean) {
       if (errors.length === 0) continue;
       failed++;
       console.error(`${path}\n${errors.map((e) => `  - ${e}`).join('\n')}`);
-      if (prune) {
-        rmSync(path);
-        console.error('  deleted');
-      }
     }
   }
-  console.log(`${checked} checked, ${failed} failed${prune && failed ? ' and deleted' : ''}.`);
-  if (failed && !prune) process.exitCode = 1;
+  console.log(`${checked} checked, ${failed} failed.`);
+  if (failed) process.exitCode = 1;
 }
 
 const [command, ...flags] = process.argv.slice(2);
 if (command === 'todo') {
   const dateFlag = flags.indexOf('--date');
   todo(flags.includes('--all'), dateFlag >= 0 ? flags[dateFlag + 1] : undefined);
-} else if (command === 'check') check(flags.includes('--prune'));
+} else if (command === 'check') check();
 else if (command === 'brief') brief(flags[0]);
 else {
-  console.error('Usage: reports.ts todo [--all | --date YYYY-MM-DD] | check [--prune] | brief <snapshot file>');
+  console.error('Usage: reports.ts todo [--all | --date YYYY-MM-DD] | check | brief <snapshot file>');
   process.exitCode = 2;
 }

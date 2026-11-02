@@ -112,10 +112,11 @@ pnpm build          # build the static site into dist/
 pnpm test           # unit tests
 pnpm check          # type check
 pnpm snapshot       # collect the last `lookbackDays` finished days (--days N or --date YYYY-MM-DD for others)
+pnpm news           # the whole daily update, inside nix-shell: see README.md
 ```
 
 - Static output only, with no server or client framework. The one script on the site is the decorative hero animation. The date picker works with the `popover` attribute and CSS alone.
-- The site shows one day at a time, and the navbar's date picker chooses which. `/days/<date>/` is every project on that day, `/days/<date>/<repo>/` is one project, and `/days/<date>/<repo>/<branch>/` lists that branch's pull requests and commits. `/` shows the latest day. These pages must only use data from on or before their date (`projectOn` in `src/lib/news.ts`), so nothing from later leaks into a past day.
+- The site shows one day at a time, and the navbar's date picker chooses which. `/2026/11/01/` is every project on that day, `/2026/11/01/<repo>/` is one project, and `/2026/11/01/<repo>/<branch>/` lists that branch's pull requests and commits. `/` redirects to the latest day. Only days with a written report get pages (`viewableDays` in `src/lib/news.ts`), though other days stay on record because later ones look back at them. These pages must only use data from on or before their date (`projectOn`), so nothing from later leaks into a past day.
 - Internal links must go through `src/lib/links.ts`, because the site is served from a sub-path on GitHub Pages.
 - The look comes from [openrac.dev](https://openrac.dev) (`OpenRAC/openrac-site`). `src/styles/global.css` and the components keep its tokens and class names, so match that site when changing the design. On a project's page the accents and the bar take that game's colours, as the launcher does (`src/lib/themes.ts`).
 - When starting the dev server in the background, use `astro dev --background`, with `astro dev stop`, `astro dev status` and `astro dev logs` to manage it. Astro's docs are at <https://docs.astro.build>.
