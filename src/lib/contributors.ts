@@ -36,7 +36,7 @@ export function contributorsOn(repo: string, facts: BranchSnapshot): Contributor
   const { branch, date } = facts;
   const people = new Map<string, { work: number; pulls: boolean; since: string; linked: boolean }>();
   const person = (name: string) => {
-    if (!people.has(name)) people.set(name, { work: 0, pulls: false, since: date, linked: LOGIN.test(name) });
+    if (!people.has(name)) people.set(name, { work: 0, pulls: false, since: date, linked: false });
     return people.get(name)!;
   };
   for (const commit of facts.commits) {
@@ -44,12 +44,15 @@ export function contributorsOn(repo: string, facts: BranchSnapshot): Contributor
     entry.work += 1;
     const written = dayOf(commit.committedAt);
     if (written < entry.since) entry.since = written;
-    if (commit.unlinked) entry.linked = false;
+    // Names in older snapshots aren't marked, but a name with a space can't be a login.
+    if (!commit.unlinked && LOGIN.test(commit.author)) entry.linked = true;
   }
   for (const pullRequest of facts.pullRequests) {
     const entry = person(pullRequest.author);
     entry.work += 1;
     entry.pulls = true;
+    // A pull request is always by an account, even if the same name also signs a commit with no account.
+    entry.linked = true;
   }
   return [...people]
     .sort(([, a], [, b]) => b.work - a.work)

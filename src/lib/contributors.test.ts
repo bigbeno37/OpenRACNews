@@ -73,6 +73,12 @@ test('a commit author with no account gets neither a link nor a picture', () => 
   assert.deepEqual(people, [{ name: 'Stephan Kast' }, { name: 'brian' }]);
 });
 
+test('a commit with no account does not cost someone the link their pull request earns', () => {
+  const [person] = contributorsOn('rac1-decomp', snapshot([commit('ana', '2026-10-31T09:00:00Z', { unlinked: true })], [pullRequest('ana')]));
+  assert.ok(person!.href);
+  assert.ok(person!.avatar);
+});
+
 test('the busiest come first, and each person appears once', () => {
   const people = contributorsOn('rac1-decomp', snapshot([commit('ana', '2026-10-31T09:00:00Z'), commit('ben', '2026-10-31T09:00:00Z'), commit('ben', '2026-10-31T10:00:00Z')], [pullRequest('cam'), pullRequest('ben', 2)]));
   assert.deepEqual(people.map((p) => p.name), ['ben', 'ana', 'cam']);

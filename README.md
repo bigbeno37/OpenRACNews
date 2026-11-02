@@ -23,7 +23,7 @@ It's a static [Astro](https://astro.build) site, styled after [openrac.dev](http
 ### First-time setup
 
 ```sh
-git clone <this repository's URL> OpenRACNews
+nix-shell -p git --run "git clone <this repository's URL> OpenRACNews"
 cd OpenRACNews
 nix-shell                          # the first run downloads everything, which takes a few minutes
 
@@ -36,6 +36,8 @@ codex login --device-auth          # for a machine with no browser
 ```
 
 To use an API key instead of a ChatGPT login, run `printenv OPENAI_API_KEY | codex login --with-api-key`.
+
+On a machine with no Nix channel, `nix-shell` prints an error about `<nixpkgs>` and then carries on. It's harmless: it's only looking for a nicer bash.
 
 ### The daily update
 
