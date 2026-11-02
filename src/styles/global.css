@@ -4,6 +4,7 @@
 
 /* Snapshots are full of text that looks like class names. */
 @source not "../../data";
+@source not "../../experiments";
 
 @theme inline {
   --font-sans: "Inter Variable", system-ui, sans-serif;
