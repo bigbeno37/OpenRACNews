@@ -18,7 +18,7 @@ const days = await viewableDays();
     <p class="mt-5 max-w-[600px] text-soft">Days with no written report don't appear here.</p>
   </Hero>
   <Section id="days" art="all" title={count(days.length, 'day')}>
-    <ul class="mt-6 grid grid-cols-[minmax(0,1fr)] gap-2.5">
+    <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
       {
         days.map((day) => (
           <Row href={dayUrl(day.date)} title={day.overview?.headline ?? dayFacts(day)}>

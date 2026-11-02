@@ -29,7 +29,6 @@ const fromGitHub = report ? [] : highlightsFrom(repo.name, facts);
     <div class="flex items-start justify-between gap-4">
       <div class="min-w-0">
         <h3 class={`${theme.font} text-[clamp(20px,3.4vw,28px)] leading-tight text-hi`}>{branch.name}</h3>
-        <p class="mt-1 max-w-[640px] text-[13px] text-dim">{branch.about}</p>
       </div>
       <div class="grid flex-none justify-items-end text-right">
         <b class={`${theme.font} whitespace-nowrap text-[clamp(20px,3.4vw,28px)] leading-tight tabular-nums text-(--tx)`}>{formatNumber(commits)}</b>

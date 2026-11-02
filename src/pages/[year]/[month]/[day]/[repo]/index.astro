@@ -1,7 +1,6 @@
 ---
 // One project on one day, in that game's colours. Moving to another day stays on this project.
 import Badge from '../../../../../components/Badge.astro';
-import DayBar from '../../../../../components/DayBar.astro';
 import Hero from '../../../../../components/Hero.astro';
 import Icons from '../../../../../components/Icons.astro';
 import ProgressBar from '../../../../../components/ProgressBar.astro';
@@ -12,7 +11,7 @@ import Layout from '../../../../../layouts/Layout.astro';
 import { dayFromParams, dayParams, formatDay, formatDayMonthShort, formatDayShort } from '../../../../../lib/days.ts';
 import { formatChange, formatNumber, formatPercent } from '../../../../../lib/format.ts';
 import { dayUrl, projectUrl } from '../../../../../lib/links.ts';
-import { eventRows, projectOn, RECENT_DAYS, viewableDates } from '../../../../../lib/news.ts';
+import { eventRows, projectOn, viewableDates } from '../../../../../lib/news.ts';
 import type { TrackedRepo } from '../../../../../lib/schema.ts';
 import { barStyle, themeFor } from '../../../../../lib/themes.ts';
 import { repoUrl, tracking } from '../../../../../lib/tracking.ts';
@@ -29,7 +28,7 @@ const { repo } = Astro.props;
 const date = dayFromParams(Astro.params);
 const viewable = new Set(await viewableDates());
 const project = await projectOn(repo, date);
-const { branches, today, activity, progress, lastActive, latestRelease } = project;
+const { branches, today, progress, lastActive, latestRelease } = project;
 const theme = themeFor(repo.name);
 const change = progress?.change === undefined ? undefined : formatChange(progress.change);
 const functions = progress?.current.functions;
@@ -83,15 +82,11 @@ const rows = project.events ? eventRows(project.events) : [];
           </div>
         )
       }
-      <div>
-        <DayBar activity={activity} />
-        <p class="text-[11px] text-dim">Commits per day, last {Math.min(activity.length, RECENT_DAYS)} days</p>
-      </div>
       {!progress && latestRelease && <p class="text-[13px] text-dim">Latest release: <span class="text-text">{latestRelease.tag}</span>, {formatDayShort(latestRelease.date)}</p>}
     </div>
   </Hero>
 
-  <Section id="branches" art="activity" title={`On ${formatDayShort(date)}`} sub="What landed on each tracked branch during this UTC day. Each bar is the day from 00:00 to 23:59, one segment per hour, brighter the more pushes and merges landed.">
+  <Section id="branches" art="activity" title={`On ${formatDayShort(date)}`}>
     <div class="grid gap-3 sm:gap-4">
       {
         branches.map(({ branch, today: day, lastActive: branchLast }) =>

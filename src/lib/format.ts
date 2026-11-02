@@ -40,7 +40,7 @@ export function hourOpacity(landings: number): number {
   return 1;
 }
 
-/** The same idea for a day on a project's activity bar, where a busy day runs to dozens of commits. */
+/** The same idea for a day on the calendar, where a busy day runs to dozens of commits. */
 export function dayOpacity(commits: number): number {
   if (commits === 0) return 0;
   if (commits <= 5) return 0.45;
@@ -64,7 +64,7 @@ const hour = (h: number) => `${String(h).padStart(2, '0')}:00`;
 export function describeHours(hours: number[]): string {
   const active = hours.flatMap((n, h) => (n > 0 ? [`${hour(h)} ${n}`] : []));
   return active.length === 0
-    ? 'Nothing landed on this branch on this day.'
+    ? 'Nothing landed on this day.'
     : `Pushes and merges landed per UTC hour: ${active.join(', ')}.`;
 }
 

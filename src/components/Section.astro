@@ -11,7 +11,7 @@ const { id, art, title, sub } = Astro.props;
 ---
 
 <section id={id} class="py-12 sm:py-[72px]">
-  <div class="mb-2 flex items-center gap-3 sm:gap-5">
+  <div class:list={['flex items-center gap-3 sm:gap-5', sub ? 'mb-2' : 'mb-5 sm:mb-6']}>
     <SectionArt id={art} class="h-14 w-auto sm:h-[76px]" />
     <h2 class="min-w-0 bg-gradient-to-r from-text to-soft bg-clip-text font-audiowide text-[clamp(26px,4vw,38px)] leading-tight text-transparent">{title}</h2>
   </div>

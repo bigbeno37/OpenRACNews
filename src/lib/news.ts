@@ -2,7 +2,6 @@
 // everything here answers "as of this date" and never looks past it. Only what config/tracking.json
 // covers is shown, so dropping a branch from the config also takes it off the site.
 import { getCollection } from 'astro:content';
-import { shiftDay } from './days.ts';
 import { count, percent, sentenceList } from './format.ts';
 import { commitUrl, issueUrl, pullUrl, releaseUrl } from './links.ts';
 import type { BranchReport, BranchSnapshot, Issue, Overview, Progress, RepoSnapshot, TrackedBranch, TrackedRepo } from './schema.ts';
@@ -37,9 +36,6 @@ export interface Day {
   totals: Totals;
 }
 
-/** How many days a project's activity bar looks back. */
-export const RECENT_DAYS = 30;
-
 /** One project as it stood on one day. */
 export interface ProjectDay {
   repo: TrackedRepo;
@@ -50,8 +46,6 @@ export interface ProjectDay {
   events?: RepoDay;
   today: Totals;
   lastActive?: string;
-  /** The days up to and including this one, oldest first, quiet ones too. */
-  activity: { date: string; commits: number }[];
   /** The newest matching figures by then, and how far they moved that day. */
   progress?: { current: Progress; asOf: string; change?: number };
   /** The newest full release by then. */
@@ -218,14 +212,6 @@ export async function projectOn(repo: TrackedRepo, date: string): Promise<Projec
     return { branch, ...(today ? { today } : {}), ...(own[0] ? { lastActive: own[0].date } : {}) };
   });
 
-  // The window starts no earlier than the first day on record, so missing data never reads as a quiet spell.
-  const firstOnRecord = days.at(-1)?.date ?? date;
-  const activity: ProjectDay['activity'] = [];
-  for (let i = RECENT_DAYS - 1; i >= 0; i--) {
-    const day = shiftDay(date, -i);
-    if (day >= firstOnRecord) activity.push({ date: day, commits: totalsFor(history.filter((b) => b.date === day)).commits });
-  }
-
   const withProgress = history.filter((day) => day.facts.progress);
   const [newest, previous] = withProgress;
   const progress = newest?.facts.progress
@@ -249,7 +235,6 @@ export async function projectOn(repo: TrackedRepo, date: string): Promise<Projec
     ...(events ? { events } : {}),
     today: totalsFor(todays),
     ...(history[0] ? { lastActive: history[0].date } : {}),
-    activity,
     ...(progress ? { progress } : {}),
     ...(releaseDay?.release ? { latestRelease: { tag: releaseDay.release.tag, date: releaseDay.date } } : {}),
   };

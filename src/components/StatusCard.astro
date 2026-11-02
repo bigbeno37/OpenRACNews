@@ -7,7 +7,7 @@ import { count, formatChange, formatNumber, formatPercent } from '../lib/format.
 import { projectUrl } from '../lib/links.ts';
 import { branchFacts, totalsFacts, type ProjectDay } from '../lib/news.ts';
 import { cardStyle, themeFor } from '../lib/themes.ts';
-import DayBar from './DayBar.astro';
+import HourBar from './HourBar.astro';
 import ProgressBar from './ProgressBar.astro';
 import Prose from './Prose.astro';
 
@@ -15,9 +15,10 @@ interface Props {
   project: ProjectDay;
 }
 const { project } = Astro.props;
-const { repo, date, today, activity, progress, branches, lastActive, latestRelease } = project;
+const { repo, date, today, progress, branches, lastActive, latestRelease } = project;
 const theme = themeFor(repo.name);
 const active = branches.filter((b) => b.today);
+const pushes = active.flatMap((b) => b.today?.facts.pushes ?? []);
 const change = progress?.change === undefined ? undefined : formatChange(progress.change);
 const functions = progress?.current.functions;
 ---
@@ -39,7 +40,7 @@ const functions = progress?.current.functions;
       </div>
     </div>
 
-    {progress ? <ProgressBar progress={progress.current} /> : <DayBar activity={activity} />}
+    {progress ? <ProgressBar progress={progress.current} /> : <HourBar pushes={pushes} />}
 
     {
       (functions || (progress && progress.asOf !== date) || (!progress && latestRelease)) && (
