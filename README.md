@@ -128,3 +128,7 @@ pnpm test && pnpm check && pnpm build
 ## Credits
 
 The design system, logo and section artwork come from [OpenRAC/openrac-site](https://github.com/OpenRAC/openrac-site) under the MIT licence: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). This is an unofficial community project.
+
+## Licence
+
+This project is licensed under the GNU General Public License v3.0: see [LICENSE.md](LICENSE.md). Parts taken from elsewhere keep their own licences, as listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Text under `data/` that's quoted from GitHub, such as commit messages and pull request descriptions, belongs to its authors.

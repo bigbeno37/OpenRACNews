@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
+  "license": "GPL-3.0-only",
   "packageManager": "pnpm@12.9.0",
   "engines": {
     "node": ">=26.0.0"
