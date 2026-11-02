@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-04",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked gains its first build, library code and level-function tooling",
+  "summary": "Deadlocked gains tools to unpack its compressed game image, rebuild an executable and check reconstructed functions against the original. Its NTSC-U v1.00 progress report records 0.51% matched code and 243 of 15,056 functions. A matched function compiles to exactly the same bytes as the original game. The branch's history is rewritten three times, and GitHub cannot compare three ranges, so the recovered commit list is incomplete.",
+  "highlights": [
+    "Compiler and assembler work improves register saves, floating-point instruction spacing and loop padding, while library and shared level implementations land.",
+    "Level overlays are split into shared and level-specific code and gain per-level progress reporting. Much of the large source change establishes the build and catalogues.",
+    "An automatic structure-based decompiler adds implementations, while a small permuter experiment explicitly finds no extra matches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

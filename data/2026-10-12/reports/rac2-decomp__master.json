@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-12",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando rebuilds its matching pipeline and reports 4.44% for USA v1.01",
+  "summary": "Going Commando's rebuilt USA v1.01 report records 4.44% matched code and 2,438 of 9,101 entries finished. A matched function compiles to exactly the same bytes as the original game. Boot and level batches land alongside repairs for implementations lost during migration (#147, #148, #149, #150, #159). A history rewrite leaves one range unavailable from GitHub, so the recovered commit list is incomplete.",
+  "highlights": [
+    "Progress now credits C only when it links at every required placement. Handwritten assembly also contributes finished entries, so the function total is not solely C reconstructions.",
+    "Implementations using assembly copy helpers are taken back out under the project's stated plain-C policy (#163).",
+    "Switch bodies that pass a local check but cannot yet place their tables remain assembly and receive no credit (#153, #155, #156).",
+    "Retained unsuccessful attempts are preserved separately in #160. Linker command-length limits and shared temporary-object collisions are fixed so programs can build in parallel (#154)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

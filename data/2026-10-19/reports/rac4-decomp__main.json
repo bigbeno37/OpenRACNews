@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-19",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked reaches 2.42% with shared, multiplayer and game routines",
+  "summary": "Deadlocked's NTSC-U v1.00 matched code rose from 1.33% to 2.42%, with 1,566 of 15,056 functions reported finished after #4 merged. A matched function compiles to exactly the same bytes as the original game. The batch spans shared object helpers, multiplayer menus, serializers and core game routines.",
+  "highlights": [
+    "New relocation checks find functions pointing at the wrong globals and repair six of them.",
+    "Further corrections fix global reads and four switch tables.",
+    "#5 proposes native Windows tooling and #6 another decompilation batch. Neither has merged.",
+    "#7 and #8 propose 38 shared helpers checked only against PAL with masked comparisons. NTSC-U validation and progress checks are still needed."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

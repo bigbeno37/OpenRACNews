@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-14",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.4.4 fixes AppImage tools after a run of installation fixes",
+  "summary": "Launcher releases 0.4.0 through 0.4.4 make installation and Play work without a source checkout. The latest fixes Linux AppImage tools crashing at startup, while earlier updates repair Play's working folder and check extracted levels before launch. Historical direct development also continued on today's release-only master branch.",
+  "highlights": [
+    "0.4.0 bundles the game and setup tools, including Python, and discovers discs in a chosen games folder.",
+    "0.4.2 checks all 21 extracted levels and retries broken extractions before offering Play.",
+    "0.4.3 broadens Linux compatibility and makes Play use the launcher's bundled game.",
+    "Game fixes carry all 19 gameplay levels past 3,000 test ticks and repair the bomb glove's collapsed throw.",
+    "Installers remain unsigned."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

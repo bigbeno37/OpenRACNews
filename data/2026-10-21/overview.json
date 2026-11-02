@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-21",
+  "headline": "OpenRAC opens gameplay modding with scripts, plugins and SDK 1.1.2",
+  "summary": "OpenRAC adds native and Luau gameplay mods and releases the MIT-licensed SDK 1.1.2, while Lock-strafe and Item Randomizer 1.0.0 are released separately. Ratchet & Clank's PAL v2.00 reaches 98.38% matched code and Going Commando's USA v1.01 reaches 12.76%, with both projects adding release targets. A matched function compiles to exactly the same bytes as the original game. Up Your Arsenal's PAL v1.00 changes from 49.25% to 8.38% after counting all levels, and Deadlocked's NTSC-U v1.00 changes from 4.13% to 4.03% after its own wider inventory. Those percentage falls reflect revised coverage while more implementations land.",
+  "writtenBy": "gpt-6.1-sol"
+}

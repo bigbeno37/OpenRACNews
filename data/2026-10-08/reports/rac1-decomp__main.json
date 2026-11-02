@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-08",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank stops rewriting compiler output and reaches 61.16% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 57.44% to 61.16% matched code, with 3,717 of 5,109 entries reported finished. A matched function compiles to exactly the same bytes as the original game. The build removes steps that patched compiler output after compilation and moves options to whole files (#40). New implementations cover movies, menus, memory-card state and objects across several levels.",
+  "highlights": [
+    "Rilgar and Batalia receive eight object routines in #42, followed by work on Batalia, Pokitaru, Hoven and Gemlik in #44.",
+    "Four larger executable routines are adapted from US source, covering formatted text, memory-card state, the map renderer and gameplay/cinematic state (#43).",
+    "Movie work and smaller-function batches land through #41. Unfinished attempts remain staged rather than receiving exact-match credit.",
+    "Finished-entry reporting also recognises linker-remnant runs and pieces belonging to joined functions, so the entry increase is not solely new C bodies."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

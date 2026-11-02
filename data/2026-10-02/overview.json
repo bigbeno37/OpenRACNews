@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-02",
+  "headline": "Veldin 2 gains object and vendor-effect code in Ratchet & Clank",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 16.34% to 16.96% matched code, with 2,609 of 5,109 functions. A matched function compiles to exactly the same bytes as the original game. Veldin 2 work lands alongside better level-code inspection and shared near misses, with reporting limitations retained in the authors' notes (rac1-decomp#14, rac1-decomp#16, rac1-decomp#17). A further closer reconstruction is proposed without becoming an exact match (rac1-decomp#18).",
+  "writtenBy": "gpt-6.1-sol"
+}

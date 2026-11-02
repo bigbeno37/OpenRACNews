@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-16",
+  "headline": "Launcher 0.6.0 opens up model and texture mods",
+  "summary": "OpenRAC released launcher 0.6.0 with model and texture replacement packs, following updates for cutscenes, wrench throwing, automatic updates and Linux ARM64. Ratchet & Clank's PAL v2.00 matched code rose from 88.30% to 92.32%. A matched function compiles to exactly the same bytes as the original game. Going Commando added shared level and core-library routines, while OpenRAC#12 reports a Fedora Wayland startup crash in launcher 0.5.0.",
+  "writtenBy": "gpt-6.1-sol"
+}

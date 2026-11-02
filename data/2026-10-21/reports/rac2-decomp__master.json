@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-21",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reaches 12.76% and builds three releases from shared C",
+  "summary": "Going Commando's USA v1.01 matched code rose from 9.13% to 12.76%, with 4,138 of 8,601 entries reported finished, including original assembly. A matched function compiles to exactly the same bytes as the original game. PAL and USA v2.00 join as build targets, with separate progress reports and release-specific C.",
+  "highlights": [
+    "The final report commit gives PAL 3,550 of 8,693 finished functions and USA v2.00 3,940 of 8,655.",
+    "#282 adds 471 PAL and 310 USA v2.00 implementations. #286 adds another 12 and two respectively.",
+    "#283 adds 48 functions, while other batches cover shared lists, Yeedil and game routines.",
+    "#249 restores assembly for four candidates that depended on artificial barriers, retaining their clean C as near misses.",
+    "#252 adds strict builds that fail when C silently falls back to original assembly.",
+    "Compiler and assembler corrections resolve #247 and #248. Further catalogue cleanup changes the total counted."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-22",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando adds six functions and moves blocker notes into the repo",
+  "summary": "Going Commando's USA v1.01 matched code rose from 12.76% to 12.78%, with 4,144 of 8,601 entries reported finished. A matched function compiles to exactly the same bytes as the original game. Six implementations land across game and level code, and shared blocker notes move into a document maintained through pull requests.",
+  "highlights": [
+    "The final report lists PAL at 3,552 of 8,693 finished functions and USA v2.00 at 3,946 of 8,655.",
+    "#287 adds a game routine for both USA releases. #289 and #293 add five level routines.",
+    "Strict builds pass for all 84 programs across the three releases.",
+    "#288, #291, #295 and #297 remain unmerged. Retained near misses receive no progress credit.",
+    "#157 closes because its notes moved in #290 and #292, rather than because every technical blocker is solved."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

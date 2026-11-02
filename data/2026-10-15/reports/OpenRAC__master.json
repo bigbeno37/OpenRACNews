@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-15",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Going Commando's native port reads the current decompilation again",
+  "summary": "Going Commando's native port can now translate the current decompilation's C sources after #7 replaced support for its obsolete layout. Launcher work in #8 adds update checks, game-specific window icons and Discord artwork. These development merges differ from master's current release-only role.",
+  "highlights": [
+    "#7 updates the embedded Going Commando sources and their level-placement information.",
+    "This restores source translation, without establishing that Going Commando is playable."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

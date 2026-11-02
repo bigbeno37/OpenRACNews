@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-04",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 20.24% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 19.79% to 20.24% matched code, with 2,834 of 5,109 functions in the project's progress report. A matched function compiles to exactly the same bytes as the original game. A batch of 36 implementations adapted from the US decompilation lands in #24, alongside more small functions and an Umbris routine.",
+  "highlights": [
+    "The imported functions are paired with PAL counterparts and use PAL data and helper addresses (#24).",
+    "The README gains clearer explanations of the project, contributing and licensing (#25)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-16",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando expands shared level code and core libraries",
+  "summary": "Going Commando gains shared level routines, object-list helpers and core-library implementations for USA v1.01. The committed progress report remains at 5.75% matched code and does not measure these later batches. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#200 adds 52 shared level functions and #204 adds 22 more.",
+    "#196, #201 and #205 add 28 shared game functions between them.",
+    "#198 includes memory allocation, exception handling and square-root library work.",
+    "#194 retains nine core matches, while bodies requiring inline assembly or lacking valid build placement are left out.",
+    "Near misses and catalogue defects remain recorded separately. Documentation proposal #202 closed without merging."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-20",
+  "headline": "Launcher 0.8.4 fixes the Suck Cannon as decompilation work spreads",
+  "summary": "OpenRAC released launcher 0.8.4 with Suck Cannon crash fixes, following updates for shadows, installed-launcher mods and simpler setup. Going Commando reaches a navigable native main menu, but still stops loading its first level. Its USA v1.01 decompilation rises from 6.51% to 9.13% matched code, with catalogue corrections contributing to the change. Up Your Arsenal's PAL v1.00 report shows 49.25%, while Deadlocked's NTSC-U v1.00 rises from 2.42% to 4.13%. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

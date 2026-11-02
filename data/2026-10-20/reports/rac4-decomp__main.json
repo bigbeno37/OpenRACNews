@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-20",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked reaches 4.13% after PAL batches are corrected for NTSC-U",
+  "summary": "Deadlocked's NTSC-U v1.00 matched code rose from 2.42% to 4.13%, with 2,019 of 15,056 functions reported finished. A matched function compiles to exactly the same bytes as the original game. Shared object and multiplayer-menu batches initially checked only on PAL receive a follow-up audit against NTSC-U.",
+  "highlights": [
+    "#7 through #16 bring shared helpers, menu handlers, serializers and option routines.",
+    "The NTSC-U follow-up corrects region-specific thresholds and call targets, renames one misplaced routine and moves two unsupported functions to near misses.",
+    "#6 adds another broad batch of game and shared-level implementations.",
+    "#5 makes build and candidate-checking tools run natively on Windows."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

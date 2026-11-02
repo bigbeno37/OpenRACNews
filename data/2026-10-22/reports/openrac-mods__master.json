@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-22",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Keyboard and mouse controls and adjustable difficulty are released",
+  "summary": "Keyboard and Mouse reaches 1.1.1, adding WASD movement, mouse camera control, configurable bindings and menu navigation for Ratchet & Clank. Difficulty 1.1.0 exposes multipliers for enemies, damage, speed, prices, ammo, bolts and health. Its presets fill the sliders, while seeded Chaos can vary settings per level.",
+  "highlights": [
+    "Keyboard and Mouse 1.1.0 extends controls to menus, cutscenes and movies. 1.1.1 makes Enter or a click travel on the map.",
+    "Difficulty's Easy, Retail, Hard, Brutal and Chaos presets show their values directly in the launcher.",
+    "Live Splits 1.0.0 is added to split a running LiveSplit timer when changing planets, excluding death reloads. No release is recorded today.",
+    "DualSense mod code is also added, without a recorded release."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

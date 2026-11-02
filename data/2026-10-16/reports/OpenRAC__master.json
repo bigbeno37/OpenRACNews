@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-16",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.6.0 adds model and texture mods alongside gameplay fixes",
+  "summary": "Launcher 0.6.0 lets players export models and textures, edit them and manage replacement packs on the Mods page. Earlier releases today add automatic updates, Linux ARM64 builds and a single Ratchet & Clank entry that follows the player's disc. Historical direct development continues alongside releases on today's release-only master.",
+  "highlights": [
+    "0.5.1 starts and chains in-game cutscenes, fixes wrench throwing and adds in-app updates.",
+    "0.5.2 restores missing seas and full walking speed on Rilgar, with Linux ARM64 support.",
+    "0.6.0 restores chrome, glass, weapon stances and Gadgetron vendor displays.",
+    "Updated level exports restore missing Blaster and Pyrocitor models and are extracted again before Play.",
+    "Flatpak packaging was removed after the author reported a Flathub policy rejection.",
+    "#12 reports a 0.5.0 AppImage crash on Fedora 44 with GNOME Wayland. Installers remain unsigned."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

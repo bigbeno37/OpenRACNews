@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-11",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank shares object and hero structures across its source",
+  "summary": "Ratchet & Clank replaces many private object, hero, vector and controller structures with shared types while preserving compiled bytes. PAL v2.00 also rises from 78.51% to 78.63% matched code, with 4,225 of 5,109 entries reported finished. A matched function compiles to exactly the same bytes as the original game. Five more implementations and a first-person camera argument fix land in #48, followed by smaller sound and level functions.",
+  "highlights": [
+    "The large deletion count comes mainly from removing duplicate private structures, rather than removing game behaviour.",
+    "#49 proposes an exact implementation of the debug-menu drawing routine, closing a staged near miss. It has not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

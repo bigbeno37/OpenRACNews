@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-22",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds 331 functions and reaches 4.41% matched code",
+  "summary": "Deadlocked's NTSC-U v1.00 matched code rose from 4.03% to 4.41%, with 3,496 of 18,085 functions reported finished. A matched function compiles to exactly the same bytes as the original game. Five merged batches add 331 small game, core and level routines.",
+  "highlights": [
+    "#26 through #30 bring the new implementations. PAL's final total is 3,470 of 18,113 functions.",
+    "Candidates with unresolved relocations, a wrong jump table or a wrong linked size are left out.",
+    "The full audit still reports 80 relocation mismatches across 43 functions and three unresolved cases, unchanged from main.",
+    "#32 through #35 propose further PAL work and remain unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

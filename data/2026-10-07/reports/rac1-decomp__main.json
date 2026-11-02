@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-07",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Veldin and menu code become complete as PAL v2.00 reaches 57.44%",
+  "summary": "Veldin's opening level and the executable's menu unit become fully matched in #36. Ratchet & Clank's PAL v2.00 rises from 56.30% to 57.44% matched code, with 3,427 of 5,109 entries reported finished. A matched function compiles to exactly the same bytes as the original game. Further library work adds exact implementations through Sony's compiler, and the project adopts GPL-3.0 licensing.",
+  "highlights": [
+    "The largest retained near miss closes, and corrected function declarations turn other existing reconstructions into matches (#36).",
+    "#40 proposes removing compiler-output repair steps and moving flags to whole files. It has not merged.",
+    "Further function contributions open as #37, #38 and #39, with no merge that day."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

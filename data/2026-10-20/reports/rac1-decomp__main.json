@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-20",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank matches bomb behaviour, elevators and menu routines",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 97.71% to 97.91%, with 5,064 of 5,124 entries reported finished. A matched function compiles to exactly the same bytes as the original game. The new work covers bomb updates, elevator partner spawning, menu slots and hardware setup.",
+  "highlights": [
+    "#106 matches the elevator partner-spawn routine shared by Novalis, Rilgar and Pokitaru.",
+    "Pause descriptions and Trespasser rings retain complete texture information for the native port.",
+    "The pause stream-buffer allocator lands alongside display setup and menu-cache search.",
+    "A staged near miss remains separate from the landed implementations."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

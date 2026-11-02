@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-16",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 passes 92% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 88.30% to 92.32%, with 4,725 of 5,109 functions reported finished. A matched function compiles to exactly the same bytes as the original game. The day also brings native Windows tooling fixes and runtime checks for functional C.",
+  "highlights": [
+    "#88 adds 50 functions plus one joined fragment, explaining the 51-entry increase in its report.",
+    "#84 compares original and functional implementations in an R5900 interpreter and repairs six functional files.",
+    "#85 adds 15 PAL-only matches, while retaining the pre-existing full-build byte mismatch.",
+    "#83 covers credits rendering, catalogue joins and repairs to near misses."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

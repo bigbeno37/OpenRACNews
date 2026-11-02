@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-20",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal carries 2,410 C functions from the US decompilation",
+  "summary": "Up Your Arsenal's PAL v1.00 progress report now shows 49.25% matched code, with 3,598 of 4,903 entries reported finished. A matched function compiles to exactly the same bytes as the original game. The day carries over 2,410 C functions from the US project across the loader, boot executable and front-end program.",
+  "highlights": [
+    "The loader receives 42 C functions, the boot executable 1,476 and the front end 892.",
+    "Functions needing individual compiler flags, missing PAL symbols or producing different output remain outside the integrated C.",
+    "All three rebuilt programs are reported to match.",
+    "Beta-disc research documents shared code and debug material, with no beta contents committed."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

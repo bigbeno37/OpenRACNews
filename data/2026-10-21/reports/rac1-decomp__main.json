@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-21",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank reaches 98.38% and adds more release targets",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 97.91% to 98.38%, with 5,073 of 5,124 entries reported finished. A matched function compiles to exactly the same bytes as the original game. PAL v1.00, NTSC-J v1.02 and NTSC-U now sit alongside the primary target, sharing source where their code allows it.",
+  "highlights": [
+    "#108 adds nine matches, including sound updates, drone behaviour, the rope-follow camera and nanotech drawing.",
+    "#109 classifies five original assembly routines, including memory-copy helpers.",
+    "#110 adds release targets and #111 supplies 12 more PAL v1.00 and 23 NTSC-J v1.02 functions.",
+    "The final progress commit lists 4,839 finished functions for PAL v1.00 and 4,974 for NTSC-J v1.02. Those are separate release counts.",
+    "#105's pause-routine question closes as completed."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

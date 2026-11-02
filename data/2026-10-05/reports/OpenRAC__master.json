@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-05",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "OpenRAC imports Deadlocked and adds tools to transfer code between projects",
+  "summary": "OpenRAC adds Deadlocked's decompilation, build instructions and progress checking alongside source updates for the other games. New tools map related functions across games and transfer C between versions with the same instructions, checking the result with the destination project's tools. This is direct development on master, unlike its current release-only description, and no launcher release is listed.",
+  "highlights": [
+    "The large source addition mostly imports existing decompilation trees, especially Going Commando and Deadlocked, rather than new player-facing features.",
+    "The Ratchet & Clank NTSC-U build works on an Apple Silicon Mac through the documented Wine 8 route, with the boot executable and level C checked.",
+    "Deadlocked's early checks compare functions with most immediate values masked and do not link them. The project documentation explicitly describes this as a weaker proof.",
+    "#1 proposes another Going Commando source update, including an isolated experimental PAL functional port. It remains unmerged, and that port claims no matching credit."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

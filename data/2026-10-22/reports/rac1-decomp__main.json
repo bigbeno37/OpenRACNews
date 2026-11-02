@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-22",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Original assembly classification raises PAL v2.00's finished total",
+  "summary": "Ratchet & Clank's PAL v2.00 matched-code report rose from 98.38% to 98.40%, with 5,080 of 5,124 entries reported finished. Pull request #112 classifies two level routines as original handwritten assembly, leaving their compiled game image unchanged. A matched function compiles to exactly the same bytes as the original game. This increase recognises finished original-source work rather than adding new C.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

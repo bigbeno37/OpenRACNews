@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-03",
+  "headline": "Ratchet & Clank adds Kalebo III code and richer Godot exports",
+  "summary": "Ratchet & Clank's PAL v2.00 report rises from 16.96% to 19.79% matched code after level-code batches, including Kalebo III and functions adapted from the US decompilation. A matched function compiles to exactly the same bytes as the original game. Godot exports gain object models and animations alongside a coloured collision layer (rac1-decomp#21). Level 18 work also preserves closer unfinished reconstructions without counting them as exact matches.",
+  "writtenBy": "gpt-6.1-sol"
+}

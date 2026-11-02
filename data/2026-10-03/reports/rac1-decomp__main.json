@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-03",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank adds Kalebo III code and export tools for objects and collision",
+  "summary": "Ratchet & Clank's PAL v2.00 progress report rises from 16.96% to 19.79% matched code, with 2,788 of 5,109 functions after batches of level work. A matched function compiles to exactly the same bytes as the original game. Kalebo III gains more implementations, while shared functions are adapted from the US decompilation and relatives in other levels (#20, #19, #21).",
+  "highlights": [
+    "Godot exports gain labelled game-object markers, object meshes, skeletons and animations, plus a hidden coloured collision layer (#21).",
+    "#22 integrates #21 after conflicts with other work. Those two pull requests describe the same contribution, rather than separate batches.",
+    "Level 18 near misses are restaged in #18 and #23. Their closer results are not new exact matches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

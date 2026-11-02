@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-11",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando replaces its generated-source workflow and imports library C",
+  "summary": "Going Commando removes the old campaign, proof and generated-source system and documents a replacement layout using ordinary source files. The large deletion count is dominated by retired generated units, catalogues, scripts and reports. SDK and library C is carried over from Ratchet & Clank, and the repository adopts GPL-3.0 while retaining earlier notices.",
+  "highlights": [
+    "A measured table preserves ambiguous pairings between boot functions and repeated level copies.",
+    "The transferred library code covers MPEG, kernel, C-library, IPU and SIF families. No new overall coverage report is available for this day."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-10",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 78.51% matched code and gains port-only C",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 61.22% to 78.51% matched code, with 4,215 of 5,109 entries reported finished. A matched function compiles to exactly the same bytes as the original game. #46 adds 508 functions through completed near misses and adaptations from the US decompilation. Separate functional C supports the native port's gameplay, camera, menus and effects without receiving matching credit (#47).",
+  "highlights": [
+    "A shared game-object structure replaces private views across level files (#46).",
+    "Behaviour-comparison tools distinguish usable non-matching reconstructions from exact matches and refuse checks that compare no captured calls.",
+    "Port-only work covers Ratchet's movement, hand attachments, crate setup, menu handlers and flight trails. These bodies do not increase the match percentage (#47)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-19",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 97.71% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 94.59% to 97.71%, with 5,053 of 5,124 entries reported finished. A matched function compiles to exactly the same bytes as the original game. New C implementations and classification of original handwritten assembly both contribute to the totals.",
+  "highlights": [
+    "#93 reproduces three library routines with their original assemblers, while #94 separates the debug menu from a linker remnant.",
+    "#96 brings native-port argument fixes and functional C back into the decompilation.",
+    "#101 adds classification for original assembly in level code, rather than treating it as unfinished C.",
+    "#102 implements the space-flight engine-trail ribbon builder.",
+    "#104 adds functional C for 45 handwritten routines, with 35 checked against the original. This earns no extra matching credit.",
+    "#105 asks whether a compiler barrier is acceptable for a pause routine. #106's elevator-spawn match is still unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

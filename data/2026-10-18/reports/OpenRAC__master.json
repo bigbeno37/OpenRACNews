@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-18",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.7.5 fixes PAL crashes and adds in-game Video options",
+  "summary": "Launcher 0.7.1 through 0.7.5 repair HUD drawing, Quit Game and several crashes on both Ratchet & Clank discs. The latest release fixes PAL crashes around crates and camera updates and adds Video options during play. Historical direct development continues on today's release-only master.",
+  "highlights": [
+    "#13 makes RPM, DEB and MSI installations receive the correct updater payload.",
+    "0.7.4 fixes the Windows crash between Veldin and Novalis and corrects US-disc behaviour.",
+    "Crash notices now offer reports and session logs. #12's Fedora Wayland startup failure is closed after a cursor-theme fallback lands.",
+    "#14 redesigns the launcher around a game list and adds a Size Matters entry, without establishing playability.",
+    "A PAL functional-code audit still records three differing routines and many unchecked ones. US rows remain unchecked because no US oracle is available.",
+    "Linux GPU selection, Windows Godot detection and a developer-only disc switch also improve."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando refreshes progress and adds core-library matches",
+  "summary": "Going Commando's USA v1.01 progress report rose from 5.60% to 5.75% matched code, catching up with 60 earlier function implementations. A matched function compiles to exactly the same bytes as the original game. Later work adds shared game routines and core-library implementations, so that refreshed figure does not cover every merge of the day.",
+  "highlights": [
+    "#184 and #186 add optional compiler settings for retail instruction scheduling and register saves.",
+    "#185 classifies 150 kernel syscall stubs as original handwritten assembly, rather than failed C matches.",
+    "#191 adds a separate executable-data measure, starting at 0% because data still comes from original dumps.",
+    "#181, #188 and #192 retain near misses without matching credit.",
+    "#194 proposes another core-function batch and remains unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

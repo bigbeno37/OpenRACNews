@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reaches 9.13% as matching and catalogue fixes land",
+  "summary": "Going Commando's USA v1.01 matched code rose from 6.51% to 9.13%, with 3,786 of 8,645 entries reported finished, including original assembly. A matched function compiles to exactly the same bytes as the original game. The catalogue shrank after padding and leftover epilogues were separated from real functions, so part of the percentage change comes from a corrected total.",
+  "highlights": [
+    "#214 adds 166 functions and #220 carries over 73 verified implementations from another fork.",
+    "#221 integrates 27 Damosel Orbit functions, rather than the originally claimed 29. The other two land later in #230.",
+    "#217 and #234 add 15 Yeedil functions, alongside shared list walks and Maktar Nebula work.",
+    "#222 and #238 correct compiler and assembler behaviour that blocked exact output.",
+    "#239 and #241 remove filler catalogue rows and tighten the rule so real instructions are preserved.",
+    "#242 opens with another shared-function batch and remains unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

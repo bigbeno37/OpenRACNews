@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-19",
+  "headline": "OpenRAC reaches Android with launcher 0.8.1",
+  "summary": "OpenRAC released launcher 0.8.1 for arm64 Android devices running Android 10 or later, with disc-image setup, touch controls and experimental Vulkan. Ratchet & Clank's PAL v2.00 matched code rose from 94.59% to 97.71%, while Deadlocked's NTSC-U v1.00 rose from 1.33% to 2.42%. A matched function compiles to exactly the same bytes as the original game. Going Commando's object tables gained sourced names, while proposed shadows and a Vulkan geometry fix remained unmerged in OpenRAC.",
+  "writtenBy": "gpt-6.1-sol"
+}

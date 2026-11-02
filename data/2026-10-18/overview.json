@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-18",
+  "headline": "Launcher 0.7.5 repairs PAL crashes and adds Video options during play",
+  "summary": "OpenRAC released launcher updates through 0.7.5, fixing PAL crate and camera crashes, the Windows transition to Novalis, HUD drawing and Quit Game. Ratchet & Clank's PAL v2.00 matched code rose from 92.32% to 94.59%, with original assembly also contributing to finished totals. A matched function compiles to exactly the same bytes as the original game. Going Commando added 30 functions for USA v1.01, while Deadlocked's next batch remained a proposal.",
+  "writtenBy": "gpt-6.1-sol"
+}

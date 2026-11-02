@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-18",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank reaches 94.59% as function boundaries are corrected",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 92.32% to 94.59%, with 4,882 of 5,118 entries reported finished. A matched function compiles to exactly the same bytes as the original game. Finished totals also include original handwritten assembly, while boundary corrections changed the catalogue's size.",
+  "highlights": [
+    "#90 separates eight real functions from linker remnants and matches three, leaving the game image unchanged.",
+    "#91 and #92 add movie-library, printing, video-mode and transition routines.",
+    "Thousands of readable names and shared structure definitions make gameplay code easier to follow without changing its output.",
+    "One attempted function returns to assembly because its full-build jump table differs.",
+    "#93 and #94 propose more assembler and boundary work and remain unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-19",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's object tables gain sourced class labels",
+  "summary": "Going Commando's dispatch tables now identify 198 object classes with attributed labels, covering 2,661 rows (#211, #212). The labels make entries such as fans and secret doors easier to find, while source qualifications distinguish identification from verified behaviour. This documentation work changes no game functions.",
+  "highlights": [
+    "#210 proposed an external texture-pack comparison tool and closed without merging."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

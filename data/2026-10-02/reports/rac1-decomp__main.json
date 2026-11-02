@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-02",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Veldin 2 work takes Ratchet & Clank's PAL v2.00 to 16.96% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 16.34% to 16.96% matched code, with 2,609 of 5,109 functions in the project's report. A matched function compiles to exactly the same bytes as the original game. Veldin 2 gains object updates and vendor-effect implementations, alongside tools for inspecting a level's own code.",
+  "highlights": [
+    "The Veldin 2 work lands through #14, #16 and #17, while closer unfinished reconstructions remain outside the matching source.",
+    "The author notes that alias-named functions can be missed by reporting and that an executable score was held at its upstream value while a local build placed a global differently.",
+    "#18 proposes a closer Veldin 2 reconstruction, but it has not merged and is not an exact match.",
+    "Memory-card chunk enums, sound-stash structures and additional research notes make the reconstructed game state easier to describe."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

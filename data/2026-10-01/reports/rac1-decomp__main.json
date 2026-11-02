@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-01",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank adds large level-code batches and shares unfinished reconstructions",
+  "summary": "Ratchet & Clank's PAL v2.00 progress report reaches 16.34% matched code and 2,566 of 5,111 functions. A matched function compiles to exactly the same bytes as the original game. The day's merged batches add level implementations, functions adapted from the US decompilation and work on Drek's Fleet and Kalebo III (#13, #15).",
+  "highlights": [
+    "Unfinished C reconstructions are shared in the repository and scored separately, rather than counted as exact matches (#15).",
+    "Draft #14 proposes Veldin 2 work but has not merged. Its description warns that two alias-named functions are not visible to the report.",
+    "Recovered retail strings help identify sound, graphics and movie functions, and memory-card state gains named structures and enums."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

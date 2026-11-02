@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-09",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "OpenRAC's desktop launcher lands with disc setup and save-management tools",
+  "summary": "The desktop launcher lands in #2 and gains disc inspection, setup controls, a level-editor entry and a prototype save manager. Later changes remove PCSX2 launch options, while the proposed native-port architecture in #3 remains unmerged. The launcher is still scaffolding, and its runtime and editor actions are reported as tested from a shell rather than from the desktop app. Master receives direct development work and a history rewrite rather than a release pull request.",
+  "highlights": [
+    "The save panel shows slots, timestamps, planets and bolt counts, with named backups and restoration.",
+    "Discord activity, Linux desktop integration and cached progress displays are added, followed by fixes for navigation stalls and progress-sync responses.",
+    "A runtime experiment boots Ratchet & Clank PAL and US and Going Commando US into their first levels, with sound and memory-card work. Going Commando's movies are skipped.",
+    "The experiment also runs some reconstructed C as host code, but #3 proposes replacing the emulation approach with native-port scaffolding. Neither the proposal nor the launcher establishes a finished native game."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

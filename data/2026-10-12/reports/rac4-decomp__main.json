@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-12",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adopts the shared OpenRAC source layout and GPL-3.0",
+  "summary": "Deadlocked reorganises shared and level-specific source and near misses to follow Ratchet & Clank's layout (#2). It adopts GPL-3.0 while retaining library notices, fixes container and documentation details, and brings over contributor queue tools. The day changes organisation and tooling rather than reporting a new coverage gain.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

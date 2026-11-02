@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-08",
+  "headline": "Ratchet & Clank ends compiler-output patching as a desktop launcher is proposed",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 57.44% to 61.16% matched code while removing post-compilation repair steps and adopting per-file compiler options (rac1-decomp#40). A matched function compiles to exactly the same bytes as the original game. Movie, menu, memory-card and level-object implementations also land. OpenRAC refreshes its imported game sources and receives a desktop-launcher proposal that remains scaffolding, with most game actions unverified (OpenRAC#2).",
+  "writtenBy": "gpt-6.1-sol"
+}

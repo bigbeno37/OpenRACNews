@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-15",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank reaches 88.30% and begins measuring data separately",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 86.02% to 88.30%, with 4,595 of 5,109 functions reported finished. A matched function compiles to exactly the same bytes as the original game. The progress report now measures executable data separately, at 0.37%.",
+  "highlights": [
+    "#76 finishes two stalled near misses and adapts three NTSC functions.",
+    "#79 adds three matches from retail code, including movie loading and image uploads, and fixes jump-table detection.",
+    "#78 counts compiled data separately from data still assembled from original dumps.",
+    "#80 publishes functional C coverage separately, with no matching credit."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

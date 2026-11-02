@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-14",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 86.02% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 81.10% to 86.02%, with 4,520 of 5,109 functions reported finished. A matched function compiles to exactly the same bytes as the original game. Work adapted from the NTSC decompilation and new PAL implementations cover shared routines and levels including Rilgar, Gaspar and Aridia.",
+  "highlights": [
+    "#72 integrates 50 plain-C ports with three other batches, retaining one implementation where they overlap.",
+    "#73 adds 38 more functions, allowing the game's existing quad-copy helpers.",
+    "#62 removes 42 functional C copies now superseded by exact implementations.",
+    "#64 and #65 fix an animation-key calculation that hung level 9.",
+    "Sandshark proposal #68 closed without merging, but its function landed through separate work in #66."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

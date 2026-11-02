@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-21",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Lock-strafe and Item Randomizer 1.0.0 are released",
+  "summary": "Lock-strafe 1.0.0 and Item Randomizer 1.0.0 are released for installation through the launcher's Mods tab. Lock-strafe provides the Hold and Lock movement schemes moved out of the port. The randomizer shuffles weapons, gadgets, vendor stock, gold bolts and infobot destinations, using seed codes and a logic model to check placements.",
+  "highlights": [
+    "The randomizer's author says each generated placement is checked through its progression logic before use.",
+    "A Button Swap Luau example is added, trading selected button pairs and their pressure values before the game reads them.",
+    "Native mods move to SDK interface 1.1 and can be installed from the repository's address.",
+    "The mods remain GPL-3.0 while their SDK is MIT-licensed."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

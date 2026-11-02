@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-13",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 reaches 5.60% matched code",
+  "summary": "Going Commando's USA v1.01 matched code rose from 4.44% to 5.60%, with 2,881 of 9,100 entries reported finished, including original assembly. A matched function compiles to exactly the same bytes as the original game. New batches cover shared game state and level routines.",
+  "highlights": [
+    "#169 corrects its batch count to 157 functions, rather than the earlier claim of 211.",
+    "#170 adds 106 game-function matches for USA v1.01.",
+    "#167 adds 30 shared functions for state resets, transfers and UI vectors.",
+    "#168 adds 30 functions and corrects three function boundaries, retaining assembly prefixes.",
+    "#171 refreshes the progress catalogue, reducing its total from 9,101 to 9,100 entries."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

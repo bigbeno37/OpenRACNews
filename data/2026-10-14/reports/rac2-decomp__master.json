@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-14",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando gains 59 shared-function matches",
+  "summary": "Five merged batches add 59 distinct shared game-function matches for Going Commando's USA v1.01. A matched function compiles to exactly the same bytes as the original game. The committed progress report remains at 5.60% matched code because these batches did not refresh it.",
+  "highlights": [
+    "#173 adds 26 functions, with separate source units to resolve helpers for historical callers.",
+    "#174 adds 20 functions, leaving unresolved calling-convention and integration cases out.",
+    "#175, #176 and #177 add another 13 functions.",
+    "#176 reports byte-identical builds for the boot program and all 27 levels.",
+    "Multilingual documentation lands in #172."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

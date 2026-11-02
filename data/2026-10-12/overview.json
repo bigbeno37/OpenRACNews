@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-12",
+  "headline": "Ratchet & Clank level edits can be packed and played from the launcher",
+  "summary": "OpenRAC gains a Mods workflow for packing edited Ratchet & Clank objects and playing the result, with added or deleted objects still excluded. The PAL v2.00 decompilation rises from 78.63% to 80.27% matched code. A matched function compiles to exactly the same bytes as the original game. Going Commando's rebuilt USA v1.01 report records 4.44% matched code with stricter placement checks, but a history rewrite leaves part of its commit history unavailable. Deadlocked adopts the shared source layout and GPL-3.0 licensing.",
+  "writtenBy": "gpt-6.1-sol"
+}

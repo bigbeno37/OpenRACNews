@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-17",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's refreshed report reaches 6.51% matched code",
+  "summary": "Going Commando's USA v1.01 matched code rose from 5.75% to 6.51% in the refreshed progress report (#206). Its 3,303 finished entries comprise 3,052 C functions and 251 original handwritten assembly routines. A matched function compiles to exactly the same bytes as the original game. This reports previously merged work rather than adding new implementations.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

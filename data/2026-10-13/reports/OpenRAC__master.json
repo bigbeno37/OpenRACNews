@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-13",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.3.0 brings disc-based setup to the native port",
+  "summary": "Launcher 0.3.0 was released with setup from the player's own disc and a single game page with a Play button. Same-day development added packaged setup tools, macOS play support and level export before launch. Despite master's current release-only role, these changes landed directly on the branch.",
+  "highlights": [
+    "Windows, Linux and macOS installer builds now carry the game, Python and setup tools.",
+    "The NTSC-U port builds and reaches the title screen, but stops later.",
+    "All PAL levels passed 1,500-tick startup runs, which do not establish full campaign playability.",
+    "Escape pauses the game, while launcher controls add stepping, speed changes and screenshots."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

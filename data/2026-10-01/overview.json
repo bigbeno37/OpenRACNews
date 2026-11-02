@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-01",
+  "headline": "Ratchet & Clank expands level-code coverage and shares its near misses",
+  "summary": "Ratchet & Clank's PAL v2.00 report reaches 16.34% matched code, with 2,566 of 5,111 functions after level-code batches and US-to-PAL adaptations. A matched function compiles to exactly the same bytes as the original game. Work covers Drek's Fleet and Kalebo III, while unfinished reconstructions are shared separately for contributors to continue (rac1-decomp#15). Veldin 2 work opens as a draft and remains unmerged (rac1-decomp#14).",
+  "writtenBy": "gpt-6.1-sol"
+}

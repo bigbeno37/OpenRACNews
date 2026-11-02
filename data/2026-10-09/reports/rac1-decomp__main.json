@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-09",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank removes assisted pseudo-functions while adding movie and level C",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 61.16% to 61.22% matched code, while its reported finished-function count falls from 3,717 to 3,706. A matched function compiles to exactly the same bytes as the original game. The day reverts pseudo-functions using fixed register choices or inline assembly, adds ordinary-C movie functions, and lands four object routines in Rilgar, Pokitaru, Gemlik and shared code (#45).",
+  "highlights": [
+    "The change in coverage and function count measures different things: coverage is weighted by code size, while reverted pseudo-functions reduce the count.",
+    "#45 reports exact checks for its additions but still notes one non-exact executable function in the wider build."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

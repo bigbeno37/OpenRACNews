@@ -2,7 +2,7 @@
   "date": "2026-10-22",
   "repo": "rac1-decomp",
   "branch": "main",
-  "capturedAt": "2026-11-02T06:49:20.882Z",
+  "capturedAt": "2026-11-02T09:30:57.939Z",
   "progress": {"sha":"b5fff6ea193f191d8782f2a11fd9988986921155","code":{"done":3654204,"total":3713568},"functions":{"done":5080,"total":5124},"data":{"done":3852,"total":699072}},
   "totals": {"commits":1,"merges":1,"landed":1,"additions":113,"deletions":91,"pushes":1,"forcePushes":0,"authors":["Daniel Risto","Lynder063"]},
   "warnings": [],
@@ -13,7 +13,7 @@
     {"number":112,"title":"asm: list func_L02_002100E8 and func_L00_0024EBF8 as hand-written","author":"Drustburn","draft":false,"head":"pr/handwritten-asm-2","events":["opened","merged"],"mergedBy":"Lynder063","additions":113,"deletions":91,"changedFiles":10,"body":"This follows #109. Two more level functions are assembly in the original. They are classified the way docs/ASM_CLASSIFICATION.md does it for level code: listed by hand in config/overlays/handwritten_asm.txt, their INCLUDE_ASM stubs become ASM_FUNC, and the report counts them as finished original-source work. ASM_FUNC is INCLUDE_ASM, so the same asm/overlays/*.s is included and the image does not change.\nThis needs no new rule. Each function is the level programs' copy of an executable function…"}
   ],
   "commits": [
-    {"sha":"a835eca67f958af2a310703ec18c35b7fef3747a","headline":"asm: list func_L02_002100E8 and func_L00_0024EBF8 as hand-written","author":"Daniel Risto","committedAt":"2026-10-22T07:14:09Z","merge":false,"landed":false},
+    {"sha":"a835eca67f958af2a310703ec18c35b7fef3747a","headline":"asm: list func_L02_002100E8 and func_L00_0024EBF8 as hand-written","author":"Daniel Risto","unlinked":true,"committedAt":"2026-10-22T07:14:09Z","merge":false,"landed":false},
     {"sha":"b5fff6ea193f191d8782f2a11fd9988986921155","headline":"Merge pull request #112 from Drustburn/pr/handwritten-asm-2","author":"Lynder063","committedAt":"2026-10-22T19:36:54Z","merge":true,"landed":true,"additions":113,"deletions":91,"body":"asm: list func_L02_002100E8 and func_L00_0024EBF8 as hand-written"}
   ]
 }

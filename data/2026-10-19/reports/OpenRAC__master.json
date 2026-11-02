@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-19",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.8.1 brings OpenRAC to Android",
+  "summary": "Launcher 0.8.1 brings the launcher and game to Android 10 and later on arm64 devices, using the player's own disc image. It adds a controller-aware touch pad, an in-game options drawer and a choice of OpenGL ES or experimental Vulkan. Historical direct development also continues on today's release-only master.",
+  "highlights": [
+    "Android support lands in #15. Desktop Settings also gains experimental Vulkan, with MoltenVK bundled on macOS.",
+    "0.8.0 restores US-disc enemies, objects and movement on affected planets, including Batalia, Oltanis and Kalebo III.",
+    "Both discs gain experimental Hold and Lock strafing, fixes to widescreen seas and lava, and pause-page repairs.",
+    "A broader PAL functional-code audit finds eight differing routines and many without captured calls, so coverage remains incomplete.",
+    "#17 proposes Ratchet shadows with Windows NTSC checks only. PAL validation is still needed and the work is unmerged.",
+    "#16's Windows diagnostics and #18's Vulkan geometry repair also remain unmerged. #18 tested only limited scenes and one GPU."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

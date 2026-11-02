@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-09",
+  "headline": "OpenRAC's launcher lands, with native play still under development",
+  "summary": "OpenRAC's desktop launcher lands with disc setup, editor access, Discord activity and prototype save backups (OpenRAC#2). Its author still calls it scaffolding, with runtime and editor actions checked from a shell rather than the desktop app, while native-port architecture remains proposed (OpenRAC#3). Ratchet & Clank's PAL v2.00 rises from 61.16% to 61.22% matched code even as the reported function count falls after assisted pseudo-functions are reverted. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

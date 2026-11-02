@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-15",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked reaches 1.33% after stricter checks remove false matches",
+  "summary": "Deadlocked's NTSC-U v1.00 matched code rose from 0.51% to 1.33%, with 808 of 15,056 functions reported finished. A matched function compiles to exactly the same bytes as the original game. The large contribution in #3 adds resident and level routines while tightening the verification tools.",
+  "highlights": [
+    "Strict constant comparisons remove 55 false matches from the source tree.",
+    "The assembler helper stops treating a loop's alignment instruction as padding.",
+    "The batch also repairs 82 near misses."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

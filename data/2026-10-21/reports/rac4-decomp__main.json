@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-21",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked recounts the whole game and adds hundreds of small routines",
+  "summary": "Deadlocked's NTSC-U v1.00 matched code changes from 4.13% to 4.03% after a wider inventory adds previously missing functions and code to the total. The report now has 3,165 of 18,085 functions finished. A matched function compiles to exactly the same bytes as the original game. New batches and PAL-specific implementations land alongside the recount.",
+  "highlights": [
+    "#17 extracts and rebuilds all 49 programs byte-identically on both discs, then recounts functions from the binaries.",
+    "#20 adds 463 small functions, #21 adds 425, #22 adds 68 and #23 adds 14.",
+    "#24 and #25 supply 32 PAL implementations for routines whose US C differs there.",
+    "Some older audit warnings reflect corrected function boundaries. The new catalogue checks the complete functions."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

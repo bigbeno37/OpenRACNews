@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-22",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's pattern sweep adds 616 source implementations",
+  "summary": "Up Your Arsenal's PAL v1.00 matched code rose from 8.38% to 8.72%, with 5,807 of 16,164 entries reported finished. A matched function compiles to exactly the same bytes as the original game. A mechanical sweep adds 616 implementations from drafts of the original instructions, including 613 level functions, retaining only candidates verified at every place they occur.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-10",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Ratchet & Clank's native PAL port gains walking, jumping and checkpoint respawning",
+  "summary": "The native-port scaffolding lands in #3, removing the earlier emulator experiment and setting up games from the player's disc. Ratchet & Clank PAL then gains enough movement and checkpoint code to complete a Veldin fall-and-respawn check and walk, jump and land afterwards (#5). Windows build fixes and New Game initialisation also land (#4). This is direct development on master rather than its usual release-pull-request activity.",
+  "highlights": [
+    "The launcher offers Build the game and Rebuild. Its Windows Play action is still marked unverified and needs extracted data and level exports.",
+    "The renderer gains movies, live character animation, original lighting and fog, effects, particles and the flight world's sky.",
+    "A debug level selector and a developer Planets menu can start levels directly. Missing C routines are logged and skipped by default, so reaching a level does not establish complete gameplay.",
+    "The native port is still silent at this stage: stream stand-ins satisfy loading logic while the sound engine remains unfinished.",
+    "#4 reports a passing Windows release build and test suite, while #5 describes validation from a clean checkout using the bundled PAL sources."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

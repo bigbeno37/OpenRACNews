@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-18",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando adds 30 functions across setup, rewards and effects",
+  "summary": "Going Commando gains 30 function matches for USA v1.01 across three pull requests. A matched function compiles to exactly the same bytes as the original game. They cover shared game routines and level setup, state and effects, while the unchanged 6.51% progress report has not yet counted this work.",
+  "highlights": [
+    "#208 adds 21 level functions, including Barlow and Joba setup and Damosel state changes.",
+    "Its effects work spans Oozla, Notak, Tabora, Joba, Aranos Prison, Gorn, Damosel and Yeedil.",
+    "#207 and #209 add nine shared game functions, with boot and all 27 levels verified byte-identical."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

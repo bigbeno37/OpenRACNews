@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-22",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "SDK 1.3.0 lets mods read keyboard, mouse and menu-pointer input",
+  "summary": "OpenRAC releases SDK updates through 1.3.0, giving mods keyboard and mouse input, configurable bindings and pointer coordinates over the game's picture. The launcher adds presets and separate settings pages for gameplay mods. Direct development continues on today's release-only master, with no launcher release recorded today.",
+  "highlights": [
+    "Mods can bind keys, mouse buttons and the wheel. Their reports now drive cutscene skips and movie controls too.",
+    "The level editor gains a Collision dock for selecting, moving, repainting and generating collision.",
+    "Object-class collision edits affect every object of that class in the edited level, leaving other levels alone.",
+    "#30 preserves results passed through hooked functions. macOS Discord detection and Game Mode metadata also improve.",
+    "#33's library-behaviour repairs and #35's selected-function float semantics remain unmerged.",
+    "#34 proposes a README formatting repair for failing launcher checks and remains unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

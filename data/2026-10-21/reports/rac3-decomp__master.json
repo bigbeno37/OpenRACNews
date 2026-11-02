@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-21",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal now counts all levels, putting PAL progress at 8.38%",
+  "summary": "Up Your Arsenal's PAL v1.00 matched-code figure changes from 49.25% to 8.38% because the report now counts the whole game, including all 49 level programs, and removes duplicate front-end code. It reports 5,193 of 16,164 entries finished. A matched function compiles to exactly the same bytes as the original game. More C lands in both core and level programs as NTSC-U support is added.",
+  "highlights": [
+    "The former percentage measured only core programs, so it is not directly comparable with the new whole-game figure.",
+    "The final NTSC-U progress commit reports 8.29% code and 5,140 of 16,222 finished entries.",
+    "All 54 NTSC-U programs rebuild byte-identically, although some functions still use original assembly.",
+    "PAL level batches carry over 1,334 shared functions, 74 level-specific functions and another 681 from US sources.",
+    "Two rewritten-history ranges cannot be compared on GitHub, leaving some activity unavailable."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

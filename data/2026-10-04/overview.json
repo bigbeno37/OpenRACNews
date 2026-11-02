@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-04",
+  "headline": "Deadlocked gains a working decompilation build as Ratchet & Clank passes 20%",
+  "summary": "Deadlocked gains unpacking, executable rebuilding and function-checking tools, with NTSC-U v1.00 reported at 0.51% matched code. Ratchet & Clank's PAL v2.00 rises from 19.79% to 20.24%, helped by implementations adapted from the US decompilation (rac1-decomp#24). A matched function compiles to exactly the same bytes as the original game. Deadlocked's history is rewritten three times and some commit ranges cannot be recovered from GitHub. OpenRAC's master branch is created at an existing commit.",
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-17",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.7.0 enables the US disc and adds a save editor",
+  "summary": "Launcher 0.7.0 sets up and plays the US version of Ratchet & Clank from its own disc. The new save editor changes weapons, bolts, health, unlocked planets and skill points, with backups and checks before writing. Historical direct development continued on today's release-only master.",
+  "highlights": [
+    "US-disc testing covers New Game and Veldin, with Novalis and Kerwan tested by direct start.",
+    "Models and textures can be exported from either disc, with compatible replacement packs mapped between them. Edited levels remain specific to their disc.",
+    "The save editor can choose a starting planet. Removing story items can leave Ratchet stuck, and raw editing requires an advanced setting.",
+    "The editor refuses writes and backup restores while the game uses that memory card.",
+    "Same-day fixes restore controllers and main-menu code after Quit Game, with a 0.7.1 version bump but no recorded release."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

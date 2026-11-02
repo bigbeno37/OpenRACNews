@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-12",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 80.27% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 78.63% to 80.27% matched code, with 4,291 of 5,109 entries reported finished. A matched function compiles to exactly the same bytes as the original game. US-to-PAL adaptations, the debug-menu drawing routine and pickup behaviour land alongside smaller implementations (#50, #55, #49, #53).",
+  "highlights": [
+    "Shared level code becomes one report unit, without changing the coverage totals merely by regrouping it (#52).",
+    "#51's author ran focused function and file checks rather than a full build.",
+    "#54 proposes a memory-card menu state handler that lets the native New Game path reach Veldin. It has not merged.",
+    "Further functional C for the port is kept separate from exact-match progress (#55)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

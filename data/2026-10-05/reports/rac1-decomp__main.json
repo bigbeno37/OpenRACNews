@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-05",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 jumps from 20.24% to 54.43% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 20.24% to 54.43% matched code, with 3,186 of 5,109 entries reported finished. A matched function compiles to exactly the same bytes as the original game. The largest batch adds 140 functions, dominated by large hero routines repeated across levels (#29). Drek's Fleet becomes the first level whose own code is fully matched (#32).",
+  "highlights": [
+    "A tool-assisted transfer brings 100 US implementations to PAL, followed by additional reviewed library and long-function work (#26).",
+    "New quadword copy and zeroing helpers unblock more implementations (#31).",
+    "#32's finished-entry increase includes 29 new matches, 22 linker remnants and four joined pieces. It is not 55 newly reconstructed functions.",
+    "Another small-to-medium function batch opens as #30 and has not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

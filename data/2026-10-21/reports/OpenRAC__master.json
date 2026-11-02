@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-21",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Gameplay mods gain native plugins, Luau scripts and an MIT-licensed SDK",
+  "summary": "OpenRAC adds gameplay mods installed from repository links, with ordering, settings, updates and a Purist mode that disables them. SDK 1.1.2 is released under MIT and supports C, C++ and Luau script mods. This is direct development on today's release-only master, with no launcher release recorded today.",
+  "highlights": [
+    "Lock-strafe moves out of the port into a mod. Script mods run across platforms, while Android still lacks native plugins and a Mods tab.",
+    "Stable hook identifiers survive renames. Hundreds of object-update hooks are exposed as experimental game internals.",
+    "The level editor can change gameplay data and collision. Terrain replacement packs can reshape visuals, but leave collision unchanged.",
+    "#22 fixes music-thread crashes at exit and #23 repairs launcher jobs, backups and save handling.",
+    "#25 through #28 correct level-copy calls and PS2 integer-width behaviour.",
+    "#29 fixes AppImage environment leakage. Other Linux fixes restore confirmation dialogs, menu launching and second-instance handling."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

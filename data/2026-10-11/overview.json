@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-11",
+  "headline": "Ratchet & Clank's native port gains music and sharper menus",
+  "summary": "OpenRAC's native Ratchet & Clank PAL port gains music, speech and sound effects, alongside native UI drawing and sharper text (OpenRAC#6). Camera and Linux Play fixes land, while Discord activity gains live planet, location and bolt information. The separate PAL v2.00 decompilation rises from 78.51% to 78.63% matched code during a broad shared-structure cleanup. A matched function compiles to exactly the same bytes as the original game. Going Commando retires its generated-source campaign system, imports SDK/library C and adopts GPL-3.0 licensing.",
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-11",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Ratchet & Clank's native port gains music, speech and sharper menus",
+  "summary": "Ratchet & Clank's native PAL port gains sound effects followed by music and speech streamed from the disc. Native textured UI quads and sharper text land in #6, while Linux gains the launcher Play action. Camera fixes address strafe-view blending, first-person initialisation and invalid collision bounds. Master continues direct development rather than its usual release-only workflow.",
+  "highlights": [
+    "Pause menus keep the world image without the HUD and avoid black frames while opening and closing (#6).",
+    "Discord presence works on Windows and reports the game, planet, location and bolt count, with connection handling moved away from UI work.",
+    "Save-slot clock, planet and empty-state parsing are corrected, and the launcher adds Compact and Classic layout choices."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

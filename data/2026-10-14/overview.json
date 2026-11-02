@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-14",
+  "headline": "Launcher fixes installation and Play, while Ratchet & Clank passes 86%",
+  "summary": "OpenRAC released launcher 0.4.0 through 0.4.4, bundling setup tools and repairing Play, level extraction and Linux startup. Ratchet & Clank's PAL v2.00 matched code rose from 81.10% to 86.02%. Going Commando gained 59 shared-function matches for USA v1.01, although its committed progress report was not refreshed. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

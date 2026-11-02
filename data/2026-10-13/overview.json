@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-13",
+  "headline": "Launcher 0.3.0 released with setup from the player's own disc",
+  "summary": "OpenRAC released launcher 0.3.0 with a single game page and disc-based setup. Native-port development also added installer tooling and brought the NTSC-U build to its title screen, though it stops later. Ratchet & Clank's PAL v2.00 matched code rose from 80.27% to 81.10%, while Going Commando's USA v1.01 rose from 4.44% to 5.60%. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.8.4 fixes Suck Cannon crashes on both discs",
+  "summary": "Launcher 0.8.4 fixes Suck Cannon grab and firing hooks that crashed Ratchet & Clank on Eudora and affected creatures elsewhere. Earlier releases today restore the PAL title screen, add Ratchet's shadow and make Mods available in installed launchers. Historical direct development also continues on today's release-only master.",
+  "highlights": [
+    "#17's shadows and #18's Vulkan geometry fix merge. Their authors tested Windows NTSC, with PAL shadows and other GPUs still untested in those submissions.",
+    "Going Commando reaches a labelled, navigable main menu. New Game still stops during the first level's load.",
+    "Deadlocked reaches its native main menu, and later-game level and asset editors appear in early access. Those games remain unplayable and their edited levels cannot be packed back.",
+    "A Differences panel exposes widescreen fixes and explains always-on crash guards, including Gaspar's exhausted spawn-pool guard.",
+    "#16 repairs Windows diagnostic reports. First-run setup and controller focus also improve.",
+    "#22's music-thread shutdown fix and #23's launcher bug sweep remain proposals."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

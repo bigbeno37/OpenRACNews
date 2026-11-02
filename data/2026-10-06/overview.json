@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-06",
+  "headline": "Kalebo III becomes Ratchet & Clank's second fully matched level-code unit",
+  "summary": "Kalebo III's own code is fully matched after its final seven functions land (rac1-decomp#34). Ratchet & Clank's PAL v2.00 rises from 54.43% to 56.30% matched code. A matched function compiles to exactly the same bytes as the original game. Other batches add smaller level functions and repair catalogue splits, whose joined pieces count with their owners rather than as new C implementations (rac1-decomp#33).",
+  "writtenBy": "gpt-6.1-sol"
+}

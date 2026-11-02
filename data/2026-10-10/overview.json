@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-10",
+  "headline": "Ratchet & Clank's native PAL build gains movement and checkpoint respawning",
+  "summary": "OpenRAC replaces its emulator experiment with native-port scaffolding and advances Ratchet & Clank PAL through Veldin walking, jumping and checkpoint respawning (OpenRAC#3, OpenRAC#5). The renderer gains movies and more faithful animation and lighting, but the native game remains silent and missing routines are skipped by default. Ratchet & Clank's separate PAL v2.00 decompilation rises from 61.22% to 78.51% matched code. A matched function compiles to exactly the same bytes as the original game. Additional functional C helps the port without counting as matching progress (rac1-decomp#47).",
+  "writtenBy": "gpt-6.1-sol"
+}

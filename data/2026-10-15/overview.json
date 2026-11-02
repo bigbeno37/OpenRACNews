@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-15",
+  "headline": "Ratchet & Clank reaches 88.30%, while Deadlocked tightens its checks",
+  "summary": "Ratchet & Clank's PAL v2.00 matched code rose from 86.02% to 88.30% and gained separate reporting for executable data. Deadlocked's NTSC-U v1.00 rose from 0.51% to 1.33% while stricter checks removed 55 false matches. A matched function compiles to exactly the same bytes as the original game. OpenRAC also restored translation of Going Commando's current decompilation sources for its native port.",
+  "writtenBy": "gpt-6.1-sol"
+}

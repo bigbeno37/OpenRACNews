@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-07",
+  "headline": "Ratchet & Clank completes Veldin and menu-code units",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 56.30% to 57.44% matched code as Veldin and the executable's menu unit become complete (rac1-decomp#36). A matched function compiles to exactly the same bytes as the original game. Library implementations also land, and the project adopts GPL-3.0 licensing. A proposal to remove compiler-output repair steps remains unmerged (rac1-decomp#40).",
+  "writtenBy": "gpt-6.1-sol"
+}

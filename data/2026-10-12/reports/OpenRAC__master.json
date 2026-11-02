@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-12",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Players can pack edited Ratchet & Clank objects and play them through Mods",
+  "summary": "The level editor can pack moved, rotated, scaled or otherwise edited game objects back into Ratchet & Clank's data, and the launcher gains a Mods page for editing, packing and playing those changes. Unchanged objects retain their original bytes, while added and deleted objects are reported and left out. Per-level Godot projects let players open one planet instead of importing every level. Master receives direct development rather than its usual release-only activity.",
+  "highlights": [
+    "The launcher presents one main action per game and keeps developer details behind Developer tools.",
+    "Website progress is cached outside tracked source files and only overrides the checkout's figures when newer.",
+    "Going Commando is imported afresh after its upstream rebuild, so much of the large source churn replaces the old generated-source layout.",
+    "Windows gets a native-program build check after platform-specific failures, and conflicting declarations are repaired so previously dropped source units generate again.",
+    "The author had not visually checked the new level picker."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

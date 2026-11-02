@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-05",
+  "headline": "Ratchet & Clank's PAL v2.00 passes halfway, with Drek's Fleet code complete",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 20.24% to 54.43% matched code after large hero routines and US-to-PAL adaptations. A matched function compiles to exactly the same bytes as the original game. Drek's Fleet becomes the first fully matched level-code unit, although the report's finished-entry count also includes linker remnants and joined pieces (rac1-decomp#32). OpenRAC imports Deadlocked and adds cross-project mapping and transfer tools, while documenting that Deadlocked's early masked per-function checks are weaker than linked proof.",
+  "writtenBy": "gpt-6.1-sol"
+}
