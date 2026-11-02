@@ -1,10 +1,11 @@
-// Loads everything under data/ and joins it up for the pages, by project and by day. Only what
-// config/tracking.json covers is shown, so dropping a branch from the config also takes it off the site.
+// Loads everything under data/ and joins it up for the pages. The site shows one day at a time, so
+// everything here answers "as of this date" and never looks past it. Only what config/tracking.json
+// covers is shown, so dropping a branch from the config also takes it off the site.
 import { getCollection } from 'astro:content';
 import { shiftDay } from './days.ts';
-import { count, sentenceList } from './format.ts';
-import { issueUrl, pullUrl, commitUrl, releaseUrl } from './links.ts';
-import type { BranchReport, BranchSnapshot, Issue, Overview, RepoSnapshot, TrackedBranch, TrackedRepo } from './schema.ts';
+import { count, percent, sentenceList } from './format.ts';
+import { commitUrl, issueUrl, pullUrl, releaseUrl } from './links.ts';
+import type { BranchReport, BranchSnapshot, Issue, Overview, Progress, RepoSnapshot, TrackedBranch, TrackedRepo } from './schema.ts';
 import { tracking, trackedBranches } from './tracking.ts';
 
 export interface BranchDay {
@@ -20,7 +21,7 @@ export interface RepoDay {
   facts: RepoSnapshot;
 }
 
-interface Totals {
+export interface Totals {
   commits: number;
   merged: number;
   opened: number;
@@ -36,19 +37,25 @@ export interface Day {
   totals: Totals;
 }
 
-/** How many days a project's activity bar and recent numbers look back. */
+/** How many days a project's activity bar looks back. */
 export const RECENT_DAYS = 30;
 
-export interface Project {
+/** One project as it stood on one day. */
+export interface ProjectDay {
   repo: TrackedRepo;
-  /** Each tracked branch, newest day first, in the order the config lists them. */
-  branches: { branch: TrackedBranch; days: BranchDay[] }[];
-  /** Issues and releases, newest day first. */
-  events: RepoDay[];
+  date: string;
+  /** Each tracked branch: what it did that day if anything, and when it last did something by then. */
+  branches: { branch: TrackedBranch; today?: BranchDay; lastActive?: string }[];
+  /** Issues and releases from that day. */
+  events?: RepoDay;
+  today: Totals;
   lastActive?: string;
-  /** Every one of the last RECENT_DAYS days on record, oldest first, including quiet ones. */
+  /** The days up to and including this one, oldest first, quiet ones too. */
   activity: { date: string; commits: number }[];
-  recent: Totals;
+  /** The newest matching figures by then, and how far they moved that day. */
+  progress?: { current: Progress; asOf: string; change?: number };
+  /** The newest full release by then. */
+  latestRelease?: { tag: string; date: string };
 }
 
 const eventCount = (facts: BranchSnapshot, event: 'opened' | 'merged' | 'closed') =>
@@ -72,6 +79,15 @@ export function branchFacts(facts: BranchSnapshot): string {
   return sentenceList([...(facts.totals.commits ? [count(facts.totals.commits, 'commit')] : []), ...pullRequests]);
 }
 
+/** The same across a whole project or day. */
+export function totalsFacts({ commits, merged, opened }: Totals): string {
+  const pullRequests = [
+    ...(merged ? [`${count(merged, 'pull request')} merged`] : []),
+    ...(opened ? [merged ? `${opened} opened` : `${count(opened, 'pull request')} opened`] : []),
+  ];
+  return sentenceList([...(commits ? [count(commits, 'commit')] : []), ...pullRequests]);
+}
+
 /** A few of the day's own titles, to stand in for a missing report: what merged, else what opened, else what landed. */
 export function highlightsFrom(repo: string, facts: BranchSnapshot, limit = 4): { title: string; href: string }[] {
   const withEvent = (event: 'merged' | 'opened') => facts.pullRequests.filter((pr) => pr.events.includes(event));
@@ -86,6 +102,7 @@ export function highlightsFrom(repo: string, facts: BranchSnapshot, limit = 4): 
 
 export function dayFacts(day: Day): string {
   const { commits, activeBranches } = day.totals;
+  if (activeBranches === 0) return 'nothing landed on a tracked branch';
   return `${count(commits, 'commit')} landed across ${count(activeBranches, 'branch', 'branches')}`;
 }
 
@@ -166,29 +183,72 @@ async function load(): Promise<Day[]> {
   });
 }
 
-/** Every day on record, newest first. */
+/** Every day something happened, newest first. */
 export const loadDays = () => (loaded ??= load());
 
-/** Every tracked project, in the order the config lists them. */
-export async function loadProjects(): Promise<Project[]> {
+/**
+ * Every calendar day from the first on record to the latest, oldest first. Quiet days count, so going back
+ * a day always moves exactly one day.
+ */
+export async function dayRange(): Promise<string[]> {
   const days = await loadDays();
-  const latest = days[0]?.date;
-  // The window ends at the latest day on record for every project, so a quiet project shows as quiet.
-  const window = latest ? Array.from({ length: RECENT_DAYS }, (_, i) => shiftDay(latest, i - RECENT_DAYS + 1)) : [];
-  const inWindow = new Set(window);
+  const [newest, oldest] = [days[0]?.date, days.at(-1)?.date];
+  if (!newest || !oldest) return [];
+  const range: string[] = [];
+  for (let date = oldest; date <= newest; date = shiftDay(date, 1)) range.push(date);
+  return range;
+}
 
-  return tracking.repos.map((repo): Project => {
-    const allBranchDays = days.flatMap((day) => day.branches.filter((b) => b.repo.name === repo.name));
-    const lastActive = allBranchDays[0]?.date;
-    const totalsByDate = new Map<string, BranchDay[]>();
-    for (const day of allBranchDays) totalsByDate.set(day.date, [...(totalsByDate.get(day.date) ?? []), day]);
-    return {
-      repo,
-      branches: repo.branches.map((branch) => ({ branch, days: allBranchDays.filter((day) => day.branch.name === branch.name) })),
-      events: days.flatMap((day) => day.repos.filter((r) => r.repo.name === repo.name)),
-      ...(lastActive ? { lastActive } : {}),
-      activity: window.map((date) => ({ date, commits: totalsFor(totalsByDate.get(date) ?? []).commits })),
-      recent: totalsFor(allBranchDays.filter((day) => inWindow.has(day.date))),
-    };
+/** One day across every project. A quiet day is simply empty. */
+export async function dayOn(date: string): Promise<Day> {
+  return (await loadDays()).find((day) => day.date === date) ?? { date, branches: [], repos: [], totals: totalsFor([]) };
+}
+
+/** One project as it stood on one day, using nothing from after it. */
+export async function projectOn(repo: TrackedRepo, date: string): Promise<ProjectDay> {
+  const days = (await loadDays()).filter((day) => day.date <= date);
+  const history = days.flatMap((day) => day.branches.filter((b) => b.repo.name === repo.name));
+  const todays = history.filter((day) => day.date === date);
+
+  const branches = repo.branches.map((branch) => {
+    const own = history.filter((day) => day.branch.name === branch.name);
+    const today = own[0]?.date === date ? own[0] : undefined;
+    return { branch, ...(today ? { today } : {}), ...(own[0] ? { lastActive: own[0].date } : {}) };
   });
+
+  // The window starts no earlier than the first day on record, so missing data never reads as a quiet spell.
+  const firstOnRecord = days.at(-1)?.date ?? date;
+  const activity: ProjectDay['activity'] = [];
+  for (let i = RECENT_DAYS - 1; i >= 0; i--) {
+    const day = shiftDay(date, -i);
+    if (day >= firstOnRecord) activity.push({ date: day, commits: totalsFor(history.filter((b) => b.date === day)).commits });
+  }
+
+  const withProgress = history.filter((day) => day.facts.progress);
+  const [newest, previous] = withProgress;
+  const progress = newest?.facts.progress
+    ? {
+        current: newest.facts.progress,
+        asOf: newest.date,
+        ...(newest.date === date && previous?.facts.progress ? { change: percent(newest.facts.progress.code) - percent(previous.facts.progress.code) } : {}),
+      }
+    : undefined;
+
+  const releaseDay = days
+    .flatMap((day) => day.repos.filter((r) => r.repo.name === repo.name))
+    .map(({ facts }) => ({ date: facts.date, release: facts.releases.filter((r) => !r.prerelease).at(-1) }))
+    .find(({ release }) => release);
+
+  const events = days[0]?.date === date ? days[0].repos.find((r) => r.repo.name === repo.name) : undefined;
+  return {
+    repo,
+    date,
+    branches,
+    ...(events ? { events } : {}),
+    today: totalsFor(todays),
+    ...(history[0] ? { lastActive: history[0].date } : {}),
+    activity,
+    ...(progress ? { progress } : {}),
+    ...(releaseDay?.release ? { latestRelease: { tag: releaseDay.release.tag, date: releaseDay.date } } : {}),
+  };
 }

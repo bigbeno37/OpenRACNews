@@ -1,6 +1,6 @@
 # OpenRAC News
 
-What's new in each [OpenRAC](https://github.com/OpenRAC) project: the Ratchet & Clank decompilations, the launcher and the mods. Every project has its own page, in that game's colours, where each tracked branch gets a report for every UTC day it was active. A summary across all projects sits on the home page.
+Every [OpenRAC](https://github.com/OpenRAC) project as it stood on any day: the Ratchet & Clank decompilations, the launcher and the mods. Pick a date in the navbar and the whole site shows that day: how far each decompilation had got, what landed, and a written report per branch. Moving between days keeps you on the same project.
 
 It's a static [Astro](https://astro.build) site for GitHub Pages, styled after [openrac.dev](https://openrac.dev).
 
@@ -8,7 +8,7 @@ It's a static [Astro](https://astro.build) site for GitHub Pages, styled after [
 
 Once a day, just after midnight UTC, `.github/workflows/daily.yml`:
 
-1. **Takes a snapshot.** `pnpm snapshot` records what landed on each branch in `config/tracking.json`, along with its pull requests, issues and releases, under `data/<date>/`.
+1. **Takes a snapshot.** `pnpm snapshot` records what landed on each branch in `config/tracking.json`, along with its pull requests, issues, releases and each decompilation's progress figures, under `data/<date>/`.
 2. **Writes the reports.** An agent follows `AGENTS.md` to turn each snapshot into a report. `pnpm reports:check` then checks them, including that every pull request or issue they cite is really in the snapshot.
 3. **Publishes.** It commits `data/` and deploys the site to GitHub Pages.
 

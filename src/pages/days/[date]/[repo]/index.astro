@@ -1,0 +1,133 @@
+---
+// One project on one day, in that game's colours. Moving to another day stays on this project.
+import Badge from '../../../../components/Badge.astro';
+import DayBar from '../../../../components/DayBar.astro';
+import Hero from '../../../../components/Hero.astro';
+import Icons from '../../../../components/Icons.astro';
+import ProgressBar from '../../../../components/ProgressBar.astro';
+import ReportCard from '../../../../components/ReportCard.astro';
+import Row from '../../../../components/Row.astro';
+import Section from '../../../../components/Section.astro';
+import Layout from '../../../../layouts/Layout.astro';
+import { formatDay, formatDayMonthShort, formatDayShort } from '../../../../lib/days.ts';
+import { formatChange, formatNumber, formatPercent } from '../../../../lib/format.ts';
+import { dayUrl, projectUrl } from '../../../../lib/links.ts';
+import { dayRange, eventRows, projectOn, RECENT_DAYS } from '../../../../lib/news.ts';
+import type { TrackedRepo } from '../../../../lib/schema.ts';
+import { barStyle, themeFor } from '../../../../lib/themes.ts';
+import { repoUrl, tracking } from '../../../../lib/tracking.ts';
+
+export async function getStaticPaths() {
+  const days = await dayRange();
+  return days.flatMap((date) => tracking.repos.map((repo) => ({ params: { date, repo: repo.name }, props: { repo } })));
+}
+
+interface Props {
+  repo: TrackedRepo;
+}
+const { repo } = Astro.props;
+const { date } = Astro.params;
+const project = await projectOn(repo, date);
+const { branches, today, activity, progress, lastActive, latestRelease } = project;
+const theme = themeFor(repo.name);
+const change = progress?.change === undefined ? undefined : formatChange(progress.change);
+const functions = progress?.current.functions;
+const lastActiveText = lastActive ? formatDayMonthShort(lastActive) : 'Not yet';
+
+const stats: [string, string][] = progress
+  ? [
+      [formatPercent(progress.current.code), change ? `code matched, ${change} this day` : 'code matched'],
+      [functions ? formatNumber(functions.done) : '–', functions ? `of ${formatNumber(functions.total)} functions` : 'functions'],
+      [formatNumber(today.commits), today.commits === 1 ? 'commit this day' : 'commits this day'],
+      [formatNumber(today.merged), today.merged === 1 ? 'pull request merged' : 'pull requests merged'],
+    ]
+  : [
+      [formatNumber(today.commits), today.commits === 1 ? 'commit this day' : 'commits this day'],
+      [formatNumber(today.merged), today.merged === 1 ? 'pull request merged' : 'pull requests merged'],
+      [formatNumber(today.contributors), today.contributors === 1 ? 'contributor' : 'contributors'],
+      [lastActiveText, 'last active'],
+    ];
+const rows = project.events ? eventRows(project.events) : [];
+---
+
+<Layout title={`${repo.title}, ${formatDayShort(date)}`} description={project.branches.find((b) => b.today?.report)?.today?.report?.headline ?? repo.about} date={date} repo={repo.name}>
+  <Hero eyebrow={`${repo.name} · ${formatDay(date)}`} font={theme.font} compact>
+    <Fragment slot="shine">{repo.title}</Fragment>
+    <p class="mt-5 max-w-[600px] text-[15px] leading-relaxed text-soft sm:text-[17px]">{repo.about}</p>
+    <div class="mt-6 grid animate-rise gap-3 [animation-delay:.2s] min-[560px]:flex min-[560px]:flex-wrap">
+      <a href={repoUrl(repo.name)} class="btn btn-primary"><Icons name="github" class="size-4" />See it on GitHub</a>
+      <a href={dayUrl(date)} class="btn">All projects on {formatDayShort(date)}</a>
+    </div>
+
+    <div class="mt-8 grid max-w-[900px] animate-rise grid-cols-2 gap-2.5 [animation-delay:.3s] min-[560px]:grid-cols-4 sm:gap-3.5">
+      {
+        stats.map(([value, label]) => (
+          <div class="surface px-3 py-3 sm:px-[18px] sm:py-4">
+            <b class="block whitespace-nowrap font-orbitron text-[clamp(15px,4.2vw,26px)] font-bold leading-tight tabular-nums text-gold">{value}</b>
+            <span class="mt-0.5 block text-[12px] leading-snug text-dim sm:text-[13px]">{label}</span>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-6 grid max-w-[900px] gap-4" style={barStyle(repo.name)}>
+      {
+        progress && (
+          <div class="grid gap-1.5">
+            <ProgressBar progress={progress.current} />
+            <p class="flex flex-wrap justify-between gap-x-4 text-[11px] text-dim">
+              <span>Matched code{progress.current.data ? `, with data below at ${formatPercent(progress.current.data)}` : ''}</span>
+              {progress.asOf !== date && <span>Figures from {formatDayShort(progress.asOf)}</span>}
+            </p>
+          </div>
+        )
+      }
+      <div>
+        <DayBar activity={activity} />
+        <p class="text-[11px] text-dim">Commits per day, last {Math.min(activity.length, RECENT_DAYS)} days</p>
+      </div>
+      {!progress && latestRelease && <p class="text-[13px] text-dim">Latest release: <span class="text-text">{latestRelease.tag}</span>, {formatDayShort(latestRelease.date)}</p>}
+    </div>
+  </Hero>
+
+  <Section id="branches" art="activity" title={`On ${formatDayShort(date)}`} sub="What landed on each tracked branch during this UTC day. Each bar is the day from 00:00 to 23:59, one segment per hour, brighter the more pushes and merges landed.">
+    <div class="grid gap-3 sm:gap-4">
+      {
+        branches.map(({ branch, today: day, lastActive: branchLast }) =>
+          day ? (
+            <ReportCard day={day} />
+          ) : (
+            <div class="surface grid gap-1 p-5 sm:p-6">
+              <h3 class={`${theme.font} text-[clamp(18px,3vw,22px)] leading-tight text-hi`}>{branch.name}</h3>
+              <p class="text-soft">
+                Nothing landed on this day.{' '}
+                {branchLast ? (
+                  <a href={projectUrl(branchLast, repo.name)} class="text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber">
+                    Last active {formatDayShort(branchLast)}
+                  </a>
+                ) : (
+                  <span class="text-dim">No activity on record by this day.</span>
+                )}
+              </p>
+            </div>
+          ),
+        )
+      }
+    </div>
+  </Section>
+
+  {
+    rows.length > 0 && (
+      <Section id="repo-wide" art="fresh" title="Issues and releases" sub="Opened, closed or published on this day. These belong to the repository as a whole rather than to one of its branches.">
+        <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
+          {rows.map((row) => (
+            <Row href={row.href} title={row.title}>
+              <Badge slot="lead">{row.badge}</Badge>
+              <span>{row.note}</span>
+            </Row>
+          ))}
+        </ul>
+      </Section>
+    )
+  }
+</Layout>

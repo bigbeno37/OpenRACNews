@@ -1,36 +1,33 @@
 ---
-import Badge from '../../../components/Badge.astro';
-import Hero from '../../../components/Hero.astro';
-import ReportCard from '../../../components/ReportCard.astro';
-import Row from '../../../components/Row.astro';
-import Section from '../../../components/Section.astro';
-import Layout from '../../../layouts/Layout.astro';
-import { formatDay, formatDayShort } from '../../../lib/days.ts';
-import { count, formatNumber, sentenceList, timeOf } from '../../../lib/format.ts';
-import { branchUrl, commitUrl, dayUrl, pullUrl, reportUrl } from '../../../lib/links.ts';
-import { loadProjects, type BranchDay } from '../../../lib/news.ts';
-import type { Commit } from '../../../lib/schema.ts';
-import { themeFor } from '../../../lib/themes.ts';
-import { branchSlug } from '../../../lib/tracking.ts';
+// Everything one branch did on one day: its report, then every pull request and commit.
+import Badge from '../../../../components/Badge.astro';
+import Hero from '../../../../components/Hero.astro';
+import ReportCard from '../../../../components/ReportCard.astro';
+import Row from '../../../../components/Row.astro';
+import Section from '../../../../components/Section.astro';
+import Layout from '../../../../layouts/Layout.astro';
+import { formatDay, formatDayShort } from '../../../../lib/days.ts';
+import { count, formatNumber, sentenceList, timeOf } from '../../../../lib/format.ts';
+import { commitUrl, dayUrl, projectUrl, pullUrl } from '../../../../lib/links.ts';
+import { loadDays, type BranchDay } from '../../../../lib/news.ts';
+import type { Commit } from '../../../../lib/schema.ts';
+import { themeFor } from '../../../../lib/themes.ts';
+import { branchSlug } from '../../../../lib/tracking.ts';
 
 export async function getStaticPaths() {
-  const projects = await loadProjects();
-  return projects.flatMap((project) =>
-    project.branches.flatMap(({ days }) =>
-      days.map((day, i) => ({
-        params: { repo: day.repo.name, branch: branchSlug(day.branch.name), date: day.date },
-        props: { day, newer: days[i - 1], older: days[i + 1] },
-      })),
-    ),
+  const days = await loadDays();
+  return days.flatMap((day) =>
+    day.branches.map((branchDay) => ({
+      params: { date: branchDay.date, repo: branchDay.repo.name, branch: branchSlug(branchDay.branch.name) },
+      props: { day: branchDay },
+    })),
   );
 }
 
 interface Props {
   day: BranchDay;
-  newer?: BranchDay;
-  older?: BranchDay;
 }
-const { day, newer, older } = Astro.props;
+const { day } = Astro.props;
 const { repo, branch, date, facts, report } = day;
 const theme = themeFor(repo.name);
 
@@ -40,19 +37,18 @@ const forcePushes = facts.pushes.filter((p) => p.type === 'force_push');
 const short = (commit: Commit) => commit.sha.slice(0, 7);
 ---
 
-<Layout title={`${repo.title} ${branch.name}, ${formatDayShort(date)}`} description={report?.headline} repo={repo.name}>
+<Layout title={`${repo.title} ${branch.name}, ${formatDayShort(date)}`} description={report?.headline} date={date} repo={repo.name}>
   <Hero eyebrow={`Branch report · ${formatDay(date)}`} font={theme.font} compact>
     <Fragment slot="shine">{repo.title}</Fragment>
     <Fragment slot="title">{branch.name}</Fragment>
-    <p class="mt-5 max-w-[680px] text-soft">{branch.about}</p>
     <div class="mt-5 flex flex-wrap gap-3">
-      <a href={branchUrl(repo.name, branch.name)} class="btn btn-sm">Back to {theme.tag}</a>
+      <a href={projectUrl(date, repo.name)} class="btn btn-sm">Back to {theme.tag} on {formatDayShort(date)}</a>
       <a href={dayUrl(date)} class="btn btn-sm">All projects on {formatDayShort(date)}</a>
     </div>
   </Hero>
 
   <div class="pt-6">
-    <ReportCard day={day} link={false} heading="date" />
+    <ReportCard day={day} link={false} />
   </div>
 
   {
@@ -115,9 +111,4 @@ const short = (commit: Commit) => commit.sha.slice(0, 7);
       </Section>
     )
   }
-
-  <nav aria-label="Other reports for this branch" class="flex flex-wrap justify-between gap-3 py-10">
-    {older ? <a href={reportUrl(repo.name, branch.name, older.date)} class="btn btn-sm">Earlier: {formatDayShort(older.date)}</a> : <span></span>}
-    {newer && <a href={reportUrl(repo.name, branch.name, newer.date)} class="btn btn-sm">Later: {formatDayShort(newer.date)}</a>}
-  </nav>
 </Layout>

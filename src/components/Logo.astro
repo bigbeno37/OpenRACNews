@@ -6,10 +6,12 @@ import paths from '../lib/logoPaths.json';
 interface Props {
   height?: number;
   accent?: boolean;
+  /** The mark alone, for where the name has no room. */
+  mark?: boolean;
   class?: string;
 }
-const { height = 32, accent = false, class: className = '' } = Astro.props;
-const view = [62, 220, 1253, 334] as const;
+const { height = 32, accent = false, mark = false, class: className = '' } = Astro.props;
+const view = mark ? ([62, 220, 415, 334] as const) : ([62, 220, 1253, 334] as const);
 const width = Math.round((height * view[2]) / view[3]);
 ---
 
@@ -18,8 +20,14 @@ const width = Math.round((height * view[2]) / view[3]);
     <g fill={accent ? '#e8a317' : undefined}>
       {paths.mark.map((d) => <path d={d} />)}
     </g>
-    <g>
-      {paths.name.map((d) => <path d={d} />)}
-    </g>
+    {
+      !mark && (
+        <g>
+          {paths.name.map((d) => (
+            <path d={d} />
+          ))}
+        </g>
+      )
+    }
   </g>
 </svg>

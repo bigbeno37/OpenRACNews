@@ -1,0 +1,123 @@
+---
+// The date you're viewing, in the navbar: back a day, forward a day, and a calendar on click. It needs no
+// script. The popover attribute opens it and closes it on Escape or a click outside, and hidden radio
+// buttons page through the months (.cal-radio in global.css).
+import { calendarMonths } from '../lib/calendar.ts';
+import { formatDay, formatDayMonthShort, formatDayShort } from '../lib/days.ts';
+import { count, dayOpacity } from '../lib/format.ts';
+import { url } from '../lib/links.ts';
+
+interface Props {
+  date: string;
+  /** Every day that can be viewed, oldest first. */
+  days: string[];
+  /** Commits per day, for how strongly to mark it on the calendar. */
+  commits: Map<string, number>;
+  /** Where each day leads: the same page, on that day. */
+  hrefFor: (date: string) => string;
+}
+const { date, days, commits, hrefFor } = Astro.props;
+const index = days.indexOf(date);
+const previous = days[index - 1];
+const next = days[index + 1];
+const latest = days.at(-1)!;
+const months = calendarMonths(days[0]!, latest);
+const viewable = new Set(days);
+const viewedMonth = date.slice(0, 7);
+
+const arrow = 'flex size-9 flex-none items-center justify-center rounded-full bg-(--bar-ink-deep) text-amber transition-colors hover:bg-(--bar-ink)';
+const heat = (day: string) => Math.round(dayOpacity(commits.get(day) ?? 0) * 40);
+const monthButton = 'flex size-8 cursor-pointer items-center justify-center rounded-full text-amber transition-colors hover:bg-white/10';
+---
+
+<div class="flex flex-none items-center gap-1">
+  {
+    previous ? (
+      <a href={hrefFor(previous)} rel="prev" aria-label={`Back a day, to ${formatDay(previous)}`} title={`Back to ${formatDayShort(previous)}`} class={arrow}>
+        <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="M10 3 5 8l5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    ) : (
+      <span aria-hidden="true" class={`${arrow} pointer-events-none opacity-40`}>
+        <svg viewBox="0 0 16 16" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="M10 3 5 8l5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </span>
+    )
+  }
+
+  <button type="button" popovertarget="date-picker" aria-label={`Choose a date. Showing ${formatDay(date)}`} class="flex h-9 cursor-pointer items-center gap-2 whitespace-nowrap rounded-full border border-black/25 bg-(--bar-ink-deep) px-3 text-sm font-semibold text-amber transition-colors hover:bg-(--bar-ink)">
+    <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 flex-none fill-none stroke-current stroke-[1.6]"><rect x="2" y="3" width="12" height="11" rx="2" /><path d="M2 7h12M5 1.5V4M11 1.5V4" stroke-linecap="round" /></svg>
+    <span class="hidden min-[480px]:inline">{formatDayShort(date)}</span>
+    <span class="min-[480px]:hidden">{formatDayMonthShort(date)}</span>
+  </button>
+
+  {
+    next ? (
+      <a href={hrefFor(next)} rel="next" aria-label={`Forward a day, to ${formatDay(next)}`} title={`Forward to ${formatDayShort(next)}`} class={arrow}>
+        <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="m6 3 5 5-5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    ) : (
+      <span aria-hidden="true" class={`${arrow} pointer-events-none opacity-40`}>
+        <svg viewBox="0 0 16 16" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="m6 3 5 5-5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </span>
+    )
+  }
+</div>
+
+<div id="date-picker" popover aria-label="Choose a date" class="calendar">
+  {
+    months.map((month, i) => {
+      const earlier = months[i - 1];
+      const later = months[i + 1];
+      return (
+        <Fragment>
+          <input type="radio" name="calendar-month" id={`cal-${month.id}`} checked={month.id === viewedMonth} aria-label={month.label} class="cal-radio sr-only" />
+          <div class="cal-page">
+            <div class="mb-2 flex items-center justify-between">
+              {earlier ? (
+                <label for={`cal-${earlier.id}`} title={earlier.label} class={monthButton}>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="M10 3 5 8l5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <span class="sr-only">{earlier.label}</span>
+                </label>
+              ) : (
+                <span class="size-8" />
+              )}
+              <b class="font-orbitron text-[14px] font-bold text-gold">{month.label}</b>
+              {later ? (
+                <label for={`cal-${later.id}`} title={later.label} class={monthButton}>
+                  <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="m6 3 5 5-5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <span class="sr-only">{later.label}</span>
+                </label>
+              ) : (
+                <span class="size-8" />
+              )}
+            </div>
+            <div aria-hidden="true" class="mb-1 grid grid-cols-7 text-center text-[11px] text-dim">
+              {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((letter) => <span>{letter}</span>)}
+            </div>
+            <div class="grid grid-cols-7 gap-1 text-center text-[13px] tabular-nums">
+              {month.weeks.flat().map((day) => {
+                if (!day) return <span />;
+                const number = Number(day.slice(8));
+                if (!viewable.has(day)) return <span class="flex h-9 items-center justify-center text-dim/50">{number}</span>;
+                const label = `${formatDay(day)}: ${count(commits.get(day) ?? 0, 'commit')}`;
+                return day === date ? (
+                  <a href={hrefFor(day)} aria-current="date" aria-label={label} title={label} class="flex h-9 items-center justify-center rounded-lg bg-amber font-bold text-(--bar-ink-deep) no-underline">
+                    {number}
+                  </a>
+                ) : (
+                  <a href={hrefFor(day)} aria-label={label} title={label} class="flex h-9 items-center justify-center rounded-lg text-hi no-underline ring-amber transition-shadow hover:ring-1" style={`background: color-mix(in srgb, var(--color-amber) ${heat(day)}%, transparent);`}>
+                    {number}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </Fragment>
+      );
+    })
+  }
+  <p class="mt-3 text-[12px] text-dim">Brighter days had more commits.</p>
+  <div class="mt-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[13px]">
+    {date !== latest ? <a href={hrefFor(latest)} class="font-semibold text-amber no-underline hover:underline">Go to the latest day</a> : <span class="text-dim">This is the latest day</span>}
+    <a href={url('/days/')} class="text-amber no-underline hover:underline">List every day</a>
+  </div>
+</div>

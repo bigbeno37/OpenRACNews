@@ -8,7 +8,7 @@ A static Astro site, hosted on GitHub Pages, that reports what happens across th
 
 - Each branch's `about` says what the branch is for. Use it to frame that branch's report: `OpenRAC` `master` moves only through release pull requests, for example, so activity there usually means a release.
 - A new branch gets reports from its next active day. Run `pnpm snapshot --days N` to backfill it.
-- The order of `repos` sets the order in the navbar and on the home page. Each repo gets a page and a navbar entry automatically. Give a new repo its short name and colours in `src/lib/themes.ts`, or it appears in gold under its repo name.
+- The order of `repos` sets the order in the navbar and on each day's page. Each repo gets pages and a navbar entry automatically. Give a new repo its short name and colours in `src/lib/themes.ts`, or it appears in gold under its repo name.
 
 ## How the data is laid out
 
@@ -24,6 +24,8 @@ Everything is under `data/<YYYY-MM-DD>/`, for finished UTC days only.
 Don't edit the files `pnpm snapshot` writes. In a branch name, `/` becomes `--` in file names.
 
 A commit belongs to the day it **landed on the branch**, not the date written in the commit. In a snapshot, `landed: true` means the commit is on the branch's first-parent line: it's what the branch itself gained. The other commits came in through a merge, so use `landed` commits and pull requests to see what happened, and treat the rest as detail. `totals.additions` and `totals.deletions` only count landed commits, so merged work isn't counted twice.
+
+`progress`, where present, is the decompilation's own report as it stood at the day's last commit. `code` is matched code by size, the figure openrac.dev shows, and is the one to quote as the project's percentage. `functions` and `data` are the other two measures. Each has `done` and `total`.
 
 ## Writing reports
 
@@ -87,8 +89,8 @@ pnpm check          # type check
 pnpm snapshot       # collect the last `lookbackDays` finished days (--days N or --date YYYY-MM-DD for others)
 ```
 
-- Static output only, with no server or client framework. The one script on the site is the decorative hero animation.
-- The site is organised by project: each repo has a page at `/<repo>/`, with a full report per branch per day at `/<repo>/<branch>/<date>/`. Day pages at `/days/` are secondary and aren't in the navbar.
+- Static output only, with no server or client framework. The one script on the site is the decorative hero animation. The date picker works with the `popover` attribute and CSS alone.
+- The site shows one day at a time, and the navbar's date picker chooses which. `/days/<date>/` is every project on that day, `/days/<date>/<repo>/` is one project, and `/days/<date>/<repo>/<branch>/` lists that branch's pull requests and commits. `/` shows the latest day. These pages must only use data from on or before their date (`projectOn` in `src/lib/news.ts`), so nothing from later leaks into a past day.
 - Internal links must go through `src/lib/links.ts`, because the site is served from a sub-path on GitHub Pages.
 - The look comes from [openrac.dev](https://openrac.dev) (`OpenRAC/openrac-site`). `src/styles/global.css` and the components keep its tokens and class names, so match that site when changing the design. On a project's page the accents and the bar take that game's colours, as the launcher does (`src/lib/themes.ts`).
 - When starting the dev server in the background, use `astro dev --background`, with `astro dev stop`, `astro dev status` and `astro dev logs` to manage it. Astro's docs are at <https://docs.astro.build>.

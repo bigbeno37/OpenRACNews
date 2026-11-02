@@ -3,22 +3,25 @@ import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
 import Tag from '../components/Tag.astro';
 import Layout from '../layouts/Layout.astro';
-import { branchUrl } from '../lib/links.ts';
+import { projectUrl, url } from '../lib/links.ts';
+import { dayRange } from '../lib/news.ts';
 import { trackedBranches } from '../lib/tracking.ts';
+
+const latest = (await dayRange()).at(-1);
 
 // The same numbered panels as "How it works" on openrac.dev.
 const steps = [
-  ['Snapshot', 'Just after midnight UTC, a job records what landed on each tracked branch during the day that just ended, along with its pull requests, issues and releases.'],
+  ['Snapshot', "Just after midnight UTC, a job records what landed on each tracked branch during the day that just ended, along with its pull requests, issues and releases. It also reads each decompilation's own progress report as it stood at the day's last commit."],
   ['Report', 'An AI agent turns that record into a short report per branch and a summary of the day. Each pull request or issue it cites is checked against the record.'],
-  ['Publish', 'The site is rebuilt as plain static pages. A branch with no written report still shows its numbers, its commits and its pull requests.'],
+  ['Publish', 'The site is rebuilt as plain static pages, one set per day. A branch with no written report still shows its numbers, its commits and its pull requests.'],
 ];
 ---
 
-<Layout title="How this works" description="How OpenRAC News makes its daily reports, and which branches it covers.">
+<Layout title="How this works" description="How OpenRAC News makes its daily snapshots, and which branches it covers.">
   <Hero eyebrow="About this site" compact>
     <Fragment slot="shine">How this</Fragment>
     <Fragment slot="title">works.</Fragment>
-    <p class="mt-5 max-w-[680px] text-soft">A day means 00:00 to 23:59 UTC. A commit counts on the day it landed on the branch, whatever date it carries, so a finished day never changes.</p>
+    <p class="mt-5 max-w-[680px] text-soft">Pick any day and every project shows as it stood at the end of it, with nothing from later. A day means 00:00 to 23:59 UTC. A commit counts on the day it landed on the branch, whatever date it carries, so a finished day never changes.</p>
   </Hero>
 
   <div class="grid gap-4 pt-8 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] sm:gap-5 sm:pt-12">
@@ -37,7 +40,7 @@ const steps = [
     <div class="grid gap-3 sm:gap-4">
       {
         trackedBranches().map(({ repo, branch }) => (
-          <a href={branchUrl(repo.name, branch.name)} class="surface surface-link grid gap-2 p-5 no-underline sm:p-6">
+          <a href={latest ? projectUrl(latest, repo.name) : url('/')} class="surface surface-link grid gap-2 p-5 no-underline sm:p-6">
             <span class="flex flex-wrap items-center gap-x-3 gap-y-1.5">
               <Tag repo={repo.name} />
               <b class="font-orbitron text-[17px] font-bold text-gold">{repo.title}</b>

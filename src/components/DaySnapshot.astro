@@ -1,0 +1,85 @@
+---
+// The site's main view: every project as it stood on one day. The home page shows this for the latest day.
+import { formatDay, formatDayMonth } from '../lib/days.ts';
+import { formatNumber } from '../lib/format.ts';
+import { dayFacts, dayOn, eventRows, projectOn } from '../lib/news.ts';
+import { paragraphs } from '../lib/prose.ts';
+import { tracking } from '../lib/tracking.ts';
+import Badge from './Badge.astro';
+import Hero from './Hero.astro';
+import Prose from './Prose.astro';
+import Row from './Row.astro';
+import Section from './Section.astro';
+import StatusCard from './StatusCard.astro';
+import Tag from './Tag.astro';
+
+interface Props {
+  date: string;
+}
+const { date } = Astro.props;
+const day = await dayOn(date);
+const projects = await Promise.all(tracking.repos.map((repo) => projectOn(repo, date)));
+const { overview, totals } = day;
+
+const stats: [number, string][] = [
+  [totals.commits, totals.commits === 1 ? 'commit landed' : 'commits landed'],
+  [totals.merged, totals.merged === 1 ? 'pull request merged' : 'pull requests merged'],
+  [totals.opened, totals.opened === 1 ? 'pull request opened' : 'pull requests opened'],
+  [totals.contributors, totals.contributors === 1 ? 'contributor' : 'contributors'],
+];
+const repoRows = day.repos.flatMap(eventRows);
+---
+
+<Hero eyebrow={`Snapshot · ${formatDay(date)}`} compact>
+  <Fragment slot="shine">{formatDayMonth(date)}:</Fragment>
+  <Fragment slot="title">{overview ? <Prose text={overview.headline} inline /> : dayFacts(day)}</Fragment>
+
+  <div class="mt-7 grid max-w-[900px] animate-rise grid-cols-2 gap-2.5 [animation-delay:.2s] min-[560px]:grid-cols-4 sm:gap-3.5">
+    {
+      stats.map(([value, label]) => (
+        <div class="surface px-3 py-3 sm:px-[18px] sm:py-4">
+          <b class="block whitespace-nowrap font-orbitron text-[clamp(15px,4.2vw,26px)] font-bold leading-tight tabular-nums text-gold">{formatNumber(value)}</b>
+          <span class="mt-0.5 block text-[12px] leading-snug text-dim sm:text-[13px]">{label}</span>
+        </div>
+      ))
+    }
+  </div>
+</Hero>
+
+<Section id="projects" art="progress" title="Every project" sub="As each one stood at the end of this UTC day. Percentages are matched code from the project's own report, the same figure openrac.dev shows. A fainter second bar is matched data.">
+  <div class="grid gap-3 sm:gap-4 md:grid-cols-2">
+    {projects.map((project) => <StatusCard project={project} />)}
+  </div>
+</Section>
+
+{
+  overview && (
+    <Section id="in-brief" art="activity" title="The day in brief">
+      <div class="surface mt-5 grid max-w-[820px] gap-3 p-5 text-soft sm:mt-6 sm:p-6">
+        {paragraphs(overview.summary).map((paragraph) => (
+          <p>
+            <Prose text={paragraph} inline />
+          </p>
+        ))}
+      </div>
+    </Section>
+  )
+}
+
+{
+  repoRows.length > 0 && (
+    <Section id="repo-wide" art="fresh" title="Issues and releases" sub="Everything opened, closed or published on this day.">
+      <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
+        {repoRows.map((row) => (
+          <Row href={row.href} title={row.title}>
+            <Fragment slot="lead">
+              <Tag repo={row.repo} />
+              <Badge>{row.badge}</Badge>
+            </Fragment>
+            <span>{row.note}</span>
+          </Row>
+        ))}
+      </ul>
+    </Section>
+  )
+}

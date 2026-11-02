@@ -1,0 +1,25 @@
+---
+// How far a decompilation has got, drawn as on openrac.dev's game cards: a bar for matched code, and a
+// thinner, fainter one under it for data where the project measures that.
+import { formatPercent, percent } from '../lib/format.ts';
+import type { Progress } from '../lib/schema.ts';
+
+interface Props {
+  progress: Progress;
+}
+const { code, data } = Astro.props.progress;
+const label = `${formatPercent(code)} of code matched${data ? `, ${formatPercent(data)} of data` : ''}.`;
+---
+
+<div role="img" aria-label={label} class="grid gap-1.5">
+  <div class="h-1.5 overflow-hidden rounded-full bg-white/10">
+    <i class="block h-full rounded-full bg-(--tx)" style={`width: ${percent(code)}%`}></i>
+  </div>
+  {
+    data && (
+      <div class="h-1 overflow-hidden rounded-full bg-white/10">
+        <i class="block h-full rounded-full bg-(--tx)/45" style={`width: ${percent(data)}%`} />
+      </div>
+    )
+  }
+</div>

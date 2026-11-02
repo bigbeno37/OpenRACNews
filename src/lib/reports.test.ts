@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { dayOpacity, describeHours, hourOpacity, landingsByHour } from './format.ts';
+import { calendarMonths } from './calendar.ts';
+import { dayOpacity, describeHours, formatChange, formatPercent, hourOpacity, landingsByHour } from './format.ts';
 import { paragraphs, referencesIn, tokenize, toEscapedHtml } from './prose.ts';
 import { checkBranchReport, checkOverview, knownNumbers } from './reportChecks.ts';
 import type { BranchReport, BranchSnapshot, Overview, Push, RepoSnapshot } from './schema.ts';
@@ -93,6 +94,31 @@ test('every landing is visible and busier hours are never dimmer', () => {
   assert.equal(hourOpacity(0), 0);
   assert.ok(levels.every((level) => level > 0));
   assert.deepEqual(levels, [...levels].sort((a, b) => a - b));
+});
+
+test('progress figures read as openrac.dev shows them', () => {
+  assert.equal(formatPercent({ done: 4684272, total: 5527936 }), '84.74%');
+  assert.equal(formatPercent({ done: 0, total: 0 }), '0.00%');
+  assert.equal(formatChange(0.314), '+0.31');
+  assert.equal(formatChange(-0.02), '−0.02');
+  assert.equal(formatChange(0.001), undefined);
+  assert.equal(formatChange(-0.001), undefined);
+});
+
+test('a calendar month starts on the right weekday and fills out its weeks', () => {
+  const [november] = calendarMonths('2026-11-01', '2026-11-30');
+  assert.equal(november?.label, 'November 2026');
+  // 1 November 2026 is a Sunday, the last column when weeks start on Monday.
+  assert.deepEqual(november?.weeks[0], [null, null, null, null, null, null, '2026-11-01']);
+  assert.equal(november?.weeks.at(-1)?.[0], '2026-11-30');
+  assert.ok(november?.weeks.every((week) => week.length === 7));
+  assert.equal(november?.weeks.flat().filter(Boolean).length, 30);
+});
+
+test('calendar months span the range, including across a new year', () => {
+  assert.deepEqual(calendarMonths('2026-11-20', '2027-02-03').map((m) => m.id), ['2026-11', '2026-12', '2027-01', '2027-02']);
+  assert.deepEqual(calendarMonths('2026-10-03', '2026-10-31').map((m) => m.id), ['2026-10']);
+  assert.equal(calendarMonths('2028-02-01', '2028-02-29')[0]?.weeks.flat().filter(Boolean).length, 29);
 });
 
 test('every active day is visible and busier days are never dimmer', () => {

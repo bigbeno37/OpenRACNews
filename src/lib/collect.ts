@@ -124,11 +124,12 @@ export function stringifySnapshot(value: Record<string, unknown>): string {
  * retitled long after the day it opened, so without this, revisiting a recent day would rewrite it. An
  * item only changes if something new happened to it on that day, which shows up in its events.
  */
-export function keepFirstCapture<T extends { events?: readonly string[] }>(earlier: T[] | undefined, fresh: T[], key: (item: T) => string | number): T[] {
+export function keepFirstCapture<T extends object>(earlier: T[] | undefined, fresh: T[], key: (item: T) => string | number): T[] {
   const first = new Map((earlier ?? []).map((item) => [key(item), item]));
+  const events = (item: T) => JSON.stringify((item as { events?: unknown }).events);
   return fresh.map((item) => {
     const kept = first.get(key(item));
-    return kept && JSON.stringify(kept.events) === JSON.stringify(item.events) ? kept : item;
+    return kept && events(kept) === events(item) ? kept : item;
   });
 }
 

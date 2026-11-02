@@ -1,7 +1,17 @@
-import type { Push } from './schema.ts';
+import type { Push, Ratio } from './schema.ts';
 
 const numbers = new Intl.NumberFormat('en-GB');
 export const formatNumber = (n: number) => numbers.format(n);
+
+export const percent = ({ done, total }: Ratio) => (total > 0 ? (done / total) * 100 : 0);
+export const formatPercent = (ratio: Ratio) => `${percent(ratio).toFixed(2)}%`;
+
+/** "+0.31" or "−0.02", or nothing when it hasn't moved at two decimal places. */
+export function formatChange(points: number): string | undefined {
+  const rounded = points.toFixed(2);
+  if (Number(rounded) === 0) return undefined;
+  return points > 0 ? `+${rounded}` : `−${rounded.slice(1)}`;
+}
 
 /** "1 commit", "2,300 commits". */
 export function count(n: number, singular: string, plural = `${singular}s`): string {

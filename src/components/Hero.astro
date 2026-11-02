@@ -19,7 +19,7 @@ const { eyebrow, font = 'font-audiowide', compact = false } = Astro.props;
   <p class="mb-4 font-orbitron text-[clamp(9px,2.35vw,11px)] font-bold uppercase tracking-[.2em] text-brand after:mt-2 after:block after:h-[3px] after:w-11 after:rounded-sm after:bg-brand after:content-[''] sm:text-[13px] sm:tracking-[.28em]">
     {eyebrow}
   </p>
-  <h1 class={`max-w-[900px] text-balance ${font} text-[clamp(28px,5.2vw,52px)] leading-[1.1]`}>
+  <h1 class={`max-w-[900px] text-balance ${font} ${compact ? 'text-[clamp(26px,4.2vw,40px)]' : 'text-[clamp(28px,5.2vw,52px)]'} leading-[1.15]`}>
     <span class="animate-shine bg-gradient-to-r from-amber via-(--btn-to) to-gold bg-[length:220%_100%] bg-clip-text text-transparent"><slot name="shine" /></span>{' '}
     <slot name="title" />
   </h1>

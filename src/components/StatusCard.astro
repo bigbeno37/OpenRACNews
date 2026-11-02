@@ -1,0 +1,88 @@
+---
+// One project's status on the viewed day, built like the game cards on openrac.dev. Decompilations lead
+// with how far they've got; the launcher and mods lead with what happened. The whole card is one link to
+// the project on that day, so the text inside it has no links of its own.
+import { formatDayShort } from '../lib/days.ts';
+import { count, formatChange, formatNumber, formatPercent } from '../lib/format.ts';
+import { projectUrl } from '../lib/links.ts';
+import { branchFacts, totalsFacts, type ProjectDay } from '../lib/news.ts';
+import { cardStyle, themeFor } from '../lib/themes.ts';
+import DayBar from './DayBar.astro';
+import ProgressBar from './ProgressBar.astro';
+import Prose from './Prose.astro';
+
+interface Props {
+  project: ProjectDay;
+}
+const { project } = Astro.props;
+const { repo, date, today, activity, progress, branches, lastActive, latestRelease } = project;
+const theme = themeFor(repo.name);
+const active = branches.filter((b) => b.today);
+const change = progress?.change === undefined ? undefined : formatChange(progress.change);
+const functions = progress?.current.functions;
+---
+
+<a href={projectUrl(date, repo.name)} class:list={['group/card relative isolate block overflow-hidden rounded-2xl bg-ink no-underline transition-transform hover:-translate-y-[3px]', theme.wide && 'md:col-span-2']} style={cardStyle(repo.name)}>
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/95 via-ink/85 to-ink/70"></div>
+
+  <div class="flex h-full flex-col gap-3 p-5 sm:p-6">
+    <div class="flex items-end justify-between gap-4">
+      <div class="min-w-0">
+        <h3 class={`${theme.font} text-[clamp(20px,3vw,26px)] leading-tight text-hi`}>{repo.title}</h3>
+        <p class="mt-1 text-[13px] text-dim">{repo.name}</p>
+      </div>
+      <div class="grid flex-none justify-items-end text-right">
+        <b class={`${theme.font} whitespace-nowrap text-[clamp(20px,3vw,26px)] leading-tight tabular-nums text-(--tx)`}>{progress ? formatPercent(progress.current.code) : formatNumber(today.commits)}</b>
+        <p class="mt-1 whitespace-nowrap text-[13px] tabular-nums text-dim">
+          {progress ? (change ? <><span class="text-text">{change}</span> this day</> : 'code matched') : today.commits === 1 ? 'commit this day' : 'commits this day'}
+        </p>
+      </div>
+    </div>
+
+    {progress ? <ProgressBar progress={progress.current} /> : <DayBar activity={activity} />}
+
+    {
+      (functions || (progress && progress.asOf !== date) || (!progress && latestRelease)) && (
+        <p class="flex flex-wrap justify-between gap-x-4 gap-y-1 text-[13px] tabular-nums text-dim">
+          {functions && <span>{formatNumber(functions.done)} of {formatNumber(functions.total)} functions</span>}
+          {progress && progress.asOf !== date && <span>figures from {formatDayShort(progress.asOf)}</span>}
+          {!progress && latestRelease && <span>latest release {latestRelease.tag}, {formatDayShort(latestRelease.date)}</span>}
+        </p>
+      )
+    }
+
+    <div class="grid gap-2.5">
+      {
+        active.length > 0 ? (
+          active.map(({ branch, today: day }) => (
+            <div class="min-w-0">
+              {repo.branches.length > 1 && <span class="mb-1 mr-2 inline-block rounded-full border border-white/15 px-2 py-0.5 text-[10px] uppercase tracking-[.15em] text-dim">{branch.name}</span>}
+              {day?.report ? (
+                <span class="font-orbitron text-[15px] font-bold leading-snug text-gold sm:text-[16px]">
+                  <Prose text={day.report.headline} inline plain />
+                </span>
+              ) : (
+                <span class="text-soft">{day && branchFacts(day.facts)}</span>
+              )}
+            </div>
+          ))
+        ) : (
+          <p class="text-dim">Quiet on this day.{lastActive ? ` Last active ${formatDayShort(lastActive)}.` : ' Nothing on record yet.'}</p>
+        )
+      }
+      {active.some((b) => b.today?.report) && <p class="text-[13px] text-dim">{totalsFacts(today)}</p>}
+      {project.events && (project.events.facts.issues.length > 0 || project.events.facts.releases.length > 0) && (
+        <p class="text-[13px] text-dim">
+          {[
+            ...(project.events.facts.releases.length ? [count(project.events.facts.releases.length, 'release')] : []),
+            ...(project.events.facts.issues.length ? [count(project.events.facts.issues.length, 'issue') + ' updated'] : []),
+          ].join(', ')}
+        </p>
+      )}
+    </div>
+
+    <p class="mt-auto pt-1 text-[13px] font-semibold text-(--tx)">Open {theme.tag}</p>
+  </div>
+
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 rounded-[inherit] border border-white/8 transition-colors duration-500 group-hover/card:border-white/20"></div>
+</a>

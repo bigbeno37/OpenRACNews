@@ -124,6 +124,26 @@ body { background: var(--color-ink); color: var(--color-text); }
 ::selection { background: color-mix(in srgb, var(--color-amber) 35%, transparent); color: #fff; }
 :focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; }
 
+/* The date picker. The browser shows and hides a popover through its display, so this must not set one. */
+.calendar {
+  position: fixed;
+  inset: 58px max(16px, calc((100vw - 1080px) / 2 + 16px)) auto auto;
+  margin: 0;
+  width: min(312px, calc(100vw - 32px));
+  max-height: calc(100dvh - 74px);
+  overflow-y: auto;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: 1rem;
+  background: var(--color-panel);
+  color: var(--color-text);
+  padding: 0.75rem 1rem 1rem;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.55);
+}
+/* One month at a time: each radio button shows the page right after it. */
+.cal-page { display: none; }
+.cal-radio:checked + .cal-page { display: block; }
+.cal-radio:focus-visible + .cal-page b { outline: 2px solid var(--color-amber); outline-offset: 3px; }
+
 details[open] > summary .plus { transform: rotate(45deg); }
 /* Not the phone menu: it must cover the page completely from the moment it opens. */
 details:not(.site-menu)[open] > :not(summary) { animation: rise 0.35s ease both; }

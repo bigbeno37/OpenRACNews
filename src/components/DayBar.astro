@@ -11,8 +11,8 @@ const { activity } = Astro.props;
 const active = activity.filter((day) => day.commits > 0);
 const label =
   active.length === 0
-    ? `No commits landed in the last ${activity.length} days.`
-    : `Commits landed per day over the last ${activity.length} days: ${active.map((day) => `${formatDayShort(day.date)} ${day.commits}`).join(', ')}.`;
+    ? `No commits landed in the ${activity.length} days up to this one.`
+    : `Commits landed per day over the ${activity.length} days up to this one: ${active.map((day) => `${formatDayShort(day.date)} ${day.commits}`).join(', ')}.`;
 ---
 
 <div>
