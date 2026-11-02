@@ -28,14 +28,6 @@ export const paragraphs = (text: string) =>
     .map((p) => p.trim())
     .filter(Boolean);
 
-/** Plain text as HTML paragraphs, for feeds: a reader treats an RSS description as HTML, so it must be escaped. */
-export function toEscapedHtml(text: string): string {
-  const escape = (s: string) => s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-  return paragraphs(text)
-    .map((paragraph) => `<p>${escape(paragraph)}</p>`)
-    .join('');
-}
-
 /** Every #123 / repo#123 outside code spans. */
 export function referencesIn(text: string) {
   return tokenize(text).flatMap((token) => (token.kind === 'ref' ? [{ repo: token.repo, number: token.number }] : []));

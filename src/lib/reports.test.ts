@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import { renderBranchBrief, renderRepoBrief } from './brief.ts';
 import { calendarMonths } from './calendar.ts';
 import { allProjectsDayOpacity, dayOpacity, describeHours, formatChange, formatPercent, hourOpacity, landingsByHour } from './format.ts';
-import { paragraphs, referencesIn, tokenize, toEscapedHtml } from './prose.ts';
+import { paragraphs, referencesIn, tokenize } from './prose.ts';
 import { checkBranchReport, checkOverview, knownNumbers } from './reportChecks.ts';
 import type { BranchReport, BranchSnapshot, Overview, Push, RepoSnapshot } from './schema.ts';
 
@@ -67,10 +67,6 @@ test('markup is rejected in prose, but allowed inside a code span', () => {
   assert.match(checkBranchReport(report({ summary: 'Look <img src=x onerror=y> here' }), known).join(), /contains markup/);
   assert.match(checkBranchReport(report({ headline: '</p><script>x</script>' }), known).join(), /contains markup/);
   assert.deepEqual(checkBranchReport(report({ summary: 'Uses `vector<int>`, and 3 < 4 > 2 still reads fine.' }), known), []);
-});
-
-test('text for a feed is escaped, so a reader shows markup instead of running it', () => {
-  assert.equal(toEscapedHtml('a <script>x</script>\n\nb & c'), '<p>a &lt;script&gt;x&lt;/script&gt;</p><p>b &amp; c</p>');
 });
 
 test('anything resembling a credential is rejected, even in a code span', () => {
