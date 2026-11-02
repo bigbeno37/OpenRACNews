@@ -38,7 +38,7 @@ function brief(path: string | undefined) {
     return;
   }
   const snapshot = branchSnapshotSchema.parse(readJson(path));
-  const about = trackedBranches().find(({ repo, branch }) => repo.name === snapshot.repo && branch.name === snapshot.branch)?.branch.about ?? '';
+  const tracked = trackedBranches().find(({ repo, branch }) => repo.name === snapshot.repo && branch.name === snapshot.branch);
   // The newest earlier figures, so the brief can say how far they moved.
   const file = `${branchKey(snapshot.repo, snapshot.branch)}.json`;
   const previous = allDays()
@@ -49,7 +49,7 @@ function brief(path: string | undefined) {
       const progress = existsSync(earlier) ? branchSnapshotSchema.parse(readJson(earlier)).progress : undefined;
       return progress ? [{ date: day, progress }] : [];
     })[0];
-  console.log(renderBranchBrief(snapshot, about, previous));
+  console.log(renderBranchBrief(snapshot, tracked?.branch.about ?? '', previous, tracked?.repo.progressRelease));
 }
 
 function todo(everyDay: boolean, onlyDate?: string) {

@@ -15,6 +15,7 @@
       "name": "rac1-decomp",
       "title": "Ratchet & Clank",
       "about": "Matching decompilation of the original game (PS2, 2002).",
+      "progressRelease": "PAL v2.00",
       "branches": [
         { "name": "main", "about": "Where all matching and refactoring work lands, mostly through pull requests." }
       ]
@@ -23,6 +24,7 @@
       "name": "rac2-decomp",
       "title": "Going Commando",
       "about": "Matching decompilation of Ratchet & Clank: Going Commando (PS2, 2003).",
+      "progressRelease": "USA v1.01",
       "branches": [
         { "name": "master", "about": "Where matching work from many contributors is integrated. Progress commits report the matched function count." }
       ]
@@ -31,6 +33,7 @@
       "name": "rac3-decomp",
       "title": "Up Your Arsenal",
       "about": "Matching decompilation of Ratchet & Clank: Up Your Arsenal (PS2, 2004).",
+      "progressRelease": "PAL v1.00",
       "branches": [
         { "name": "master", "about": "The only long-lived branch. Work is at an early stage and activity is occasional." }
       ]
@@ -39,6 +42,7 @@
       "name": "rac4-decomp",
       "title": "Ratchet: Deadlocked",
       "about": "Matching decompilation of Ratchet: Deadlocked (PS2, 2005).",
+      "progressRelease": "NTSC-U v1.00",
       "branches": [
         { "name": "main", "about": "Where matching work lands, often as large batches of pull requests merged together." }
       ]

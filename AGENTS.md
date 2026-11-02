@@ -25,7 +25,7 @@ Don't edit the files `pnpm snapshot` writes. In a branch name, `/` becomes `--` 
 
 A commit belongs to the day it **landed on the branch**, not the date written in the commit. In a snapshot, `landed: true` means the commit is on the branch's first-parent line: it's what the branch itself gained. The other commits came in through a merge, so use `landed` commits and pull requests to see what happened, and treat the rest as detail. `totals.additions` and `totals.deletions` only count landed commits, so merged work isn't counted twice.
 
-`progress`, where present, is the decompilation's own report as it stood at the day's last commit. `code` is matched code by size, the figure openrac.dev shows, and is the one to quote as the project's percentage. `functions` and `data` are the other two measures. Each has `done` and `total`.
+`progress`, where present, is the decompilation's own report as it stood at the day's last commit. `code` is matched code by size, the figure openrac.dev shows, and is the one to quote as the project's percentage. `functions` and `data` are the other two measures. Each has `done` and `total`. These figures measure one release only, named by the repo's `progressRelease` in `config/tracking.json`, so always say which. A project's other releases have figures of their own, which appear only in pull request and commit text.
 
 ## Writing reports
 

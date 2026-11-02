@@ -44,7 +44,7 @@ const functions = progress?.current.functions;
     {
       (functions || (progress && progress.asOf !== date) || (!progress && latestRelease)) && (
         <p class="flex flex-wrap justify-between gap-x-4 gap-y-1 text-[13px] tabular-nums text-dim">
-          {functions && <span>{formatNumber(functions.done)} of {formatNumber(functions.total)} functions</span>}
+          {functions && <span>{formatNumber(functions.done)} of {formatNumber(functions.total)} functions{repo.progressRelease ? `, ${repo.progressRelease}` : ''}</span>}
           {progress && progress.asOf !== date && <span>figures from {formatDayShort(progress.asOf)}</span>}
           {!progress && latestRelease && <span>latest release {latestRelease.tag}, {formatDayShort(latestRelease.date)}</span>}
         </p>

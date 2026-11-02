@@ -76,7 +76,7 @@ const rows = project.events ? eventRows(project.events) : [];
           <div class="grid gap-1.5">
             <ProgressBar progress={progress.current} />
             <p class="flex flex-wrap justify-between gap-x-4 text-[11px] text-dim">
-              <span>Matched code{progress.current.data ? `, with data below at ${formatPercent(progress.current.data)}` : ''}</span>
+              <span>Matched code{repo.progressRelease ? ` on ${repo.progressRelease}` : ''}{progress.current.data ? `, with data below at ${formatPercent(progress.current.data)}` : ''}</span>
               {progress.asOf !== date && <span>Figures from {formatDayShort(progress.asOf)}</span>}
             </p>
           </div>

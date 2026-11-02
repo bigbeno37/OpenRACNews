@@ -14,6 +14,8 @@ export const trackingSchema = z.strictObject({
         name: z.string().min(1),
         title: z.string().min(1),
         about: z.string().min(1),
+        /** Which release the project's progress report measures. A project's other releases have figures of their own. */
+        progressRelease: z.string().min(1).optional(),
         branches: z
           .array(
             z.strictObject({

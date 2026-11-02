@@ -6,12 +6,12 @@ import type { BranchSnapshot, Progress, RepoSnapshot } from './schema.ts';
 const whole = new Intl.NumberFormat('en-GB');
 const pct = ({ done, total }: { done: number; total: number }) => `${((100 * done) / total).toFixed(2)}%`;
 
-function progressLine(progress: Progress, previous?: { date: string; progress: Progress }): string {
+function progressLine(progress: Progress, release?: string, previous?: { date: string; progress: Progress }): string {
   const parts = [`${pct(progress.code)} of code (${whole.format(progress.code.done)} of ${whole.format(progress.code.total)} bytes)`];
   if (progress.functions) parts.push(`${whole.format(progress.functions.done)} of ${whole.format(progress.functions.total)} functions`);
   if (progress.data) parts.push(`${pct(progress.data)} of data`);
   const before = previous ? ` Previously ${pct(previous.progress.code)} of code on ${previous.date}.` : '';
-  return `Progress at the day's last commit: ${parts.join(', ')}.${before}`;
+  return `Progress at the day's last commit${release ? `, measured on ${release} only` : ''}: ${parts.join(', ')}.${before}`;
 }
 
 const indent = (text: string) => text.replace(/\s*\n\s*/g, ' ').trim();
@@ -22,12 +22,12 @@ function pullRequestOf(headline: string): number | undefined {
   return match ? Number(match[1]) : undefined;
 }
 
-export function renderBranchBrief(snapshot: BranchSnapshot, about: string, previous?: { date: string; progress: Progress }): string {
+export function renderBranchBrief(snapshot: BranchSnapshot, about: string, previous?: { date: string; progress: Progress }, release?: string): string {
   const { repo, branch, date, totals, pullRequests, commits, progress, warnings } = snapshot;
   const lines = [
     `${repo} ${branch}, ${date}`,
     `What this branch is: ${about}`,
-    ...(progress ? [progressLine(progress, previous)] : []),
+    ...(progress ? [progressLine(progress, release, previous)] : []),
     `Totals: ${totals.commits} commits and ${totals.merges} merges. ${totals.landed} landed directly on the branch, adding ${whole.format(totals.additions)} lines and removing ${whole.format(totals.deletions)}. By: ${totals.authors.join(', ') || 'nobody'}.`,
     ...(totals.forcePushes ? [`History was rewritten ${totals.forcePushes} times.`] : []),
     ...warnings.map((warning) => `Warning: ${warning}`),

@@ -127,6 +127,8 @@ test('a brief keeps everything a writer needs, and says repeated things once', (
   const text = renderBranchBrief(snapshot, 'Where work lands.', { date: '2026-10-31', progress: { sha: 'old', code: { done: 50, total: 100 }, functions: null, data: null } });
   assert.match(text, /What this branch is: Where work lands\./);
   assert.match(text, /75\.00% of code .*3 of 4 functions\. Previously 50\.00% of code on 2026-10-31\./);
+  assert.doesNotMatch(text, /measured on/);
+  assert.match(renderBranchBrief(snapshot, 'x', undefined, 'USA v1.01'), /Progress at the day's last commit, measured on USA v1\.01 only: 75\.00%/);
   assert.match(text, /#7 \[opened, merged, draft\] by amy, \+10 -2 in 3 files: Add a thing/);
   assert.match(text, /Not yet run on Windows\./);
   assert.match(text, /Warning: Could not compare/);
