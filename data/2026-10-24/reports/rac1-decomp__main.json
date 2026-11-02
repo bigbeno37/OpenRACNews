@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-24",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank builds NTSC-U in its own tree and carries over existing C",
+  "summary": "NTSC-U now builds within this repository instead of requiring the NTSC decompilation as a submodule (#121). Carrying existing definitions from PAL v1.00 and NTSC-J takes NTSC-U from 74.21% to 76.10% matched code and from 4,756 to 4,822 of 5,097 functions (#122). A matched function compiles to exactly the same bytes as the original game. PAL v2.00 remains at 98.48% matched code and 5,089 of 5,120 functions, and the pull requests describe no newly written C.",
+  "highlights": [
+    "All 20 NTSC-U programs reproduce the original bytes. Upstream NTSC names are still read at a pinned revision, without making recursive clones carry its whole tree (#121).",
+    "A newer NTSC naming batch is adopted, and provenance comments are corrected to credit the upstream decompilation as GPL-3.0 (#123, #124)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

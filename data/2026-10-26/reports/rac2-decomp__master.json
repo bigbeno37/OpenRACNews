@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-26",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reaches 15.46% matched code for USA v1.01",
+  "summary": "Going Commando's refreshed progress report takes USA v1.01 from 14.04% to 15.46% matched code, with 4,618 of 8,584 functions. A matched function compiles to exactly the same bytes as the original game. The other releases reach 11.24% and 3,867 of 8,678 functions for Europe/Australia v1.00, and 14.63% and 4,413 of 8,639 for USA v2.00. Landed work includes 129 verified implementations carried from a fork, movement helpers and boot functions (#329, #328, #332).",
+  "highlights": [
+    "The fork carry-over leaves out a command-byte reader whose exact version required explicit register bindings and an empty compiler barrier (#329).",
+    "A shared level helper matches in all 27 tested placements (#331). Its author reports that a broader unit-test run was blocked by compiler sandbox errors.",
+    "Three large Oozla, Dobbo and Snivelak reconstructions gain corrected storage and lifetime details, but remain outside the linked build (#330)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

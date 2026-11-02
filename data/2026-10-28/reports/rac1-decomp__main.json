@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-28",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank simplifies menu, particle and memory-card source",
+  "summary": "Ratchet & Clank replaces more private structures and raw offsets with shared, named fields across menus, particles, MPEG decoding and memory cards. The changes preserve the original compiled bytes rather than adding gameplay features. Pause-menu cleanup also keeps Japanese overrides aligned with the shared interfaces (#146).",
+  "highlights": [
+    "Hero state, throw targets and level camera structures are shared across level files instead of being declared repeatedly (#150, #151, #153).",
+    "Suck Cannon and Trespasser puzzle code gain clearer object and puzzle-state structures (#154, #158).",
+    "Memory-card save-slot operations and menu focus, back and confirmation handling use shared types (#159, #160)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

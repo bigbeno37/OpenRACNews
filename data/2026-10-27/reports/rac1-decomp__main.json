@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-27",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 report reaches 100.00% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 progress report rises from 99.44% to 100.00% matched code, with all 5,116 counted functions. A matched function compiles to exactly the same bytes as the original game. The last batch includes small tagged assembly fragments or fixed register choices in nine functions, so this is not a claim that every implementation is pure C (#135). Originally handwritten routines remain in assembly, and the separate matched-data measure is only 0.57%.",
+  "highlights": [
+    "The freeze-screen update and Walloper beam builder gain matching implementations (#132, #134).",
+    "Scalar minimum and maximum compile exactly as ordinary C through a pinned PS2DEV GCC 3.2.3 compiler profile (#133).",
+    "Follow-up work removes fixed register choices from CD initialisation and replaces assisted implementations of vendor effects and the Rilgar sharkigator update with pure C (#138, #139).",
+    "Shared menu, memory-card, particle and MPEG structures replace raw offsets and duplicate private definitions without changing compiled bytes (#140, #141, #142, #143, #144, #145)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

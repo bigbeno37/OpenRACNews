@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-29",
+  "headline": "Multiplayer 0.7.3 shares campaign progress as Android native mods arrive",
+  "summary": "Multiplayer 0.7.3 brings shared items, gold bolts and unlocked planets, smoother remote movement and Android packaging alongside the other native mods. OpenRAC develop gains co-op fixes, persistent savestate APIs, environment reflections and a clearer level-editor workflow, while the stable 0.10.0 release pull request remains unmerged (OpenRAC#116). Custom ship destinations land with PAL-only and incomplete gameplay-testing qualifications (OpenRAC#104). Going Commando's USA v1.01 rises from 54.46% to 65.83% matched code and Deadlocked's NTSC-U v1.00 rises from 5.27% to 5.57%, while Up Your Arsenal adds native NTSC-U frontend routines. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

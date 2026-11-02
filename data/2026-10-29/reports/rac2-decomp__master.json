@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 reaches 65.83% matched code after an 842-function carry-over",
+  "summary": "Going Commando's USA v1.01 rises from 54.46% to 65.83% matched code, with 7,100 of 8,578 functions. A matched function compiles to exactly the same bytes as the original game. The largest addition brings 842 boot and level implementations from bigbeno37's fork (#368), after reviewed contributor work lands through #366 and #364. The final progress update separately records Europe/Australia at 4,979 of 8,672 functions and USA v2.00 at 6,646 of 8,634.",
+  "highlights": [
+    "#366 reconciles overlapping contributions instead of counting every submitted function. One proposed hit-vector routine remains a near miss because of its initialisation order.",
+    "#362 improves a documented near miss but adds no match. Object-slot and held-object implementations in #370 and #371 open without merging.",
+    "Parallel builds now give simultaneously built programs separate Wine prefixes, removing a single shared wineserver bottleneck. An explicit `WINEPREFIX` retains the old arrangement.",
+    "#369 corrects the separate fully linked-code measure to sum complete units. That measure is distinct from matched-code coverage."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

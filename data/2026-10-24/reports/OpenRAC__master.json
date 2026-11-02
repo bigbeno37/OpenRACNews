@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-24",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Android gains Mods and touch-camera controls as Vulkan adds FSR upscaling",
+  "summary": "Android gains a Mods tab, enhanced graphics and movable touch controls with swipe camera input (#44). That work was tested on an Ayn Odin 3 and also brings launcher themes and better diagonal movement with analog sticks to other platforms. Enhanced Vulkan rendering adds FSR 3.1.4 temporal upscaling, defaulting to Quality, with the HUD at display resolution and no frame generation (#47). This was feature development on master, unlike its usual release-only role, with no launcher release published that day.",
+  "highlights": [
+    "Lighting preparation becomes faster and optional edge-aware texture upscaling lands (#43). Vulkan also gains shader caching, earlier texture uploads and fewer repeated draw commands.",
+    "Ratchet & Clank fixes include Gaspar's lava, the NTSC Orxon nanotech vendor, pause-menu save loading and remembered language and sound options (#49).",
+    "Secret Agent Clank is added to the project with launcher artwork (#45). The listed changes do not establish that it is playable.",
+    "Mods gain per-row Update buttons, Update all and folder installation. An unbuilt native mod's source folder is refused rather than replacing a working installation.",
+    "Most added lines come from a PAL source-generation update, rather than new launcher features. Several experimental rendering paths remain off or unmerged after testing.",
+    "#46, reporting a missing Play button on Steam Deck, closed as completed. #48 asks about compatibility with existing HD texture packs."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

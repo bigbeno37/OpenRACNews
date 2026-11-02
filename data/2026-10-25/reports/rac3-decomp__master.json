@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-25",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "NTSC-U frontend routines proposed for Up Your Arsenal",
+  "summary": "#1 proposes six native NTSC-U routines across eight program placements, including state updates and timer, fade and callback handling. The pull request opened but had not merged, and no commits landed on master that day.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-29",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Co-op fixes, Android native mods and environment reflections land on develop",
+  "summary": "Ratchet & Clank co-op gains fixes so pause menus keep the shared world intact (#99), and Android gains native-mod support (#110). Enhanced rendering adds environment reflections and better probe placement around playable areas (#119). The launcher gains a clearer level-editor workflow, and its Development channel now follows develop rather than stale master builds (#107, #111). Mod SDK 1.10.0 and 1.10.1 are released, while launcher 0.10.0's version bump remains proposed (#115).",
+  "highlights": [
+    "Persistent savestate APIs land through #103, replacing closed #102. They require the same game build and disc, with slot files and policy left to Project Save Clank.",
+    "Custom ship destinations land through #104, replacing closed #101. Those changes remain limited to PAL, with NTSC-U support unfinished and manual gameplay testing not completed.",
+    "Installed editor tools gain typed object layouts (#100), level background-colour edits work (#108), and Start over actions explain what they delete and ask first (#105).",
+    "The Drone Device makes drones again and Novalis's sparks no longer collect at Ratchet's feet (#110). The US save-overwrite prompt, Exit and remembered language also receive fixes (#121, #124, #126).",
+    "Fresh pad input and lower-latency frames become optional settings, both off by default (#122). A reported black-screen camera problem could not be reproduced, but unusable cameras are now rejected (#114).",
+    "Co-op glove animation is fixed (#120). Mod-update prompts, saved links, marked saves and controller bindings remain a proposal in #123."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

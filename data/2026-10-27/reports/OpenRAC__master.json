@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-27",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Diagnostics recording and Android 9 support land in OpenRAC",
+  "summary": "Players can record diagnostics from developer controls or Ctrl+F3, producing a report and frame timings for investigating performance (#75). Android support extends to Android 9, including custom GPU drivers, with the same renderer and effects enabled (#77). SDK interface 1.4 adds game views and a shared Vulkan device so native mods can support a headset, but it adds no VR mod (#82). These are direct development changes on master, unlike its usual release-only role.",
+  "highlights": [
+    "Camera proxy and camera flip regain a missing collision object in Ratchet & Clank, checked on Kerwan for PAL and NTSC-U (#80). The related report #76 closes as completed.",
+    "Quitting Giant Clank mode on Quartu makes Clank small again on both PAL and NTSC-U (#81).",
+    "Three PAL C implementations for hero-item updates, the Pyrocitor and the Suck Cannon beam are backported without the broader source rename (#73).",
+    "Most added source lines restore a retail interpreter used only for testing candidate C. It is excluded from the port, launcher and packages.",
+    "Map-pack tools (#84), an ambient-occlusion optimisation (#83) and a Going Commando boot/menu comparison gate (#85) remain proposals rather than merged changes.",
+    "#78 asks for built-in exit controls on Steam Deck. A question about importing PCSX2 saves closes as completed (#79). Android 9 uninstalling cannot offer to keep app data (#77)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

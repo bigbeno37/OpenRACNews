@@ -1,7 +1,7 @@
 {
   "date": "2026-10-27",
   "repo": "OpenRAC",
-  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "capturedAt": "2026-11-02T09:07:35.248Z",
   "issues": [
     {"number":76,"title":"RaC1 can no longer do camera flip and camera proxy","author":"limjiancheng1129-coder","events":["opened","closed"],"closedAs":"COMPLETED","body":"For what camera proxy is, refer to this video:\nhttps://youtu.be/d-3Im4n_vaQ\nCamera flip:\nhttps://youtu.be/JndUzgdIzrc"},
     {"number":78,"title":"Unable to close game or launcher cleanly","author":"Billabong1985","events":["opened"],"closedAs":null,"body":"When the game is running, there is no built in 'exit' option so I have to force close the game. Also, running on steam deck, in gaming/big picture mode, due to the way it displays windows, the top window menu bar with the close window option isn't displayed, so the launcher also cannot be closed cleanly and has to be force closed. These are minor issues as I don't think it really does any harm to force close them, but it would be nice if there was an inbuilt way to close both game and launcher"},

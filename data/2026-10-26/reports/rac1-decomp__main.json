@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-26",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 99.44% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 98.48% to 99.44% matched code, with 5,104 of 5,117 functions in the project's progress report. A matched function compiles to exactly the same bytes as the original game. New C includes the Pyrocitor, Suck Cannon beam, hero-item updates and an Orxon sliding platform (#127, #129, #131). Catalogue-boundary repairs and classifying a level object-processing routine as handwritten assembly also change what the report counts.",
+  "highlights": [
+    "The Orxon sliding platform implementation lands in #131 with PAL v1.00 and Japanese map entries. Draft #130 closes without merging, but supplies the approach used in the landed version.",
+    "The map-reveal function remains assembly after its pure-C attempt differs from the original (#127).",
+    "Declarations and shared views gain more readable names, including library names for core routines (#126)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

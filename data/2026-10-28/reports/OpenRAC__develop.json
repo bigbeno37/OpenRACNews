@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-28",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Co-op fixes, persistent savestates and custom destinations proposed on develop",
+  "summary": "Four pull requests open on develop, but no commits land on the branch. They propose co-op world fixes (#99), packaged editor layouts (#100), added ship destinations and cross-level imports (#101), and persistent Ratchet & Clank savestate support for an external mod (#102). The destination work is explicitly unfinished: its current implementation supports PAL only and manual gameplay testing has not been completed.",
+  "highlights": [
+    "#99 addresses pause menus making objects disappear from another player's world and adds explicit object-death reporting.",
+    "#100 packages data-only object layouts so installed editor tools can apply typed edits without the decompilation's headers.",
+    "#102 proposes cross-launch savestates for the same game build and disc. Save-slot files and policy remain the external Project Save Clank mod's responsibility."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

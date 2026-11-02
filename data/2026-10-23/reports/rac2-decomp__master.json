@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-23",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando adds shared effects, hero helpers and a corrected Damosel Orbit function",
+  "summary": "Going Commando gains reconstructed game code for shared effects, hero helpers and updates on Oozla, Endako, Barlow and Snivelak (#300, #301, #302, #304, #307). The committed progress report puts USA v1.01 at 12.99% matched code, up from 12.78%, and 4,192 of 8,601 functions. A matched function compiles to exactly the same bytes as the original game. That progress update precedes several of the day's merges and separately records Europe/Australia at 3,576 of 8,693 functions and USA v2.00 at 3,994 of 8,655.",
+  "highlights": [
+    "Damosel Orbit's wrapper gets a corrected starting address and a matching C implementation (#299).",
+    "Function checks now return failure when instructions, relocations or sizes differ, so batch tools can detect a failed check (#300).",
+    "The Dobbo Orbit hero-state dispatcher is reconstructed, but remains outside the matching build (#303).",
+    "Another 110 measured C reconstructions were retained without matching credit (#305). A further batch of 89 was proposed in #308 and had not merged.",
+    "The two large bodies documented in #288 still do not match. Its detailed records identify them as Joba and Barlow work despite the pull request's Yeedil label."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

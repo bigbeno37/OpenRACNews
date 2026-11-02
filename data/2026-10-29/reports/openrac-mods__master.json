@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Multiplayer 0.7.3 shares campaign progress and adds an Android build",
+  "summary": "Multiplayer releases advance to 0.7.3, bringing shared items, gold bolts and unlocked planets, alongside smoother remote movement over slower connections. Bolts drop from the host's world only, and pickup fixes make them fly toward the player who takes them. New native-mod patches carry Android builds against SDK 1.10.1, with no other code changes from those packaging bumps.",
+  "highlights": [
+    "The public OpenRAC server becomes the default. Direct hosting remains available, and Ready toggles no longer get overwritten by older host updates.",
+    "Remote Ratchets stop bobbing while standing still, and their held items animate smoothly between received poses.",
+    "Difficulty 1.2.2, Button Swap 1.0.0 and Xbox Icons 1.0.0 are published before the Android packaging round.",
+    "Android releases also include Difficulty 1.2.3, Item Randomizer 1.0.3, Lock Strafe 1.0.2 and Live Splits 1.0.2.",
+    "Keyboard & Mouse 1.2.4, Ammo Max 1.0.2, Xbox Icons 1.0.1 and DualSense 1.0.2 complete the native-mod Android updates."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

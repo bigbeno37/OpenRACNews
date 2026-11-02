@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-25",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.9.0 ships, with PCSX2 save imports and Ratchet & Clank fixes",
+  "summary": "Launcher 0.9.0 is released, with fixes for Gaspar's missing lava, pause-menu save loading and remembered language and sound settings. A new Import saves from PCSX2 command reads a memory-card file or folder card, backs up OpenRAC's card and copies the game's saves (#55). Android disc setup gains visible error messages and Rebuild (#58). Master also receives direct development changes throughout the day, rather than moving only through its usual release pull request.",
+  "highlights": [
+    "The hoverboard girl grows correctly, and vendor icons survive in-level movies (#52, #59). The launcher also gains its new logo and branch selection for updates from forks (#51).",
+    "Later work replaces Play with mods and Purist mode with a Mods switch below Play, off by default (#62).",
+    "Lighting preparation shows finer progress and estimated time remaining, resumes interrupted work and runs at lower priority to keep the computer usable.",
+    "Page transitions are disabled without WebKit compositing to address Steam Deck crashes (#63). A Wayland/NVIDIA fix also lands, but was not tested on NVIDIA hardware (#68).",
+    "Ratchet keeps his oxygen mask in Gemlik's ship scenes, and Umbris's water puzzle loses wrongly drawn slabs (#65, #69). The PAL Video page gains draft translations, tested on PAL (#67).",
+    "#50, the Android Python setup error, closes as completed. #64 reports launcher 0.9.0 crashes on Steam Deck, and #66 reports an unrecognised Going Commando disc serial."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

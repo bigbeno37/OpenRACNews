@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-23",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "ByteMatch can connect Up Your Arsenal's NTSC-U report names to its source",
+  "summary": "A generated name map connects the NTSC-U progress report's function names to the source names ByteMatch needs for its source view. Previously, different addresses and names for repeated level functions prevented it from finding most of that code. Documentation also points contributors to OpenRAC's shared permuter tool.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

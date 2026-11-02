@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-24",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando links C switch tables and publishes a catch-up progress report",
+  "summary": "Going Commando can now link verified compiler-generated switch tables, allowing five C functions in #312 and three more in #313 to enter the build. A matched function compiles to exactly the same bytes as the original game. The progress refresh in #310 raises USA v1.01 from 12.99% to 14.04% matched code, with 4,351 of 8,601 functions, including previously unreported merges. It separately puts USA v2.00 at 13.13% and 4,149 of 8,655 functions, and Europe/Australia at 10.16% and 3,666 of 8,693, before the day's later merges.",
+  "highlights": [
+    "#309 contributes 62 newly matched routines across the releases that contain them. Its much larger source diff also includes retained reconstructions that do not count as matches.",
+    "Another 15 game functions land in #311, with useful near misses kept outside the linked build.",
+    "Checking actual switch destinations catches wrong case mappings in two Joba reconstructions, which are corrected in #313.",
+    "The 89 C reconstructions in #308 remain unlinked and add no matching credit."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

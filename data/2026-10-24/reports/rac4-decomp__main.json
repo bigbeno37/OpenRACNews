@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-24",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds three PAL-only functions, with five more proposed",
+  "summary": "Three PAL-only functions enter Deadlocked's C source in #36, covering two game routines and a shared level routine. Five further PAL-only functions and three catalogue-boundary corrections were proposed in #38, which had not merged. This work concerns PAL rather than the NTSC-U release measured by the project's main progress report.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

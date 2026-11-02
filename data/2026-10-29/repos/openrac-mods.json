@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
   "repo": "openrac-mods",
-  "capturedAt": "2026-11-02T06:23:04.163Z",
+  "capturedAt": "2026-11-02T09:09:20.979Z",
   "issues": [],
   "releases": [
     {"tag":"difficulty-v1.2.2","name":"difficulty-v1.2.2","prerelease":false,"publishedAt":"2026-10-29T01:17:10Z","author":"github-actions[bot]","body":"Built by the build workflow from ce23cb3d0d99db6ce3bad49bddce5290f3a57f5e, against the OpenRAC mod SDK 1.7.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},

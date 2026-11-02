@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-26",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 99.44% matched code",
+  "summary": "Ratchet & Clank's PAL v2.00 rises from 98.48% to 99.44% matched code with weapon, hero-item and Orxon sliding-platform work, alongside catalogue corrections. A matched function compiles to exactly the same bytes as the original game. Going Commando's report raises USA v1.01 from 14.04% to 15.46%, while Europe/Australia v1.00 reaches 11.24% and USA v2.00 reaches 14.63%. OpenRAC receives proposals for diagnostics recording and work-in-progress interior lighting and Novalis water, but nothing merges on master. The lighting author warns that interiors can still be too dark and need visual tuning (OpenRAC#74).",
+  "writtenBy": "gpt-6.1-sol"
+}

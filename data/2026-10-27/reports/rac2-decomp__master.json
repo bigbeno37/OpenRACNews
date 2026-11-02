@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-27",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 jumps from 15.46% to 44.26% matched code",
+  "summary": "Two large batches take Going Commando's USA v1.01 progress report to 44.26% matched code and 5,514 of 8,584 functions, up from 15.46%. A matched function compiles to exactly the same bytes as the original game. #333 adds 777 USA v1.01 functions and three release-specific ones, including large hero-state handlers, alongside compiler and assembler fixes measured against the original. #334 follows with 119 smaller functions, including four whose starting points were corrected to exclude linker filler.",
+  "highlights": [
+    "The large source totals are dominated by #333, whose biggest hero-state handlers span tens of thousands of bytes. Its work was reconciled with implementations already merged from other contributors.",
+    "Particle routines (#335), functions reused from Ratchet & Clank (#336), and further small-function batches (#337, #339, #340, #343) opened but had not merged.",
+    "#338 proposes classifying six hardware wait loops as handwritten assembly. #342 proposes a separate home for functional, non-matching C that would receive no matching credit.",
+    "One level function remains assembly in Europe/Australia and USA v2.00, with explicit assembly units added for those releases."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

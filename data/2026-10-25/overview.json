@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-25",
+  "headline": "Launcher 0.9.0 arrives with Ratchet & Clank fixes and PCSX2 save importing",
+  "summary": "Launcher 0.9.0 is released with fixes for missing Gaspar lava, pause-menu save loading and remembered game options. Players can import PCSX2 saves after a card backup, while Android setup gains clearer failures and Rebuild (OpenRAC#55, OpenRAC#58). Later launcher work addresses Steam Deck page-transition crashes and changes how mods are enabled, while a Wayland/NVIDIA fix remains untested on NVIDIA hardware. Ratchet & Clank reorganises existing source, and Going Commando adds level handlers and support for compiler-generated constants. Up Your Arsenal receives an unmerged NTSC-U proposal, while Xbox icons and an NTSC-U Difficulty loading fix land in the mods repository without a release that day.",
+  "writtenBy": "gpt-6.1-sol"
+}

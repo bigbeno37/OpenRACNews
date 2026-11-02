@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-27",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 100% matched code, with assembly qualifications",
+  "summary": "Ratchet & Clank's PAL v2.00 report rises from 99.44% to 100.00% matched code. A matched function compiles to exactly the same bytes as the original game. The result includes assembly-assisted implementations and keeps originally handwritten routines in assembly, while matched data remains at 0.57% (rac1-decomp#135). Going Commando's USA v1.01 rises from 15.46% to 44.26% matched code after large hero-state and smaller-function batches. OpenRAC adds diagnostics recording, Android 9 support and SDK groundwork for headset mods without shipping a VR mod, and restores camera tricks and exiting Giant Clank mode (OpenRAC#75, OpenRAC#77, OpenRAC#82, OpenRAC#80, OpenRAC#81).",
+  "writtenBy": "gpt-6.1-sol"
+}

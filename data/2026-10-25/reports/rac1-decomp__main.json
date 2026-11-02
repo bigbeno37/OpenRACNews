@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-25",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank replaces raw offsets with shared structures and readable names",
+  "summary": "A broad source cleanup replaces private object, hero, controller, vector and camera views with shared structures (#125). About 6,200 symbols and 334 hero fields gain names, and level files are renamed by their contents. The pull request says the PAL build remains byte-identical and US, PAL v1.00 and Japanese version checks are unchanged. The large line totals come from rewriting existing source, rather than new game features.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

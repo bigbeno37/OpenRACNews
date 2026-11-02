@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Direct mouse camera control and maximum-ammo purchases reach the mod releases",
+  "summary": "Keyboard & Mouse 1.2.0 makes mouse movement turn Ratchet & Clank's follow and first-person cameras directly, without stick easing. Ammo Max 1.0.0 starts an ammo purchase at the most the player can afford or carry, while Down still lowers the amount. Difficulty 1.1.1 fixes enemy copying, and 1.2.0 uses the port's larger object pools while reserving space for Gaspar's sparks. Seven mod releases were published, and the branch's history was rewritten twice.",
+  "highlights": [
+    "Item Randomizer 1.0.1 fixes how vendor purchases are granted and how the store list is maintained.",
+    "Live Splits 1.0.0 and DualSense 1.0.0 were released, alongside Windows test and Linux build fixes.",
+    "Difficulty keeps the smaller object budget on Rilgar, Blarg Station and Quartu, where the port retains the original pool size."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

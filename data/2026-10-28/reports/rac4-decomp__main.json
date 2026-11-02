@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-28",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's runtime and library work takes NTSC-U v1.00 to 5.27% matched code",
+  "summary": "Deadlocked's NTSC-U v1.00 progress report rises from 4.54% to 5.27% matched code, with 3,822 of 18,085 functions. A matched function compiles to exactly the same bytes as the original game. PAL's separate total reaches 3,842 of 18,113 functions. The main contribution, #40, describes 274 runtime and library implementations and adds per-file routing to the existing Sony GCC 2.9 compiler.",
+  "highlights": [
+    "Five PAL-only functions and a core routine shared with PAL also land (#38, #39).",
+    "The final NTSC-U v1.00 report increases by 224 functions, fewer than #40's stated 274-function batch. The day's account does not reconcile that difference.",
+    "TTY read/write wrappers remain proposed in #41. The author of the merged core routine reports pre-existing unrelated build-audit mismatches (#39).",
+    "A 57-function PAL batch closes without merging as #42 and reopens as #43. Its claimed 5.47% PAL code coverage is proposed, not the landed NTSC-U figure.",
+    "Draft #44 proposes five additional PAL functions and has not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

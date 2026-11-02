@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-25",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Xbox button icons land, and Difficulty gets a fix for loading on NTSC-U",
+  "summary": "A new Xbox Icons mod replaces the game's button prompts with Xbox controller icons (#2). Difficulty's 1.2.2 source update fixes a function-name lookup that prevented the mod from loading on the US disc (#3). Its tests pass, but the author had not tried it on a real US disc, and no mod release was published that day.",
+  "highlights": [
+    "The Difficulty incompatibility report #1 closes as completed after the lookup fix."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "OpenRAC adds multiplayer world APIs, warm savestates and installable map packs",
+  "summary": "Native mods gain Ratchet & Clank player poses, shared-world controls and pages in the game's menus, alongside same-process savestates (#86). Creators can export edited Godot worlds as map packs and launch them through Mods, though #84 supplies tools rather than an authored map. Experimental interior lighting and Novalis water also land, with the author warning that interiors can still be too dark and need tuning (#74). Master again takes direct development work rather than only a release pull request, and a history rewrite leaves one commit range unavailable from GitHub.",
+  "highlights": [
+    "Mod SDK 1.5.0 and 1.7.0 are released. Later master code extends the mod interface through 1.9 for sharing the game's world.",
+    "PAL level edits now target the 60 Hz gameplay copy the native game loads (#87). The launcher shows prepared level files, asset packs and recorded edits (#91).",
+    "Movies use the game's language, the camera follows the departing ship, and NTSC-U fixes address object updates and a skipped-frame effect-texture crash (#98, #96, #93, #95).",
+    "Large PAL and NTSC-U source updates mostly import upstream names, structures and implementations. Port-specific replacements remain where newly imported source cannot run as written.",
+    "Going Commando gains boot/title/menu C comparison tools (#85) and can build from the player's disc image. Its launcher Play action remains developer-only behind a warning.",
+    "Custom ship destinations and packaged editor layouts close without merging (#92, #94). The incomplete GitHub commit comparison means the recovered commit list is not exhaustive."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

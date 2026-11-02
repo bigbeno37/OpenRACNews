@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds core and network code alongside PAL-specific functions",
+  "summary": "Deadlocked's NTSC-U v1.00 progress report rises from 4.41% to 4.54% matched code, with 3,598 of 18,085 functions. A matched function compiles to exactly the same bytes as the original game. The landed work includes 103 core, network and resident-text functions in #31, plus separate work on PAL timing differences and PAL-only functions (#32, #33, #34, #35).",
+  "highlights": [
+    "PAL-specific implementations cover timing differences associated with its 50 Hz release (#32). These are separate from the NTSC-U progress figure.",
+    "Three further PAL-only functions were proposed in #36, which had not merged.",
+    "Contributor documentation explains how to use OpenRAC's shared permuter for both US and PAL builds (#37)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

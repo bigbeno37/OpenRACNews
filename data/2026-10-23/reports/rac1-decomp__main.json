@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-23",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 reaches 98.48% matched code",
+  "summary": "Startup and animation work takes PAL v2.00 from 98.40% to 98.48% matched code, with 5,089 of 5,120 functions in the project's progress report. A matched function compiles to exactly the same bytes as the original game. Nine completed functions and repaired level-function boundaries landed in #116, alongside extensive changes that make existing C easier to read without changing its compiled bytes.",
+  "highlights": [
+    "Names, headers and hundreds of existing functions adopt the NTSC decompilation's structures and terminology (#113, #114, #115, #118). The large source changes mostly rewrite existing work.",
+    "Eleven Blarg Station functions gain names identified by playing with the port's object inspector, including electric barriers and containment tubes (#117).",
+    "Following newer NTSC work also fixes rebuilding the game compiler when an upstream compiler patch is added (#120)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

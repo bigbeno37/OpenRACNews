@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-24",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Keyboard & Mouse 1.2.3 fixes Quick Select crashes and menu selection",
+  "summary": "Keyboard & Mouse's three patch releases fix mouse interaction with Ratchet & Clank's menus. Version 1.2.1 stops Quick Select crashes by focusing only widgets the game's own navigation can reach, and 1.2.2 restores map clicks and Enter inside levels. Version 1.2.3 makes the Weapons, Gadgets and Quick Select grids select the cell under the cursor instead of drifting with mouse movement.",
+  "highlights": [
+    "Ammo Max 1.0.1, Difficulty 1.2.1, DualSense 1.0.1, Item Randomizer 1.0.2, Live Splits 1.0.1 and Lock Strafe 1.0.1 also ship. Those patches contain documentation and layout changes without behaviour changes."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

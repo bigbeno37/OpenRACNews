@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-25",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando gains level handlers and a way to link compiler-generated constants",
+  "summary": "Going Commando adds C for level movement, effects and state handling, including Siberius, Damosel Orbit, Snivelak, Notak, Maktar, Tabora and Joba. A matched function compiles to exactly the same bytes as the original game. Techniques adopted from Ratchet & Clank allow verified compiler-generated constants to link and help previously blocked reconstructions match (#318, #319). The committed progress report is unchanged from the previous day and does not yet reflect these new merges.",
+  "highlights": [
+    "Catalogue repairs correct callable starting points across USA v1.01, USA v2.00 and Europe/Australia while leaving excluded prefixes in assembly (#314, #315).",
+    "#316 classifies 27 bodies as original assembly. This changes their labels rather than adding C implementations.",
+    "Vector, control, beam-rendering and target helpers land across the releases that contain them (#320, #321, #322, #323, #324, #325).",
+    "#326 repairs existing call interfaces and retains 39 large reconstructions, but explicitly adds no newly matched functions.",
+    "Snivelak path motion matches for USA v1.01 and USA v2.00 in #327. Europe/Australia has no corresponding catalogue entry."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

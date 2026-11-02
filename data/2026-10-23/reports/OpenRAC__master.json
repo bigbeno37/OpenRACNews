@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-23",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Experimental enhanced graphics bring new lighting and shadows to Ratchet & Clank",
+  "summary": "Ratchet & Clank gains optional enhanced graphics with baked lighting, ambient occlusion and sun and character shadows (#36). The launcher exposes the experimental feature in Mods and prepares lighting on the player's computer, while the setting stays off by default. Intel Macs ship without the lighting baker and retain original lighting. Unlike this branch's usual release-only role, the day brought direct feature work and a broad reorganisation rather than a release pull request.",
+  "highlights": [
+    "Vulkan drawing improvements also benefit players using original lighting (#36).",
+    "Most levels gain room for more effects, but Rilgar, Blarg Station and Quartu retain the console-sized pool. Gaspar still needs an in-game check.",
+    "Collision calculations, crate debris and object visibility receive fixes to follow the console's behaviour (#37, #42).",
+    "The launcher blocks duplicate Play requests, and Vulkan pipeline-cache saves no longer share a temporary file that concurrent programs could corrupt.",
+    "Faster lighting preparation and optional texture upscaling were proposed in #43, which had not merged.",
+    "#39 reports a Quartu crash under unusual circumstances, including circumstances normally requiring memory editing."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

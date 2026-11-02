@@ -1,7 +1,7 @@
 {
   "date": "2026-10-25",
   "repo": "OpenRAC",
-  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "capturedAt": "2026-11-02T09:07:35.247Z",
   "issues": [
     {"number":50,"title":"Android Version: Python is not Set Error","author":"matthewtrains","events":["opened","closed"],"closedAs":"COMPLETED","body":"I'm trying to build RAC1 and i'm getting a Python is not set error, on the latest build.\nWhich is v.0.8.4-dev.406 and the APK that is listed in the release is dev.404 and that cant get past setting up the disc."},
     {"number":64,"title":"Launcher crashing","author":"Billabong1985","events":["opened"],"closedAs":null,"body":"On 0.9.0, Steam deck, using the amd64 Appimage, trying to click on the settings or mods tabs causes the launcher to crash. The game itself seems to launch fine if I leave it on the first tab and just hit play"},

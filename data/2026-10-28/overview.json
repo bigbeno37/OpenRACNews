@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-28",
+  "headline": "Multiplayer debuts with a lobby as shared campaign play develops on master",
+  "summary": "Multiplayer 0.1.0 ships a lobby and connection without shared gameplay, while later mod source adds co-op, shared objects and host-led travel beyond that release. OpenRAC supplies multiplayer world APIs, same-process savestates and map-pack tools, alongside unfinished interior lighting and Novalis water (OpenRAC#86, OpenRAC#84, OpenRAC#74). Its master history was rewritten, and GitHub could not recover one commit range. Going Commando's USA v1.01 rises from 44.26% to 54.46% matched code, and Deadlocked's NTSC-U v1.00 rises from 4.54% to 5.27%. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

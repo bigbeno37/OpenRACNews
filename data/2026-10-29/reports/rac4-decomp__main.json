@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds game, network and PAL code as NTSC-U v1.00 reaches 5.57%",
+  "summary": "Deadlocked's NTSC-U v1.00 rises from 5.27% to 5.57% matched code, with 4,151 of 18,085 functions. A matched function compiles to exactly the same bytes as the original game. PAL's separate total rises from 3,842 to 4,553 of 18,113 functions. The day's work combines game and network code, engine and library functions, and PAL-specific batches (#46, #47, #45, #43).",
+  "highlights": [
+    "TTY read and write wrappers land for both US and PAL using the existing Sony GCC 2.9 route (#41).",
+    "PAL-specific copies that overlap shared C are removed so each function has one implementation. Some duplicate object names had caused false relocation-audit mismatches.",
+    "#45 describes 450 PAL reconstructions, but overlaps with #46 and #47 mean the submitted batch totals should not be added together.",
+    "A Tempus Station PAL function and an assembler change that would unblock further PAL functions remain proposals (#48, #49). Draft #44 closes without merging."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

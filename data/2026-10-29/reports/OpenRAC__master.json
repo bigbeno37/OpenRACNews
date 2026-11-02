@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-29",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 0.10.0 release pull request opens, with master unchanged",
+  "summary": "The stable branch receives release proposal #116 to bring develop's changes over as launcher 0.10.0. It has not merged, and its description says the separate version bump in #115 must merge into develop first. No commits land on master, so this is release preparation rather than a stable launcher release.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

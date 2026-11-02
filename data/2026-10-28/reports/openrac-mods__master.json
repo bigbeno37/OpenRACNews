@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-28",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Multiplayer's first release offers a lobby, while co-op develops further on master",
+  "summary": "Multiplayer 0.1.0 is released with menus, a lobby and a server connection, explicitly without playing the game together yet. Later source work on master adds shared campaign play, other players' Ratchets, shared objects and travel with the host's ship. Those later changes reach a 0.7.0 source version but are not part of the day's sole published release.",
+  "highlights": [
+    "Direct connect can host a party within the game or join by address without relying on the central server.",
+    "The host can start a new game or share a save without writing over members' memory cards. Incompatible game builds, mod versions or discs are refused.",
+    "Pausing must not remove the other game's world objects. Follow-up code uses explicit death reports, adds regression tests and improves world-event logging.",
+    "The final scene rule allows only the host to skip movies and scenes. Other players' figures are hidden during scenes, and Start waits for every member to be ready.",
+    "Only the host chooses interplanetary travel. Party members follow the host's ship and return to the Multiplayer page if they leave or lose the party."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

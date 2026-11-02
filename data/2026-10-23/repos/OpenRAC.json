@@ -1,7 +1,7 @@
 {
   "date": "2026-10-23",
   "repo": "OpenRAC",
-  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "capturedAt": "2026-11-02T09:07:35.245Z",
   "issues": [
     {"number":39,"title":"OpenRAC may encounter a very obscure but guaranteed crash from base RaC1","author":"TheWhiteGuardian","events":["opened"],"closedAs":null,"body":"Hello OpenRAC team! I want to congratulate you all on this amazing project.\nI've been messing with the memory of RaC1 for fun, using PCSX2 and RPCS3, for some time now. In doing so I've discovered a quirk about planet Quartu that, under the right circumstances, can guaranteed crash the game. I've tested OpenRAC and it also crashes when it encounters this scenario.\nIn Insomniac's defense: the specific circumstances required to trigger this are usually not possible, and without memory editing, a…"}
   ],

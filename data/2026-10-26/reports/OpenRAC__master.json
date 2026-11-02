@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-26",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Interior lighting and diagnostics recording proposed, with nothing merged on master",
+  "summary": "Two proposals would add work-in-progress interior lighting and Novalis water (#74), plus diagnostics recording and rendering fixes (#75). Neither had merged, and master gained no commits that day. The lighting author warns that interiors can still be too dark, generated lights need visual tuning and Novalis remains the focus of the work.",
+  "highlights": [
+    "#75 proposes recordings with device information, frame timings and CPU/GPU diagnostics, started from developer controls or Ctrl+F3.",
+    "A broad Ratchet & Clank PAL source sync closes without merging (#71). Its replacement proposes backporting only three exact C functions (#73), which also remains unmerged.",
+    "A fix for finding level assembly during PAL function triage opens in #72. It had not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

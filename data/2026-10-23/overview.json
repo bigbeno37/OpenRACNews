@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-23",
+  "headline": "Ratchet & Clank gains experimental enhanced lighting and direct mouse camera control",
+  "summary": "OpenRAC adds optional baked lighting, ambient occlusion and new shadows, exposed through an experimental Mods entry that stays off by default (OpenRAC#36). Intel Macs ship without the lighting baker and retain original lighting. Keyboard & Mouse 1.2.0 brings direct camera turning, while Ammo Max 1.0.0 starts vendor ammo purchases at the affordable maximum. Ratchet & Clank gains startup and animation code, Going Commando adds shared effects and hero helpers, and Deadlocked gains core, network and PAL-specific work. Up Your Arsenal adds a name map so ByteMatch can connect its NTSC-U report to source files.",
+  "writtenBy": "gpt-6.1-sol"
+}

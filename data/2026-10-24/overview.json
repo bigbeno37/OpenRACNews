@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-24",
+  "headline": "Android gets Mods and swipe-camera controls, while Vulkan gains FSR upscaling",
+  "summary": "OpenRAC brings Mods, enhanced graphics and movable touch controls to Android, tested on an Ayn Odin 3 (OpenRAC#44). Enhanced Vulkan rendering gains FSR 3.1.4 temporal upscaling with no frame generation (OpenRAC#47), alongside rendering optimisations and Ratchet & Clank fixes for Gaspar, Orxon and save loading. Secret Agent Clank is added to the project, though the listed work does not establish playability (OpenRAC#45). Ratchet & Clank starts building NTSC-U within its own repository, Going Commando gains verified C switch-table linking, and Deadlocked adds three PAL-only functions. Keyboard & Mouse 1.2.3 completes a run of fixes for Quick Select crashes, map input and selecting menu-grid cells under the cursor.",
+  "writtenBy": "gpt-6.1-sol"
+}

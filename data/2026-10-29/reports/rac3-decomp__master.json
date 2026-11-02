@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal adds six native NTSC-U frontend routines",
+  "summary": "Six native NTSC-U routines land in #1, covering frontend state, timers, callbacks and dialog handling across eight program placements. The NTSC-U progress update reports 8.38% matched code and 5,677 of 16,222 functions. A matched function compiles to exactly the same bytes as the original game. PAL v1.00 is measured separately and remains at 8.72% matched code with 5,807 of 16,164 functions.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}
