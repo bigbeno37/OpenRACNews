@@ -14,13 +14,14 @@ import {
   issueEventsOn,
   keepFirstCapture,
   landingRanges,
+  parseProgress,
   pullRequestEventsOn,
   sameSnapshot,
   stringifySnapshot,
   totalsFor,
 } from '../src/lib/collect.ts';
 import { dayOf, isValidDay, lastCompleteDay, recentDays } from '../src/lib/days.ts';
-import type { Commit, Issue, PullRequest, Push, Release, TrackedBranch, TrackedRepo } from '../src/lib/schema.ts';
+import type { Commit, Issue, Progress, PullRequest, Push, Release, TrackedBranch, TrackedRepo } from '../src/lib/schema.ts';
 import { branchSnapshotSchema, repoSnapshotSchema } from '../src/lib/schema.ts';
 import { branchKey, tracking } from '../src/lib/tracking.ts';
 
@@ -207,6 +208,14 @@ async function commitsFor(repo: string, pushes: Push[], warnings: string[]): Pro
   });
 }
 
+/** How far a decompilation had got at this commit, from the report it commits. Most repos have none. */
+async function fetchProgress(repo: string, sha: string): Promise<Progress | null> {
+  const response = await request(`https://raw.githubusercontent.com/${tracking.org}/${repo}/${sha}/progress/report.json`);
+  if (response.status === 404) return null;
+  if (!response.ok) throw new GitHubError(response.status, `${response.status} reading ${repo}'s progress report at ${sha}`);
+  return parseProgress(await response.json().catch(() => null), sha);
+}
+
 function pullRequestsOn(all: any[], branch: string, day: string): PullRequest[] {
   return all
     .filter((pr) => pr.baseRefName === branch)
@@ -291,15 +300,20 @@ async function snapshotBranch(repo: TrackedRepo, branch: TrackedBranch, days: st
     const warnings: string[] = [];
     const commits = await commitsFor(repo.name, pushesToday, warnings);
     const path = join(DATA_DIR, date, 'branches', `${branchKey(repo.name, branch.name)}.json`);
+    const earlier = readIfPresent(path, branchSnapshotSchema);
+    // These reports run to megabytes, so each day's is only read once.
+    const lastCommit = pushesToday.at(-1)?.after;
+    const progress = earlier?.progress !== undefined ? earlier.progress : lastCommit && !/^0+$/.test(lastCommit) ? await fetchProgress(repo.name, lastCommit) : undefined;
     const snapshot = branchSnapshotSchema.parse({
       date,
       repo: repo.name,
       branch: branch.name,
       capturedAt: new Date().toISOString(),
+      ...(progress !== undefined ? { progress } : {}),
       totals: totalsFor(commits, pushesToday),
       warnings,
       pushes: pushesToday,
-      pullRequests: keepFirstCapture(readIfPresent(path, branchSnapshotSchema)?.pullRequests, pullRequests, (pr) => pr.number),
+      pullRequests: keepFirstCapture(earlier?.pullRequests, pullRequests, (pr) => pr.number),
       commits,
     });
     const { commits: c, merges: m } = snapshot.totals;

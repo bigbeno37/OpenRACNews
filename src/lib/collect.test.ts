@@ -6,6 +6,7 @@ import {
   issueEventsOn,
   keepFirstCapture,
   landingRanges,
+  parseProgress,
   pullRequestEventsOn,
   sameSnapshot,
   stringifySnapshot,
@@ -164,6 +165,36 @@ test('something new on that day still gets through', () => {
   const added = { number: 6, events: ['opened'], additions: 1 };
   assert.deepEqual(keepFirstCapture(earlier, [merged, added], key), [merged, added]);
   assert.deepEqual(keepFirstCapture(undefined, [added], key), [added]);
+});
+
+test('progress reads the measures of a real objdiff report, whose numbers may be strings', () => {
+  const report = { measures: { total_code: '5527936', matched_code: '4684272', total_functions: 8579, matched_functions: 7760, total_data: '100', matched_data: '25', fuzzy_match_percent: 84.7 } };
+  assert.deepEqual(parseProgress(report, 'abc'), {
+    sha: 'abc',
+    code: { done: 4684272, total: 5527936 },
+    functions: { done: 7760, total: 8579 },
+    data: { done: 25, total: 100 },
+  });
+});
+
+test('a report with no data measure just has no data figure', () => {
+  const progress = parseProgress({ measures: { total_code: 10, matched_code: 1, total_functions: 5, matched_functions: 1 } }, 'abc');
+  assert.equal(progress?.data, null);
+  assert.equal(progress?.code.done, 1);
+});
+
+test('a bad data figure is dropped without losing the code figure', () => {
+  const progress = parseProgress({ measures: { total_code: 10, matched_code: 1, total_data: 5, matched_data: 9 } }, 'abc');
+  assert.equal(progress?.data, null);
+  assert.deepEqual(progress?.code, { done: 1, total: 10 });
+});
+
+test('anything without a usable code figure is no progress at all', () => {
+  assert.equal(parseProgress(null, 'abc'), null);
+  assert.equal(parseProgress({}, 'abc'), null);
+  assert.equal(parseProgress({ measures: { total_code: 0, matched_code: 0 } }, 'abc'), null);
+  assert.equal(parseProgress({ measures: { total_code: 'lots', matched_code: 1 } }, 'abc'), null);
+  assert.equal(parseProgress({ measures: { total_code: 5, matched_code: 9 } }, 'abc'), null);
 });
 
 test('re-capturing the same facts is not a change', () => {

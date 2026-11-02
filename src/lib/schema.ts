@@ -75,11 +75,28 @@ export const pullRequestSchema = z.strictObject({
 });
 export type PullRequest = z.infer<typeof pullRequestSchema>;
 
+const ratioSchema = z.strictObject({ done: z.number(), total: z.number() });
+
+/**
+ * How far a decompilation had got: its own objdiff report (progress/report.json) as it stood at the
+ * day's last commit. `code` is the honest figure, weighted by size, as on openrac.dev.
+ */
+export const progressSchema = z.strictObject({
+  sha: z.string(),
+  code: ratioSchema,
+  functions: ratioSchema.nullable(),
+  data: ratioSchema.nullable(),
+});
+export type Progress = z.infer<typeof progressSchema>;
+export type Ratio = z.infer<typeof ratioSchema>;
+
 export const branchSnapshotSchema = z.strictObject({
   date: day,
   repo: z.string(),
   branch: z.string(),
   capturedAt: z.string(),
+  /** Null when this commit has no report. Absent on a day nothing landed, when there's no new commit to read it from. */
+  progress: progressSchema.nullable().optional(),
   totals: z.strictObject({
     commits: z.number().int(),
     merges: z.number().int(),

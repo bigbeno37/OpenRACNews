@@ -4,7 +4,7 @@
 // the date written in the commit. A pull request merged today often carries commits dated days
 // earlier: bucketing those by their own date would file them under days already reported on, and
 // finished days would keep changing. Landing time also means a finished day never changes.
-import type { Commit, Issue, Push, PullRequest } from './schema.ts';
+import type { Commit, Issue, Progress, Push, PullRequest, Ratio } from './schema.ts';
 import { dayOf } from './days.ts';
 
 export interface Range {
@@ -130,6 +130,29 @@ export function keepFirstCapture<T extends { events?: readonly string[] }>(earli
     const kept = first.get(key(item));
     return kept && JSON.stringify(kept.events) === JSON.stringify(item.events) ? kept : item;
   });
+}
+
+const toRatio = (done: unknown, total: unknown): Ratio | null => {
+  const [d, t] = [Number(done ?? 0), Number(total)];
+  return [d, t].every((n) => Number.isFinite(n) && n >= 0) && t > 0 && d <= t ? { done: d, total: t } : null;
+};
+
+/**
+ * Reads the measures of an objdiff report, as openrac.dev does. Numbers may come as strings. A report
+ * without a usable code figure gives null, and a bad data or function figure is dropped by itself, so it
+ * can't take the code figure down with it.
+ */
+export function parseProgress(report: unknown, sha: string): Progress | null {
+  const m = (report as { measures?: Record<string, unknown> } | null)?.measures;
+  if (!m) return null;
+  const code = toRatio(m.matched_code, m.total_code);
+  if (!code) return null;
+  return {
+    sha,
+    code,
+    functions: m.total_functions == null ? null : toRatio(m.matched_functions, m.total_functions),
+    data: m.total_data == null ? null : toRatio(m.matched_data, m.total_data),
+  };
 }
 
 /** Whether two snapshots say the same thing, ignoring when each was taken. */
