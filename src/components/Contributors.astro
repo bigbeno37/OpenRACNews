@@ -1,0 +1,27 @@
+---
+// The people behind a day's work on a branch, as a row of pictures. Each shows a name on hover or focus, and
+// links to that person's work on GitHub. The initial sits behind the picture, so it shows if there's no
+// picture or it fails to load.
+import type { Contributor } from '../lib/contributors.ts';
+
+interface Props {
+  people: Contributor[];
+}
+const { people } = Astro.props;
+---
+
+<ul class="flex flex-wrap items-center gap-1">
+  {
+    people.map(({ name, href, avatar }) => {
+      const Element = href ? 'a' : 'span';
+      return (
+        <li>
+          <Element href={href} class="avatar" data-tip={name} aria-label={href ? `${name}'s work on this day, on GitHub` : name} tabindex={href ? undefined : 0}>
+            <span aria-hidden="true">{name[0]}</span>
+            {avatar && <img src={avatar} alt="" width="28" height="28" loading="lazy" decoding="async" referrerpolicy="no-referrer" />}
+          </Element>
+        </li>
+      );
+    })
+  }
+</ul>

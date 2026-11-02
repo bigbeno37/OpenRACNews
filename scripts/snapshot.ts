@@ -14,6 +14,7 @@ import {
   issueEventsOn,
   keepFirstCapture,
   landingRanges,
+  loginOf,
   parseProgress,
   pullRequestEventsOn,
   sameSnapshot,
@@ -112,13 +113,13 @@ const fetchPullRequests = (repo: string, since: string) =>
   updatedSince(
     'pullRequests',
     `number title bodyText isDraft baseRefName headRefName createdAt mergedAt closedAt additions deletions changedFiles
-     author { login } mergedBy { login }`,
+     author { __typename login } mergedBy { login }`,
     repo,
     since,
   );
 
 const fetchIssues = (repo: string, since: string) =>
-  updatedSince('issues', `number title bodyText createdAt closedAt stateReason author { login }`, repo, since);
+  updatedSince('issues', `number title bodyText createdAt closedAt stateReason author { __typename login }`, repo, since);
 
 async function fetchReleases(repo: string, since: string): Promise<any[]> {
   const query = `query($owner: String!, $name: String!, $after: String) {
@@ -199,6 +200,7 @@ async function commitsFor(repo: string, pushes: Push[], warnings: string[]): Pro
       sha: c.sha,
       headline,
       author: c.author?.login ?? c.commit.author?.name ?? 'unknown',
+      ...(c.author?.login ? {} : { unlinked: true as const }),
       committedAt: c.commit.committer?.date ?? c.commit.author?.date,
       merge: c.parents.length > 1,
       landed,
@@ -227,7 +229,7 @@ function pullRequestsOn(all: any[], branch: string, day: string): PullRequest[] 
         {
           number: pr.number,
           title: pr.title,
-          author: pr.author?.login ?? 'ghost',
+          author: loginOf(pr.author),
           draft: pr.isDraft,
           head: pr.headRefName,
           events,
@@ -252,7 +254,7 @@ function issuesOn(all: any[], day: string): Issue[] {
         {
           number: issue.number,
           title: issue.title,
-          author: issue.author?.login ?? 'ghost',
+          author: loginOf(issue.author),
           events,
           closedAs: events.includes('closed') ? (issue.stateReason ?? null) : null,
           ...(body ? { body } : {}),

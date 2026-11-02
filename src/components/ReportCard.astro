@@ -1,11 +1,13 @@
 ---
 // One branch on one day, built like the game cards on openrac.dev: the game's colours behind a dark
 // wash, a name and a headline number on top, a thin bar, and the repository along the bottom.
+import { contributorsOn } from '../lib/contributors.ts';
 import { count, formatNumber } from '../lib/format.ts';
 import { reportUrl, treeUrl } from '../lib/links.ts';
 import { branchFacts, highlightsFrom, type BranchDay } from '../lib/news.ts';
 import { cardStyle, themeFor } from '../lib/themes.ts';
 import { tracking } from '../lib/tracking.ts';
+import Contributors from './Contributors.astro';
 import HourBar from './HourBar.astro';
 import Icons from './Icons.astro';
 import Prose from './Prose.astro';
@@ -18,7 +20,8 @@ interface Props {
 const { day, link = true } = Astro.props;
 const { repo, branch, date, facts, report } = day;
 const theme = themeFor(repo.name);
-const { commits, additions, deletions, authors } = facts.totals;
+const { commits, additions, deletions } = facts.totals;
+const people = contributorsOn(repo.name, facts);
 const fromGitHub = report ? [] : highlightsFrom(repo.name, facts);
 ---
 
@@ -91,7 +94,14 @@ const fromGitHub = report ? [] : highlightsFrom(repo.name, facts);
         <Icons name="github" class="size-[18px]" />
         <span class="truncate">{tracking.org}/{repo.name}</span>
       </a>
-      {authors.length > 0 && <span>{count(authors.length, 'contributor')}</span>}
+      {
+        people.length > 0 && (
+          <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+            <span>{count(people.length, 'contributor')}</span>
+            <Contributors people={people} />
+          </div>
+        )
+      }
       {link && <a href={reportUrl(repo.name, branch.name, date)} class="btn btn-sm sm:ml-auto">See commits and pull requests</a>}
     </div>
   </div>

@@ -45,7 +45,10 @@ export type Push = z.infer<typeof pushSchema>;
 export const commitSchema = z.strictObject({
   sha: z.string(),
   headline: z.string(),
+  /** A GitHub login, or the name in the commit when `unlinked`. */
   author: z.string(),
+  /** Its author has no GitHub account, so there's no profile to link to. */
+  unlinked: z.literal(true).optional(),
   committedAt: z.string(),
   merge: z.boolean(),
   /** On the branch's first-parent line: it is what the branch itself gained, not a commit merged in. */

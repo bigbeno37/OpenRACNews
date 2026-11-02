@@ -15,6 +15,15 @@ export interface Range {
 const isEmptySha = (sha: string) => /^0+$/.test(sha);
 
 /**
+ * Who a pull request or issue is by. GitHub's GraphQL API names an app without the "[bot]" that its REST API
+ * and commits use, so this adds it: the same app is then one contributor, and can be recognised as an app.
+ */
+export function loginOf(author: { __typename?: string; login: string } | null): string {
+  if (!author) return 'ghost';
+  return author.__typename === 'Bot' ? `${author.login}[bot]` : author.login;
+}
+
+/**
  * Joins a day's pushes, oldest first, into as few before...after ranges as possible, so one
  * comparison can cover a run of pushes. A force push gets a range of its own because history doesn't
  * continue through it, and creating or deleting a branch has nothing to compare against.
