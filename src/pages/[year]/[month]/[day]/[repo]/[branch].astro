@@ -8,7 +8,7 @@ import Section from '../../../../../components/Section.astro';
 import Layout from '../../../../../layouts/Layout.astro';
 import { dayParams, formatDay, formatDayShort } from '../../../../../lib/days.ts';
 import { count, formatNumber, sentenceList, timeOf } from '../../../../../lib/format.ts';
-import { commitUrl, dayUrl, projectUrl, pullUrl } from '../../../../../lib/links.ts';
+import { commitUrl, projectUrl, pullUrl } from '../../../../../lib/links.ts';
 import { viewableDays, type BranchDay } from '../../../../../lib/news.ts';
 import type { Commit } from '../../../../../lib/schema.ts';
 import { themeFor } from '../../../../../lib/themes.ts';
@@ -43,7 +43,6 @@ const short = (commit: Commit) => commit.sha.slice(0, 7);
     <Fragment slot="title">{branch.name}</Fragment>
     <div class="mt-5 flex flex-wrap gap-3">
       <a href={projectUrl(date, repo.name)} class="btn btn-sm">Back to {theme.tag} on {formatDayShort(date)}</a>
-      <a href={dayUrl(date)} class="btn btn-sm">All projects on {formatDayShort(date)}</a>
     </div>
   </Hero>
 

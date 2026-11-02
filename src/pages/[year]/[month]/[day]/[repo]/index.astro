@@ -9,7 +9,7 @@ import Section from '../../../../../components/Section.astro';
 import Layout from '../../../../../layouts/Layout.astro';
 import { dayFromParams, dayParams, formatDay, formatDayMonthShort, formatDayShort } from '../../../../../lib/days.ts';
 import { formatChange, formatNumber, formatPercent } from '../../../../../lib/format.ts';
-import { dayUrl, projectUrl } from '../../../../../lib/links.ts';
+import { projectUrl } from '../../../../../lib/links.ts';
 import { projectOn, viewableDates } from '../../../../../lib/news.ts';
 import type { TrackedRepo } from '../../../../../lib/schema.ts';
 import { barStyle, themeFor } from '../../../../../lib/themes.ts';
@@ -54,7 +54,6 @@ const stats: [string, string][] = progress
     <p class="mt-5 max-w-[600px] text-[15px] leading-relaxed text-soft sm:text-[17px]">{repo.about}</p>
     <div class="mt-6 grid animate-rise gap-3 [animation-delay:.2s] min-[560px]:flex min-[560px]:flex-wrap">
       <a href={repoUrl(repo.name)} class="btn btn-primary"><Icons name="github" class="size-4" />See it on GitHub</a>
-      <a href={dayUrl(date)} class="btn">All projects on {formatDayShort(date)}</a>
     </div>
 
     <div class="mt-8 grid max-w-[900px] animate-rise grid-cols-2 gap-2.5 [animation-delay:.3s] min-[560px]:grid-cols-4 sm:gap-3.5">
