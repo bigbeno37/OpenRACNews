@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-15",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:21:38.368Z",
+  "totals": {"commits":8,"merges":2,"landed":2,"additions":25696,"deletions":3584,"pushes":2,"forcePushes":0,"authors":["llesieur99","Lynder063","Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-15T07:56:07Z","type":"pr_merge","actor":"Veradictus","before":"29eaa3c13e6dd231d6bbf107e4c17936ca6d9db9","after":"2900a3b49c281601a004754528ffa23cdbe7abfa"},
+    {"at":"2026-10-15T13:06:39Z","type":"pr_merge","actor":"Lynder063","before":"2900a3b49c281601a004754528ffa23cdbe7abfa","after":"293ea07b61e3c9483962a65099ee984c16eb3dc6"}
+  ],
+  "pullRequests": [
+    {"number":7,"title":"build(port): connect Going Commando to current RAC2 master","author":"llesieur99","draft":false,"head":"codex/rac2-hostgen-master","events":["opened","merged"],"mergedBy":"Veradictus","additions":25433,"deletions":3553,"changedFiles":553,"body":"The Going Commando port still read the old candidates/ layout and LVL_...FUN_... names, so it translated none of the current RAC2 matching C. This PR syncs the embedded decompilation to RAC2 master at 86dbd852 and makes hostgen read src/, the level placement catalogue, and the RAC2 overlay relocation range.\nThe newer source has a file with a function-local signed extern followed by an unsigned file-scope declaration of the same symbol. Hostgen now keeps those declarations separate in its…"},
+    {"number":8,"title":"Main","author":"Lynder063","draft":false,"head":"main","events":["opened","merged"],"mergedBy":"Lynder063","additions":263,"deletions":31,"changedFiles":16}
+  ],
+  "commits": [
+    {"sha":"f2a6039e1fa01e4b631780709cba66a168f1272a","headline":"chore(rac2): sync embedded decompilation to master","author":"llesieur99","committedAt":"2026-10-15T05:35:00Z","merge":false,"landed":false},
+    {"sha":"89ddac3f934c47197d1033ae930e2435431c4c72","headline":"build(port): translate RAC2 master sources with hostgen","author":"llesieur99","committedAt":"2026-10-15T05:37:57Z","merge":false,"landed":false},
+    {"sha":"2900a3b49c281601a004754528ffa23cdbe7abfa","headline":"Merge pull request #7 from llesieur99/codex/rac2-hostgen-master","author":"Veradictus","committedAt":"2026-10-15T07:56:07Z","merge":true,"landed":true,"additions":25433,"deletions":3553,"body":"build(port): connect Going Commando to current RAC2 master"},
+    {"sha":"f62f4a284137f9d27ca3e6b8e3dffae418a147ec","headline":"fix(hostgen): workaround conflicting syntax in rac1-decomp","author":"Lynder063","committedAt":"2026-10-15T13:05:04Z","merge":false,"landed":false},
+    {"sha":"d5c76bd45942d8e8e73a4e39c117a7438418d4d7","headline":"feat(port): add per-game window icons for rac1-pal, rac1-ntsc, rac2, rac3, rac4","author":"Lynder063","committedAt":"2026-10-15T13:05:04Z","merge":false,"landed":false},
+    {"sha":"affba34f32b98a0f0f3fb15a126f68244b9b6906","headline":"feat(launcher): check GitHub releases for updates and allow openrac.dev CSP","author":"Lynder063","committedAt":"2026-10-15T13:05:04Z","merge":false,"landed":false},
+    {"sha":"379cce756165788fcd9a8f069b4ad35f3b97226b","headline":"feat(launcher): display per-game artwork in Discord rich presence","author":"Lynder063","committedAt":"2026-10-15T13:05:04Z","merge":false,"landed":false},
+    {"sha":"dbdfbf24a7810fb67bcf87b2e29f821820bd55f9","headline":"docs: document level editor workflow in README.md","author":"Lynder063","committedAt":"2026-10-15T13:05:04Z","merge":false,"landed":false},
+    {"sha":"1d3c5b214488253ce57c31b8c384de9f013c8629","headline":"chore: update progress tables and source revisions","author":"Lynder063","committedAt":"2026-10-15T13:05:29Z","merge":false,"landed":false},
+    {"sha":"293ea07b61e3c9483962a65099ee984c16eb3dc6","headline":"Merge pull request #8 from OpenRAC/main","author":"Lynder063","committedAt":"2026-10-15T13:06:38Z","merge":true,"landed":true,"additions":263,"deletions":31,"body":"Main"}
+  ]
+}

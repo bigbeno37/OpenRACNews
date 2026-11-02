@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-23",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-02T06:23:04.163Z",
+  "issues": [],
+  "releases": [
+    {"tag":"live-splits-v1.0.0","name":"live-splits-v1.0.0","prerelease":false,"publishedAt":"2026-10-23T02:45:53Z","author":"github-actions[bot]","body":"Built by the build workflow from 04bb17e95718619219e4753af77ffc45a5b55515, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"dualsense-v1.0.0","name":"dualsense-v1.0.0","prerelease":false,"publishedAt":"2026-10-23T02:47:17Z","author":"github-actions[bot]","body":"Built by the build workflow from 04bb17e95718619219e4753af77ffc45a5b55515, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"keyboard-mouse-v1.2.0","name":"keyboard-mouse-v1.2.0","prerelease":false,"publishedAt":"2026-10-23T03:45:40Z","author":"github-actions[bot]","body":"Built by the build workflow from afbe9102c4c0f08bafc696e1a04737a3864d0815, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"difficulty-v1.1.1","name":"difficulty-v1.1.1","prerelease":false,"publishedAt":"2026-10-23T03:45:52Z","author":"github-actions[bot]","body":"Built by the build workflow from afbe9102c4c0f08bafc696e1a04737a3864d0815, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"item-randomizer-v1.0.1","name":"item-randomizer-v1.0.1","prerelease":false,"publishedAt":"2026-10-23T03:46:16Z","author":"github-actions[bot]","body":"Built by the build workflow from afbe9102c4c0f08bafc696e1a04737a3864d0815, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"ammo-max-v1.0.0","name":"ammo-max-v1.0.0","prerelease":false,"publishedAt":"2026-10-23T03:46:34Z","author":"github-actions[bot]","body":"Built by the build workflow from afbe9102c4c0f08bafc696e1a04737a3864d0815, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"difficulty-v1.2.0","name":"difficulty-v1.2.0","prerelease":false,"publishedAt":"2026-10-23T05:45:49Z","author":"github-actions[bot]","body":"Built by the build workflow from 76cfc9199b265ac20f35e860887c54364f77a805, against the OpenRAC mod SDK 1.3.0.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-21",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-02T06:19:34.787Z",
+  "issues": [
+    {"number":247,"title":"Three C bodies in src/ that do not match: one extra nop after mfc1","author":"ReaperOfVeriod","events":["opened","closed"],"closedAs":"COMPLETED","body":"Maintainer resolution — 21 October 2026\nResolved on the qualified current toolchain. The four reported functions pass all placements: func_00290680 28/28 (148 bytes), func_002ED4B8 28/28 (176 bytes), func_L22_003A2DF8 2/2 (20 bytes), and its caller func_L22_003A2D58 2/2 (156 bytes). The reviewed integration including merged #256 passes python3 tools/build.py all --strict --jobs 8: all 28 programs OK, with no C fallback.\nThe assembler's R5900 mfc1 interlock correction is already in the compiler…"},
+    {"number":248,"title":"128-bit matching: qualified zero-store and vector-copy compiler profiles","author":"ReaperOfVeriod","events":["opened","closed"],"closedAs":"COMPLETED","body":"Maintainer status — 21 October 2026\nBoth compiler mechanisms in this issue now have qualified implementations.\nPR #262 adds the default-off, per-file -frac2-qcopy profile. An ordinary aligned\nTImode C assignment can now keep both addresses in registers and use a grouped\nlq/sq pair with its temporary register declared to the compiler. It preserves\nmemory flags and alias sets, rejects explicitly unaligned accesses, and adds no\nmemory barrier or source-level assembly. -fno-rac2-qcopy restores the…"}
+  ],
+  "releases": []
+}

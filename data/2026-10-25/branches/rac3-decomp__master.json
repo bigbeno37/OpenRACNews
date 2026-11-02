@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-25",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:19:48.807Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":1,"title":"feat(us): add native frontend routines with NTSC validation","author":"llesieur99","draft":false,"head":"codex/ntsc-float-setter-20261025","events":["opened"],"mergedBy":"Veradictus","additions":681,"deletions":56,"changedFiles":17,"body":"Summary\nAdd six native NTSC-U routines, in eight program placements:\n\n\n\nProgram\nFunction\nComplete body\nRole\n\n\n\n\nfrontbin\nfunc_U_003EB578\n12 bytes\nStore a float at state +0x50\n\n\nboot_elf\nfunc_U_003F0D38\n12 bytes\nThe same setter's boot_elf copy\n\n\nboot_elf\nfunc_U_003C4CB8\n200 bytes\nShort-counter/state update and RGB extraction\n\n\nboot_elf\nfunc_U_003E46B0\n200 bytes\nState-derived ratio and two-float helper call\n\n\nboot_elf\nfunc_U_00396860\n296 bytes\nUpdate the thirteen-entry timer/fade/callback…"}
+  ],
+  "commits": []
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:20:27.673Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":39,"title":"feat(core): match func_00161380","author":"BlindFire1200","draft":false,"head":"match-func_00161380","events":["opened"],"mergedBy":"Veradictus","additions":188,"deletions":82,"changedFiles":6,"body":"func_00161380 (core.text, 200 bytes) matched in src/core/00161380.c. The same C also matches PAL's func_00161390.\n\nMATCH with tools/check_func.py under the stock flags. match_map places it on PAL as func_00161390. The stack struct's two groups of stores are written in retail's order (second group first).\nFull build: audit_matches 2,946 exact (was 2,945). The same 3 not exact, and the same 18 audit_relocs mismatches and 2 unresolved as main, none in this function.\nmatch_map and progress…"}
+  ],
+  "commits": []
+}

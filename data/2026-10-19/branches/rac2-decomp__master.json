@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-19",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:18:59.141Z",
+  "totals": {"commits":3,"merges":2,"landed":2,"additions":13614,"deletions":13404,"pushes":2,"forcePushes":0,"authors":["llesieur99"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-19T07:45:57Z","type":"pr_merge","actor":"llesieur99","before":"0d8430cd331756def3edea446248356739b1c487","after":"2aa5db4fd24d6d2f11ae9f8b3748752ed86b3c07"},
+    {"at":"2026-10-19T08:12:07Z","type":"pr_merge","actor":"llesieur99","before":"2aa5db4fd24d6d2f11ae9f8b3748752ed86b3c07","after":"f755bdee11ac56062af725fee34cc3341fa09bea"}
+  ],
+  "pullRequests": [
+    {"number":210,"title":"feat(tools): match external texture packs to original resource keys","author":"llesieur99","draft":false,"head":"feat/texture-correspondence","events":["opened","closed"],"mergedBy":null,"additions":630,"deletions":0,"changedFiles":7,"body":"What\nAdd tools/texture_matches.py so contributors can compare an external PCSX2 HD pack with their own extracted originals without publishing either input. The tool joins complete resource keys, preserves shared occurrences and duplicate pack keys, and writes metadata only under ignored build/.\n\nReconstruct supported full PSMT8 / PSMT8H keys from indexed original PNGs, including the full palette and dimensions.\nOptionally join original PCSX2 dump filename keys. Keep region/mip information and…"},
+    {"number":211,"title":"Add sourced Wrench class labels to Moby dispatch entries","author":"llesieur99","draft":false,"head":"docs/moby-community-labels","events":["opened","merged"],"mergedBy":"llesieur99","additions":6758,"deletions":6696,"changedFiles":3,"body":"What\nThe dispatch TSV identifies update handlers by numeric class, but does not tell a reader that class 2425 is Wrench's Fan, or that 4057 is Secret Door. Append class_label and class_label_source to the existing docs/moby-dispatch.tsv, adding 12 attributed community labels with immutable links to their exact public Wrench declarations.\nAll 6,688 rows retain their original eight fields, order, addresses and proposed function names. Labels describe classes, not the full behaviour of shared…"},
+    {"number":212,"title":"Complete Moby label coverage with explicit source qualification","author":"llesieur99","draft":false,"head":"docs/moby-source-validation","events":["opened","merged"],"mergedBy":"llesieur99","additions":6856,"deletions":6708,"changedFiles":3,"body":"What\nComplete the existing Moby dispatch TSV's coverage of the audited Wrench metadata, Replanetizer's 228-entry RAC2 model list and all explicit APRac2 model IDs. The table now has 198 named classes / 2,661 labelled rows. Every source-provided Moby ID with an existing dispatch row is represented; no handler rows are invented for models absent from the table.\nAppend class_label_basis so coverage does not imply semantic verification:\n\n\n\nBasis\nClasses\nRows\nQualification\n\n\n\n\nps2-source\n61\n1,309\nAn…"}
+  ],
+  "commits": [
+    {"sha":"9b701581c11d259543de95b1da467810205ca47e","headline":"docs(moby): attribute Wrench class labels in the dispatch table","author":"llesieur99","committedAt":"2026-10-19T07:40:39Z","merge":false,"landed":false},
+    {"sha":"2aa5db4fd24d6d2f11ae9f8b3748752ed86b3c07","headline":"Merge pull request #211 from OpenRAC/docs/moby-community-labels","author":"llesieur99","committedAt":"2026-10-19T07:45:57Z","merge":true,"landed":true,"additions":6758,"deletions":6696,"body":"Add sourced Wrench class labels to Moby dispatch entries"},
+    {"sha":"a2f542e10546da2669701bf253bcf5fe2bf96a62","headline":"docs(moby): corroborate equipment labels and document live identification","author":"llesieur99","committedAt":"2026-10-19T08:01:35Z","merge":false,"landed":false},
+    {"sha":"c6a77f51d9a64f4b216e80654149ebc199bfa175","headline":"docs(moby): complete attributed label coverage with an explicit source basis","author":"llesieur99","committedAt":"2026-10-19T08:11:30Z","merge":false,"landed":false},
+    {"sha":"f755bdee11ac56062af725fee34cc3341fa09bea","headline":"Merge pull request #212 from OpenRAC/docs/moby-source-validation","author":"llesieur99","committedAt":"2026-10-19T08:12:07Z","merge":true,"landed":true,"additions":6856,"deletions":6708,"body":"Complete Moby label coverage with explicit source qualification"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-23",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:19:48.806Z",
+  "totals": {"commits":2,"merges":0,"landed":2,"additions":14531,"deletions":0,"pushes":2,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-23T16:42:54Z","type":"push","actor":"Veradictus","before":"51f7d3569ad510c5224ba11477abbaae12530bde","after":"3d9bb40cd871a14b3f868b5fac61864de75c8dfd"},
+    {"at":"2026-10-23T23:00:39Z","type":"push","actor":"Veradictus","before":"3d9bb40cd871a14b3f868b5fac61864de75c8dfd","after":"403f30a9561324342c87802960eefbaaae13b372"}
+  ],
+  "pullRequests": [],
+  "commits": [
+    {"sha":"3d9bb40cd871a14b3f868b5fac61864de75c8dfd","headline":"feat(tools): tie report names to source names for ByteMatch's source view","author":"Veradictus","committedAt":"2026-10-23T06:23:54Z","merge":false,"landed":true,"additions":14524,"deletions":0,"body":"The NTSC-U report names functions by NTSC-U addresses and counts level\ncopies under their own names, while src/ defines each once under its PAL\nor catalogue name, so ByteMatch could find almost none of NTSC-U's\nfunctions in the repository. tools/gen_bytematch_names.py writes\ninclude/bytematch_names.h from config/us/map.tsv, the level catalogues\nand the front-end pairs: a #define from each report name src/ doesn't\ndefine to the name it does, for the names the committed reports use.\nNothing…"},
+    {"sha":"403f30a9561324342c87802960eefbaaae13b372","headline":"docs(permuter): point to OpenRAC's shared permuter tool","author":"Veradictus","committedAt":"2026-10-23T23:00:37Z","merge":false,"landed":true,"additions":7,"deletions":0,"body":"OpenRAC's tools/permuter is this engine made game-agnostic. Its rac3/pal\nand rac3/us profiles compile with check.py --keep-object and count a 0\nonly when check.py says MATCH. The note says how to run it; the tools\nhere are unchanged."}
+  ]
+}

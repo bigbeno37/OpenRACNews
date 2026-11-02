@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-19",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.136Z",
+  "issues": [],
+  "releases": [
+    {"tag":"launcher-v0.8.0","name":"v0.8.0","prerelease":false,"publishedAt":"2026-10-19T09:53:37Z","author":"github-actions[bot]","body":"## The game\n\n- **The US disc plays far more like the original.** A long list of places where the US version still did nothing, or did the wrong thing, is fixed:\n  - Enemies and objects that never appeared now spawn, on Rilgar, Blarg Station, Gaspar, Orxon, Pokitaru, Gemlik Base and Quartu (where the helicopters now drop their Blarg commanders).\n  - Ratchet can now walk on Batalia, Oltanis and Kalebo III, where his movement code did not run.\n  - Over a hundred calls that lost a value on the way…"},
+    {"tag":"launcher-dev-master","name":"v0.10.1-dev.683 (master)","prerelease":true,"publishedAt":"2026-10-19T21:16:07Z","author":"github-actions[bot]","body":"The launchers built from master at f53f202aef7ee107b0e97de11b2b2ea188f23cc7; launchers built from this branch update from here."},
+    {"tag":"launcher-v0.8.1","name":"v0.8.1","prerelease":false,"publishedAt":"2026-10-19T21:20:44Z","author":"github-actions[bot]","body":"## Android\n\n- **OpenRAC runs on Android.** The launcher and the game are one app for arm64 phones, tablets and handhelds (Android 10 and later): set the game up from your own disc image, as on a computer, and play with a controller or the on-screen pad.\n  - An on-screen pad laid out like a DualShock 2, which puts itself away when a controller is used.\n  - A drawer over the game, opened with Back, with the graphics settings and what the game draws with.\n  - The game draws with OpenGL ES, or with…"}
+  ]
+}

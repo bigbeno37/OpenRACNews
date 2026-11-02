@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-22",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-02T06:19:34.787Z",
+  "issues": [
+    {"number":157,"title":"Archived: matching blocker notes moved to the shared document","author":"llesieur99","events":["closed"],"closedAs":"COMPLETED","body":"Retired tracker — knowledge moved to the repository\nThe maintained reference is docs/MATCHING-BLOCKERS.md. Every contributor can edit any entry through a normal pull request; discussion belongs in the relevant code or documentation PR.\nThe 52 numbered observations and both contributor measurement sets were preserved in PR #290. Existing comments and issue history remain available as provenance.\nThis issue is closed because the tracker was replaced, not because every technical blocker is solved.…"}
+  ],
+  "releases": []
+}

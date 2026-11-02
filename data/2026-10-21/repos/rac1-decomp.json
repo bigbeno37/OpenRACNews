@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-21",
+  "repo": "rac1-decomp",
+  "capturedAt": "2026-11-02T06:17:03.380Z",
+  "issues": [
+    {"number":105,"title":"func_00226D50 matches only with an empty do { } while (0): land it as an original debug macro?","author":"cnobis","events":["closed"],"closedAs":"COMPLETED","body":"func_00226D50 (src/game/pause.c, 340 bytes) lays out the five slots of the table at D_001D6448: one or two runs of 0x11800 from the word at D_001D5F70 + 0x108, one from + 0x10C, two of 0x4F000, then clears the rest. It is exact with the project's compiler and flags (try_func.py: EXACT), but only with an empty do { } while (0);, which tools/integrate.py refuses as a barrier. I would like a decision on whether it can land, by hand as the docs describe for newlib's macros, or should stay as it…"}
+  ],
+  "releases": []
+}

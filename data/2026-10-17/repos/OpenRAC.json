@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-17",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.136Z",
+  "issues": [],
+  "releases": [
+    {"tag":"launcher-v0.7.0","name":"v0.7.0","prerelease":false,"publishedAt":"2026-10-17T03:06:17Z","author":"github-actions[bot]","body":"## The game\n\n- **The US disc plays.** The launcher sets up and plays the US version of Ratchet & Clank from its own disc. Pause menus, in-game scenes, menu text, the liquid strips, collision and memory card reads all work; the HUD edges, Video rows and Planets page match the European game.\n- **Games have their own names.** Each game is named by its title and version, and on macOS the game is a proper app with an Apple-shaped icon.\n- **Fixes.** A press right after picking a planet no longer…"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-21",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-02T06:23:04.163Z",
+  "issues": [],
+  "releases": [
+    {"tag":"lock-strafe-v1.0.0","name":"lock-strafe-v1.0.0","prerelease":false,"publishedAt":"2026-10-21T22:05:48Z","author":"github-actions[bot]","body":"Built by the build workflow from 6d9caf54e6f9128ab51ba096f28875ed7edebea0, against the OpenRAC mod SDK 1.1.1.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."},
+    {"tag":"item-randomizer-v1.0.0","name":"item-randomizer-v1.0.0","prerelease":false,"publishedAt":"2026-10-21T22:32:26Z","author":"github-actions[bot]","body":"Built by the build workflow from 7d19c5794382486753dfad2c7e94f10e8104e753, against the OpenRAC mod SDK 1.1.1.\n\nInstall: paste this repository's address in the OpenRAC launcher's Mods tab, or add a .zip there."}
+  ]
+}

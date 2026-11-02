@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-29",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:22:45.548Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":116,"title":"Release v0.10.0","author":"Veradictus","draft":false,"head":"develop","events":["opened"],"mergedBy":"mateuszklysz","additions":37927,"deletions":4906,"changedFiles":548,"body":"Everything on develop since v0.9.0, for release as v0.10.0.\n\n#115 (chore/release-0.10.0) must merge into develop first, so that this PR carries the version bump and launcher/release-notes/0.10.0.md. Until then it would release as 0.9.0.\n\nRelease checklist (from launcher/docs/RELEASING.md)\n\n Merge #115 (the bump and the notes) into develop.\n Merge this PR into master.\n Tag the merged commit on master and push the tag:\ngit fetch origin && git checkout master && git pull --ff-only && git tag…"}
+  ],
+  "commits": []
+}

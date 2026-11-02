@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:20:11.367Z",
+  "totals": {"commits":15,"merges":1,"landed":1,"additions":46697,"deletions":19359,"pushes":1,"forcePushes":0,"authors":["Lynder063","Stephan Kast"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-15T19:25:37Z","type":"pr_merge","actor":"Lynder063","before":"2b6f5657470603356ba80f5b2ed3620ba587238d","after":"1d26d1e86dd0edf98d0d680e5e049e9c2b1a8eb1"}
+  ],
+  "pullRequests": [
+    {"number":3,"title":"First assisted decomp work ","author":"skast96","draft":false,"head":"aut-39-code-2pct","events":["opened","merged"],"mergedBy":"Lynder063","additions":46697,"deletions":19359,"changedFiles":610,"body":"Hey @Lynder063 great work so far on the ratchet and clank games. I want to contribute my work as well. It is obviously AI assisted, but hey I would rather spend more time by myself modding the 100% decomp than spending 5+years to reach 100%.\nIf you have any suggestions how to improve my contributions please say so.\nSummary\nRaises matched code from 0.513% to 1.332% (26,572 → 68,920 of 5,175,440 bytes) and matched functions from 243 to 808 (1.6% → 5.4%). It also fixes two build tools that were…"}
+  ],
+  "commits": [
+    {"sha":"48054748f57c296c0690f9624613a322a4ab4b71","headline":"QUEUE.md: name $gp-relative globals by address (gp = 0x22597F)","author":"Stephan Kast","committedAt":"2026-10-14T21:36:40Z","merge":false,"landed":false},
+    {"sha":"05774bef2800cd2621da5b99c42082d761d6aff1","headline":"Match 261 resident functions with tools/auto_structs.py","author":"Stephan Kast","committedAt":"2026-10-14T21:36:40Z","merge":false,"landed":false},
+    {"sha":"b547924285d6db7cb4b6f1aefcd3e8469c9b97d7","headline":"Match 18 small overlay functions (wave q1, auto_structs)","author":"Stephan Kast","committedAt":"2026-10-14T21:36:40Z","merge":false,"landed":false},
+    {"sha":"57b8f2908e51e52d3e769851adb12baae7e639b8","headline":"Reach small globals through $gp or lui as ps2eeas does","author":"Stephan Kast","committedAt":"2026-10-14T22:11:35Z","merge":false,"landed":false},
+    {"sha":"8115421c375154572c02cc3a25b851929cc2de9e","headline":"Match 17 more functions (wave q2, rechecks, auto_structs)","author":"Stephan Kast","committedAt":"2026-10-14T22:11:35Z","merge":false,"landed":false},
+    {"sha":"05e64ff008970d383008c7aeeaa29e56bd5c1399","headline":"auto_structs: define each structure once; match 107 more functions","author":"Stephan Kast","committedAt":"2026-10-14T22:35:01Z","merge":false,"landed":false},
+    {"sha":"92edc0f5b26158a478fcb0bcaaa367c2e1afa6bd","headline":"Match func_L00_006BB188 and three resident functions (waves q3, o2)","author":"Stephan Kast","committedAt":"2026-10-14T22:35:01Z","merge":false,"landed":false},
+    {"sha":"70f0c4c6a21682376ac2e8e60a275c8348de39d7","headline":"Compare constants strictly; take 55 false matches out of src/","author":"Stephan Kast","committedAt":"2026-10-14T22:59:14Z","merge":false,"landed":false},
+    {"sha":"93bc542da445fba52c469cdc0b3f9c906d100787","headline":"Match 87 functions identical to matched ones (twins)","author":"Stephan Kast","committedAt":"2026-10-14T22:59:14Z","merge":false,"landed":false},
+    {"sha":"b3381a956543452adeca7cab835e30a39be2f663","headline":"Match 12 functions (waves q4, o3)","author":"Stephan Kast","committedAt":"2026-10-14T22:59:19Z","merge":false,"landed":false},
+    {"sha":"9b6ffde92da588d10439e7cd162660ed65575b03","headline":"ps2eeas_nops: do not count an alignment nop before a loop as its padding","author":"Stephan Kast","committedAt":"2026-10-14T23:23:35Z","merge":false,"landed":false},
+    {"sha":"5a5aa84dc4ddb7fa141d37722887399b0e87cdd2","headline":"Match four shared overlay functions of 0.5-2 KB (wave o4)","author":"Stephan Kast","committedAt":"2026-10-14T23:23:35Z","merge":false,"landed":false},
+    {"sha":"03741044fa0cb0cfd27907f38720e9aab6996067","headline":"Repair 82 near misses (waves f1, f2)","author":"Stephan Kast","committedAt":"2026-10-14T23:23:35Z","merge":false,"landed":false},
+    {"sha":"0ea4df500e3364c772aef7a29abe06abc9326b74","headline":"Match 26 functions (waves o5-o7, q5)","author":"Stephan Kast","committedAt":"2026-10-15T06:41:01Z","merge":false,"landed":false},
+    {"sha":"a9b8d48f59a9fcfe90f3db3f51c9aca969af0d0f","headline":"func_L01_005A4D00: read D_0021DDB8 through its symbol","author":"Stephan Kast","committedAt":"2026-10-15T07:02:39Z","merge":false,"landed":false},
+    {"sha":"1d26d1e86dd0edf98d0d680e5e049e9c2b1a8eb1","headline":"Merge pull request #3 from skast96/aut-39-code-2pct","author":"Lynder063","committedAt":"2026-10-15T19:25:37Z","merge":true,"landed":true,"additions":46697,"deletions":19359,"body":"First assisted decomp work"}
+  ]
+}

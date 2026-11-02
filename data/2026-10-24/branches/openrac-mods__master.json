@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:22:57.366Z",
+  "totals": {"commits":5,"merges":0,"landed":5,"additions":703,"deletions":49,"pushes":5,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-24T09:15:48Z","type":"push","actor":"Veradictus","before":"fbde7b0ebcb6525bbedb77c5245bffd020564aa0","after":"3d1f457f73af389956a97bb90e04ccd3a87b1a90"},
+    {"at":"2026-10-24T09:19:00Z","type":"push","actor":"Veradictus","before":"3d1f457f73af389956a97bb90e04ccd3a87b1a90","after":"4984b4f0fb8a9ee2bf60594997532a1d3e27f9c0"},
+    {"at":"2026-10-24T09:27:21Z","type":"push","actor":"Veradictus","before":"4984b4f0fb8a9ee2bf60594997532a1d3e27f9c0","after":"d954bb1f743152f9d4a0a2287c448aa032bc84b3"},
+    {"at":"2026-10-24T09:49:35Z","type":"push","actor":"Veradictus","before":"d954bb1f743152f9d4a0a2287c448aa032bc84b3","after":"e6c91952ac5eb62d7d1e093f340813020f207c05"},
+    {"at":"2026-10-24T12:58:42Z","type":"push","actor":"Veradictus","before":"e6c91952ac5eb62d7d1e093f340813020f207c05","after":"43f9c26b15074ccbf8db99851c93954e26cda211"}
+  ],
+  "pullRequests": [],
+  "commits": [
+    {"sha":"3d1f457f73af389956a97bb90e04ccd3a87b1a90","headline":"fix(keyboard-mouse): the mouse focuses only what the arrows can reach, version 1.2.1","author":"Veradictus","committedAt":"2026-10-24T09:15:33Z","merge":false,"landed":true,"additions":274,"deletions":16,"body":"Hovering or clicking on the pause menu's Quick Select page crashed the\ngame (SIGBUS in select_world_object_resource_tables, from\nupdate_item_preview_binding). The mouse asked the game to focus any page\nwidget under the cursor, labels and the item preview included. The game\nitself only moves the focus along an item grid's up/down/left/right\nlinks or a text list's up/down (update_menu_grid_selection and\nupdate_menu_entry_actions), and the Quick Select's preview reads the\nfocused widget as an item…"},
+    {"sha":"4984b4f0fb8a9ee2bf60594997532a1d3e27f9c0","headline":"test(keyboard-mouse): keep the fake widget updates distinct, which MSVC folded into one","author":"Veradictus","committedAt":"2026-10-24T09:18:58Z","merge":false,"landed":true,"additions":5,"deletions":3,"body":"The load test told an item grid from a text list by its fake update's\naddress. The three fakes had the same body and MSVC's identical-code\nfolding gave them one address on Windows, so the list was taken for a\ngrid. Each now returns its own value."},
+    {"sha":"d954bb1f743152f9d4a0a2287c448aa032bc84b3","headline":"fix(keyboard-mouse): find the map by its handler's function in every level, version 1.2.2","author":"Veradictus","committedAt":"2026-10-24T09:27:19Z","merge":false,"landed":true,"additions":48,"deletions":11,"body":"The map's Enter and click (Circle) checked the focused widget's handler\nagainst DrawMapScreen's executable address (0x0021CE60 on PAL). In a\nlevel the menus run from that level's copy of it (level 11's at\n0x0029FD10), so the check never matched in the pause menu's map. The\ndisc now names the function, and the widget's handler is compared\nthrough function_at, as the focus links are.\n\nTests: the load test's map is found at the executable's place and at a\nlevel copy's."},
+    {"sha":"e6c91952ac5eb62d7d1e093f340813020f207c05","headline":"fix(keyboard-mouse): the mouse selects the grid cell under it, version 1.2.3","author":"Veradictus","committedAt":"2026-10-24T09:49:33Z","merge":false,"landed":true,"additions":370,"deletions":13,"body":"Over a focused item grid (Weapons, Gadgets, the Quick Select editor) the\nmouse's motion stepped the d-pad, so the selection moved by how far the\nmouse went rather than to what was under it, and drifted away from the\ncursor. The mod now lays the grid out as draw_menu_item_grid does (the\nwidget's rectangle, its menu moby's frame, the icon size at D_00160390,\nthe margins, rows and columns) and queues the d-pad presses to the cell\nunder the cursor, a row at a time and then a column. A click on…"},
+    {"sha":"43f9c26b15074ccbf8db99851c93954e26cda211","headline":"chore(release): patch versions for the documentation and style pass","author":"Veradictus","committedAt":"2026-10-24T12:58:40Z","merge":false,"landed":true,"additions":6,"deletions":6,"body":"ammo-max 1.0.1, difficulty 1.2.1, dualsense 1.0.1, item-randomizer 1.0.2,\nlive-splits 1.0.1 and lock-strafe 1.0.1: each changed since its last\nrelease (file comments, named constants, helpers, clang-format) with no\nchange in behaviour."}
+  ]
+}

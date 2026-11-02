@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:16:57.830Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":161,"title":"refactor(readability): clarify generated names across game code","author":"Lynder063","draft":false,"head":"docs/pal-v2-readability-plan","events":["opened"],"mergedBy":null,"additions":3977,"deletions":4169,"changedFiles":86,"body":"Clarify generated names and comments while preserving descriptive names, types and code placement.\n1,251 executable C functions exact; canonical report build, layout, image and all-version/report checks pass."}
+  ],
+  "commits": []
+}

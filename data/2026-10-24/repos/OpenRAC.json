@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-24",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "issues": [
+    {"number":46,"title":"Missing Play button on launcher","author":"Billabong1985","events":["opened","closed"],"closedAs":"COMPLETED","body":"Launcher is missing a Play button on the games tab for me, there is a Play button on the mods tab which allows the game to launch fine even with no mods added. This is the amd64 AppImage running on a steam deck"},
+    {"number":48,"title":"HD texture pack compatibility? ","author":"Billabong1985","events":["opened"],"closedAs":null,"body":"On PCSX2 I use HD texture packs for the Ratchet and Clank games, are there any plans to make this project compatible with texture packs like these?"}
+  ],
+  "releases": []
+}

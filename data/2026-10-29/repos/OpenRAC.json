@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-29",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "issues": [],
+  "releases": [
+    {"tag":"sdk-v1.10.0","name":"Mod SDK 1.10.0","prerelease":false,"publishedAt":"2026-10-29T02:06:06Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.10.0, for the mod interface 1.10 (docs/port/MODS.md). SHA-256 of the archive: 1211149e580fdf09f20fe83aa568579d083892d5bd96e7500b5c0e1c9788fe1a"},
+    {"tag":"launcher-dev-develop","name":"v0.10.1-dev.693 (develop)","prerelease":true,"publishedAt":"2026-10-29T05:34:49Z","author":"github-actions[bot]","body":"The launchers built from develop at 703c997e02e7d67d0399928844d56ce5199cff7b; launchers built from this branch update from here."},
+    {"tag":"sdk-v1.10.1","name":"Mod SDK 1.10.1","prerelease":false,"publishedAt":"2026-10-29T06:04:30Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.10.1, for the mod interface 1.10 (docs/port/MODS.md). SHA-256 of the archive: 5d7455a9c0e7bb6067ee514565cbce9abf12e132f9eb5053d8d3618c16084470"}
+  ]
+}

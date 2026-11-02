@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-18",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:20:11.367Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":4,"title":"Further decomp (>2% matched code)","author":"skast96","draft":false,"head":"aut-39-code-2pct","events":["opened"],"mergedBy":"Lynder063","additions":77082,"deletions":32696,"changedFiles":958,"body":"Threw in some extra token usage to get it to 2%."}
+  ],
+  "commits": []
+}

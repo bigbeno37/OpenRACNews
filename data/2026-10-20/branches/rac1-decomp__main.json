@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-20",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:16:42.125Z",
+  "totals": {"commits":9,"merges":5,"landed":8,"additions":1402,"deletions":1816,"pushes":6,"forcePushes":0,"authors":["Lynder063","Veradictus","xx255q"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-20T00:28:01Z","type":"push","actor":"Veradictus","before":"2897435e5fc7607de6a0dff3a184bffc2df8b21c","after":"801437f45d25bfe25c7f91b89ab7e7df2887d608"},
+    {"at":"2026-10-20T00:32:47Z","type":"push","actor":"Veradictus","before":"801437f45d25bfe25c7f91b89ab7e7df2887d608","after":"bd8747335a3b023df3d46f948384a4d1022df5d0"},
+    {"at":"2026-10-20T05:53:43Z","type":"push","actor":"Lynder063","before":"bd8747335a3b023df3d46f948384a4d1022df5d0","after":"e17c55ab148f747994b1adafd3e22e95c520581f"},
+    {"at":"2026-10-20T06:03:48Z","type":"push","actor":"Lynder063","before":"e17c55ab148f747994b1adafd3e22e95c520581f","after":"28beccea0502f0d7fd370bde108e39779b68633d"},
+    {"at":"2026-10-20T08:34:26Z","type":"pr_merge","actor":"Lynder063","before":"28beccea0502f0d7fd370bde108e39779b68633d","after":"3973b6b753cf83eaa4063b72869d12c8648297d5"},
+    {"at":"2026-10-20T15:47:56Z","type":"push","actor":"Lynder063","before":"3973b6b753cf83eaa4063b72869d12c8648297d5","after":"813090403fe822acd929616da0fee2081131f92e"}
+  ],
+  "pullRequests": [
+    {"number":106,"title":"match func_L01_002F0728 (elevator partner spawn)","author":"xx255q","draft":false,"head":"match/elevator-spawn","events":["merged"],"mergedBy":"Lynder063","additions":67,"deletions":65,"changedFiles":5,"body":"Matches func_L01_002F0728, the elevator's partner-spawn function. It's shared by levels 01, 05 and 11, and all three copies are exact.\nWhat it does: it picks the class that pairs with this moby's (0x23C → 0x361, 0x361 → 0x362), walks its group's entity list (D_L01_001ABFC0[group], bit 15 marks the last entry) for a live moby of that class, copies this moby's update distance, draw distance, spawn frame, flags, position, rotation and two pvar floats onto it, refreshes it with func_L00_00251E30…"},
+    {"number":107,"title":"Feat/oc army","author":"Lynder063","draft":false,"head":"feat/oc-army","events":["opened","merged"],"mergedBy":"Lynder063","additions":870,"deletions":1076,"changedFiles":20,"body":"I will get it to 100% whatever it takes"}
+  ],
+  "commits": [
+    {"sha":"5da8fe0178d251965a5dd7b09cc7c590306fb746","headline":"fix(pause): the description box keeps the font TEX0 whole","author":"Veradictus","committedAt":"2026-10-19T09:57:52Z","merge":false,"landed":false},
+    {"sha":"31a31b334d9cded7d59391ed02a640345b8cf5d5","headline":"Merge remote-tracking branch 'upstream/main'","author":"Veradictus","committedAt":"2026-10-19T17:27:00Z","merge":true,"landed":false},
+    {"sha":"3952e00cb9aba392ccab92bc86863e16ae5c7af9","headline":"match func_L01_002F0728 (elevator partner spawn)","author":"xx255q","committedAt":"2026-10-19T21:14:49Z","merge":false,"landed":false},
+    {"sha":"801437f45d25bfe25c7f91b89ab7e7df2887d608","headline":"Merge remote-tracking branch 'upstream/main'","author":"Veradictus","committedAt":"2026-10-19T22:14:41Z","merge":true,"landed":false},
+    {"sha":"bd8747335a3b023df3d46f948384a4d1022df5d0","headline":"fix(trespasser): the ring's quads take the effect TEX0 whole","author":"Veradictus","committedAt":"2026-10-20T00:31:38Z","merge":false,"landed":false},
+    {"sha":"0803664d7be343559efbaa34cd972383335ab1f6","headline":"feat: match func_L00_00237B90","author":"Lynder063","committedAt":"2026-10-20T05:50:38Z","merge":false,"landed":true,"additions":143,"deletions":136,"body":"Its two score tables are declared MACRO_ADDR, as freeze.c and help_00237B00.c already declare them: retail builds each address as one la pair.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"},
+    {"sha":"e17c55ab148f747994b1adafd3e22e95c520581f","headline":"Merge remote-tracking branch 'origin/main'","author":"Lynder063","committedAt":"2026-10-20T05:50:46Z","merge":true,"landed":true,"additions":9,"deletions":4},
+    {"sha":"28beccea0502f0d7fd370bde108e39779b68633d","headline":"feat: match func_L00_002C9DC8 (bomb update)","author":"Lynder063","committedAt":"2026-10-20T06:03:46Z","merge":false,"landed":true,"additions":276,"deletions":498,"body":"m + 0x10 is written at each use in cases 2 and 3: gcse PRE then gives it one reaching register, which is retail's case-3 copy and register order.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"},
+    {"sha":"ed32052bbab8e63aba09e4d10e81c1f63faf0069","headline":"Merge branch 'main' into match/elevator-spawn","author":"Lynder063","committedAt":"2026-10-20T08:34:01Z","merge":true,"landed":false},
+    {"sha":"3973b6b753cf83eaa4063b72869d12c8648297d5","headline":"Merge pull request #106 from xx255q/match/elevator-spawn","author":"Lynder063","committedAt":"2026-10-20T08:34:26Z","merge":true,"landed":true,"additions":67,"deletions":65,"body":"match func_L01_002F0728 (elevator partner spawn)"},
+    {"sha":"7753d00769c559ac21ea3283c9b2323bea01c8c7","headline":"Match func_L03_00251AC8 and update func_L00_002CF808 near-miss","author":"Lynder063","committedAt":"2026-10-20T10:15:17Z","merge":false,"landed":true,"additions":451,"deletions":394,"body":"- Land func_L03_00251AC8 at 100% exact match in src/overlays/shared/mobyutil_00249488.c\n- Update nonmatching/shared/func_L00_002CF808.c to 97.9% match\n- Regenerate nonmatching/README.md\n\nCo-Authored-By: Antigravity"},
+    {"sha":"aebb4ea554105986ae29d2b6ee936c102210c2e4","headline":"Match func_L05_00266D10 (100% exact)","author":"Lynder063","committedAt":"2026-10-20T10:23:26Z","merge":false,"landed":true,"additions":106,"deletions":102,"body":"- Land func_L05_00266D10 into src/overlays/shared/hud_00263490.c\n- Remove staged nonmatching/functional/func_L05_00266D10.c\n\nCo-Authored-By: Antigravity"},
+    {"sha":"cb1830653a7825abe98da96ec7cd143991c39c3f","headline":"Match func_00121DC8, func_00226D50, and func_L00_0024A798 (100% exact)","author":"Lynder063","committedAt":"2026-10-20T12:40:38Z","merge":false,"landed":true,"additions":270,"deletions":547,"body":"- Match func_00121DC8 in src/core/00121D18.c (Sony GS display environment setup)\n- Match func_00226D50 in src/game/pause.c (stream buffer slot distribution)\n- Match func_L00_0024A798 in src/overlays/shared/menu_00249720.c (menu cache slot search)\n- Rebuild progress report (5061/5124 functions, 97.90% code)\n\nCo-Authored-By: Antigravity"},
+    {"sha":"813090403fe822acd929616da0fee2081131f92e","headline":"Match func_001207B8, func_L00_002E98A8, and func_L00_0024F048 (100% exact)","author":"Lynder063","committedAt":"2026-10-20T14:50:12Z","merge":false,"landed":true,"additions":80,"deletions":70,"body":"- Match func_001207B8 in src/core/001207B8.c (VIF1/VU1 hardware register setup)\n- Join func_L00_002E98A8 piece to Cam_AcquireLock (func_L00_002E9870) in config/overlays/joined.tsv\n- Match func_L00_0024F048 in src/overlays/shared/missionfunc_0024EEF0.c and join with func_0020CC88\n- Rebuild progress report (5064/5124 functions, 97.91% code)\n\nCo-Authored-By: Antigravity"}
+  ]
+}

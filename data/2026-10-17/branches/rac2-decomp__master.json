@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-17",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:18:56.665Z",
+  "totals": {"commits":1,"merges":1,"landed":1,"additions":2181,"deletions":1245,"pushes":1,"forcePushes":0,"authors":["llesieur99"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-17T02:40:28Z","type":"pr_merge","actor":"llesieur99","before":"ec03034a20494c2335f344db4513188ace40dd96","after":"253a8aee52cce96c383891e7195759c06ecdfa25"}
+  ],
+  "pullRequests": [
+    {"number":206,"title":"chore(progress): refresh ByteMatch to 3,303 of 9,100 functions","author":"llesieur99","draft":false,"head":"chore/bytematch-refresh-20261016","events":["opened","merged"],"mergedBy":"llesieur99","additions":2181,"deletions":1245,"changedFiles":2,"body":"What\nRefresh the maintainer progress snapshot from merged master ec03034 using a fresh complete build. This report-only PR updates the two generated files together so ByteMatch and the README publish the same measurements.\n\nCode: 360,448 / 5,533,600 bytes (6.51%), previously 318,088 bytes (5.75%).\nFinished distinct functions: 3,303 / 9,100, previously 2,941. This includes 3,052 C functions and 251 original assembly routines marked ASM_FUNC.\nLevel C placements: 41,101, previously 38,445.…"}
+  ],
+  "commits": [
+    {"sha":"1f991d226d2ce3e7e0df98797cdcd5ce1306c256","headline":"chore(progress): 3,303 of 9,100 functions","author":"llesieur99","committedAt":"2026-10-17T02:39:45Z","merge":false,"landed":false},
+    {"sha":"253a8aee52cce96c383891e7195759c06ecdfa25","headline":"Merge pull request #206 from OpenRAC/chore/bytematch-refresh-20261016","author":"llesieur99","committedAt":"2026-10-17T02:40:28Z","merge":true,"landed":true,"additions":2181,"deletions":1245,"body":"chore(progress): refresh ByteMatch to 3,303 of 9,100 functions"}
+  ]
+}

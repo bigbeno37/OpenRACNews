@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-28",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "capturedAt": "2026-11-02T06:20:56.656Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":1,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-28T16:52:42Z","type":"branch_creation","actor":"Veradictus","before":"0000000000000000000000000000000000000000","after":"6360471e8b0f81fa43059ee379a30b8922194039"}
+  ],
+  "pullRequests": [
+    {"number":99,"title":"Co-op sweep: the world under menus, deaths reported (mod interface 1.9)","author":"Veradictus","draft":false,"head":"feat/coop-sweep","events":["opened"],"mergedBy":"Veradictus","additions":6057,"deletions":1472,"changedFiles":64,"body":"The co-op mod's sanity sweep found that pausing in one game despawned mobys in the other: the pause menu swaps the game's moby array for its own (select_moby_context), so the world calls read the pause menu's mobys, and the mod took the level's for gone. This fixes the port side and adds what the mod needs so that a menu never stops or empties a party's world.\nPort (rac1, PAL and NTSC-U)\n\nThe world calls always address the level's own mobys. While the pause menu's context is up they read the…"},
+    {"number":100,"title":"fix(editor): ship typed pvar layouts with installed tools","author":"llesieur99","draft":false,"head":"fix/pal-elevator-parameters-v2","events":["opened"],"mergedBy":"Veradictus","additions":143,"deletions":6,"changedFiles":7,"body":"Replaces #94 after rebuilding on the current master history.\nTyped pvar edits could work in a source checkout but be ignored by installed editor tools, which do not carry the decompilation headers used by class_layouts(). Generate validated data-only layouts during desktop and Android bundling and load them when headers are absent. Source checkouts continue to use their headers. Invalid packaged definitions fail explicitly instead of becoming a cached empty layout.\nAlso ignore the inherited…"},
+    {"number":101,"title":"feat(editor): add ship destinations and cross-level static imports","author":"llesieur99","draft":false,"head":"feat/map-creator-framework-v2","events":["opened"],"mergedBy":null,"additions":1719,"deletions":248,"changedFiles":45,"body":"Replaces #92 after rebuilding on the current master history.\nWork in progress\nNTSC-U support for added ship destinations will be added before this PR is marked ready. The current implementation supports PAL only. Follow-up work will adapt the ship menu and travel transitions for NTSC-U and validate travel to a custom destination and back to an original planet. Manual gameplay testing is planned for later; it has not been completed for this revision.\nCreators can add their own RAC1 PAL worlds as…"},
+    {"number":102,"title":"feat(sdk): add persistent RAC1 savestate support","author":"ReaperOfVeriod","draft":false,"head":"codex/rac1-persistent-savestates","events":["opened"],"mergedBy":null,"additions":1359,"deletions":129,"changedFiles":33,"body":"Summary\nThis extends the merged warm-savestate APIs so an external mod can provide persistent multi-slot RAC1 savestates. Save/load policy and slot-file handling remain in Project Save Clank.\n\nAdd mod API 1.10 for Developer menu entries, dynamic slot labels, menu actions, and play readiness/status.\nMake snapshots safe at tick boundaries and restore guest memory plus essential runtime state for the same game build and disc across launches.\nInvalidate renderer state and reset audio runtime state…"}
+  ],
+  "commits": []
+}

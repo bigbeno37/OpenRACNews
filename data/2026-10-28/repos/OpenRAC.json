@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-28",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "issues": [],
+  "releases": [
+    {"tag":"sdk-v1.5.0","name":"Mod SDK 1.5.0","prerelease":false,"publishedAt":"2026-10-28T03:05:10Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.5.0, for the mod interface 1.5 (docs/port/MODS.md). SHA-256 of the archive: 2048128ba084c41e5eafdc5b70dd8bc59b121c23ce032c15a92c074e1acb596d"},
+    {"tag":"sdk-v1.7.0","name":"Mod SDK 1.7.0","prerelease":false,"publishedAt":"2026-10-28T05:11:50Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.7.0, for the mod interface 1.7 (docs/port/MODS.md). SHA-256 of the archive: 755bb9a07723b74180afac9e9f48a3d18a1336b17fe592fc3c11ea9e48746e6e"}
+  ]
+}

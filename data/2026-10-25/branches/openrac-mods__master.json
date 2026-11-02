@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-25",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:22:58.384Z",
+  "totals": {"commits":2,"merges":1,"landed":2,"additions":1323,"deletions":5,"pushes":2,"forcePushes":0,"authors":["Lynder063"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-25T19:46:55Z","type":"pr_merge","actor":"Lynder063","before":"43f9c26b15074ccbf8db99851c93954e26cda211","after":"b7703770ebd170a968382bc67f53b6f153deec05"},
+    {"at":"2026-10-25T20:19:36Z","type":"pr_merge","actor":"Lynder063","before":"b7703770ebd170a968382bc67f53b6f153deec05","after":"2c5139c106de03a7ae2d0ef55a703a1d7c290d09"}
+  ],
+  "pullRequests": [
+    {"number":2,"title":"Xbox icons","author":"Lynder063","draft":false,"head":"xbox-icons","events":["opened","merged"],"mergedBy":"Lynder063","additions":1316,"deletions":0,"changedFiles":14},
+    {"number":3,"title":"fix(difficulty): call the NTSC-U line test by the port's name, version 1.2.2","author":"Lynder063","draft":false,"head":"fix/difficulty-ntsc-line-test","events":["opened","merged"],"mergedBy":"Lynder063","additions":7,"deletions":5,"changedFiles":4,"body":"On the US disc the mod asked for the line test as FUN_L00_001efc70, the decomp's spelling. The port's NTSC-U build has its own C for it under func_L00_001EFC70, so the lookup failed and the mod never loaded. Also brings the library's version string in line with the manifest (both 1.2.2).\nTests pass. Not tried on a real US disc.\nFixes #1\n🤖 Generated with Claude Code"}
+  ],
+  "commits": [
+    {"sha":"f144c15105ee833a1902d4b2336b3a36b9d8d11d","headline":"feat(xbox-icons): the game's button icons as an Xbox controller's, version 1.0.0","author":"Lynder063","committedAt":"2026-10-25T19:43:36Z","merge":false,"landed":false},
+    {"sha":"b7703770ebd170a968382bc67f53b6f153deec05","headline":"Merge pull request #2 from OpenRAC/xbox-icons","author":"Lynder063","committedAt":"2026-10-25T19:46:54Z","merge":true,"landed":true,"additions":1316,"deletions":0,"body":"Xbox icons"},
+    {"sha":"2c5139c106de03a7ae2d0ef55a703a1d7c290d09","headline":"fix(difficulty): call the NTSC-U line test by the port's name, version 1.2.2","author":"Lynder063","committedAt":"2026-10-25T20:19:35Z","merge":false,"landed":true,"additions":7,"deletions":5,"body":"On the US disc the mod asked for the line test as the NTSC decomp spells it, FUN_L00_001efc70, but\nOpenRAC's NTSC-U build has its own C for it (rac1/host/collision.c) under func_L00_001EFC70; the\ndecomp's spelling only redirects calls inside the port (port/game/rac1-ntsc/no_c.tsv, \"other\nspelling\"), so openrac_api.function gave nothing and the mod refused to load: \"this disc's build\nhas no function FUN_L00_001efc70\". The other NTSC-U names of every mod are the port's.\n\nThe library and its load…"}
+  ]
+}

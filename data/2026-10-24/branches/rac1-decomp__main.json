@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-24",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:16:49.263Z",
+  "totals": {"commits":9,"merges":4,"landed":4,"additions":64385,"deletions":6815,"pushes":4,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-24T04:12:32Z","type":"pr_merge","actor":"Veradictus","before":"04dc4342d1e8d4d0aaa95be852901d736ee07c2a","after":"13b285ccb673e5ba6d1f2330cce1797706f02a67"},
+    {"at":"2026-10-24T05:47:44Z","type":"pr_merge","actor":"Veradictus","before":"13b285ccb673e5ba6d1f2330cce1797706f02a67","after":"de14440819093b81c00a1e219d4fef54d6fccd16"},
+    {"at":"2026-10-24T08:33:14Z","type":"pr_merge","actor":"Veradictus","before":"de14440819093b81c00a1e219d4fef54d6fccd16","after":"45453963345e75d0e51402ecead77a15af75c7ab"},
+    {"at":"2026-10-24T10:23:07Z","type":"pr_merge","actor":"Veradictus","before":"45453963345e75d0e51402ecead77a15af75c7ab","after":"69c3e42d792adb90fabb90184a4fac915a48f5b2"}
+  ],
+  "pullRequests": [
+    {"number":121,"title":"Drop the NTSC decomp submodule: NTSC-U built here, the NTSC decomp read at a pin","author":"Veradictus","draft":false,"head":"main","events":["opened","merged"],"mergedBy":"Veradictus","additions":51413,"deletions":164,"changedFiles":24,"body":"The versions/ntsc submodule put 2,122 files of the NTSC decomp into every recursive clone. It goes. Nothing about matching changes: no new C, no ports.\n\nNTSC-U is a version like PAL v1.00 and NTSC-J (tools/versions.py drops the submodule field). Its boot ELF and 19 level programs build byte-identical from assembly (20 of 20), with programs.tsv, boot_layout.json, a fresh map.tsv and our own report in progress/us/report.json (4,756 of 5,097 functions, 74.21% of code). version_sync.py check now…"},
+    {"number":122,"title":"feat(us): carry 64 definitions that build NTSC-U exactly","author":"Veradictus","draft":false,"head":"main","events":["opened","merged"],"mergedBy":"Veradictus","additions":6041,"deletions":368,"changedFiles":66,"body":"version_sync.py run copies 64 existing PAL v1.00 and NTSC-J definitions into src/versions/us/, where they build NTSC-U byte for byte. No new C.\n\nNTSC-U: 4,756 to 4,822 of 5,097 functions (76.10% of code)\nversion_build.py --version us: 20 of 20 programs match\nversion_sync.py check, gen_progress_report.py --check, names.py check and the tools tests pass"},
+    {"number":123,"title":"chore(ntsc): follow the NTSC decomp to 2d6fb52bb8","author":"Veradictus","draft":false,"head":"main","events":["opened","merged"],"mergedBy":"Veradictus","additions":6100,"deletions":5452,"changedFiles":258,"body":"Moves the NTSC decomp pin from 6abcf077 to 2d6fb52b. Upstream renamed 2 boot functions and a few hundred level helpers (no header or layout changes, nothing newly matched); the names are adopted (config/names_ntsc.tsv, names.tsv, include/names.h, 600 definitions and 3734 uses renamed). All four versions build 20 of 20; version sync, fidelity, names and unit checks pass."},
+    {"number":124,"title":"docs: credit the NTSC decomp's code as GPL-3.0","author":"Veradictus","draft":false,"head":"main","events":["opened","merged"],"mergedBy":"Veradictus","additions":831,"deletions":831,"changedFiles":207,"body":"The NTSC decomp is GPL-3.0 since its a1379f57, but the provenance comments in adapted code and the docs still said MIT. Comments only (206 files), no code changes.\nVerified on box1: build_sn.sh audits 1241 of 1241 functions and the image matches retail; version_sync.py check, names.py check and gen_progress_report.py --check pass."}
+  ],
+  "commits": [
+    {"sha":"e766b03d9740924d76c00906debe801f88b514b6","headline":"feat(versions): build, check and report NTSC-U here like PAL v1.00 and NTSC-J","author":"Veradictus","committedAt":"2026-10-24T03:55:34Z","merge":false,"landed":false},
+    {"sha":"c5c4c50b0399b74f6b1e29bf7696c901d6dc1169","headline":"feat(ntsc): read the NTSC decomp at a pinned commit from a cache","author":"Veradictus","committedAt":"2026-10-24T03:58:42Z","merge":false,"landed":false},
+    {"sha":"fc79f1233b2ac16281f349d35ff07aeb2ff489b8","headline":"ci(progress): fetch the NTSC decomp's pinned commit for its report","author":"Veradictus","committedAt":"2026-10-24T03:58:42Z","merge":false,"landed":false},
+    {"sha":"5215b5fee481b84896ff0ec07b0688cb4a2eccca","headline":"chore(ntsc)!: remove the NTSC decomp submodule","author":"Veradictus","committedAt":"2026-10-24T04:00:11Z","merge":false,"landed":false},
+    {"sha":"95477d035a0f05279183140db9ec9a98d2e96a39","headline":"docs: say where the NTSC decomp comes from now and how to follow it","author":"Veradictus","committedAt":"2026-10-24T04:00:11Z","merge":false,"landed":false},
+    {"sha":"13b285ccb673e5ba6d1f2330cce1797706f02a67","headline":"Merge pull request #121 from Veradictus/main","author":"Veradictus","committedAt":"2026-10-24T04:12:32Z","merge":true,"landed":true,"additions":51413,"deletions":164,"body":"Drop the NTSC decomp submodule: NTSC-U built here, the NTSC decomp read at a pin"},
+    {"sha":"472afea74935071dc273ec2d71fcbca5f723acbc","headline":"feat(us): carry 64 PAL v1.00 and NTSC-J definitions that build NTSC-U exactly","author":"Veradictus","committedAt":"2026-10-24T05:46:18Z","merge":false,"landed":false},
+    {"sha":"de14440819093b81c00a1e219d4fef54d6fccd16","headline":"Merge pull request #122 from Veradictus/main","author":"Veradictus","committedAt":"2026-10-24T05:47:44Z","merge":true,"landed":true,"additions":6041,"deletions":368,"body":"feat(us): carry 64 definitions that build NTSC-U exactly"},
+    {"sha":"e70b7b9bcf70bb207463e92515a621c1b917e065","headline":"chore(ntsc): follow the NTSC decomp to 2d6fb52bb8","author":"Veradictus","committedAt":"2026-10-24T08:10:29Z","merge":false,"landed":false},
+    {"sha":"1bca640b09a46022d1be83b785e59d8c1faf60d4","headline":"chore(names): the NTSC decomp's names at 2d6fb52bb8","author":"Veradictus","committedAt":"2026-10-24T08:11:22Z","merge":false,"landed":false},
+    {"sha":"45453963345e75d0e51402ecead77a15af75c7ab","headline":"Merge pull request #123 from Veradictus/main","author":"Veradictus","committedAt":"2026-10-24T08:33:14Z","merge":true,"landed":true,"additions":6100,"deletions":5452,"body":"chore(ntsc): follow the NTSC decomp to 2d6fb52bb8"},
+    {"sha":"8ee9c27703b2c62720286dd65ff028b3cedd9c3f","headline":"docs: credit the NTSC decomp's code as GPL-3.0","author":"Veradictus","committedAt":"2026-10-24T10:19:13Z","merge":false,"landed":false},
+    {"sha":"69c3e42d792adb90fabb90184a4fac915a48f5b2","headline":"Merge pull request #124 from Veradictus/main","author":"Veradictus","committedAt":"2026-10-24T10:23:07Z","merge":true,"landed":true,"additions":831,"deletions":831,"body":"docs: credit the NTSC decomp's code as GPL-3.0"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-25",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.137Z",
+  "issues": [
+    {"number":50,"title":"Android Version: Python is not Set Error","author":"matthewtrains","events":["opened","closed"],"closedAs":"COMPLETED","body":"I'm trying to build RAC1 and i'm getting a Python is not set error, on the latest build.\nWhich is v.0.8.4-dev.406 and the APK that is listed in the release is dev.404 and that cant get past setting up the disc."},
+    {"number":64,"title":"Launcher crashing","author":"Billabong1985","events":["opened"],"closedAs":null,"body":"On 0.9.0, Steam deck, using the amd64 Appimage, trying to click on the settings or mods tabs causes the launcher to crash. The game itself seems to launch fine if I leave it on the first tab and just hit play"},
+    {"number":66,"title":"Ratchet & Clank 2 (SCES_516.07) not recognised by extractor","author":"OvrilPT","events":["opened"],"closedAs":null,"body":"Description\nExtracting SCES_516.07 fails with error 4001. The disc image reads correctly (96 files listed, boot executable detected), but the serial is not in game.json, so extraction stops.\nDisc\n\nSerial: SCES_516.07\nBoot SHA-1: cb59ce5396ddebb8aa539b0847f8bf66d6a47fe0\nDisc contents hash: 8a34bee424474fc92940554d98d2678d1c1ef58cc42f4dcb4df3ab7d48216edc\nFiles on disc: 96\n\nCommand\n tools/extractor.py “.iso” --game rac2 --extract --validate --proj-path \\rac2\\data\n(<openrac-python> is the Python…"}
+  ],
+  "releases": [
+    {"tag":"launcher-v0.9.0","name":"v0.9.0","prerelease":false,"publishedAt":"2026-10-25T15:29:54Z","author":"github-actions[bot]","body":"## The game\n\n- **Gaspar's lava is back.** The lava sea was missing and only the sky showed under the level.\n- **Loading a save from the pause menu no longer crashes the game.** The flight to the save's planet wrote over its own data (players saw it on Hoven). It now works as on the console.\n- **Your language and sound settings are kept.** The game's language and its Sound page (playback mode, music and sound volume) come back at every start, and loading a save no longer replaces them with the…"}
+  ]
+}

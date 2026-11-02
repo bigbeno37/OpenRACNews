@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-22",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:19:47.768Z",
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":9633,"deletions":4109,"pushes":1,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-22T01:40:40Z","type":"push","actor":"Veradictus","before":"c7d5d2c1ecaf37227be039ba6d82e00ff0aa5c35","after":"51f7d3569ad510c5224ba11477abbaae12530bde"}
+  ],
+  "pullRequests": [],
+  "commits": [
+    {"sha":"51f7d3569ad510c5224ba11477abbaae12530bde","headline":"feat(src): match 616 functions by pattern sweep","author":"Veradictus","committedAt":"2026-10-22T01:40:38Z","merge":false,"landed":true,"additions":9633,"deletions":4109,"body":"Model-free sweep: m2c drafts of the retail bytes (addresses as extern globals, calls by catalogue name, field accesses as byte offsets), with mechanical variants (missing leading arguments, call arity from the argument registers, $gp/absolute declarations). Each kept only if tools/check.py prints MATCH under its file's own flags, at every place a level function has; drafts with unknown types, goto, stack temporaries or 128-bit moves were dropped before checking. 613 level functions, 3…"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-20",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.136Z",
+  "issues": [],
+  "releases": [
+    {"tag":"launcher-v0.8.2","name":"v0.8.2","prerelease":false,"publishedAt":"2026-10-20T04:22:42Z","author":"github-actions[bot]","body":"## The game\n\n- **The title screen** draws its world again. Two of the game's vector routines came in from the decompilation as console instructions, which do nothing on a computer; the port has its own versions of them now (European disc).\n- **Ratchet's shadow.** Ratchet casts the game's shadow on the ground beneath him, shaped by his animation, on both discs.\n- **Water and windows.**\n  - Umbris: the sea no longer covers the glow and the see-through parts of what stands in front of it. Seas and…"},
+    {"tag":"launcher-v0.8.3","name":"v0.8.3","prerelease":false,"publishedAt":"2026-10-20T13:43:10Z","author":"github-actions[bot]","body":"## The launcher\n\n- **A simpler first run.** It asks one question, where your PS2 disc images are, and asks for the OpenRAC folder or Python beside it only when they were not found. Everything else it found folds under \"Found for you\". Start says why it is waiting.\n- **The launcher stays out of your game.** A controller drove the launcher behind the game too, moving its focus and pressing its buttons. Now the controller only works the launcher while the launcher is in front.\n- **Mods on Windows…"},
+    {"tag":"launcher-v0.8.4","name":"v0.8.4","prerelease":false,"publishedAt":"2026-10-20T19:34:08Z","author":"github-actions[bot]","body":"## The game\n\n- **The Suck Cannon no longer crashes the game.** On Eudora, a circular saw robot drawn all the way into the cannon stopped the game, on both discs. For several kinds of creature the cannon ran the wrong step: it grabbed the creature again when it should have placed it in the muzzle, and the next frame read through a bad target. The same mix-up affected creatures on most planets. Sucking up and firing creatures now works as on the console, and they home in on the locked target.\n-…"}
+  ]
+}

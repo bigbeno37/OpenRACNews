@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-13",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-02T06:22:48.135Z",
+  "issues": [],
+  "releases": [
+    {"tag":"launcher-v0.3.0","name":"v0.3.0","prerelease":false,"publishedAt":"2026-10-13T23:05:34Z","author":"github-actions[bot]","body":"## The launcher\n\n- **Set a game up from your own disc.** Point the launcher at your PlayStation 2 disc image, as OpenGOAL does: it reads the game's data from your copy, prepares the levels, and Play starts the game. No emulator is involved anywhere; the game runs as a native program.\n- **One page per game, one main button.** Each game has a tile, and its page has the button for the next step (set up, then Play). Details for developers sit behind Developer tools.\n- **Compact or Classic layout.**…"}
+  ]
+}

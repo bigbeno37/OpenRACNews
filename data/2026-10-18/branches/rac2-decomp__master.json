@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-18",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:18:58.065Z",
+  "totals": {"commits":11,"merges":3,"landed":3,"additions":1278,"deletions":38,"pushes":3,"forcePushes":0,"authors":["ThorpenCodes","Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-18T04:57:26Z","type":"pr_merge","actor":"ThorpenCodes","before":"253a8aee52cce96c383891e7195759c06ecdfa25","after":"f614180fac38bf35c684efe7624216aefcf97ac7"},
+    {"at":"2026-10-18T19:07:46Z","type":"pr_merge","actor":"Veradictus","before":"f614180fac38bf35c684efe7624216aefcf97ac7","after":"8c5adfab32d07d97ef3e6f6f8f891dd087de545f"},
+    {"at":"2026-10-18T21:10:40Z","type":"pr_merge","actor":"ThorpenCodes","before":"8c5adfab32d07d97ef3e6f6f8f891dd087de545f","after":"0d8430cd331756def3edea446248356739b1c487"}
+  ],
+  "pullRequests": [
+    {"number":207,"title":"feat(src): match four game functions","author":"ThorpenCodes","draft":false,"head":"match/thorpen-four-functions-20261018","events":["opened","merged"],"mergedBy":"ThorpenCodes","additions":150,"deletions":4,"changedFiles":7,"body":"What\nAdd four new exact plain-C src/game functions for Going Commando USA v1.01 / SCUS_972.68, each in its own commit: 1,052 catalogue bytes and 58 placements. All four remained assembly markers on freshly fetched master.\nHistorical caller-ABI/integration exclusions, core candidates, catalogue fixes, and near misses remain outside this PR. Compiler policy and generated progress/README remain unchanged.\nChecked\n\npython3 tools/build.py all --jobs 1: boot and all 27 levels byte-identical; 28…"},
+    {"number":208,"title":"feat(src): match twenty-one level functions","author":"Veradictus","draft":false,"head":"match/level-setup-and-state-20261018","events":["opened","merged"],"mergedBy":"Veradictus","additions":976,"deletions":29,"changedFiles":18,"body":"Twenty-one level functions go from assembly to C, in two commits:\n\nSix setup and state functions (bbdb7ee): shared state reset, settings initialisation and completion rewards, Barlow and Joba setup, and a Damosel object-state transition. They add 2,524 catalogue bytes across 70 placements for SCUS_972.68. The two shared initialisers stay in their existing -g8 units.\nFifteen more (5acf986): Oozla, Notak, Tabora, Joba (eight), Aranos Prison, Gorn, Damosel and Yeedil. They are particle and effect…"},
+    {"number":209,"title":"feat(src): match five game functions","author":"ThorpenCodes","draft":false,"head":"match/thorpen-five-functions-20261019","events":["opened","merged"],"mergedBy":"ThorpenCodes","additions":152,"deletions":5,"changedFiles":3,"body":"What\nAdd five new exact plain-C src/game functions for Going Commando USA v1.01 / SCUS_972.68, each in its own commit: 1,944 catalogue bytes and 140 placements. All five remained assembly markers on freshly fetched master.\nHistorical caller-ABI/integration exclusions, core candidates, catalogue fixes, and near misses remain outside this PR. Compiler policy and generated progress/README remain unchanged.\nChecked\n\npython3 tools/build.py all --jobs 1: boot and all 27 levels byte-identical; 28…"}
+  ],
+  "commits": [
+    {"sha":"ba9258c817340833d855aa951315f162965759b4","headline":"feat(src): match func_002D55E0","author":"ThorpenCodes","committedAt":"2026-10-18T04:56:32Z","merge":false,"landed":false},
+    {"sha":"7913ae0eb11f3412837d21d07bc3a03f2cf5a4f8","headline":"feat(src): match func_002D2CE8","author":"ThorpenCodes","committedAt":"2026-10-18T04:56:33Z","merge":false,"landed":false},
+    {"sha":"2faed1cce9b2d4f866ba3ce801fb8c88b09ce5b6","headline":"feat(src): match func_00327A60","author":"ThorpenCodes","committedAt":"2026-10-18T04:56:34Z","merge":false,"landed":false},
+    {"sha":"07bc278f4da4924653e77947cfff540a4f51af48","headline":"feat(src): match func_00330BC0","author":"ThorpenCodes","committedAt":"2026-10-18T04:56:35Z","merge":false,"landed":false},
+    {"sha":"f614180fac38bf35c684efe7624216aefcf97ac7","headline":"Merge pull request #207 from OpenRAC/match/thorpen-four-functions-20261018","author":"ThorpenCodes","committedAt":"2026-10-18T04:57:26Z","merge":true,"landed":true,"additions":150,"deletions":4,"body":"feat(src): match four game functions"},
+    {"sha":"bbdb7ee02d2c8e2f24960a3d0fb7f2689029dba5","headline":"feat(src): match six level setup and state functions","author":"Veradictus","committedAt":"2026-10-18T06:54:27Z","merge":false,"landed":false},
+    {"sha":"5acf98691936ede3f76a7233d2172e2efb0b632a","headline":"feat(src): match fifteen level functions","author":"Veradictus","committedAt":"2026-10-18T19:06:53Z","merge":false,"landed":false},
+    {"sha":"8c5adfab32d07d97ef3e6f6f8f891dd087de545f","headline":"Merge pull request #208 from OpenRAC/match/level-setup-and-state-20261018","author":"Veradictus","committedAt":"2026-10-18T19:07:46Z","merge":true,"landed":true,"additions":976,"deletions":29,"body":"feat(src): match twenty-one level functions"},
+    {"sha":"753ae1a7155cd661e0497e2eaff687b03d3ed12a","headline":"feat(src): match func_002AA898","author":"ThorpenCodes","committedAt":"2026-10-18T21:09:43Z","merge":false,"landed":false},
+    {"sha":"77841f7b6717096e27edc0246587c6e75f69d6d5","headline":"feat(src): match func_002C1C88","author":"ThorpenCodes","committedAt":"2026-10-18T21:09:44Z","merge":false,"landed":false},
+    {"sha":"114d1c52da354758830dfad25f374a0775e45bea","headline":"feat(src): match func_002C1B38","author":"ThorpenCodes","committedAt":"2026-10-18T21:09:45Z","merge":false,"landed":false},
+    {"sha":"06b7db6089c1a8278f54d2ba693ddf6e802f28b6","headline":"feat(src): match func_002C6868","author":"ThorpenCodes","committedAt":"2026-10-18T21:09:46Z","merge":false,"landed":false},
+    {"sha":"32555b069620ed900d41101022558496f0112726","headline":"feat(src): match func_002C38E0","author":"ThorpenCodes","committedAt":"2026-10-18T21:09:46Z","merge":false,"landed":false},
+    {"sha":"0d8430cd331756def3edea446248356739b1c487","headline":"Merge pull request #209 from OpenRAC/match/thorpen-five-functions-20261019","author":"ThorpenCodes","committedAt":"2026-10-18T21:10:39Z","merge":true,"landed":true,"additions":152,"deletions":5,"body":"feat(src): match five game functions"}
+  ]
+}

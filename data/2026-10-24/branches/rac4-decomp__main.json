@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-24",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:20:27.673Z",
+  "totals": {"commits":2,"merges":2,"landed":1,"additions":223,"deletions":69,"pushes":1,"forcePushes":0,"authors":["chistianh","Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-24T10:06:55Z","type":"pr_merge","actor":"Veradictus","before":"04d07c665ad720e2b9478deea0be94077de62005","after":"5d517a2bcfd7add9af94e36a297e259d7846d607"}
+  ],
+  "pullRequests": [
+    {"number":36,"title":"Add PAL C for 3 more PAL-only functions; two build/PAL notes","author":"chistianh","draft":false,"head":"pal-oficial-7","events":["merged"],"mergedBy":"Veradictus","additions":223,"deletions":69,"changedFiles":7,"body":"This adds 3 PAL-only functions, chosen as in #33–#35 (fingerprint in no row of config/us/functions.tsv, nothing resident, no match or near row places them):\n\n\n\nPAL\nWhere\nSize\n\n\n\n\nfunc_00523578\nsrc/pal/game/\n184\n\n\nfunc_004ABCE8\nsrc/pal/game/\n268\n\n\nfunc_L01_0045BF60\nsrc/pal/overlays/shared/\n212\n\n\n\nNotes:\n\nfunc_00523578 calls a handler from a table with 5 arguments ($t0 = 1).\nfunc_L01_0045BF60 takes two u128 arguments by value. The callee parameters that receive 0xFFFFFFFF and 0x84204080 are…"},
+    {"number":38,"title":"Add PAL C for 5 more PAL-only functions; three PAL catalogue cuts","author":"chistianh","draft":false,"head":"pal-oficial-8","events":["opened"],"mergedBy":"Veradictus","additions":305,"deletions":0,"changedFiles":5,"body":"Title: Add PAL C for 5 more PAL-only functions; three PAL catalogue cuts\nThis adds 5 PAL-only functions, chosen as in #33–#36 (fingerprint in no row of config/us/functions.tsv, nothing resident, no match or near row places them):\n\n\n\nPAL\nWhere\nSize\n\n\n\n\nfunc_L01_0048AAF0\nsrc/pal/overlays/shared/\n380\n\n\nfunc_L01_0048F610\nsrc/pal/overlays/shared/\n388\n\n\nfunc_L01_0056FCA0\nsrc/pal/overlays/shared/\n440\n\n\nfunc_005179B0\nsrc/pal/game/\n456\n\n\nfunc_L01_00502598\nsrc/pal/overlays/shared/\n468\n\n\n\nNotes:\n\nFrame…"}
+  ],
+  "commits": [
+    {"sha":"d11c72ed68148d588911a30664cde13fe547da6a","headline":"Add PAL C for 3 more PAL-only functions","author":"chistianh","committedAt":"2026-10-23T17:15:25Z","merge":false,"landed":false},
+    {"sha":"f012e6cbe224983a02cee41c25be7474fcacc170","headline":"Merge remote-tracking branch 'origin/main' into pal-oficial-7","author":"Veradictus","committedAt":"2026-10-24T10:06:10Z","merge":true,"landed":false},
+    {"sha":"898136846f77b94ec9f6bf30b43b80a7d4445bc5","headline":"chore(progress): regenerate the maps and reports","author":"Veradictus","committedAt":"2026-10-24T10:06:10Z","merge":false,"landed":false},
+    {"sha":"5d517a2bcfd7add9af94e36a297e259d7846d607","headline":"Merge pull request #36 from chistianh/pal-oficial-7","author":"Veradictus","committedAt":"2026-10-24T10:06:55Z","merge":true,"landed":true,"additions":223,"deletions":69,"body":"Add PAL C for 3 more PAL-only functions; two build/PAL notes"}
+  ]
+}

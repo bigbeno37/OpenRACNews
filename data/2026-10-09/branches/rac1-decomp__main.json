@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-09",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-02T06:16:13.733Z",
+  "totals": {"commits":3,"merges":1,"landed":3,"additions":582,"deletions":477,"pushes":3,"forcePushes":0,"authors":["dev-gian","Lynder063"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-09T06:13:06Z","type":"push","actor":"Lynder063","before":"6ded75da99da1d7dec69bf76af7e46dc24b3c14c","after":"0da680d7a13884a5531b1eb574e4bf9cd3f59e1f"},
+    {"at":"2026-10-09T07:30:35Z","type":"push","actor":"Lynder063","before":"0da680d7a13884a5531b1eb574e4bf9cd3f59e1f","after":"48bbff8ed606c7aba7e7e93050fc875e5af1d778"},
+    {"at":"2026-10-09T20:35:28Z","type":"pr_merge","actor":"Lynder063","before":"48bbff8ed606c7aba7e7e93050fc875e5af1d778","after":"0fe9b5129b831024e5372b05e52c0279f4fe54ab"}
+  ],
+  "pullRequests": [
+    {"number":45,"title":"Match 4 functions in Rilgar, Pokitaru, Gemlik and shared overlays","author":"dev-gian","draft":false,"head":"feat/four-overlay-matches","events":["opened","merged"],"mergedBy":"Lynder063","additions":278,"deletions":186,"changedFiles":9,"body":"Four overlay functions matched byte-for-byte, in one commit:\n\nRilgar: func_L05_003108D0\nPokitaru: func_L11_00318730 (UpdateMoby_1264)\nGemlik: func_L13_00306D40\nShared: func_L14_002B4128\n\nMatched code goes from 61.174% to 61.221% (3,702 to 3,706 functions).\nVerification, on top of current upstream main (48bbff8, no newer commits when this was opened):\n\nbuild_sn.sh with the Linux ee-gcc-2.9-991111-01: 1109 of 1110 exact, 0 size mismatches, everything at its retail…"}
+  ],
+  "commits": [
+    {"sha":"0da680d7a13884a5531b1eb574e4bf9cd3f59e1f","headline":"Revert pseudo-functions using register pinning and inline asm to INCLUDE_ASM","author":"Lynder063","committedAt":"2026-10-09T06:13:01Z","merge":false,"landed":true,"additions":152,"deletions":256},
+    {"sha":"48bbff8ed606c7aba7e7e93050fc875e5af1d778","headline":"Decompile 5 functions in movie player without inline asm","author":"Lynder063","committedAt":"2026-10-09T07:30:30Z","merge":false,"landed":true,"additions":152,"deletions":35},
+    {"sha":"82515dfdb38e25d4361357ff314fdeaa7da2dcd5","headline":"Match 4 functions in Rilgar, Pokitaru, Gemlik and shared overlays","author":"dev-gian","committedAt":"2026-10-09T16:00:31Z","merge":false,"landed":false},
+    {"sha":"0fe9b5129b831024e5372b05e52c0279f4fe54ab","headline":"Merge pull request #45 from dev-gian/feat/four-overlay-matches","author":"Lynder063","committedAt":"2026-10-09T20:35:28Z","merge":true,"landed":true,"additions":278,"deletions":186,"body":"Match 4 functions in Rilgar, Pokitaru, Gemlik and shared overlays"}
+  ]
+}

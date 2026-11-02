@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-29",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-02T06:19:50.074Z",
+  "totals": {"commits":6,"merges":1,"landed":2,"additions":811,"deletions":180,"pushes":2,"forcePushes":0,"authors":["llesieur99","Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-10-29T15:36:36Z","type":"pr_merge","actor":"Veradictus","before":"403f30a9561324342c87802960eefbaaae13b372","after":"44c86b7af20f2bff5ae3d70561cebdd0b0e10b04"},
+    {"at":"2026-10-29T15:42:26Z","type":"push","actor":"Veradictus","before":"44c86b7af20f2bff5ae3d70561cebdd0b0e10b04","after":"cd0e7c20fd8a93116566ba2e024fa2f3536bd30c"}
+  ],
+  "pullRequests": [
+    {"number":1,"title":"feat(us): add native frontend routines with NTSC validation","author":"llesieur99","draft":false,"head":"codex/ntsc-float-setter-20261025","events":["merged"],"mergedBy":"Veradictus","additions":681,"deletions":56,"changedFiles":17,"body":"Summary\nAdd six native NTSC-U routines, in eight program placements:\n\n\n\nProgram\nFunction\nComplete body\nRole\n\n\n\n\nfrontbin\nfunc_U_003EB578\n12 bytes\nStore a float at state +0x50\n\n\nboot_elf\nfunc_U_003F0D38\n12 bytes\nThe same setter's boot_elf copy\n\n\nboot_elf\nfunc_U_003C4CB8\n200 bytes\nShort-counter/state update and RGB extraction\n\n\nboot_elf\nfunc_U_003E46B0\n200 bytes\nState-derived ratio and two-float helper call\n\n\nboot_elf\nfunc_U_00396860\n296 bytes\nUpdate the thirteen-entry timer/fade/callback…"}
+  ],
+  "commits": [
+    {"sha":"d06a0376a3ddcf721802ebaca5f8834d7899ae61","headline":"feat(us): add native float setter candidates","author":"llesieur99","committedAt":"2026-10-25T20:33:35Z","merge":false,"landed":false},
+    {"sha":"6fb7ca9ae04ad0ec50148f55868587ad35312df5","headline":"feat(us): add two native boot frontend routines","author":"llesieur99","committedAt":"2026-10-25T22:40:19Z","merge":false,"landed":false},
+    {"sha":"f3cfd6afcea93bea032fbd991bfbbffa9f7e1b6e","headline":"feat(us): match frontend initializer copies and table update","author":"llesieur99","committedAt":"2026-10-26T00:12:45Z","merge":false,"landed":false},
+    {"sha":"33a48acbad7b705d38932e663fd2421305584fa3","headline":"feat(us): match dialog dispatcher with native whole-object data","author":"llesieur99","committedAt":"2026-10-26T00:44:20Z","merge":false,"landed":false},
+    {"sha":"f1ec2cd4e8bb1e53eec6276538ad98b8006e097b","headline":"fix(tools): keep native object tests free of optional packages","author":"llesieur99","committedAt":"2026-10-26T00:55:44Z","merge":false,"landed":false},
+    {"sha":"44c86b7af20f2bff5ae3d70561cebdd0b0e10b04","headline":"Merge pull request #1 from llesieur99/codex/ntsc-float-setter-20261025","author":"Veradictus","committedAt":"2026-10-29T15:36:36Z","merge":true,"landed":true,"additions":681,"deletions":56,"body":"feat(us): add native frontend routines with NTSC validation"},
+    {"sha":"cd0e7c20fd8a93116566ba2e024fa2f3536bd30c","headline":"chore(progress): NTSC-U 5677 of 16222 functions (8.38%)","author":"Veradictus","committedAt":"2026-10-29T15:42:23Z","merge":false,"landed":true,"additions":130,"deletions":124}
+  ]
+}
