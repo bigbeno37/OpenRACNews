@@ -49,6 +49,15 @@ export function dayOpacity(commits: number): number {
   return 1;
 }
 
+/** The same across every project, where even a quiet day runs to dozens of commits. */
+export function allProjectsDayOpacity(commits: number): number {
+  if (commits === 0) return 0;
+  if (commits <= 50) return 0.45;
+  if (commits <= 150) return 0.65;
+  if (commits <= 300) return 0.85;
+  return 1;
+}
+
 const hour = (h: number) => `${String(h).padStart(2, '0')}:00`;
 
 /** The same bar in words, for screen readers. */

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { calendarMonths } from './calendar.ts';
-import { dayOpacity, describeHours, formatChange, formatPercent, hourOpacity, landingsByHour } from './format.ts';
+import { allProjectsDayOpacity, dayOpacity, describeHours, formatChange, formatPercent, hourOpacity, landingsByHour } from './format.ts';
 import { paragraphs, referencesIn, tokenize, toEscapedHtml } from './prose.ts';
 import { checkBranchReport, checkOverview, knownNumbers } from './reportChecks.ts';
 import type { BranchReport, BranchSnapshot, Overview, Push, RepoSnapshot } from './schema.ts';
@@ -122,8 +122,14 @@ test('calendar months span the range, including across a new year', () => {
 });
 
 test('every active day is visible and busier days are never dimmer', () => {
-  const levels = [1, 5, 6, 20, 21, 60, 61, 400].map(dayOpacity);
-  assert.equal(dayOpacity(0), 0);
-  assert.ok(levels.every((level) => level > 0));
-  assert.deepEqual(levels, [...levels].sort((a, b) => a - b));
+  for (const [scale, samples] of [
+    [dayOpacity, [1, 5, 6, 20, 21, 60, 61, 400]],
+    [allProjectsDayOpacity, [1, 50, 51, 150, 151, 300, 301, 900]],
+  ] as const) {
+    const levels = samples.map(scale);
+    assert.equal(scale(0), 0);
+    assert.ok(levels.every((level) => level > 0));
+    assert.deepEqual(levels, [...levels].sort((a, b) => a - b));
+    assert.ok(new Set(levels).size === 4, 'each scale uses all four steps');
+  }
 });

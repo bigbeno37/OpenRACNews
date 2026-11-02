@@ -7,7 +7,8 @@ import DatePicker from '../components/DatePicker.astro';
 import Icons from '../components/Icons.astro';
 import Logo from '../components/Logo.astro';
 import { dayUrl, projectUrl, url } from '../lib/links.ts';
-import { dayRange, loadDays } from '../lib/news.ts';
+import { allProjectsDayOpacity, dayOpacity } from '../lib/format.ts';
+import { commitsPerDay, dayRange } from '../lib/news.ts';
 import { pageStyle, themeFor } from '../lib/themes.ts';
 import { tracking } from '../lib/tracking.ts';
 
@@ -32,7 +33,8 @@ const themeColor = repo ? (themeFor(repo).accent?.brand ?? '#d6a020') : '#d6a020
 
 const days = await dayRange();
 const shown = date ?? days.at(-1);
-const commitsByDay = new Map((await loadDays()).map((day) => [day.date, day.totals.commits]));
+// The calendar shows what this page is about: one project's activity, or everyone's.
+const commitsByDay = await commitsPerDay(repo);
 // Moving through days keeps you on the same project.
 const hrefFor = (day: string) => (repo ? projectUrl(day, repo) : dayUrl(day));
 
@@ -85,7 +87,7 @@ const footerLink = 'text-amber underline decoration-amber/40 underline-offset-2 
         </nav>
 
         <div class="ml-auto lg:ml-0">
-          {shown && <DatePicker date={shown} days={days} commits={commitsByDay} hrefFor={hrefFor} />}
+          {shown && <DatePicker date={shown} days={days} commits={commitsByDay} scale={repo ? dayOpacity : allProjectsDayOpacity} hrefFor={hrefFor} />}
         </div>
 
         <div class="hidden flex-none items-center gap-2 lg:flex">

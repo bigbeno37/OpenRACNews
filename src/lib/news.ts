@@ -199,6 +199,12 @@ export async function dayRange(): Promise<string[]> {
   return range;
 }
 
+/** Commits per day, for one project or across all of them. */
+export async function commitsPerDay(repo?: string): Promise<Map<string, number>> {
+  const days = await loadDays();
+  return new Map(days.map((day) => [day.date, repo ? totalsFor(day.branches.filter((b) => b.repo.name === repo)).commits : day.totals.commits]));
+}
+
 /** One day across every project. A quiet day is simply empty. */
 export async function dayOn(date: string): Promise<Day> {
   return (await loadDays()).find((day) => day.date === date) ?? { date, branches: [], repos: [], totals: totalsFor([]) };

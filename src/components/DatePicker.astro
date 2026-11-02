@@ -4,7 +4,7 @@
 // buttons page through the months (.cal-radio in global.css).
 import { calendarMonths } from '../lib/calendar.ts';
 import { formatDay, formatDayMonthShort, formatDayShort } from '../lib/days.ts';
-import { count, dayOpacity } from '../lib/format.ts';
+import { count } from '../lib/format.ts';
 import { url } from '../lib/links.ts';
 
 interface Props {
@@ -13,10 +13,12 @@ interface Props {
   days: string[];
   /** Commits per day, for how strongly to mark it on the calendar. */
   commits: Map<string, number>;
+  /** Turns a day's commits into a strength from 0 to 1. */
+  scale: (commits: number) => number;
   /** Where each day leads: the same page, on that day. */
   hrefFor: (date: string) => string;
 }
-const { date, days, commits, hrefFor } = Astro.props;
+const { date, days, commits, scale, hrefFor } = Astro.props;
 const index = days.indexOf(date);
 const previous = days[index - 1];
 const next = days[index + 1];
@@ -26,7 +28,11 @@ const viewable = new Set(days);
 const viewedMonth = date.slice(0, 7);
 
 const arrow = 'flex size-9 flex-none items-center justify-center rounded-full bg-(--bar-ink-deep) text-amber transition-colors hover:bg-(--bar-ink)';
-const heat = (day: string) => Math.round(dayOpacity(commits.get(day) ?? 0) * 40);
+// Spread over 13% to 40% of the accent: visibly apart, and light text stays readable on the strongest.
+const heat = (day: string) => {
+  const strength = scale(commits.get(day) ?? 0);
+  return strength === 0 ? 0 : Math.round((strength - 0.2) * 50);
+};
 const monthButton = 'flex size-8 cursor-pointer items-center justify-center rounded-full text-amber transition-colors hover:bg-white/10';
 ---
 
