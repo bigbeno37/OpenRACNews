@@ -21,7 +21,7 @@ interface Props {
 const { day, newer, older } = Astro.props;
 ---
 
-<Layout title={formatDay(day.date)} description={day.overview?.headline} current="days">
+<Layout title={formatDay(day.date)} description={day.overview?.headline}>
   <DayDigest day={day} />
   <nav aria-label="Other days" class="flex flex-wrap justify-between gap-3 pb-10">
     {older ? <a href={dayUrl(older.date)} class="btn btn-sm">Earlier: {formatDayShort(older.date)}</a> : <span></span>}

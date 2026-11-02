@@ -1,0 +1,38 @@
+---
+// A project's recent activity, drawn like openrac.dev's progress bars: one segment per day, brighter the
+// more commits landed. The steps are fixed (lib/format.ts), so busy and quiet projects compare fairly.
+import { formatDayShort } from '../lib/days.ts';
+import { count, dayOpacity } from '../lib/format.ts';
+
+interface Props {
+  activity: { date: string; commits: number }[];
+}
+const { activity } = Astro.props;
+const active = activity.filter((day) => day.commits > 0);
+const label =
+  active.length === 0
+    ? `No commits landed in the last ${activity.length} days.`
+    : `Commits landed per day over the last ${activity.length} days: ${active.map((day) => `${formatDayShort(day.date)} ${day.commits}`).join(', ')}.`;
+---
+
+<div>
+  <div role="img" aria-label={label} class="grid gap-[2px]" style={`grid-template-columns: repeat(${activity.length}, minmax(0, 1fr));`}>
+    {
+      activity.map((day) => (
+        <span title={`${formatDayShort(day.date)}: ${count(day.commits, 'commit')}`} class="block py-1.5">
+          <span class="relative block h-1.5 overflow-hidden rounded-full bg-white/10">
+            {day.commits > 0 && <span class="absolute inset-0 rounded-full bg-(--tx)" style={`opacity: ${dayOpacity(day.commits)}`} />}
+          </span>
+        </span>
+      ))
+    }
+  </div>
+  {
+    activity.length > 0 && (
+      <div aria-hidden="true" class="flex justify-between text-[11px] tabular-nums text-dim">
+        <span>{formatDayShort(activity[0]!.date)}</span>
+        <span>{formatDayShort(activity.at(-1)!.date)}</span>
+      </div>
+    )
+  }
+</div>

@@ -11,7 +11,7 @@ import { dayFacts, loadDays } from '../../lib/news.ts';
 const days = await loadDays();
 ---
 
-<Layout title="Every day" current="days" description="Every daily digest of the OpenRAC projects, newest first.">
+<Layout title="Every day" description="Every daily digest of the OpenRAC projects, newest first.">
   <Hero eyebrow="Archive" compact>
     <Fragment slot="shine">Every day</Fragment>
     <Fragment slot="title">on record.</Fragment>
@@ -23,7 +23,7 @@ const days = await loadDays();
         days.map((day) => (
           <Row href={dayUrl(day.date)} title={day.overview?.headline ?? dayFacts(day)}>
             <span slot="lead" class="flex-none font-orbitron text-[13px] font-semibold text-gold">{formatDay(day.date)}</span>
-            <span>{count(day.totals.commits, 'commit')}</span>
+            <span>{count(day.totals.merged, 'pull request')} merged</span>
           </Row>
         ))
       }

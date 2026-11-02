@@ -53,9 +53,17 @@
   }
 }
 
-/* The header bar: wide stripes of two close golds, as the launcher draws it. */
+/* The header bar: wide stripes of two close colours, as the launcher draws it. A project's page sets its
+   own values for these and for the amber, gold and brand above (src/lib/themes.ts). */
+:root {
+  --bar-stripe: #c99222;
+  --bar-stripe-alt: #bd8619;
+  --bar-ink: #2a1800;
+  --bar-ink-deep: #1b1206;
+  --btn-to: #e8a317;
+}
 @utility bar-stripes {
-  background: repeating-linear-gradient(35deg, #c99222 0 20px, #bd8619 20px 40px);
+  background: repeating-linear-gradient(35deg, var(--bar-stripe) 0 20px, var(--bar-stripe-alt) 20px 40px);
 }
 
 @layer components {
@@ -77,9 +85,9 @@
   }
   .btn-primary {
     border-color: var(--color-amber);
-    background: linear-gradient(to bottom, var(--color-amber), #e8a317);
-    color: #1a0d00;
-    box-shadow: 0 6px 24px rgb(232 163 23 / 0.3);
+    background: linear-gradient(to bottom, var(--color-amber), var(--btn-to));
+    color: var(--bar-ink-deep);
+    box-shadow: 0 6px 24px color-mix(in srgb, var(--btn-to) 30%, transparent);
   }
   .btn-sm {
     min-height: 2.5rem;
@@ -88,7 +96,7 @@
   }
   @media (hover: hover) and (pointer: fine) {
     .btn:hover { transform: translateY(-2px); border-color: var(--color-amber); box-shadow: 0 8px 24px rgb(0 0 0 / 0.4); }
-    .btn-primary:hover { filter: brightness(1.08); box-shadow: 0 8px 28px rgb(232 163 23 / 0.4); }
+    .btn-primary:hover { filter: brightness(1.08); box-shadow: 0 8px 28px color-mix(in srgb, var(--btn-to) 40%, transparent); }
   }
 
   /* A raised panel. */
@@ -113,7 +121,7 @@ html {
   background: var(--color-ink);
 }
 body { background: var(--color-ink); color: var(--color-text); }
-::selection { background: rgb(245 192 64 / 0.35); color: #fff; }
+::selection { background: color-mix(in srgb, var(--color-amber) 35%, transparent); color: #fff; }
 :focus-visible { outline: 2px solid var(--color-amber); outline-offset: 3px; }
 
 details[open] > summary .plus { transform: rotate(45deg); }

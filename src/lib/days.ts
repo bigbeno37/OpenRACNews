@@ -40,4 +40,6 @@ const dayMonthFormat = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month:
 
 export const formatDay = (day: string) => longFormat.format(new Date(`${day}T00:00:00Z`));
 export const formatDayMonth = (day: string) => dayMonthFormat.format(new Date(`${day}T00:00:00Z`));
+export const formatDayMonthYear = (day: string) => `${formatDayMonth(day)} ${day.slice(0, 4)}`;
+export const formatDayMonthShort = (day: string) => formatDayShort(day).replace(/ \d{4}$/, '');
 export const formatDayShort = (day: string) => shortFormat.format(new Date(`${day}T00:00:00Z`));

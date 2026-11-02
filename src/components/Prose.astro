@@ -10,16 +10,18 @@ interface Props {
   /** Which repo a bare #123 belongs to. */
   repo?: string;
   inline?: boolean;
+  /** No links, for text inside something that's already a link. */
+  plain?: boolean;
   class?: string;
 }
-const { text, repo, inline = false, class: className } = Astro.props;
+const { text, repo, inline = false, plain = false, class: className } = Astro.props;
 
 const render = (paragraph: string) =>
   tokenize(paragraph).map((token) => {
     if (token.kind === 'text') return { text: token.text };
     if (token.kind === 'code') return { code: token.text };
     const target = token.repo ?? repo;
-    return target && isTracked(target) ? { text: token.text, href: issueUrl(target, token.number) } : { text: token.text };
+    return !plain && target && isTracked(target) ? { text: token.text, href: issueUrl(target, token.number) } : { text: token.text };
   });
 const blocks = inline ? [text] : paragraphs(text);
 ---

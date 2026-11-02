@@ -1,10 +1,11 @@
 ---
 // One branch on one day, built like the game cards on openrac.dev: the game's colours behind a dark
-// wash, its name and headline number on top, a thin bar, and the repository along the bottom.
-import { formatNumber, count } from '../lib/format.ts';
-import { reportUrl, treeUrl } from '../lib/links.ts';
-import { branchFacts, type BranchDay } from '../lib/news.ts';
-import { themeFor } from '../lib/themes.ts';
+// wash, a name and a headline number on top, a thin bar, and the repository along the bottom.
+import { formatDayMonthYear } from '../lib/days.ts';
+import { count, formatNumber } from '../lib/format.ts';
+import { projectUrl, reportUrl, treeUrl } from '../lib/links.ts';
+import { branchFacts, highlightsFrom, type BranchDay } from '../lib/news.ts';
+import { cardStyle, themeFor } from '../lib/themes.ts';
 import { tracking } from '../lib/tracking.ts';
 import HourBar from './HourBar.astro';
 import Icons from './Icons.astro';
@@ -14,21 +15,25 @@ interface Props {
   day: BranchDay;
   /** Links to the full report. Off on that report's own page. */
   link?: boolean;
+  /** What to lead with: the project on a page about a day, the date on a page about a project. */
+  heading?: 'project' | 'date';
 }
-const { day, link = true } = Astro.props;
+const { day, link = true, heading = 'project' } = Astro.props;
 const { repo, branch, date, facts, report } = day;
 const theme = themeFor(repo.name);
 const { commits, additions, deletions, authors } = facts.totals;
-const style = `--tx: ${theme.text}; background-image: linear-gradient(120deg, ${theme.from}, ${theme.to});`;
+const fromGitHub = report ? [] : highlightsFrom(repo.name, facts);
 ---
 
-<article id={`${repo.name}-${branch.name}`} class="group/card relative isolate scroll-mt-16 overflow-hidden rounded-2xl bg-ink" style={style}>
+<article id={`${repo.name}-${branch.name}`} class="group/card relative isolate scroll-mt-16 overflow-hidden rounded-2xl bg-ink" style={cardStyle(repo.name)}>
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/95 via-ink/85 to-ink/70"></div>
 
   <div class="grid gap-4 p-5 sm:p-6">
     <div class="flex items-end justify-between gap-4">
       <div class="min-w-0">
-        <h3 class={`${theme.font} text-[clamp(20px,3.4vw,28px)] leading-tight text-hi`}>{repo.title}</h3>
+        <h3 class={`${theme.font} text-[clamp(20px,3.4vw,28px)] leading-tight text-hi`}>
+          {heading === 'project' ? <a href={projectUrl(repo.name)} class="no-underline hover:text-(--tx)">{repo.title}</a> : formatDayMonthYear(date)}
+        </h3>
         <p class="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-dim">
           <span>{repo.name}</span>
           <span class="rounded-full border border-white/15 px-2 py-0.5 text-[10px] uppercase tracking-[.15em] sm:text-[11px]">{branch.name}</span>
@@ -74,9 +79,21 @@ const style = `--tx: ${theme.text}; background-image: linear-gradient(120deg, ${
           )}
         </div>
       ) : (
-        <p class="max-w-[820px] text-soft">
-          {branchFacts(facts)}. <span class="text-dim">The written report for this branch isn't ready yet.</span>
-        </p>
+        <div class="grid max-w-[820px] gap-2">
+          <p class="text-soft">
+            {branchFacts(facts)}. <span class="text-dim">There's no written report for this day.</span>
+          </p>
+          {fromGitHub.length > 0 && (
+            <ul class="grid gap-1.5 text-body">
+              {fromGitHub.map((item) => (
+                <li class="flex gap-2.5">
+                  <i aria-hidden="true" class="mt-[.6em] size-1.5 flex-none rounded-full bg-(--tx)" />
+                  <a href={item.href} class="min-w-0 no-underline [overflow-wrap:anywhere] hover:text-amber">{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       )
     }
 

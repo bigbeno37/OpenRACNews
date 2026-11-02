@@ -30,6 +30,15 @@ export function hourOpacity(landings: number): number {
   return 1;
 }
 
+/** The same idea for a day on a project's activity bar, where a busy day runs to dozens of commits. */
+export function dayOpacity(commits: number): number {
+  if (commits === 0) return 0;
+  if (commits <= 5) return 0.45;
+  if (commits <= 20) return 0.65;
+  if (commits <= 60) return 0.85;
+  return 1;
+}
+
 const hour = (h: number) => `${String(h).padStart(2, '0')}:00`;
 
 /** The same bar in words, for screen readers. */

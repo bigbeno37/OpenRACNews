@@ -3,6 +3,15 @@
   "lookbackDays": 3,
   "repos": [
     {
+      "name": "OpenRAC",
+      "title": "OpenRAC launcher",
+      "about": "The launcher and native PC port that bring the decompilations together.",
+      "branches": [
+        { "name": "develop", "about": "Day-to-day development. Work lands here through squash-merged pull requests, and Development channel builds follow it." },
+        { "name": "master", "about": "The stable line. Protected, and it moves only through a release pull request from develop, so activity here usually means a release." }
+      ]
+    },
+    {
       "name": "rac1-decomp",
       "title": "Ratchet & Clank",
       "about": "Matching decompilation of the original game (PS2, 2002).",
@@ -32,15 +41,6 @@
       "about": "Matching decompilation of Ratchet: Deadlocked (PS2, 2005).",
       "branches": [
         { "name": "main", "about": "Where matching work lands, often as large batches of pull requests merged together." }
-      ]
-    },
-    {
-      "name": "OpenRAC",
-      "title": "OpenRAC launcher",
-      "about": "The launcher and native PC port that bring the decompilations together.",
-      "branches": [
-        { "name": "develop", "about": "Day-to-day development. Work lands here through squash-merged pull requests, and Development channel builds follow it." },
-        { "name": "master", "about": "The stable line. Protected, and it moves only through a release pull request from develop, so activity here usually means a release." }
       ]
     },
     {

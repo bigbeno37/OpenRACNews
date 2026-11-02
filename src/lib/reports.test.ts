@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { describeHours, hourOpacity, landingsByHour } from './format.ts';
+import { dayOpacity, describeHours, hourOpacity, landingsByHour } from './format.ts';
 import { paragraphs, referencesIn, tokenize, toEscapedHtml } from './prose.ts';
 import { checkBranchReport, checkOverview, knownNumbers } from './reportChecks.ts';
 import type { BranchReport, BranchSnapshot, Overview, Push, RepoSnapshot } from './schema.ts';
@@ -91,6 +91,13 @@ test('landings fall in their UTC hour, across the whole day', () => {
 test('every landing is visible and busier hours are never dimmer', () => {
   const levels = [1, 2, 3, 4, 7, 8, 50].map(hourOpacity);
   assert.equal(hourOpacity(0), 0);
+  assert.ok(levels.every((level) => level > 0));
+  assert.deepEqual(levels, [...levels].sort((a, b) => a - b));
+});
+
+test('every active day is visible and busier days are never dimmer', () => {
+  const levels = [1, 5, 6, 20, 21, 60, 61, 400].map(dayOpacity);
+  assert.equal(dayOpacity(0), 0);
   assert.ok(levels.every((level) => level > 0));
   assert.deepEqual(levels, [...levels].sort((a, b) => a - b));
 });

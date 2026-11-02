@@ -8,6 +8,7 @@ A static Astro site, hosted on GitHub Pages, that reports what happens across th
 
 - Each branch's `about` says what the branch is for. Use it to frame that branch's report: `OpenRAC` `master` moves only through release pull requests, for example, so activity there usually means a release.
 - A new branch gets reports from its next active day. Run `pnpm snapshot --days N` to backfill it.
+- The order of `repos` sets the order in the navbar and on the home page. Each repo gets a page and a navbar entry automatically. Give a new repo its short name and colours in `src/lib/themes.ts`, or it appears in gold under its repo name.
 
 ## How the data is laid out
 
@@ -87,6 +88,7 @@ pnpm snapshot       # collect the last `lookbackDays` finished days (--days N or
 ```
 
 - Static output only, with no server or client framework. The one script on the site is the decorative hero animation.
+- The site is organised by project: each repo has a page at `/<repo>/`, with a full report per branch per day at `/<repo>/<branch>/<date>/`. Day pages at `/days/` are secondary and aren't in the navbar.
 - Internal links must go through `src/lib/links.ts`, because the site is served from a sub-path on GitHub Pages.
-- The look comes from [openrac.dev](https://openrac.dev) (`OpenRAC/openrac-site`). `src/styles/global.css` and the components keep its tokens and class names, so match that site when changing the design.
+- The look comes from [openrac.dev](https://openrac.dev) (`OpenRAC/openrac-site`). `src/styles/global.css` and the components keep its tokens and class names, so match that site when changing the design. On a project's page the accents and the bar take that game's colours, as the launcher does (`src/lib/themes.ts`).
 - When starting the dev server in the background, use `astro dev --background`, with `astro dev stop`, `astro dev status` and `astro dev logs` to manage it. Astro's docs are at <https://docs.astro.build>.

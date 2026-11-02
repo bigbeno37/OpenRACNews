@@ -20,7 +20,7 @@
       canvas.width = Math.round(w * dpr);
       canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.fillStyle = '#f5c040';
+      ctx.fillStyle = getComputedStyle(canvas).getPropertyValue('--color-amber') || '#f5c040';
       dots = Array.from({ length: Math.min(46, Math.floor(w / 24)) }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,

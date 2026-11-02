@@ -1,6 +1,6 @@
 # OpenRAC News
 
-A daily digest of what's happening across the [OpenRAC](https://github.com/OpenRAC) projects: the Ratchet & Clank decompilations, the launcher and the mods. Each tracked branch gets its own report for every UTC day it was active, plus a summary of the whole day.
+What's new in each [OpenRAC](https://github.com/OpenRAC) project: the Ratchet & Clank decompilations, the launcher and the mods. Every project has its own page, in that game's colours, where each tracked branch gets a report for every UTC day it was active. A summary across all projects sits on the home page.
 
 It's a static [Astro](https://astro.build) site for GitHub Pages, styled after [openrac.dev](https://openrac.dev).
 

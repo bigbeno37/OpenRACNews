@@ -1,24 +1,27 @@
 ---
-import Badge from '../../../../components/Badge.astro';
-import Hero from '../../../../components/Hero.astro';
-import ReportCard from '../../../../components/ReportCard.astro';
-import Row from '../../../../components/Row.astro';
-import Section from '../../../../components/Section.astro';
-import Layout from '../../../../layouts/Layout.astro';
-import { formatDay, formatDayShort } from '../../../../lib/days.ts';
-import { count, formatNumber, sentenceList, timeOf } from '../../../../lib/format.ts';
-import { branchUrl, commitUrl, dayUrl, pullUrl, reportUrl } from '../../../../lib/links.ts';
-import { branchHistory, type BranchDay } from '../../../../lib/news.ts';
-import type { Commit } from '../../../../lib/schema.ts';
-import { branchSlug, trackedBranches } from '../../../../lib/tracking.ts';
+import Badge from '../../../components/Badge.astro';
+import Hero from '../../../components/Hero.astro';
+import ReportCard from '../../../components/ReportCard.astro';
+import Row from '../../../components/Row.astro';
+import Section from '../../../components/Section.astro';
+import Layout from '../../../layouts/Layout.astro';
+import { formatDay, formatDayShort } from '../../../lib/days.ts';
+import { count, formatNumber, sentenceList, timeOf } from '../../../lib/format.ts';
+import { branchUrl, commitUrl, dayUrl, pullUrl, reportUrl } from '../../../lib/links.ts';
+import { loadProjects, type BranchDay } from '../../../lib/news.ts';
+import type { Commit } from '../../../lib/schema.ts';
+import { themeFor } from '../../../lib/themes.ts';
+import { branchSlug } from '../../../lib/tracking.ts';
 
 export async function getStaticPaths() {
-  const all = await Promise.all(trackedBranches().map(({ repo, branch }) => branchHistory(repo.name, branch.name)));
-  return all.flatMap((history) =>
-    history.map((day, i) => ({
-      params: { repo: day.repo.name, branch: branchSlug(day.branch.name), date: day.date },
-      props: { day, newer: history[i - 1], older: history[i + 1] },
-    })),
+  const projects = await loadProjects();
+  return projects.flatMap((project) =>
+    project.branches.flatMap(({ days }) =>
+      days.map((day, i) => ({
+        params: { repo: day.repo.name, branch: branchSlug(day.branch.name), date: day.date },
+        props: { day, newer: days[i - 1], older: days[i + 1] },
+      })),
+    ),
   );
 }
 
@@ -29,6 +32,7 @@ interface Props {
 }
 const { day, newer, older } = Astro.props;
 const { repo, branch, date, facts, report } = day;
+const theme = themeFor(repo.name);
 
 const landed = facts.commits.filter((c) => c.landed).reverse();
 const mergedIn = facts.commits.filter((c) => !c.landed).reverse();
@@ -36,19 +40,19 @@ const forcePushes = facts.pushes.filter((p) => p.type === 'force_push');
 const short = (commit: Commit) => commit.sha.slice(0, 7);
 ---
 
-<Layout title={`${repo.title} ${branch.name}, ${formatDayShort(date)}`} description={report?.headline} current="branches">
-  <Hero eyebrow={`Branch report · ${formatDay(date)}`} compact>
+<Layout title={`${repo.title} ${branch.name}, ${formatDayShort(date)}`} description={report?.headline} repo={repo.name}>
+  <Hero eyebrow={`Branch report · ${formatDay(date)}`} font={theme.font} compact>
     <Fragment slot="shine">{repo.title}</Fragment>
     <Fragment slot="title">{branch.name}</Fragment>
     <p class="mt-5 max-w-[680px] text-soft">{branch.about}</p>
     <div class="mt-5 flex flex-wrap gap-3">
-      <a href={dayUrl(date)} class="btn btn-sm">All of {formatDayShort(date)}</a>
-      <a href={branchUrl(repo.name, branch.name)} class="btn btn-sm">This branch's history</a>
+      <a href={branchUrl(repo.name, branch.name)} class="btn btn-sm">Back to {theme.tag}</a>
+      <a href={dayUrl(date)} class="btn btn-sm">All projects on {formatDayShort(date)}</a>
     </div>
   </Hero>
 
   <div class="pt-6">
-    <ReportCard day={day} link={false} />
+    <ReportCard day={day} link={false} heading="date" />
   </div>
 
   {

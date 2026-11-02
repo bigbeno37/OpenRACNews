@@ -7,8 +7,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 export const url = (path: string) => `${base}${path}`;
 
 export const dayUrl = (date: string) => url(`/days/${date}/`);
-export const branchUrl = (repo: string, branch: string) => url(`/branches/${repo}/${branchSlug(branch)}/`);
-export const reportUrl = (repo: string, branch: string, date: string) => url(`/branches/${repo}/${branchSlug(branch)}/${date}/`);
+export const projectUrl = (repo: string) => url(`/${repo}/`);
+export const branchUrl = (repo: string, branch: string) => url(`/${repo}/#${branchSlug(branch)}`);
+export const reportUrl = (repo: string, branch: string, date: string) => url(`/${repo}/${branchSlug(branch)}/${date}/`);
 
 export const commitUrl = (repo: string, sha: string) => `${repoUrl(repo)}/commit/${sha}`;
 export const pullUrl = (repo: string, number: number) => `${repoUrl(repo)}/pull/${number}`;

@@ -1,43 +1,56 @@
 ---
-import DayDigest from '../components/DayDigest.astro';
 import Hero from '../components/Hero.astro';
-import Row from '../components/Row.astro';
+import Icons from '../components/Icons.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Prose from '../components/Prose.astro';
 import Section from '../components/Section.astro';
 import Layout from '../layouts/Layout.astro';
-import { formatDayShort } from '../lib/days.ts';
-import { count } from '../lib/format.ts';
+import { formatDayMonth, formatDayShort } from '../lib/days.ts';
 import { dayUrl, url } from '../lib/links.ts';
-import { dayFacts, loadDays } from '../lib/news.ts';
+import { dayFacts, loadDays, loadProjects } from '../lib/news.ts';
+import { paragraphs } from '../lib/prose.ts';
 
-const days = await loadDays();
-const [latest, ...earlier] = days;
+const [projects, days] = await Promise.all([loadProjects(), loadDays()]);
+const latest = days[0];
 ---
 
-<Layout current="latest">
+<Layout>
+  <Hero eyebrow="Unofficial · updated daily">
+    <Fragment slot="shine">What's new</Fragment>
+    <Fragment slot="title">in every OpenRAC project.</Fragment>
+    <p class="mt-5 max-w-[600px] text-[15px] leading-relaxed text-soft sm:text-[17px]">Follow each game's decompilation, the launcher and the mods. Every project gets a short report for each day something lands.</p>
+    <div class="mt-7 grid animate-rise gap-3 [animation-delay:.45s] min-[560px]:flex min-[560px]:flex-wrap">
+      <a href="#projects" class="btn btn-primary"><Icons name="down" class="size-4" />Choose a project</a>
+      {latest && <a href="#latest" class="btn">Latest across all of them</a>}
+    </div>
+  </Hero>
+
+  <Section id="projects" art="progress" title="Projects" sub="Each bar is the last 30 days, one segment per day, brighter the more commits landed.">
+    <div class="grid gap-3 sm:gap-4 md:grid-cols-2">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </Section>
+
   {
-    latest ? (
-      <>
-        <DayDigest day={latest} />
-        {earlier.length > 0 && (
-          <Section id="earlier" art="activity" title="Earlier days" sub="The days before this one, newest first.">
-            <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
-              {earlier.slice(0, 7).map((day) => (
-                <Row href={dayUrl(day.date)} title={day.overview?.headline ?? dayFacts(day)}>
-                  <span slot="lead" class="flex-none font-orbitron text-[13px] font-semibold text-gold">{formatDayShort(day.date)}</span>
-                  <span>{count(day.totals.commits, 'commit')}</span>
-                </Row>
+    latest && (
+      <Section id="latest" art="activity" title={`Across all projects, ${formatDayMonth(latest.date)}`}>
+        <div class="surface mt-5 grid gap-3 p-5 sm:mt-6 sm:p-6">
+          <h3 class="font-orbitron text-[17px] font-bold leading-snug text-gold sm:text-[19px]">{latest.overview ? <Prose text={latest.overview.headline} inline /> : dayFacts(latest)}</h3>
+          {latest.overview && (
+            <div class="grid max-w-[820px] gap-3 text-soft">
+              {paragraphs(latest.overview.summary).map((paragraph) => (
+                <p>
+                  <Prose text={paragraph} inline />
+                </p>
               ))}
-            </ul>
-            {earlier.length > 7 && <a href={url('/days/')} class="btn btn-sm mt-5">Browse every day</a>}
-          </Section>
-        )}
-      </>
-    ) : (
-      <Hero eyebrow="Daily digest">
-        <Fragment slot="shine">No days</Fragment>
-        <Fragment slot="title">on record yet.</Fragment>
-        <p class="mt-5 max-w-[600px] text-soft">The first digest appears after the next daily snapshot. To create one now, run <code class="text-gold">pnpm snapshot</code>.</p>
-      </Hero>
+            </div>
+          )}
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href={dayUrl(latest.date)} class="btn btn-sm">Everything from {formatDayShort(latest.date)}</a>
+            <a href={url('/days/')} class="btn btn-sm">Browse by day</a>
+          </div>
+        </div>
+      </Section>
     )
   }
 </Layout>

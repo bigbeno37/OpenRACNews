@@ -1,10 +1,9 @@
 ---
-// A whole day: the overview and its numbers, every branch's report, then what belongs to a repo rather
-// than a branch. The home page shows this for the latest day, and each day has a page of its own.
+// Everything from one day, across all projects: the day's summary, its numbers and each branch's report.
 import { formatDay, formatDayMonth } from '../lib/days.ts';
 import { formatNumber, sentenceList } from '../lib/format.ts';
-import { issueUrl, releaseUrl } from '../lib/links.ts';
-import { dayFacts, type Day } from '../lib/news.ts';
+import { url } from '../lib/links.ts';
+import { dayFacts, eventRows, type Day } from '../lib/news.ts';
 import { paragraphs } from '../lib/prose.ts';
 import { trackedBranches } from '../lib/tracking.ts';
 import Badge from './Badge.astro';
@@ -15,7 +14,6 @@ import ReportCard from './ReportCard.astro';
 import Row from './Row.astro';
 import Section from './Section.astro';
 import Tag from './Tag.astro';
-import { url } from '../lib/links.ts';
 
 interface Props {
   day: Day;
@@ -36,26 +34,7 @@ const quiet = trackedBranches()
   .filter(({ repo, branch }) => !day.branches.some((b) => b.repo.name === repo.name && b.branch.name === branch.name))
   .map(({ repo, branch }) => `${repo.title} (${branch.name})`);
 
-const closedWords: Record<string, string> = { COMPLETED: 'closed as completed', NOT_PLANNED: 'closed as not planned', DUPLICATE: 'closed as a duplicate' };
-const issueWords = (events: string[], closedAs: string | null) =>
-  sentenceList(events.map((event) => (event === 'closed' ? (closedAs && closedWords[closedAs]) || 'closed' : event)));
-
-const repoRows = day.repos.flatMap(({ repo, facts }) => [
-  ...facts.releases.map((release) => ({
-    repo: repo.name,
-    title: release.name || release.tag,
-    href: releaseUrl(repo.name, release.tag),
-    badge: release.prerelease ? 'prerelease' : 'release',
-    note: release.tag,
-  })),
-  ...facts.issues.map((issue) => ({
-    repo: repo.name,
-    title: issue.title,
-    href: issueUrl(repo.name, issue.number),
-    badge: 'issue',
-    note: `#${issue.number} ${issueWords(issue.events, issue.closedAs)}`,
-  })),
-]);
+const repoRows = day.repos.flatMap(eventRows);
 ---
 
 <Hero eyebrow={`Daily digest · ${longDate}`}>
@@ -63,7 +42,7 @@ const repoRows = day.repos.flatMap(({ repo, facts }) => [
   <Fragment slot="title">{overview ? <Prose text={overview.headline} inline /> : dayFacts(day)}</Fragment>
 
   <div class="mt-5 grid max-w-[680px] gap-3 text-[15px] leading-relaxed text-soft sm:text-[17px]">
-    {overview ? paragraphs(overview.summary).map((paragraph) => <p><Prose text={paragraph} inline /></p>) : <p>The written summary for this day isn't ready yet. Everything that happened is listed below.</p>}
+    {overview ? paragraphs(overview.summary).map((paragraph) => <p><Prose text={paragraph} inline /></p>) : <p>There's no written summary for this day. Everything that happened is listed below.</p>}
   </div>
 
   <div class="mt-7 grid animate-rise gap-3 [animation-delay:.45s] min-[560px]:flex min-[560px]:flex-wrap">
