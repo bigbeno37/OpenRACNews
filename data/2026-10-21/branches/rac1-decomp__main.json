@@ -2,7 +2,8 @@
   "date": "2026-10-21",
   "repo": "rac1-decomp",
   "branch": "main",
-  "capturedAt": "2026-11-02T06:16:44.072Z",
+  "capturedAt": "2026-11-02T06:49:18.106Z",
+  "progress": {"sha":"52b7fe97a2e96da8c15b53ee67ae3de900a2e036","code":{"done":3653460,"total":3713568},"functions":{"done":5073,"total":5124},"data":{"done":3852,"total":699072}},
   "totals": {"commits":32,"merges":5,"landed":4,"additions":161608,"deletions":3233,"pushes":4,"forcePushes":0,"authors":["Daniel Risto","Lynder063","Veradictus"]},
   "warnings": [],
   "pushes": [

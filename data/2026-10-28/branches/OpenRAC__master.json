@@ -2,7 +2,8 @@
   "date": "2026-10-28",
   "repo": "OpenRAC",
   "branch": "master",
-  "capturedAt": "2026-11-02T06:22:45.547Z",
+  "capturedAt": "2026-11-02T06:48:10.320Z",
+  "progress": null,
   "totals": {"commits":77,"merges":3,"landed":42,"additions":544066,"deletions":499977,"pushes":33,"forcePushes":1,"authors":["llesieur99","Lynder063","mateuszklysz","pezzadev","ReaperOfVeriod","Veradictus"]},
   "warnings": ["GitHub could not compare 4904f16e5...6360471e8, so its commits are missing."],
   "pushes": [

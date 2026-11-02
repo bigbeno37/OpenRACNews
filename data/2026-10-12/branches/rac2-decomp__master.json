@@ -2,7 +2,8 @@
   "date": "2026-10-12",
   "repo": "rac2-decomp",
   "branch": "master",
-  "capturedAt": "2026-11-02T06:18:47.460Z",
+  "capturedAt": "2026-11-02T06:51:05.462Z",
+  "progress": {"sha":"1a9ce37663ba90a90e7f9dd18035a337afe2f10c","code":{"done":245812,"total":5538056},"functions":{"done":2438,"total":9101},"data":null},
   "totals": {"commits":65,"merges":30,"landed":31,"additions":326571,"deletions":210772,"pushes":29,"forcePushes":1,"authors":["llesieur99","ThorpenCodes","Veradictus"]},
   "warnings": ["GitHub could not compare 783efe0ab...7fccf7352, so its commits are missing."],
   "pushes": [

@@ -2,7 +2,8 @@
   "date": "2026-10-19",
   "repo": "rac1-decomp",
   "branch": "main",
-  "capturedAt": "2026-11-02T06:16:40.873Z",
+  "capturedAt": "2026-11-02T06:49:14.269Z",
+  "progress": {"sha":"2897435e5fc7607de6a0dff3a184bffc2df8b21c","code":{"done":3628644,"total":3713568},"functions":{"done":5053,"total":5124},"data":{"done":3852,"total":699072}},
   "totals": {"commits":84,"merges":21,"landed":37,"additions":90470,"deletions":83319,"pushes":24,"forcePushes":0,"authors":["claude","Lynder063","Veradictus","xx255q"]},
   "warnings": [],
   "pushes": [

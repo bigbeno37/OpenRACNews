@@ -2,7 +2,8 @@
   "date": "2026-10-21",
   "repo": "rac3-decomp",
   "branch": "master",
-  "capturedAt": "2026-11-02T06:19:46.426Z",
+  "capturedAt": "2026-11-02T06:52:01.982Z",
+  "progress": {"sha":"c7d5d2c1ecaf37227be039ba6d82e00ff0aa5c35","code":{"done":632632,"total":7546948},"functions":{"done":5193,"total":16164},"data":null},
   "totals": {"commits":82,"merges":0,"landed":82,"additions":503096,"deletions":45688,"pushes":36,"forcePushes":2,"authors":["Lynder063","Veradictus"]},
   "warnings": ["GitHub could not compare f7a6ebabc...167803409, so its commits are missing.","GitHub could not compare 12b433a8f...e923010ea, so its commits are missing."],
   "pushes": [

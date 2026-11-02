@@ -2,7 +2,8 @@
   "date": "2026-10-16",
   "repo": "rac2-decomp",
   "branch": "master",
-  "capturedAt": "2026-11-02T06:18:55.621Z",
+  "capturedAt": "2026-11-02T06:51:14.371Z",
+  "progress": {"sha":"ec03034a20494c2335f344db4513188ace40dd96","code":{"done":318088,"total":5533600},"functions":{"done":2941,"total":9100},"data":{"done":0,"total":383391}},
   "totals": {"commits":293,"merges":11,"landed":9,"additions":33255,"deletions":735,"pushes":9,"forcePushes":0,"authors":["agent","agent-lvl-01","agent-lvl7-08","llesieur99","lvl7-03","lvl7-06","RAC2 wave7","ReaperOfVeriod","ThorpenCodes","worker"]},
   "warnings": [],
   "pushes": [

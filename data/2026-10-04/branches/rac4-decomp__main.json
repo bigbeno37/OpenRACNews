@@ -2,7 +2,8 @@
   "date": "2026-10-04",
   "repo": "rac4-decomp",
   "branch": "main",
-  "capturedAt": "2026-11-02T06:20:08.681Z",
+  "capturedAt": "2026-11-02T06:52:21.113Z",
+  "progress": {"sha":"dedfcd416a1b8e195978df6b038e0d4cd927f4b7","code":{"done":26572,"total":5175440},"functions":{"done":243,"total":15056},"data":null},
   "totals": {"commits":37,"merges":0,"landed":37,"additions":265960,"deletions":72653,"pushes":41,"forcePushes":3,"authors":["Lynder063"]},
   "warnings": ["GitHub could not compare 537aafe75...451723c3a, so its commits are missing.","GitHub could not compare abe5c5e8c...c9b0efd04, so its commits are missing.","GitHub could not compare ee92a3164...4ff72358f, so its commits are missing."],
   "pushes": [

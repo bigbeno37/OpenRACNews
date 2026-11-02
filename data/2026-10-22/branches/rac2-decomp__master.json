@@ -2,7 +2,8 @@
   "date": "2026-10-22",
   "repo": "rac2-decomp",
   "branch": "master",
-  "capturedAt": "2026-11-02T06:19:11.900Z",
+  "capturedAt": "2026-11-02T06:51:30.145Z",
+  "progress": {"sha":"a655afb63823de38f18bbebbecfeac186f99866d","code":{"done":706652,"total":5529156},"functions":{"done":4144,"total":8601},"data":{"done":0,"total":383391}},
   "totals": {"commits":9,"merges":7,"landed":9,"additions":2438,"deletions":2504,"pushes":9,"forcePushes":0,"authors":["llesieur99","Veradictus"]},
   "warnings": [],
   "pushes": [
