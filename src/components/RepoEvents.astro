@@ -1,0 +1,58 @@
+---
+// A day's releases and issues, which belong to a repository rather than to one of its branches.
+import { issueRows, releaseRows, type RepoDay } from '../lib/news.ts';
+import Badge from './Badge.astro';
+import Icons from './Icons.astro';
+import Row from './Row.astro';
+import Section from './Section.astro';
+import Tag from './Tag.astro';
+
+interface Props {
+  repos: RepoDay[];
+  /** Says which project each row is from, for a page covering several. */
+  tagged?: boolean;
+}
+const { repos, tagged = false } = Astro.props;
+const releases = repos.flatMap(releaseRows);
+// Those still open come first, and those closed that day follow.
+const issues = repos.flatMap(issueRows).sort((a, b) => Number(a.closed) - Number(b.closed));
+---
+
+{
+  releases.length > 0 && (
+    <Section id="releases" art="fresh" title="Releases">
+      <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
+        {releases.map((row) => (
+          <Row href={row.href} title={row.title}>
+            <Fragment slot="lead">
+              {tagged && <Tag repo={row.repo} />}
+              <Badge>{row.badge}</Badge>
+            </Fragment>
+            <span>{row.note}</span>
+          </Row>
+        ))}
+      </ul>
+    </Section>
+  )
+}
+
+{
+  issues.length > 0 && (
+    <Section id="issues" art="how" title="Issues">
+      <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
+        {issues.map((row) => (
+          <Row href={row.href} title={row.title} muted={row.closed}>
+            <Fragment slot="lead">
+              {tagged && <Tag repo={row.repo} />}
+              <Badge tone={row.closed ? 'closed' : 'open'}>
+                <Icons name={row.closed ? 'closed' : 'open'} class="size-3" />
+                {row.closed ? 'closed' : 'open'}
+              </Badge>
+            </Fragment>
+            <span>{row.note}</span>
+          </Row>
+        ))}
+      </ul>
+    </Section>
+  )
+}

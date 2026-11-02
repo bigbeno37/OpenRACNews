@@ -28,6 +28,9 @@
   --color-text: #efeff3;
   --color-body: #cacad3;
   --color-line: rgb(255 255 255 / 0.09);
+  /* An issue's state, in GitHub's own colours. These stay the same on every project's page. */
+  --color-open: #3fb950;
+  --color-closed: #a371f7;
 
   --animate-rise: rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   --animate-drift: drift 16s ease-in-out infinite alternate;
@@ -144,6 +147,59 @@ body { background: var(--color-ink); color: var(--color-text); }
 .cal-page { display: none; }
 .cal-radio:checked + .cal-page { display: block; }
 .cal-radio:focus-visible + .cal-page b { outline: 2px solid var(--color-amber); outline-offset: 3px; }
+
+/* A contributor's picture, with their name in a tooltip. Inside a card that clips what overflows, so the
+   tooltip opens upwards, into the card. */
+.avatar {
+  position: relative;
+  display: flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--color-panel-hi);
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.14);
+  color: var(--color-soft);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: box-shadow 0.15s ease;
+}
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.avatar::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  translate: -50% 3px;
+  padding: 3px 8px;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: 6px;
+  background: var(--color-ink-deep);
+  color: var(--color-text);
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease, translate 0.12s ease;
+}
+.avatar:focus-visible { z-index: 1; }
+.avatar:focus-visible::after { opacity: 1; translate: -50% 0; }
+@media (hover: hover) and (pointer: fine) {
+  .avatar:hover { z-index: 1; }
+  .avatar:hover::after { opacity: 1; translate: -50% 0; }
+  a.avatar:hover { box-shadow: 0 0 0 2px var(--color-amber); }
+}
 
 details[open] > summary .plus { transform: rotate(45deg); }
 /* Not the phone menu: it must cover the page completely from the moment it opens. */

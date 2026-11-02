@@ -104,27 +104,25 @@ const closedWords: Record<string, string> = { COMPLETED: 'closed as completed', 
 const issueWords = ({ events, closedAs }: Issue) =>
   sentenceList(events.map((event) => (event === 'closed' ? (closedAs && closedWords[closedAs]) || 'closed' : event)));
 
-/** A repo's issues and releases for one day, as rows for a list. */
-export function eventRows({ repo, facts }: RepoDay) {
-  return [
-    ...facts.releases.map((release) => ({
-      repo: repo.name,
-      date: facts.date,
-      title: release.name || release.tag,
-      href: releaseUrl(repo.name, release.tag),
-      badge: release.prerelease ? 'prerelease' : 'release',
-      note: release.tag,
-    })),
-    ...facts.issues.map((issue) => ({
-      repo: repo.name,
-      date: facts.date,
-      title: issue.title,
-      href: issueUrl(repo.name, issue.number),
-      badge: 'issue',
-      note: `#${issue.number} ${issueWords(issue)}`,
-    })),
-  ];
-}
+/** A repo's releases on one day, as rows for a list. */
+export const releaseRows = ({ repo, facts }: RepoDay) =>
+  facts.releases.map((release) => ({
+    repo: repo.name,
+    title: release.name || release.tag,
+    href: releaseUrl(repo.name, release.tag),
+    badge: release.prerelease ? 'prerelease' : 'release',
+    note: release.tag,
+  }));
+
+/** A repo's issues on one day, as rows for a list. One opened and closed that day counts as closed. */
+export const issueRows = ({ repo, facts }: RepoDay) =>
+  facts.issues.map((issue) => ({
+    repo: repo.name,
+    title: issue.title,
+    href: issueUrl(repo.name, issue.number),
+    closed: issue.events.includes('closed'),
+    note: `#${issue.number} ${issueWords(issue)}`,
+  }));
 
 function totalsFor(branches: BranchDay[]): Totals {
   const people = new Set<string>();

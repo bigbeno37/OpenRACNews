@@ -1,7 +1,7 @@
 ---
 // Decorative marks, as openrac.dev draws them. Screen readers skip them: the link text names the target.
 interface Props {
-  name: 'github' | 'rss' | 'down';
+  name: 'github' | 'rss' | 'down' | 'open' | 'closed';
   class?: string;
 }
 const { name, class: className = 'size-5' } = Astro.props;
@@ -19,6 +19,22 @@ const { name, class: className = 'size-5' } = Astro.props;
     <svg viewBox="0 0 16 16" aria-hidden="true" class={`flex-none fill-current ${className}`}>
       <circle cx="3.2" cy="12.8" r="1.8" />
       <path d="M1.4 6.2v2.5a5.9 5.9 0 0 1 5.9 5.9h2.5a8.4 8.4 0 0 0-8.4-8.4zm0-4.8v2.5a10.7 10.7 0 0 1 10.7 10.7h2.5A13.2 13.2 0 0 0 1.4 1.4z" />
+    </svg>
+  )
+}
+{
+  name === 'open' && (
+    <svg viewBox="0 0 16 16" aria-hidden="true" class={`flex-none fill-none stroke-current stroke-[1.5] ${className}`}>
+      <circle cx="8" cy="8" r="6.5" />
+      <circle cx="8" cy="8" r="1.5" class="fill-current stroke-none" />
+    </svg>
+  )
+}
+{
+  name === 'closed' && (
+    <svg viewBox="0 0 16 16" aria-hidden="true" class={`flex-none fill-none stroke-current stroke-[1.5] ${className}`}>
+      <circle cx="8" cy="8" r="6.5" />
+      <path d="m5 8.2 2.1 2.1L11 6.2" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   )
 }

@@ -1,17 +1,16 @@
 ---
 // One project on one day, in that game's colours. Moving to another day stays on this project.
-import Badge from '../../../../../components/Badge.astro';
 import Hero from '../../../../../components/Hero.astro';
 import Icons from '../../../../../components/Icons.astro';
 import ProgressBar from '../../../../../components/ProgressBar.astro';
 import ReportCard from '../../../../../components/ReportCard.astro';
-import Row from '../../../../../components/Row.astro';
+import RepoEvents from '../../../../../components/RepoEvents.astro';
 import Section from '../../../../../components/Section.astro';
 import Layout from '../../../../../layouts/Layout.astro';
 import { dayFromParams, dayParams, formatDay, formatDayMonthShort, formatDayShort } from '../../../../../lib/days.ts';
 import { formatChange, formatNumber, formatPercent } from '../../../../../lib/format.ts';
 import { dayUrl, projectUrl } from '../../../../../lib/links.ts';
-import { eventRows, projectOn, viewableDates } from '../../../../../lib/news.ts';
+import { projectOn, viewableDates } from '../../../../../lib/news.ts';
 import type { TrackedRepo } from '../../../../../lib/schema.ts';
 import { barStyle, themeFor } from '../../../../../lib/themes.ts';
 import { repoUrl, tracking } from '../../../../../lib/tracking.ts';
@@ -47,7 +46,6 @@ const stats: [string, string][] = progress
       [formatNumber(today.contributors), today.contributors === 1 ? 'contributor' : 'contributors'],
       [lastActiveText, 'last active'],
     ];
-const rows = project.events ? eventRows(project.events) : [];
 ---
 
 <Layout title={`${repo.title}, ${formatDayShort(date)}`} description={project.branches.find((b) => b.today?.report)?.today?.report?.headline ?? repo.about} date={date} repo={repo.name}>
@@ -114,18 +112,5 @@ const rows = project.events ? eventRows(project.events) : [];
     </div>
   </Section>
 
-  {
-    rows.length > 0 && (
-      <Section id="repo-wide" art="fresh" title="Issues and releases" sub="Opened, closed or published on this day. These belong to the repository as a whole rather than to one of its branches.">
-        <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
-          {rows.map((row) => (
-            <Row href={row.href} title={row.title}>
-              <Badge slot="lead">{row.badge}</Badge>
-              <span>{row.note}</span>
-            </Row>
-          ))}
-        </ul>
-      </Section>
-    )
-  }
+  <RepoEvents repos={project.events ? [project.events] : []} />
 </Layout>

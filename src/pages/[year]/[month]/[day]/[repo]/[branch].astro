@@ -67,7 +67,7 @@ const short = (commit: Commit) => commit.sha.slice(0, 7);
           {facts.pullRequests.map((pr) => (
             <Row href={pullUrl(repo.name, pr.number)} title={pr.title}>
               <Fragment slot="lead">
-                {pr.events.map((event) => <Badge>{event}</Badge>)}
+                {pr.events.map((event) => <Badge tone={event === 'opened' ? 'open' : event === 'closed' ? 'closed' : 'accent'}>{event}</Badge>)}
                 {pr.draft && <Badge>draft</Badge>}
               </Fragment>
               <span>#{pr.number}</span>

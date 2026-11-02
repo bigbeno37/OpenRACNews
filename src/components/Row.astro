@@ -4,12 +4,14 @@
 interface Props {
   href: string;
   title: string;
+  /** Sets the title back, for something that's finished with. */
+  muted?: boolean;
 }
-const { href, title } = Astro.props;
+const { href, title, muted = false } = Astro.props;
 ---
 
 <li class="flex min-w-0 flex-wrap items-center gap-x-3.5 gap-y-1.5 rounded-xl border border-line bg-panel px-4 py-3">
   <slot name="lead" />
-  <a href={href} class="order-3 min-w-0 basis-full truncate text-text no-underline hover:text-amber sm:order-none sm:flex-1 sm:basis-0" title={title}>{title}</a>
+  <a href={href} class:list={['order-3 min-w-0 basis-full truncate no-underline hover:text-amber sm:order-none sm:flex-1 sm:basis-0', muted ? 'text-dim' : 'text-text']} title={title}>{title}</a>
   <span class="flex flex-none flex-wrap items-center gap-x-3 gap-y-1 text-[13px] tabular-nums text-dim"><slot /></span>
 </li>

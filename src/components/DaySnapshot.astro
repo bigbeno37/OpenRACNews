@@ -2,16 +2,14 @@
 // The site's main view: every project as it stood on one day.
 import { formatDay } from '../lib/days.ts';
 import { formatNumber } from '../lib/format.ts';
-import { dayFacts, dayOn, eventRows, projectOn } from '../lib/news.ts';
+import { dayFacts, dayOn, projectOn } from '../lib/news.ts';
 import { paragraphs } from '../lib/prose.ts';
 import { tracking } from '../lib/tracking.ts';
-import Badge from './Badge.astro';
 import Hero from './Hero.astro';
 import Prose from './Prose.astro';
-import Row from './Row.astro';
+import RepoEvents from './RepoEvents.astro';
 import Section from './Section.astro';
 import StatusCard from './StatusCard.astro';
-import Tag from './Tag.astro';
 
 interface Props {
   date: string;
@@ -27,7 +25,6 @@ const stats: [number, string][] = [
   [totals.opened, totals.opened === 1 ? 'pull request opened' : 'pull requests opened'],
   [totals.contributors, totals.contributors === 1 ? 'contributor' : 'contributors'],
 ];
-const repoRows = day.repos.flatMap(eventRows);
 ---
 
 <Hero eyebrow={formatDay(date)} compact>
@@ -65,20 +62,4 @@ const repoRows = day.repos.flatMap(eventRows);
   </div>
 </Section>
 
-{
-  repoRows.length > 0 && (
-    <Section id="repo-wide" art="fresh" title="Issues and releases" sub="Everything opened, closed or published on this day.">
-      <ul class="grid grid-cols-[minmax(0,1fr)] gap-2.5">
-        {repoRows.map((row) => (
-          <Row href={row.href} title={row.title}>
-            <Fragment slot="lead">
-              <Tag repo={row.repo} />
-              <Badge>{row.badge}</Badge>
-            </Fragment>
-            <span>{row.note}</span>
-          </Row>
-        ))}
-      </ul>
-    </Section>
-  )
-}
+<RepoEvents repos={day.repos} tagged />

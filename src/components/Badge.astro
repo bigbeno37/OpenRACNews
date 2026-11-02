@@ -1,1 +1,13 @@
-<span class="flex-none rounded-full border border-amber/40 px-2 py-0.5 font-orbitron text-[10px] uppercase tracking-[.15em] text-amber"><slot /></span>
+---
+interface Props {
+  tone?: 'accent' | 'open' | 'closed';
+}
+const { tone = 'accent' } = Astro.props;
+const tones = {
+  accent: 'border-amber/40 text-amber',
+  open: 'border-open/50 text-open',
+  closed: 'border-closed/50 bg-closed/15 text-closed',
+};
+---
+
+<span class:list={['inline-flex flex-none items-center gap-1.5 rounded-full border px-2 py-0.5 font-orbitron text-[10px] uppercase tracking-[.15em]', tones[tone]]}><slot /></span>
