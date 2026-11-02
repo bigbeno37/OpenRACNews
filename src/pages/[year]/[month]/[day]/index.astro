@@ -1,0 +1,17 @@
+---
+import DaySnapshot from '../../../../components/DaySnapshot.astro';
+import Layout from '../../../../layouts/Layout.astro';
+import { dayFromParams, dayParams, formatDay } from '../../../../lib/days.ts';
+import { dayOn, viewableDates } from '../../../../lib/news.ts';
+
+export async function getStaticPaths() {
+  return (await viewableDates()).map((date) => ({ params: dayParams(date) }));
+}
+
+const date = dayFromParams(Astro.params);
+const day = await dayOn(date);
+---
+
+<Layout title={formatDay(date)} description={day.overview?.headline} date={date}>
+  <DaySnapshot date={date} />
+</Layout>

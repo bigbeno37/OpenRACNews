@@ -1,0 +1,22 @@
+---
+// A page that sends the visitor straight on. Static hosts can't answer with a real redirect, so this uses a
+// meta refresh with a relative address, which works wherever the site is served from. It isn't
+// Astro.redirect, because that writes the absolute address from `site` into the page.
+interface Props {
+  to: string;
+}
+const { to } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" style="background: #12121a; color: #efeff3;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark" />
+    <meta http-equiv="refresh" content={`0; url=${to}`} />
+    <title>OpenRAC News</title>
+  </head>
+  <body>
+    <a href={to} style="color: #f5c040;">Go to the latest day</a>
+  </body>
+</html>

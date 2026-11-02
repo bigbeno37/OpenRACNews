@@ -1,32 +1,33 @@
 ---
 // One project on one day, in that game's colours. Moving to another day stays on this project.
-import Badge from '../../../../components/Badge.astro';
-import DayBar from '../../../../components/DayBar.astro';
-import Hero from '../../../../components/Hero.astro';
-import Icons from '../../../../components/Icons.astro';
-import ProgressBar from '../../../../components/ProgressBar.astro';
-import ReportCard from '../../../../components/ReportCard.astro';
-import Row from '../../../../components/Row.astro';
-import Section from '../../../../components/Section.astro';
-import Layout from '../../../../layouts/Layout.astro';
-import { formatDay, formatDayMonthShort, formatDayShort } from '../../../../lib/days.ts';
-import { formatChange, formatNumber, formatPercent } from '../../../../lib/format.ts';
-import { dayUrl, projectUrl } from '../../../../lib/links.ts';
-import { dayRange, eventRows, projectOn, RECENT_DAYS } from '../../../../lib/news.ts';
-import type { TrackedRepo } from '../../../../lib/schema.ts';
-import { barStyle, themeFor } from '../../../../lib/themes.ts';
-import { repoUrl, tracking } from '../../../../lib/tracking.ts';
+import Badge from '../../../../../components/Badge.astro';
+import DayBar from '../../../../../components/DayBar.astro';
+import Hero from '../../../../../components/Hero.astro';
+import Icons from '../../../../../components/Icons.astro';
+import ProgressBar from '../../../../../components/ProgressBar.astro';
+import ReportCard from '../../../../../components/ReportCard.astro';
+import Row from '../../../../../components/Row.astro';
+import Section from '../../../../../components/Section.astro';
+import Layout from '../../../../../layouts/Layout.astro';
+import { dayFromParams, dayParams, formatDay, formatDayMonthShort, formatDayShort } from '../../../../../lib/days.ts';
+import { formatChange, formatNumber, formatPercent } from '../../../../../lib/format.ts';
+import { dayUrl, projectUrl } from '../../../../../lib/links.ts';
+import { eventRows, projectOn, RECENT_DAYS, viewableDates } from '../../../../../lib/news.ts';
+import type { TrackedRepo } from '../../../../../lib/schema.ts';
+import { barStyle, themeFor } from '../../../../../lib/themes.ts';
+import { repoUrl, tracking } from '../../../../../lib/tracking.ts';
 
 export async function getStaticPaths() {
-  const days = await dayRange();
-  return days.flatMap((date) => tracking.repos.map((repo) => ({ params: { date, repo: repo.name }, props: { repo } })));
+  const days = await viewableDates();
+  return days.flatMap((date) => tracking.repos.map((repo) => ({ params: { ...dayParams(date), repo: repo.name }, props: { repo } })));
 }
 
 interface Props {
   repo: TrackedRepo;
 }
 const { repo } = Astro.props;
-const { date } = Astro.params;
+const date = dayFromParams(Astro.params);
+const viewable = new Set(await viewableDates());
 const project = await projectOn(repo, date);
 const { branches, today, activity, progress, lastActive, latestRelease } = project;
 const theme = themeFor(repo.name);
@@ -101,10 +102,12 @@ const rows = project.events ? eventRows(project.events) : [];
               <h3 class={`${theme.font} text-[clamp(18px,3vw,22px)] leading-tight text-hi`}>{branch.name}</h3>
               <p class="text-soft">
                 Nothing landed on this day.{' '}
-                {branchLast ? (
+                {branchLast && viewable.has(branchLast) ? (
                   <a href={projectUrl(branchLast, repo.name)} class="text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber">
                     Last active {formatDayShort(branchLast)}
                   </a>
+                ) : branchLast ? (
+                  <span class="text-dim">Last active {formatDayShort(branchLast)}.</span>
                 ) : (
                   <span class="text-dim">No activity on record by this day.</span>
                 )}

@@ -28,6 +28,13 @@ export function recentDays(count: number, now: Date = new Date()): string[] {
   return Array.from({ length: count }, (_, i) => shiftDay(last, i - count + 1));
 }
 
+/** A day as it appears in a page's address: /2026/11/01/. */
+export const dayParams = (day: string) => {
+  const [year, month, date] = day.split('-');
+  return { year: year!, month: month!, day: date! };
+};
+export const dayFromParams = ({ year, month, day }: { year: string; month: string; day: string }) => `${year}-${month}-${day}`;
+
 const longFormat = new Intl.DateTimeFormat('en-GB', {
   weekday: 'long',
   day: 'numeric',

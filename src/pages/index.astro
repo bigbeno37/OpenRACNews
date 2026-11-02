@@ -1,24 +1,25 @@
 ---
-import DaySnapshot from '../components/DaySnapshot.astro';
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-import { dayRange } from '../lib/news.ts';
+import Redirect from '../layouts/Redirect.astro';
+import { dayUrl } from '../lib/links.ts';
+import { viewableDates } from '../lib/news.ts';
 
-const latest = (await dayRange()).at(-1);
+const latest = (await viewableDates()).at(-1);
 ---
 
-<Layout date={latest}>
-  {
-    latest ? (
-      <DaySnapshot date={latest} />
-    ) : (
+{
+  latest ? (
+    <Redirect to={dayUrl(latest)} />
+  ) : (
+    <Layout>
       <Hero eyebrow="OpenRAC News">
         <Fragment slot="shine">No days</Fragment>
         <Fragment slot="title">on record yet.</Fragment>
         <p class="mt-5 max-w-[600px] text-soft">
-          The first snapshot appears after the next daily run. To create one now, run <code class="text-gold">pnpm snapshot</code>.
+          A day appears once it has a written report. To create one, run <code class="text-gold">pnpm news</code>.
         </p>
       </Hero>
-    )
-  }
-</Layout>
+    </Layout>
+  )
+}

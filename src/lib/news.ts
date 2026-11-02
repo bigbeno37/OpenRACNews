@@ -102,7 +102,7 @@ export function highlightsFrom(repo: string, facts: BranchSnapshot, limit = 4): 
 
 export function dayFacts(day: Day): string {
   const { commits, activeBranches } = day.totals;
-  if (activeBranches === 0) return 'nothing landed on a tracked branch';
+  if (activeBranches === 0) return 'Nothing landed on a tracked branch';
   return `${count(commits, 'commit')} landed across ${count(activeBranches, 'branch', 'branches')}`;
 }
 
@@ -183,21 +183,17 @@ async function load(): Promise<Day[]> {
   });
 }
 
-/** Every day something happened, newest first. */
+/** Every day on record, newest first. */
 export const loadDays = () => (loaded ??= load());
 
 /**
- * Every calendar day from the first on record to the latest, oldest first. Quiet days count, so going back
- * a day always moves exactly one day.
+ * The days readers can visit, newest first: those with a written report. Other days stay on record, because
+ * a report and a project's page both look back at them, but they get no page of their own.
  */
-export async function dayRange(): Promise<string[]> {
-  const days = await loadDays();
-  const [newest, oldest] = [days[0]?.date, days.at(-1)?.date];
-  if (!newest || !oldest) return [];
-  const range: string[] = [];
-  for (let date = oldest; date <= newest; date = shiftDay(date, 1)) range.push(date);
-  return range;
-}
+export const viewableDays = async () => (await loadDays()).filter((day) => day.overview || day.branches.some((branch) => branch.report));
+
+/** The same as dates, oldest first, for moving between them. */
+export const viewableDates = async () => (await viewableDays()).map((day) => day.date).reverse();
 
 /** Commits per day, for one project or across all of them. */
 export async function commitsPerDay(repo?: string): Promise<Map<string, number>> {

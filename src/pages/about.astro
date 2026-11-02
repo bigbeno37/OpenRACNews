@@ -4,16 +4,16 @@ import Section from '../components/Section.astro';
 import Tag from '../components/Tag.astro';
 import Layout from '../layouts/Layout.astro';
 import { projectUrl, url } from '../lib/links.ts';
-import { dayRange } from '../lib/news.ts';
+import { viewableDates } from '../lib/news.ts';
 import { trackedBranches } from '../lib/tracking.ts';
 
-const latest = (await dayRange()).at(-1);
+const latest = (await viewableDates()).at(-1);
 
 // The same numbered panels as "How it works" on openrac.dev.
 const steps = [
-  ['Snapshot', "Just after midnight UTC, a job records what landed on each tracked branch during the day that just ended, along with its pull requests, issues and releases. It also reads each decompilation's own progress report as it stood at the day's last commit."],
+  ['Snapshot', "Each day, a job records what landed on each tracked branch during the last finished UTC day, along with its pull requests, issues and releases. It also reads each decompilation's own progress report as it stood at the day's last commit."],
   ['Report', 'An AI agent turns that record into a short report per branch and a summary of the day. Each pull request or issue it cites is checked against the record.'],
-  ['Publish', 'The site is rebuilt as plain static pages, one set per day. A branch with no written report still shows its numbers, its commits and its pull requests.'],
+  ['Publish', 'The site is rebuilt as plain static pages, one set for each day that has a written report.'],
 ];
 ---
 

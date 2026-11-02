@@ -1,6 +1,6 @@
 ---
-// The date you're viewing, in the navbar: back a day, forward a day, and a calendar on click. It needs no
-// script. The popover attribute opens it and closes it on Escape or a click outside, and hidden radio
+// The date you're viewing, in the navbar: the previous and next day with a report, and a calendar on click.
+// It needs no script. The popover attribute opens it and closes it on Escape or a click outside, and hidden radio
 // buttons page through the months (.cal-radio in global.css).
 import { calendarMonths } from '../lib/calendar.ts';
 import { formatDay, formatDayMonthShort, formatDayShort } from '../lib/days.ts';
@@ -39,7 +39,7 @@ const monthButton = 'flex size-8 cursor-pointer items-center justify-center roun
 <div class="flex flex-none items-center gap-1">
   {
     previous ? (
-      <a href={hrefFor(previous)} rel="prev" aria-label={`Back a day, to ${formatDay(previous)}`} title={`Back to ${formatDayShort(previous)}`} class={arrow}>
+      <a href={hrefFor(previous)} rel="prev" aria-label={`Back to ${formatDay(previous)}`} title={`Back to ${formatDayShort(previous)}`} class={arrow}>
         <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="M10 3 5 8l5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
       </a>
     ) : (
@@ -57,7 +57,7 @@ const monthButton = 'flex size-8 cursor-pointer items-center justify-center roun
 
   {
     next ? (
-      <a href={hrefFor(next)} rel="next" aria-label={`Forward a day, to ${formatDay(next)}`} title={`Forward to ${formatDayShort(next)}`} class={arrow}>
+      <a href={hrefFor(next)} rel="next" aria-label={`Forward to ${formatDay(next)}`} title={`Forward to ${formatDayShort(next)}`} class={arrow}>
         <svg viewBox="0 0 16 16" aria-hidden="true" class="size-3.5 fill-none stroke-current stroke-[2.5]"><path d="m6 3 5 5-5 5" stroke-linecap="round" stroke-linejoin="round" /></svg>
       </a>
     ) : (
@@ -124,6 +124,6 @@ const monthButton = 'flex size-8 cursor-pointer items-center justify-center roun
   <p class="mt-3 text-[12px] text-dim">Brighter days had more commits.</p>
   <div class="mt-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[13px]">
     {date !== latest ? <a href={hrefFor(latest)} class="font-semibold text-amber no-underline hover:underline">Go to the latest day</a> : <span class="text-dim">This is the latest day</span>}
-    <a href={url('/days/')} class="text-amber no-underline hover:underline">List every day</a>
+    <a href={url('/archive/')} class="text-amber no-underline hover:underline">List every day</a>
   </div>
 </div>

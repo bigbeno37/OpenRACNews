@@ -1,24 +1,24 @@
 ---
 // Everything one branch did on one day: its report, then every pull request and commit.
-import Badge from '../../../../components/Badge.astro';
-import Hero from '../../../../components/Hero.astro';
-import ReportCard from '../../../../components/ReportCard.astro';
-import Row from '../../../../components/Row.astro';
-import Section from '../../../../components/Section.astro';
-import Layout from '../../../../layouts/Layout.astro';
-import { formatDay, formatDayShort } from '../../../../lib/days.ts';
-import { count, formatNumber, sentenceList, timeOf } from '../../../../lib/format.ts';
-import { commitUrl, dayUrl, projectUrl, pullUrl } from '../../../../lib/links.ts';
-import { loadDays, type BranchDay } from '../../../../lib/news.ts';
-import type { Commit } from '../../../../lib/schema.ts';
-import { themeFor } from '../../../../lib/themes.ts';
-import { branchSlug } from '../../../../lib/tracking.ts';
+import Badge from '../../../../../components/Badge.astro';
+import Hero from '../../../../../components/Hero.astro';
+import ReportCard from '../../../../../components/ReportCard.astro';
+import Row from '../../../../../components/Row.astro';
+import Section from '../../../../../components/Section.astro';
+import Layout from '../../../../../layouts/Layout.astro';
+import { dayParams, formatDay, formatDayShort } from '../../../../../lib/days.ts';
+import { count, formatNumber, sentenceList, timeOf } from '../../../../../lib/format.ts';
+import { commitUrl, dayUrl, projectUrl, pullUrl } from '../../../../../lib/links.ts';
+import { viewableDays, type BranchDay } from '../../../../../lib/news.ts';
+import type { Commit } from '../../../../../lib/schema.ts';
+import { themeFor } from '../../../../../lib/themes.ts';
+import { branchSlug } from '../../../../../lib/tracking.ts';
 
 export async function getStaticPaths() {
-  const days = await loadDays();
+  const days = await viewableDays();
   return days.flatMap((day) =>
     day.branches.map((branchDay) => ({
-      params: { date: branchDay.date, repo: branchDay.repo.name, branch: branchSlug(branchDay.branch.name) },
+      params: { ...dayParams(branchDay.date), repo: branchDay.repo.name, branch: branchSlug(branchDay.branch.name) },
       props: { day: branchDay },
     })),
   );
