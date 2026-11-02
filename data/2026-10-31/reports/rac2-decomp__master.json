@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando’s USA v1.01 reaches 66.51% matched code",
+  "summary": "Going Commando’s progress report puts USA v1.01 at 66.51% matched code by size, up from 65.83%, with 7,152 of 8,578 functions matched. A matched function compiles to exactly the same bytes as the original game. The other releases have separate totals: USA v2.00 has 6,692 of 8,634 functions matched, and PAL has 4,995 of 8,672.",
+  "highlights": [
+    "#381 brings 44 USA v1.01 function matches across Yeedil, Aranos Prison and shared level code. One Yeedil routine remains assembly in PAL and USA v2.00 because its C only matches USA v1.01.",
+    "#370 matches an object-to-slot routine on USA v1.01. #371 adds matching C for positioning and animating the hero’s held object.",
+    "#372 matches Dobbo and Snivelak routines on both USA releases, with the Snivelak match also applying to PAL. #373 adds four routines across Dobbo and other levels and repairs a callback catalogue entry.",
+    "The assembly-classification proposal #374, subtitle drawer #382 and near-miss proposals #375, #376, #378, #379, #380 and #383 closed without merging. The catalogue note #377 also closed without merging."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

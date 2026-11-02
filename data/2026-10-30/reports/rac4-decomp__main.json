@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-30",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked pull request proposes 157 function matches, with no changes landed",
+  "summary": "BlindFire1200 opened #50, proposing what the pull request describes as 157 function matches for Deadlocked. It has not merged, and no commits landed on main. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "For NTSC-U v1.00, #50 reports a proposed rise from 5.57% to 5.77% of code matched, with matched functions rising from 4,151 to 4,308 of 18,085.",
+    "For the PAL release, #50 reports a proposed rise from 5.95% to 6.14% of code matched, with matched functions rising from 4,553 to 4,696 of 18,113.",
+    "The proposal also retains C reconstructions for 33 near misses. It notes that 13 functions already had PAL-only C, so the releases do not gain the same number of matches (#50)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

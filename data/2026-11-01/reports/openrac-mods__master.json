@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Archipelago remembers each save’s room, and Difficulty fixes Blarg Station spawns",
+  "summary": "Archipelago v2.1.0 is released with per-save-slot room tracking that refuses a save from another seed (#26). Difficulty v1.2.4 fixes extra enemies crowding out the ship and Clank when landing on Blarg Station (#34). Item Randomizer v1.0.4 is also released, and all three releases use Mod SDK 1.11.0.",
+  "highlights": [
+    "Archipelago’s world package, progression logic and client receive fixes for seed checks, reconnects and location handling (#24). Real-game checks confirmed that a different room’s save awarded no checks (#26).",
+    "Difficulty reserves Blarg Station’s object capacity for the level’s own spawns, so the enemy-count setting of 2 adds no copies there (#34).",
+    "Mod listings can state AI assistance (#33). The listing bot now rejects a broken newest release instead of silently offering an older one (#32), and releases explicitly trigger index rebuilding (#27).",
+    "Issue #25 asks players to test Archipelago and Item Randomizer logic, including whether Drek and several gold bolts can be reached without the Trespasser.",
+    "Co-op crossplay, separate co-op saves, reconnects and host takeover remain in draft #22, which is not ready for review or merge."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

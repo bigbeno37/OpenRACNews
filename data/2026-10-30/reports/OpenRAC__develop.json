@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-30",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Mod updates at launch, PAL enhanced water and fixes for responsive controls",
+  "summary": "The launcher now offers mod updates at startup, remembers mod links and marks saves made with mods loaded (#123). Players can also bind controller buttons in the settings file. Android gains full-screen landscape fixes (#128), while PAL Ratchet & Clank gains the enhanced Novalis water and lighting profiles previously wired only for NTSC-U (#132). Development builds move to 0.10.1 after the 0.10.0 release bump (#115, #129).",
+  "highlights": [
+    "Mod save marks sit beside saves without changing them, and Escape always pauses (#123).",
+    "Responsive camera fixes address freezing while holding the stick, and low-latency frames follow the display rate (#142).",
+    "Wayland with NVIDIA disables launcher compositing (#130). Safe rendering can do the same on Linux and turns on automatically after a crashed start (#131).",
+    "The launcher can offer an older Stable release when switching from Development. Android blocks installs with a lower version code (#139).",
+    "Mod authors gain menu, HUD, vendor, ammo-drop and save hooks. Menu preview poses and bundled mod assets remain outside this change (#136).",
+    "The NTSC source import dominates the line changes (#133). Follow-up fixes restore object updates, including Novalis pond setup (#140), and texture sampling on vendor and menu models (#143)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

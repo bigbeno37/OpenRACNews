@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-30",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher v0.10.0 released with online co-op for Ratchet & Clank",
+  "summary": "Launcher v0.10.0 is out through the stable line’s release pull request (#116). With the Multiplayer mod, players share a Ratchet & Clank campaign, see each other’s Ratchet, share broken crates and collected bolts, and travel between planets together (#99). The release also brings enhanced rendering with environment reflections and playable lighting-probe placement (#119).",
+  "highlights": [
+    "The level editor gains one status panel, plain error messages and an Update project that carries edits into refreshed projects (#107).",
+    "Creator-authored PAL destinations can be installed without replacing campaign planets, and authored terrain can import static scenery from other levels (#104).",
+    "Typed object-property edits survive installed builds without source headers (#100). The launcher also offers confirmed editor reset and level reread actions (#105).",
+    "Optional fresh controller input and low-latency frames arrive in the port (#122). Exit and the player’s language survive Quit Game (#126).",
+    "SDK 1.10.1 adds Android native-mod support (#117, #118). Persistent Ratchet & Clank savestates also land (#103).",
+    "The Development channel now follows develop, so its builds no longer wait for stable releases (#111)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

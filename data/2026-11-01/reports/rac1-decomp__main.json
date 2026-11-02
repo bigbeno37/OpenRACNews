@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank’s source becomes easier to read while PAL code stays fully matched",
+  "summary": "Lynder063 reorganized Ratchet & Clank’s source into game systems and libraries, replaced raw numbers with names and shared repeated declarations. PAL v2.00 remains at 100.00% matched code by size, unchanged from the previous day, with all 5,116 functions matched. A matched function compiles to exactly the same bytes as the original game. The day’s large line counts mainly reflect whole-source formatting in #169 rather than new game behavior.",
+  "highlights": [
+    "PAL v2.00 compiled data rises from 0.57% in #196’s starting figure to 73.94% in the final progress report. Data blocks and pointers now build from C using values generated from the contributor’s own game disc (#196, #197, #198).",
+    "Button, level, hero-state and object-class names replace numeric constants, and core files gain readable names (#186, #188, #189, #190, #191). The pull requests report unchanged compiled results.",
+    "Checks guard against lost matches and new syntax errors (#204). Unneeded compiler workarounds were removed, while those still required to preserve the original bytes remain documented (#195, #200, #201, #202, #203)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

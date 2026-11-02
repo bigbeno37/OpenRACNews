@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds PAL drawing, movement and lookup routines in matching C",
+  "summary": "Deadlocked’s PAL version gains matching C for drawing wrappers, point transforms, smoothing, object access and table lookups. A matched function compiles to exactly the same bytes as the original game. These PAL additions do not move the separate NTSC-U v1.00 progress figure, which remains at 6.07% of code by size, unchanged from the previous day, with 4,475 of 18,085 functions matched.",
+  "highlights": [
+    "PAL batches include 30 functions in #54, seventeen fixed-size hash lookups in #72 and 22 game functions in #75. Drawing and point-transform routines also land (#57, #60).",
+    "Contributors can extract a disc image stored outside the checkout by supplying its path, without copying or linking it into the project (#56).",
+    "Draft #71 proposes 45 NTSC-U helper matches but still needs PAL mapping before merge. Its author lacks PAL retail inputs locally.",
+    "PAL proposals #55, #77, #78 and #79 remain unmerged. Issue #73 shares reconstruction findings and unmatched drafts, not a claim that every generated code range is a decompiled function."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Mod installs gain dependencies and updates, alongside graphics and Windows fixes",
+  "summary": "The Development channel gains mod install links, dependency handling, automatic updates with rollback and Share my setup (#161). The pull request reports automated checks passing, but Windows, macOS and Android have not yet been tested for that feature. Windows sound gaps, diagonal stick movement and underwater visibility on Pokitaru also receive fixes (#188, #168, #194). The large source import in #160 accounts for most of the day’s added lines.",
+  "highlights": [
+    "Enhanced graphics gains a phone-focused upscaler and GPU optimizations (#165), plus more Android graphics controls (#183). Vulkan becomes the default renderer and OpenGL programs are retained (#188).",
+    "Windows fixes restore Orxon’s electric-barrier strands (#171), correct blue explosion debris (#178) and prevent an animated-layer shadow crash (#186). Vulkan failure handling also improves (#187).",
+    "First start goes fullscreen, the overlay scales for 4K and the 2026 Steam Controller works without Steam (#177). Adding OpenRAC to Steam with artwork is tested on Linux only, with Flatpak Steam refused (#184).",
+    "Mod SDK 1.11.0 is released, adding per-mod storage and the active save slot (#172). Mod browsing gains hub links and safety, region and AI-assisted badges (#182).",
+    "Developers gain an Object Viewer, freecam and culling inspection (#195, #196). Enhanced Vulkan gets Forward+ local lighting, while experimental light editing requires a build flag that defaults off (#195).",
+    "Co-op crossplay and host takeover remain a draft (#166). Going Commando’s native port builds and runs but is not playable yet, with ship inputs incomplete and many menus untested (#191)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

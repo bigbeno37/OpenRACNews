@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-31",
+  "headline": "Archipelago multiworld mod released as launcher fixes and decompilation work land",
+  "summary": "Archipelago v1.0.0 brings Ratchet & Clank into multiworld games, while lock-strafe v1.0.3 restores hoverboard tricks (openrac-mods#5, openrac-mods#4). OpenRAC’s Development branch gains smoother frame caps, controller switching, Quartu fixes and support for larger modded maps, alongside enhanced-rendering work its author still calls a work in progress. Going Commando’s USA v1.01 rises from 65.83% to 66.51% matched code by size, and Deadlocked’s NTSC-U v1.00 rises from 5.57% to 6.07%. A matched function compiles to exactly the same bytes as the original game. The original game’s decompilation only changes Screamer documentation, while new reports flag Linux launcher freezes and visual glitches, extraction trouble and enhanced-lighting preparation failures (rac1-decomp#164, rac1-decomp#162, rac1-decomp#165, OpenRAC#159).",
+  "writtenBy": "gpt-6.1-sol"
+}

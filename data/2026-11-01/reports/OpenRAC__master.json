@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Stable branch fixes a PAL lighting-bake failure without a launcher release",
+  "summary": "A lighting-bake fix landed directly on the stable branch, which normally moves through release pull requests from develop (#189). It checks clearance in both directions before accepting a lighting path, addressing the PAL level 11 failure reported in #173. The commit reports that all 254 lighting regions in that level now bake with unchanged traversal settings. No launcher release was published.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

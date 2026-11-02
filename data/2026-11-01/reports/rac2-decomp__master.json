@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-01",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando’s USA v1.01 matched code rises from 66.51% to 84.74%",
+  "summary": "Five matching pull requests landed, taking Going Commando’s USA v1.01 from 66.51% to 84.74% of its code by size, with 7,760 of 8,579 functions matched. A matched function compiles to exactly the same bytes as the original game. The other releases have their own figures: #386 reports USA v2.00 rising from 50.40% to 80.93% of code, with 7,586 of 8,634 functions, and Europe/Australia from 22.85% to 54.14%, with 6,992 of 8,672 functions.",
+  "highlights": [
+    "The largest batch covers the lock-on tether family and two compiler fixes (#386). Its USA v1.01 figures precede the final daily progress report.",
+    "#384 adds 453 USA v1.01 functions across boot and level code. #385 adds three matches while retaining near-miss notes.",
+    "Yeedil and Aranos Prison gain 13 matched functions, alongside a fix for PAL and USA v2.00 (#387).",
+    "`func_00292078` matches at all 28 USA v1.01 placements, with release-specific handling corrected for USA v2.00 (#388).",
+    "Draft #389 holds functional C for the native port. It has not merged, is excluded from the matching build and adds no matches to the progress report."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

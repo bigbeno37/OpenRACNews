@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-31",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Archipelago 1.0.0 brings Ratchet & Clank into multiworld games",
+  "summary": "Archipelago v1.0.0 is released, letting players take Ratchet & Clank into an Archipelago multiworld and defeat Drek to finish (#5). Its game integration package is built and tested against Archipelago 0.6.8, and a release-workflow fix includes that package in releases (#6). Lock-strafe v1.0.3 also ships, restoring L2 and R2 hoverboard tricks by disabling strafing while Ratchet is on the board (#4).",
+  "highlights": [
+    "#7 adds the signed mod index used by the launcher and the project’s website, submission forms, a submission bot and image processing. The index is published as a separate prerelease, not a playable mod.",
+    "#19 updates the repository’s references from rac1-mods to openrac-mods. #20 makes submission and review jobs act through the organization’s openrac-bot GitHub App."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

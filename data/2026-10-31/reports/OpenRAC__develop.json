@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Smoother frame caps, controller switching and Quartu fixes land in Development",
+  "summary": "Players gain a more precise frame limiter, gamepads assigned by first press rather than device discovery order, and fixes for PAL flights to Quartu and crowded ship landings on Blarg Station (#146, #149, #151, #147). Larger modded Ratchet & Clank maps gain expanded memory and actor limits, while ordinary sessions retain the original memory arena and class limits (#148, #158). Enhanced rendering gains a native preparation pipeline, compressed lighting probes and water, wet-material and fur improvements, but its author calls the work very much a work in progress (#154). That rendering pull request accounts for most of the day’s added lines.",
+  "highlights": [
+    "#152 addresses NTSC lighting preparation, the Quartu drowning crash, Going Commando PAL disc recognition, mod assets, texture packs and controller remapping, closing #39, #48, #66, #127, #135 and #141.",
+    "#145 fixes disappearing menu text on Intel Arc with anti-aliasing. #157 fixes Adreno menu checkerboarding without anti-aliasing and adds collision checks against the original game’s routines.",
+    "#150 restores the Suck Cannon gauge with HUD: Edges. #155 fills black screens to their edges. #156 restores flight destination names and shortens the stop after flights.",
+    "#144 lowers level-extraction priority to leave CPU threads free. #153 fixes launcher tab-list fades on Linux and lists missing from early tab transitions.",
+    "#161 proposes mod install links, dependencies, automatic updates with rollback and setup sharing. It has not merged or been run on Windows, macOS or Android. #162 lands the openrac-mods rename.",
+    "#160’s decompilation import and #163’s faster Vulkan regression tests remain open. Issue #159 reports two levels still failing enhanced-lighting preparation because they need too many lighting regions."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

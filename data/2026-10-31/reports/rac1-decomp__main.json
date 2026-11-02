@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-31",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Screamer documentation corrected, with no gameplay change",
+  "summary": "The Screamer’s behavior comments now say it returns to its spawn point after diving at its target, rather than dying. Its death state is entered only after lethal damage depletes its health. The day’s sole landed change corrects documentation.",
+  "highlights": [
+    "The generated-name readability proposal #161 closed without merging.",
+    "New reports describe Linux visual glitches in OpenRAC 0.10.0 (#162), launcher freezes on Kubuntu 26.04 LTS (#164), and a level-preparation extraction error (#165). #163 requests headphone HRTF and surround sound."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,6 @@
+{
+  "date": "2026-10-30",
+  "headline": "Launcher v0.10.0 brings shared Ratchet & Clank campaigns through the Multiplayer mod",
+  "summary": "Launcher v0.10.0 is out, bringing online co-op through the Multiplayer mod, a clearer level-editor status panel and enhanced rendering with environment reflections (OpenRAC#116, OpenRAC#99, OpenRAC#107, OpenRAC#119). Development separately adds mod-update prompts, saves marked when mods were loaded, PAL enhanced water and fixes for responsive controls (OpenRAC#123, OpenRAC#132, OpenRAC#142). Mod authors gain menu, HUD, vendor, ammo-drop and save hooks, while menu preview poses and bundled assets remain outside that change (OpenRAC#136). Going Commando and Deadlocked have new decompilation proposals but no landed changes, including Deadlocked’s proposed batch of function matches (rac4-decomp#50). A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

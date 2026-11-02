@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-30",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando proposals cover Dobbo, Snivelak and near-matching routines",
+  "summary": "Going Commando received seven new pull requests, but none merged and no commits landed on master. #372 proposes two matching level routines for Dobbo in USA v1.01 and USA v2.00, and Snivelak in those releases and PAL. #373 proposes four more routines and a correction to a callback entry. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#375 preserves a movie-playback reconstruction whose skip-button test still differs from the original.",
+    "#376 preserves an Oozla ring-particle emitter reconstruction. It reaches the original size only with debug compilation enabled, and load orders still differ.",
+    "#378 preserves a near-matching text-list drawer, including control-binding labels. These reconstructions remain proposed work, not landed matches.",
+    "#374 proposes classifying `func_002A1130` as handwritten assembly, subject to maintainer agreement in review.",
+    "#377 records evidence that a shared Barlow and Hrugis Cloud routine includes the preceding function’s tail. The correction is not applied."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
