@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-02",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-03T00:07:31.364Z",
+  "issues": [
+    {"number":35,"title":"Submit mod: rac-board","author":"mateuszklysz","events":["opened","closed"],"closedAs":"COMPLETED","body":"Kind\nMod\nRepository\nhttps://github.com/mateuszklysz/RAC-Board\nMod ids\nrac-board\nModpack name\nNo response\nShort description\nRide Jak II's JET-Board as Ratchet. Hop on with D-pad Up, grind any rail or edge, and do spins, flips and grabs for points. The board runs on Jak II's own logic, with Ratchet's animations and sounds.\nTags\ngameplay,controls\nImpact\ngameplay\nAI assistance\nYes\nBug tracker\nhttps://github.com/mateuszklysz/RAC-Board/issues\nDiscord\nNo…"},
+    {"number":39,"title":"Review rac-board 0.2.0","author":"openrac-bot[bot]","events":["opened","closed"],"closedAs":"COMPLETED","body":"A new version of an external native mod waits for review before players get it.\n\nMod: rac-board (RAC-Board), https://github.com/mateuszklysz/RAC-Board\nRelease: https://github.com/mateuszklysz/RAC-Board/releases/tag/v0.2.0 (2026-11-02T19:50:41Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nrac-board-0.2.0-linux-x86_64.zip\n0342b4371161d072b9f2015c871c5ecba50fdb9ebccf008b9f5cf35194d90437\n644238\n\n\nlinux-aarch64\nrac-board-0.2.0-linux-aarch64.zip\n8f17459bbec2d0e4196b0071334de7134e573a5f0a257e14…"}
+  ],
+  "releases": []
+}

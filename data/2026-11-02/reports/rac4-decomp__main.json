@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's NTSC-U v1.00 rises from 6.07% to 7.17% matched code",
+  "summary": "Ratchet: Deadlocked's NTSC-U v1.00 advanced from 6.07% to 7.17% matched code, with 5,435 of 18,085 functions matched. A matched function compiles to exactly the same bytes as the original game. The largest batch, #83, brings 938 NTSC-U functions over from already-matched PAL twins and same-game siblings.",
+  "highlights": [
+    "PAL work includes six table and state helpers (#77), 53 resident game functions (#81), and one further function (#82).",
+    "Another 57 PAL resident functions landed through #84 and 54 through #85, covering state changes, resources, inventory and callbacks.",
+    "Twenty-one PAL-only functions using floating-point constants landed through #55. These PAL batches are separate from the NTSC-U v1.00 code percentage."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

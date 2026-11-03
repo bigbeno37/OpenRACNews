@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-02",
+  "headline": "Going Commando's native port lands, and Ratchet gets audio mods and Jak II's board",
+  "summary": "Going Commando's USA v1.01 native port landed on OpenRAC develop through OpenRAC#206, with Mac and Linux play across all 27 levels reported in OpenRAC#191, based on scripted runs without retail-frame comparison. Ratchet & Clank gained an Audio tab for replacing sounds, music and speech, while rac-board 0.2.0 joined the mod index with Jak II's JET-Board (OpenRAC#164, openrac-mods#35, openrac-mods#39). Going Commando's USA v1.01 matched code rose from 84.74% to 85.49%, and Deadlocked's NTSC-U v1.00 from 6.07% to 7.17%. A matched function compiles to exactly the same bytes as the original game. Ratchet & Clank moved nearly all game data into C, while Up Your Arsenal's proposed front-end matching remained unmerged (rac1-decomp#219, rac3-decomp#2).",
+  "writtenBy": "gpt-6.1-sol"
+}

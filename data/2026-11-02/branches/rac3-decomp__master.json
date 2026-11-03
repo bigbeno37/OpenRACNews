@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-03T00:07:08.787Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":2,"title":"feat(frontbin): match 29 functions and fix native source selection","author":"DameNavarro","draft":false,"head":"match/frontbin","events":["opened"],"mergedBy":null,"additions":2386,"deletions":2289,"changedFiles":50,"body":"Add 26 shared PAL/NTSC-U frontbin implementations and three NTSC-U-only\nimplementations, adapted from the NTSC decomp drafts under GPL-3.0.\nPreserve existing file compiler flags, required file-scope symbol-size\nhints, and fixed-address global accesses. Fix native C exclusion from\nthe PAL object fallback. Retire integrated drafts, document four\nunfinished attempts, and refresh declarations and progress records.\nMerged current master and verified:\n\nAll three PAL core programs: MATCH with retail…"}
+  ],
+  "commits": []
+}

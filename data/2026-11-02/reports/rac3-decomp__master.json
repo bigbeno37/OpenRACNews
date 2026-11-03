@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-02",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal front-end matching proposed, with no changes landed",
+  "summary": "#2 proposes 26 front-end implementations shared by PAL and NTSC-U, plus three for NTSC-U only. A matched function compiles to exactly the same bytes as the original game. The pull request also corrects native-source selection for PAL, but remained open and master gained no commits.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

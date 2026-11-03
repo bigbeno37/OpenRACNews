@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-02",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando's native port lands on develop, alongside audio mods and HDR",
+  "summary": "Going Commando's USA v1.01 native port landed through #206, replacing #191. The original pull request reports menus, saves, combat and all 27 levels playing on Mac and Linux, judged through scripted runs without retail frames for comparison. The port accounts for most of the day's added code. Follow-up fixes in draft #212 remain unmerged.",
+  "highlights": [
+    "Ratchet & Clank's new Audio tab exports sounds, music and speech as WAV files, then imports edited files as mod packs for either NTSC or PAL (#164).",
+    "Mod interface 1.12 lets mods drive and pose the hero, read nearby collision, draw meshes, play sounds and move the camera, while keeping older mods compatible (#203).",
+    "Vulkan gains HDR10/scRGB output, off by default (#204). Desktop and Android now share an in-game menu styled like the launcher (#211).",
+    "Objects and scenery fade at distance (#210), white Vulkan glows stay visible (#208), and playable Clank casts his original-style shadow (#217).",
+    "Shaders from earlier runs now build during loading (#216). Open #222 reports six Vulkan test failures on NVIDIA's GTX 1070 after that change and proposes a fix.",
+    "Mod imports show copy and install progress (#209). GitHub's asset digest can replace a separate checksum file, but installs still require a hash and any two supplied hashes must agree (#219)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

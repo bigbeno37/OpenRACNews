@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-02",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-03T00:07:31.330Z",
+  "progress": null,
+  "totals": {"commits":5,"merges":0,"landed":5,"additions":121,"deletions":49,"pushes":5,"forcePushes":0,"authors":["Lynder063","openrac-bot[bot]"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-02T21:08:43Z","type":"pr_merge","actor":"Lynder063","before":"ef19b3653f0be827511845cadf1eb03a9df301ef","after":"d270bf51b026fe844d3d43247223a8212f4817fb"},
+    {"at":"2026-11-02T21:12:48Z","type":"pr_merge","actor":"Lynder063","before":"d270bf51b026fe844d3d43247223a8212f4817fb","after":"a82ef79f9be593603ad2737539c83b19abdd7b7c"},
+    {"at":"2026-11-02T21:14:45Z","type":"pr_merge","actor":"Lynder063","before":"a82ef79f9be593603ad2737539c83b19abdd7b7c","after":"dcc0c1dfd86ed2a9529096db286502f2aa520e0c"},
+    {"at":"2026-11-02T21:26:52Z","type":"push","actor":"openrac-bot[bot]","before":"dcc0c1dfd86ed2a9529096db286502f2aa520e0c","after":"a208d991202aa4ca3e06fbfb16ef9d8f90d1307e"},
+    {"at":"2026-11-02T21:54:49Z","type":"pr_merge","actor":"Lynder063","before":"a208d991202aa4ca3e06fbfb16ef9d8f90d1307e","after":"ee62e70a14c796ec3536c3ed62901f15909059c2"}
+  ],
+  "pullRequests": [
+    {"number":36,"title":"List rac-board","author":"openrac-bot[bot]","draft":false,"head":"listing/rac-board","events":["opened","merged"],"mergedBy":"Lynder063","additions":30,"deletions":0,"changedFiles":3,"body":"From #35, checked by the listing bot.\nCloses #35"},
+    {"number":37,"title":"fix(index): accept GitHub's asset digest without SHA256SUMS","author":"Lynder063","draft":false,"head":"fix/index-github-digest","events":["opened","merged"],"mergedBy":"Lynder063","additions":53,"deletions":22,"changedFiles":5,"body":"The index now takes GitHub's digest as an archive's hash, so SHA256SUMS is optional.\nIf both exist they must match; with neither, a native release is still skipped."},
+    {"number":38,"title":"fix(mods): credit each mod's first committer as its author","author":"Lynder063","draft":false,"head":"fix/mods-first-author","events":["opened","merged"],"mergedBy":"Lynder063","additions":13,"deletions":13,"changedFiles":13,"body":"Replaces \"OpenRAC contributors\" in each mod's manifest with whoever made its first commit.\nArchipelago's APWorld credits change too; copyright headers stay."},
+    {"number":40,"title":"fix(submit): say that pictures can stay as GitHub writes them, drop the wizard","author":"Lynder063","draft":false,"head":"fix/screenshots-form-wording","events":["opened","merged"],"mergedBy":"Lynder063","additions":20,"deletions":13,"changedFiles":6,"body":"Mod author feedback on the submission form, with the matching site change in OpenRAC/openrac-site.\nScreenshots. Pasting a picture makes GitHub write <img width=… src=\"https://github.com/user-attachments/assets/…\">, but the placeholder showed ![shot](…) | caption, so the author rewrote each line by hand. pictures() already accepted the <img> form, so parsing does not change. This updates the wording in both forms and in the bot's check message, and says that links to pictures hosted elsewhere…"}
+  ],
+  "commits": [
+    {"sha":"d270bf51b026fe844d3d43247223a8212f4817fb","headline":"fix(index): accept GitHub's asset digest without SHA256SUMS (#37)","author":"Lynder063","committedAt":"2026-11-02T21:08:43Z","merge":false,"landed":true,"additions":53,"deletions":22,"body":"Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"},
+    {"sha":"a82ef79f9be593603ad2737539c83b19abdd7b7c","headline":"fix(mods): credit each mod's first committer as its author (#38)","author":"Lynder063","committedAt":"2026-11-02T21:12:47Z","merge":false,"landed":true,"additions":13,"deletions":13,"body":"Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"},
+    {"sha":"dcc0c1dfd86ed2a9529096db286502f2aa520e0c","headline":"feat(index): List rac-board (#36)","author":"openrac-bot[bot]","committedAt":"2026-11-02T21:14:45Z","merge":false,"landed":true,"additions":30,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"},
+    {"sha":"a208d991202aa4ca3e06fbfb16ef9d8f90d1307e","headline":"chore(index): approve rac-board 0.2.0","author":"openrac-bot[bot]","committedAt":"2026-11-02T21:26:50Z","merge":false,"landed":true,"additions":5,"deletions":1},
+    {"sha":"ee62e70a14c796ec3536c3ed62901f15909059c2","headline":"fix(submit): say that pictures can stay as GitHub writes them, drop the wizard (#40)","author":"Lynder063","committedAt":"2026-11-02T21:54:49Z","merge":false,"landed":true,"additions":20,"deletions":13,"body":"Pasting a picture makes GitHub write an <img> tag, while the Screenshots\nplaceholder showed ![shot](...), so an author rewrote each line by hand. The bot\nalready took both. The forms and the bot's message now say to leave the line as\nit is, and that links to pictures elsewhere don't work. Tests pin all of this.\n\nThe wizard at openrac.dev/mods/submit is going away, so the form, its chooser and\nthe README stop pointing at it. The form now says what a mod needs first.\n\nCo-authored-by: Claude Opus…"}
+  ]
+}

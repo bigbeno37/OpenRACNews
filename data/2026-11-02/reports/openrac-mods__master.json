@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "rac-board 0.2.0 joins the mod index, letting Ratchet ride Jak II's JET-Board",
+  "summary": "Players can now find rac-board in the mod index, with version 0.2.0 approved (#36, #39). Created by mateuszklysz, it lets Ratchet ride Jak II's JET-Board, grind rails and edges, and perform spins, flips and grabs for points (#35). The board uses Jak II's logic with Ratchet's animations and sounds.",
+  "highlights": [
+    "Mod manifests now credit each mod's first committer as its author, including Archipelago's APWorld credits (#38).",
+    "The native mod index accepts GitHub's asset digest without a separate checksum file. If both exist they must agree, and a release with neither is still skipped (#37).",
+    "Submission forms now explain that pasted GitHub pictures are accepted, and the submission wizard was removed (#40)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

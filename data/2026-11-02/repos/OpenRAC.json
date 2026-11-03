@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-02",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-03T00:06:29.773Z",
+  "issues": [
+    {"number":218,"title":"[Feature request] Resident-world support and mod API for seamless inter-level portals","author":"noire342","events":["opened"],"closedAs":null,"body":"I'm working on a Ratchet & Clank PAL mod that connects planets through ordinary doorways. The goal is to see the destination with the correct perspective and walk through continuously, without a loading screen or fade.\nI have a working prototype using local engine changes based on OpenRAC 0.10.0. I'd like to discuss the reusable engine support needed to eventually run this through the official client.\nThe main capabilities are:\n\nKeep multiple levels resident, with independent objects,…"}
+  ],
+  "releases": []
+}

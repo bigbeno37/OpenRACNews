@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-02",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 reaches 85.49% matched code as native-port C lands",
+  "summary": "Going Commando's USA v1.01 rose from 84.74% to 85.49% matched code, with 7,793 of 8,580 functions matched. A matched function compiles to exactly the same bytes as the original game. Separately, #389 landed functional C for the native port without adding any matched functions, and accounts for most of the day's added lines.",
+  "highlights": [
+    "A shared steering and impact-effect update now matches in Barlow and Joba for USA v1.01 and v2.00 (#391). Seven more functions, including level-26 routines and their copies, match through #392.",
+    "Six Joba functions match through #394. #395 adds 16 matches, including a family of level trigger updates and a hoverbike rail-trick routine, while retaining notes for 13 near misses.",
+    "#390 repairs five large unfinished USA v1.01 actor and loader reconstructions. None is a complete match or enabled in the functional manifest.",
+    "Draft #393 proposes another functional-C backfill and remains unmerged. #396 proposes two Oozla matches and an improved Joba near miss, but also remains open."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

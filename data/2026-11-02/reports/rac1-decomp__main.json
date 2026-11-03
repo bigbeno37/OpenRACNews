@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-02",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank moves nearly all game data into C and names more hero logic",
+  "summary": "Lynder063's refactoring makes Ratchet & Clank's game data and hero logic easier to read while preserving the compiled results. PAL v2.00 remains at 100.00% matched code, with all 5,116 functions matched and 99.95% of data matched in the project's progress report. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#219 reports 99.955% of PAL v2.00's data sections in C, with no retail numeric values committed. This measures data expressed in C, separately from the code match percentage.",
+    "Hero control modes get names at 1,532 sites (#227), and typed hero records replace raw pointer casts (#229, #230).",
+    "Shared audio voice records and real global-variable types replace duplicated layouts and address arithmetic (#216, #226, #228, #233).",
+    "Fresh-clone setup now fetches missing compilers and documents the required disc-dump steps (#221, #225).",
+    "Two compiler-matching workarounds could be removed (#231). The remaining ones stay because changing them alters the compiled code (#224)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
