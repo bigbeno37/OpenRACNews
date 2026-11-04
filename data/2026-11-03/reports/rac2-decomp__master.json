@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 code matching rises from 85.49% to 87.68%",
+  "summary": "The day's progress report puts USA v1.01 at 87.68% of code matched, up from 85.49%, with 7,950 of 8,580 functions matching. A matched function compiles to exactly the same bytes as the original game. The largest merged batch, #399, converts 145 boot and level functions to C. A separate merged progress update reports 7,006 of 8,672 functions for PAL and 7,612 of 8,634 for USA v2.00.",
+  "highlights": [
+    "#396 matches two Oozla routines, #397 corrects an entry before matching a boot function, and #398 adds nine routines including route following and trail creation.",
+    "#401 repairs catalogue entries and matches 13 routines. #405 adds four initialization functions, while #407 matches logarithms and HUD range, visibility and colour handling.",
+    "#393 adds functional C for the native port, and #402 restores 27 tested helper rows. These reconstructions and #404's effect repairs are separate from exact code matching.",
+    "#406 classifies 37 routines as original assembly rather than new C. It leaves the progress reports unchanged.",
+    "The Joba NPC state machine (#408), a hit-packet routine (#409) and Tabora's hero-trigger reset (#411) are open proposals. Their claimed matches have not landed.",
+    "#412 proposes returning three more functional rows and remains unmerged. #410 corrects the port handoff: Feltzin's difference came from the interpreter's sound mask, and Gorn's from frame load."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

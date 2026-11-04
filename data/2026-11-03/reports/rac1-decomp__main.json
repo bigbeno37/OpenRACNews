@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-03",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank tidies shared declarations without changing the game",
+  "summary": "Four pull requests moved shared function declarations into headers and replaced compatible aliases with real names (#234, #235, #236, #237). The author reports unchanged output for every release. PAL v2.00 remains at 100.00% of code matched, with all 5,116 functions matching. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "Five headers and aliases with differing types or failed checks were left in place (#237)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

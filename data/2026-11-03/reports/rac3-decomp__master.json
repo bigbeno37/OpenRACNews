@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-03",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal adds 29 front-end functions in C",
+  "summary": "Up Your Arsenal gained 26 shared PAL/NTSC-U front-end implementations and three NTSC-U-only implementations in C (#2). A matched function compiles to exactly the same bytes as the original game. The recorded PAL v1.00 progress remains at 8.72% of code matched, with 5,810 of 16,164 functions matching. Build tooling also fixes native C exclusion from the PAL object fallback.",
+  "highlights": [
+    "Four other function reconstructions remain unfinished (#2)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

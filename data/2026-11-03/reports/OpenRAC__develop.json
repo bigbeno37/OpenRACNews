@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando crash fixes land, with wider views and smoother controller navigation",
+  "summary": "Going Commando gains fixes for nanotech level-up crashes, Windows menu, Aranos and Endako crashes, and Android flight exports (#212, #228, #232, #230). Players must rerun \"Get the levels ready\" because #212 raises the level format to 20. A saved gameplay-only field-of-view slider runs from 80% to 120%, while launcher controller actions take one A press and game tiles respond to A and Y (#249, #235, #240). The field-of-view pull request reports Windows testing on Ratchet & Clank NTSC-U, including Novalis on Vulkan and OpenGL.",
+  "highlights": [
+    "Vulkan fixes wrong vertices on NVIDIA GPUs (#222) and coordinates shadows, water and temporal effects through a new rendering graph (#225).",
+    "Material overrides can target the model slot selected with the click picker. Classic graphics regain the original sky, and enhanced graphics retain authored appearance when a probe bake is missing (#246).",
+    "Ratchet & Clank's ship glass stays with its hull between ticks (#237). Shared rendering fixes ship HUD positioning and stray lines on text, while Going Commando's pause menu gains Video (#239).",
+    "Pause Options pictures and Quit Game controls are restored (#229). The save editor names Joba's and Maktar's 13 arena challenges each, using code-derived labels rather than loading every flag in the game (#244).",
+    "The level loader retains an argument needed for Going Commando's resume path (#236). Feltzin's sound-mask and ship-input fixes still leave seven changed level routes awaiting comparison with the original game in #241. #248 fixes the sound-test crash.",
+    "Open #251 proposes checking replacement C over a whole game run. Its new verdict is separate from the existing comparison result and does not mark a function complete."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

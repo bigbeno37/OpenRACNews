@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-03",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-04T00:50:26.445Z",
+  "progress": {"sha":"2ceb5ed22a886a6b87b7f02af6df3195abdfc931","code":{"done":658400,"total":7546948},"functions":{"done":5810,"total":16164},"data":null},
+  "totals": {"commits":3,"merges":2,"landed":1,"additions":2386,"deletions":2289,"pushes":1,"forcePushes":0,"authors":["DameNavarro","Lynder063"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-03T15:24:58Z","type":"pr_merge","actor":"Lynder063","before":"cd0e7c20fd8a93116566ba2e024fa2f3536bd30c","after":"2ceb5ed22a886a6b87b7f02af6df3195abdfc931"}
+  ],
+  "pullRequests": [
+    {"number":2,"title":"feat(frontbin): match 29 functions and fix native source selection","author":"DameNavarro","draft":false,"head":"match/frontbin","events":["merged"],"mergedBy":"Lynder063","additions":2386,"deletions":2289,"changedFiles":50,"body":"Add 26 shared PAL/NTSC-U frontbin implementations and three NTSC-U-only\nimplementations, adapted from the NTSC decomp drafts under GPL-3.0.\nPreserve existing file compiler flags, required file-scope symbol-size\nhints, and fixed-address global accesses. Fix native C exclusion from\nthe PAL object fallback. Retire integrated drafts, document four\nunfinished attempts, and refresh declarations and progress records.\nMerged current master and verified:\n\nAll three PAL core programs: MATCH with retail…"}
+  ],
+  "commits": [
+    {"sha":"490a0bbdb756b110cacb71353218e616ef3dc50f","headline":"fix(tools): skip native C in PAL object fallback","author":"DameNavarro","committedAt":"2026-10-30T16:31:51Z","merge":false,"landed":false},
+    {"sha":"6b7f2e80c6c4960034c3c04b801a714ffb8e9bc8","headline":"feat(frontbin): match six shared and four NTSC-U functions","author":"DameNavarro","committedAt":"2026-10-30T16:42:35Z","merge":false,"landed":false},
+    {"sha":"3314da4a0b293e4d0894deae90b5121a7fe440f1","headline":"feat(frontbin): match 20 shared functions","author":"DameNavarro","committedAt":"2026-11-02T01:16:37Z","merge":false,"landed":false},
+    {"sha":"2292a33e35750e167113edba9582fd24f58460df","headline":"chore(merge): integrate upstream master","author":"DameNavarro","committedAt":"2026-11-02T02:07:10Z","merge":true,"landed":false},
+    {"sha":"2ceb5ed22a886a6b87b7f02af6df3195abdfc931","headline":"Merge pull request #2 from DameNavarro/match/frontbin","author":"Lynder063","committedAt":"2026-11-03T15:24:58Z","merge":true,"landed":true,"additions":2386,"deletions":2289,"body":"feat(frontbin): match 29 functions and fix native source selection"}
+  ]
+}

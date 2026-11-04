@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-03",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-04T00:50:48.191Z",
+  "progress": null,
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":1,"deletions":0,"pushes":1,"forcePushes":0,"authors":["openrac-bot[bot]"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-03T21:01:44Z","type":"push","actor":"openrac-bot[bot]","before":"ee62e70a14c796ec3536c3ed62901f15909059c2","after":"a63a9dc4a59e85a1029089c94273b04aafd13562"}
+  ],
+  "pullRequests": [
+    {"number":41,"title":"feat(multiplayer): localize UI for all five PAL languages","author":"momo1212221","draft":false,"head":"feat/multiplayer-pal-localization","events":["opened"],"mergedBy":null,"additions":883,"deletions":140,"changedFiles":10,"body":"The multiplayer pages currently remain English when a PAL player selects another game language. This adds original UI translations for all five PAL languages: English, French, German, Spanish and Italian.\n\nSelect the language from the game's current language word (using verified PAL and NTSC-U addresses), with English fallback, and refresh page content and in-game notices when it changes.\nTranslate the home/browser/lobby/direct-connect/pause pages, local save picker, button hints,…"}
+  ],
+  "commits": [
+    {"sha":"a63a9dc4a59e85a1029089c94273b04aafd13562","headline":"chore(index): discussion numbers","author":"openrac-bot[bot]","committedAt":"2026-11-03T21:01:40Z","merge":false,"landed":true,"additions":1,"deletions":0}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-03",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked gains 171 matched PAL functions, with NTSC-U unchanged",
+  "summary": "Four PAL batches landed together through #91, adding 171 matched functions across menus, inventory, resources, HUD and text helpers. A matched function compiles to exactly the same bytes as the original game. The NTSC-U v1.00 progress report remains at 7.17% of code matched, with 5,435 of 18,085 functions matching. Draft #92 proposes 57 NTSC-U functions and remains unmerged.",
+  "highlights": [
+    "The PAL batch combines 52 resident game functions from #86, 15 word-table probes from #87, 54 game and resource functions from #88, and 50 resident functions from #89.",
+    "Draft #92 claims NTSC-U matched functions would rise from 5,435 to 5,492 and PAL from 6,026 to 6,077. These proposed totals are not on main.",
+    "#90 remains open with six more PAL-only functions and notes on 20 function boundaries."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

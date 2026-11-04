@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-03",
+  "headline": "Going Commando reaches 87.68% code matching as port fixes and wider views land",
+  "summary": "Going Commando's USA v1.01 code matching rises from 85.49% to 87.68%, while Deadlocked gains 171 matched PAL functions (rac4-decomp#91). A matched function compiles to exactly the same bytes as the original game. Launcher development adds Windows crash fixes, smoother controller navigation and a saved gameplay field-of-view slider from 80% to 120% (OpenRAC#228, OpenRAC#235, OpenRAC#249), while Going Commando players must rerun \"Get the levels ready\" after OpenRAC#212. Other work covers Ratchet & Clank's source cleanup (rac1-decomp#237), Up Your Arsenal's front-end C (rac3-decomp#2), and proposed multiplayer translations (openrac-mods#41). Launcher users reported lengthy compilation and failed enhanced-lighting preparation (OpenRAC#224, OpenRAC#242), requested controller rebinding (OpenRAC#250), and closed a Godot version-selection question (OpenRAC#243).",
+  "writtenBy": "gpt-6.1-sol"
+}

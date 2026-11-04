@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-03",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-04T00:49:40.882Z",
+  "issues": [
+    {"number":224,"title":"Too long to compile and apply graphical enhancements?","author":"sebastian926","events":["opened"],"closedAs":null,"body":"Probably it depends on the CPU, but i do feel like the times to compile mods could be improved. I also think it got stuck on my second attempt with the latest update."},
+    {"number":242,"title":"Failed: Prepare the enhanced lighting","author":"kwfrrb562c-boop","events":["opened"],"closedAs":null,"body":"$ \"/tmp/.mount_OpenRAPOhGFo/usr/lib/OpenRAC Launcher/openrac/python/bin/python3\" port/enhanced/tools/probes/bake_all.py --levels-dir /home/deck/OpenRAC/active/rac1/data/port/ntsc --output-dir /home/deck/OpenRAC/active/rac1/data/probes/ntsc --baker \"/tmp/.mount_OpenRAPOhGFo/usr/lib/OpenRAC Launcher/openrac/port/build/release/openrac-probe-bake\" --disc /home/deck/OpenRAC/active/rac1/data/iso_data/rac1/disc.iso --jobs 0 --update\nProbe bake started 2026-11-03T19:20:00.500351+00:00 |…"},
+    {"number":243,"title":"Godot re-targeting","author":"TheWhiteGuardian","events":["opened","closed"],"closedAs":"COMPLETED","body":"Hi OpenRAC team!\nI believe I may have created a small problem for myself. Having set up OpenRAC on a different machine, I provided it with Godot version 4.4.1 to work with. It seems this version of Godot does not appreciate the collision script provided by OpenRAC. I've since downloaded Godot version 4.7.2 (latest as of writing), but I don't see how I can tell OpenRAC to use this version of Godot instead. How can one update the version of Godot that the level editor opens?"},
+    {"number":250,"title":"Request: Ability to rebind controller buttons","author":"aaronjamestodd-ui","events":["opened"],"closedAs":null,"body":"It would be useful especially using the lock strafe mod to have the ability to rebind buttons (i.e. circle/b -> rt/r2"}
+  ],
+  "releases": []
+}

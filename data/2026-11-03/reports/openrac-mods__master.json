@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-03",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Multiplayer UI translations proposed for all five PAL languages",
+  "summary": "Open #41 proposes multiplayer interface translations for English, French, German, Spanish and Italian, covering menus, notices and the save picker. It has not merged, so these translations are not yet part of master. The only landed change was an automated discussion-index update.",
+  "highlights": [
+    "The proposal follows the game's current language, refreshes the interface when it changes and falls back to English (#41)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
