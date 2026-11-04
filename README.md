@@ -59,6 +59,14 @@ nix-shell --run 'REPORT_DATE=2026-11-05 pnpm reports:write'
 
 Then run `pnpm news` as usual to publish them.
 
+### Scheduled agent runs
+
+The scheduled daily agent follows [DAILY.md](DAILY.md), writes the reports
+directly, and uses the snapshot, validation and build commands separately.
+Each run starts in a fresh thread. This path works on the publishing host,
+where the nested CLI writer cannot start its sandbox. The task runs at
+00:05 UTC and checks the next UTC run time on each execution.
+
 ### What the agent can reach
 
 Reports are written from text anyone with a GitHub account can write, so treat what the agent reads as hostile. `scripts/write-reports.sh` limits its commands to no network and writing only under `data/`. They can read this repository, the Nix store and basic system files, but not your home directory, `.git` or `/etc/nixos`, so they can't see your GitHub or Codex logins or SSH keys. They can still read the rest of `/etc`, so don't keep secrets in world-readable files there. Run it inside `nix-shell`, since the sandbox relies on Node and pnpm coming from the Nix store.
