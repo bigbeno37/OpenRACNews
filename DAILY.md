@@ -18,7 +18,8 @@ following `AGENTS.md`, and GitHub Actions deploys the resulting push to `main`.
    env -u LD_LIBRARY_PATH nix-shell --run 'pnpm install --frozen-lockfile && pnpm --silent snapshot'
    ```
 
-Remove `LD_LIBRARY_PATH` for every Nix command on this host. Its inherited value
+Remove `LD_LIBRARY_PATH` for every Nix command on this host, including Git
+commands that use the Nix-provided GitHub credential helper. Its inherited value
 loads incompatible system libraries. This is a per-command environment change.
 
 ## Write
@@ -48,7 +49,7 @@ source material, as `AGENTS.md` requires.
    the checks or changing coverage.
 2. Review the diff. Stage only this run's finished-day files under `data/`.
    Commit as `chore(data): news up to YYYY-MM-DD`, using yesterday's UTC date,
-   then `git push origin main`. Never force-push. If another push wins, integrate
+   then `env -u LD_LIBRARY_PATH git push origin main`. Never force-push. If another push wins, integrate
    it without discarding work and rerun the checks before retrying.
 3. Verify that the resulting commit is on GitHub's `main` branch. Check its
    `Deploy site` workflow and the dated public page before calling it published.
