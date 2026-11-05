@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-04",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Modern Controls and Steam Deck Pack 0.3.0 join the launcher mod index",
+  "summary": "The mod index now lists momo1212221's external Modern Controls and Steam Deck Pack mods for Ratchet & Clank PAL and NTSC-U, with version 0.3.0 approved for both (#48, #49, #53). Modern Controls offers direct mouse and controller camera control, axis sensitivity, deadzone and movement adjustments. The experimental Steam Deck Pack offers built-in white button prompts, Steam Input gyro and trackpad camera controls, and in-game settings.",
+  "highlights": [
+    "The original proposals to add these mods inside this repository closed without merging (#43, #44). Their external listings landed instead (#48, #49).",
+    "A proposed Multiplayer 0.8.0 adds teammate rescue, host rally points and team tools. It remains unmerged (#45).",
+    "A Restored Debug Menu listing is awaiting review (#64, #63). Submissions also opened for QoL Hub, Fast Travel and Save Manager (#58, #59, #60).",
+    "Accessibility Pack proposes hold-to-mash controls (#61). Cutscene Manager proposes skipping only repeated scenes established as safe after natural completion (#62). These submissions are not approved listings yet.",
+    "New listing pull requests and review issues now notify maintainers when approval is needed (#50)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

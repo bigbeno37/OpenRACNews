@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-04",
+  "headline": "Launcher 1.0.0 brings Going Commando's early native PC port to players",
+  "summary": "Launcher 1.0.0 opens Going Commando's native PC port for the US disc to players, with warnings about wrong graphics, missing effects and crashes (OpenRAC#270). Development adds desktop Build and play from the player's disc, though Windows remains untested for that feature (OpenRAC#276).\n\nGoing Commando's USA v1.01 advances from 87.68% to 90.31% of code in its latest progress report, while Up Your Arsenal's PAL v1.00 rises from 8.72% to 10.40%. A matched function compiles to exactly the same bytes as the original game. Deadlocked merges six PAL-only functions (rac4-decomp#90), and the mod index approves Modern Controls and the experimental Steam Deck Pack at version 0.3.0 (openrac-mods#48, openrac-mods#49, openrac-mods#53).",
+  "writtenBy": "gpt-6.1-sol"
+}

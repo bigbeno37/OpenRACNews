@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-04",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 reaches 90.31% of code, with more PAL work landing afterward",
+  "summary": "Going Commando's latest progress report takes USA v1.01 from 87.68% to 90.31% of code, with 8,096 of 8,578 functions matched. A matched function compiles to exactly the same bytes as the original game. That report also puts USA v2.00 at 84.86% of code with 7,870 of 8,633 functions, and PAL at 55.43% with 7,156 of 8,671. Further matching work merged after that progress update, including 59 PAL-only functions (#418).",
+  "highlights": [
+    "An 80-function batch landed directly, alongside Joba's NPC state machine (#408), Tabora's hero trigger reset (#411) and a shared hit-packet routine (#409).",
+    "Caption rendering and Maktar combat gain matched C (#414), as do HUD text and level setup (#417), shared triggers and UI setup (#420). Repaired function boundaries also allow ten implementations (#416).",
+    "The 59 PAL-only functions reuse already matched USA v1.01 C, adjusted for PAL's instructions, including its 50 Hz timing. The pull request reports matches at every placement (#418).",
+    "Five routines return to functional use with the weaker same-run verdict. Comparisons still differ briefly during loads and at one timer read. Two routines remain excluded (#415).",
+    "The Joba sentry proposal in #419 remains unmerged and also documents an exact-but-held near miss. A further proposal covers two USA v1.01 functions and 18 PAL-only functions (#422).",
+    "New issue #421 reports PAL menu-accessor catalogue entries shifted by one function in levels 05, 10, 15 and 25."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

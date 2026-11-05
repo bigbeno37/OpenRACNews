@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-04",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 1.0.0 releases Going Commando's early native PC port",
+  "summary": "Launcher 1.0.0 brings Going Commando's native PC port for the US disc to players, with Play and enhanced lighting baking available without developer tools. The release notes warn that it is early and unstable, with wrong graphics, missing effects and crashes. The stable line took its regular release pull request from develop (#270), also releasing Mod SDK 1.12.0.",
+  "highlights": [
+    "Vulkan becomes the default renderer and loses its experimental label. HDR output supports HDR10 and scRGB screens (#270).",
+    "The launcher's Audio tab lets players replace game sounds, music and speech (#270).",
+    "The release includes a shared in-game menu for desktop and Android, a gameplay Field of View slider and gamepad freecam controls (#270).",
+    "Later work on develop targets repeated Going Commando rebuild offers caused by a missing game program in the 1.0.0 installer (#283). That fix is separate from this stable release."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

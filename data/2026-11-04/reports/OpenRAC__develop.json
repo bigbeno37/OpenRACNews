@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-04",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando gains desktop Build and play, with fixes for Joba and the Museum",
+  "summary": "Desktop players can build Going Commando from their own disc without developer tools through Build and play (#276), though its author has not tested Windows yet. Builds now follow the launcher's commit and clear old builds after a successful replacement (#278). A separate fix targets repeated rebuild offers when the game program is missing, following a Steam Deck report about the 1.0.0 installer (#283). Joba taxi rides now end (#265), and a Windows x64 crash while drawing the Insomniac Museum's shared sign effect is fixed (#256).",
+  "highlights": [
+    "Android gets a Mali Vulkan title-screen crash fix (#263). World rendering stays in one render pass (#267), and the earlier performance-hint change is reverted after the slowdown was traced to render passes (#268).",
+    "Field of View gains easier touch and pad adjustment (#272), and wider views keep water and effects visible above and below (#277). The drawer also gains an HDR peak setting and a higher paper-white limit (#282).",
+    "Enhanced NTSC-U Pokitaru gains a configurable simulated ocean. Optional Ratchet fur shells remain off by default (#254). Interior lighting tools include a Blarg Station profile (#281).",
+    "Fullscreen now uses a borderless window at the desktop's display mode (#258). Gamepads can fly the freecam, which is also available in the Android drawer (#259).",
+    "Vulkan water and draw uploads are streamlined (#255). Crash reports retain Vulkan diagnostics, with driver fault details and GPU pass tracking on supported drivers (#273).",
+    "Whole-run C comparisons gain a separate same-run verdict that does not mark work done (#251). The all-level results retain that weaker status and note an unexplained forced-state crash (#260)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

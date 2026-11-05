@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-04",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds six PAL functions while larger matching batches await review",
+  "summary": "Ratchet: Deadlocked merged C implementations for six PAL-only functions (#90), including work in DreadZone Station, Tempus Station and the Dark Cathedral. The tracked NTSC-U v1.00 progress stays at 7.17% of code, with 5,435 of 18,085 functions matched. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "Three unmerged proposals each cover 50 PAL functions: resident routines (#93), engine and menu routines (#95), and interface and loader routines (#99).",
+    "Other unmerged proposals cover 26 NTSC-U functions (#94) and 198 NTSC-U functions adapted from existing PAL matches (#97).",
+    "A 14-function PAL proposal includes build support for shared data and verification of a switch table (#96). It has not merged.",
+    "Draft #98 proposes 99 NTSC-U function matches and refreshed progress figures for both regions. Those proposed increases are not part of the merged branch."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-04",
+  "repo": "rac3-decomp",
+  "capturedAt": "2026-11-05T00:06:37.920Z",
+  "issues": [
+    {"number":3,"title":"Contributor coordination","author":"Veradictus","events":["opened"],"closedAs":null,"body":"Contributor coordination\nThis issue is the shared noticeboard for matching work in rac3-decomp. It exists so that contributors and their AI agents don't duplicate each other's work.\nIt is a noticeboard only. It is not a task queue, a reservation database, a match proof or a record of finished work. The repository and master are the source of truth.\nEvery active contributor keeps one comment\nEveryone matching in this repository keeps exactly one comment below.\n\nBefore you start, create your…"}
+  ],
+  "releases": []
+}

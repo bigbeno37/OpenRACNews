@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-04",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 passes 10% of code on an unusually busy day",
+  "summary": "Veradictus took Up Your Arsenal's PAL v1.00 decompilation from 8.72% to 10.40% of code, an unusually busy day for this early-stage branch. The project's progress report now counts 6,485 of 16,164 matched functions. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "Batches cover story levels, the multiplayer menu, the front end and boot code. Some implementations adapt Going Commando C where the original games use the same instructions apart from addresses.",
+    "Build tools can now retain compiler-generated switch tables and constant pools at their original locations. Padding fixes also let full programs reproduce the original alignment bytes.",
+    "Multiplayer levels now use their own global-data base address. Earlier checks could match assembly and C while their names still pointed outside the level, because both checks used the story levels' address.",
+    "The final batch reports matching builds for all three PAL core programs and all 49 PAL levels, with the work carried to NTSC-U and all 54 of its build targets matching.",
+    "A contributor noticeboard opens in #3 to help avoid duplicate matching work. It does not serve as proof that work is finished."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

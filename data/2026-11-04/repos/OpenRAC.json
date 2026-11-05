@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-04",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-05T00:06:03.315Z",
+  "issues": [
+    {"number":252,"title":"won't let me  reinstall ","author":"baczyk47","events":["opened"],"closedAs":null,"body":"Accidentally uninstall it off my samsung galaxy s26 ultra now no matter which apk I use my phone will  said not install"},
+    {"number":257,"title":"Will there be support for a HD texture  pack? E.g the one that can be used in PCSX2?","author":"kwfrrb562c-boop","events":["opened"],"closedAs":null},
+    {"number":262,"title":"Crash when changing menu","author":"Ratchet2277","events":["opened","closed"],"closedAs":"COMPLETED","body":"OpenRAC Launcher work fine ob RaC1 main page, but crach each time i try to change page (like getting on other game than RaC 1, go to mod tab, edit launcher setting).\nVersion 0.10.0 AppImage amd64 (from release page)\nOS : Cachy OS\nRenderer : Wayland\nGPU : NVidia 3070Ti\nCPU : Ryzen 5700X\nNot aware of any logs for the launcher itself, feel free to point me where they are if any ^^"},
+    {"number":274,"title":"feat(mods): support callback-only native mods before game hook points","author":"momo1212221","events":["opened"],"closedAs":null,"body":"Goal\nMake native callback-only mods an explicitly supported and tested path for games that have no game-specific hook points yet, starting with RAC2.\nThis is intentionally smaller than adding RAC2 hook points.\nCurrent behavior found on develop\nThe native mod loader already appears generic:\n\nmods::plan checks game/disc, API version, platform library and dependencies, but does not require a game to expose hook points.\nopenrac_api.on_pad is wired through the common pad…"},
+    {"number":279,"title":"Stick sensitivity doesn't seem to work? ","author":"Billabong1985","events":["opened"],"closedAs":null,"body":"The new in game menu for customising controls is great as I no longer have to do it in Steam input, but the stick sensitivity setting doesn't seem to do anything, I was really hoping I could increase the camera movement sensitivity a bit but even if I wind it up to 300% right stick sensitivity, the camera moves at the same speed"}
+  ],
+  "releases": [
+    {"tag":"launcher-v1.0.0","name":"v1.0.0","prerelease":false,"publishedAt":"2026-11-04T20:23:54Z","author":"github-actions[bot]","body":"## Highlights\r\n\r\n- **Going Commando is playable, early and unstable.** It runs as a native port on PC (US disc), and Play and the enhanced lighting bake no longer need Developer tools. Expect wrong graphics, missing effects and crashes (#206, #212).\r\n- **Vulkan is now the default renderer** and is no longer marked experimental (#188).\r\n- **HDR output** on Vulkan, for HDR10 and scRGB screens (#204).\r\n- **An Audio tab in the launcher** replaces the game's sounds, music and speech (#164).\r\n- **Mod…"}
+  ]
+}

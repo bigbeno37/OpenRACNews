@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-04",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-05T00:07:00.036Z",
+  "progress": null,
+  "totals": {"commits":5,"merges":0,"landed":5,"additions":53,"deletions":2,"pushes":5,"forcePushes":0,"authors":["Lynder063","openrac-bot[bot]"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-04T13:37:14Z","type":"pr_merge","actor":"Lynder063","before":"a63a9dc4a59e85a1029089c94273b04aafd13562","after":"1dcace3de962314824e6c193d602036205e6211d"},
+    {"at":"2026-11-04T13:41:25Z","type":"pr_merge","actor":"Lynder063","before":"1dcace3de962314824e6c193d602036205e6211d","after":"c756069a517bb6a5dcb104085c9bd3a2737a6c56"},
+    {"at":"2026-11-04T13:41:29Z","type":"pr_merge","actor":"Lynder063","before":"c756069a517bb6a5dcb104085c9bd3a2737a6c56","after":"7b70f979208b32e19c31b79df6d577ed4d93fbab"},
+    {"at":"2026-11-04T13:49:48Z","type":"push","actor":"openrac-bot[bot]","before":"7b70f979208b32e19c31b79df6d577ed4d93fbab","after":"6746c402589cec88ed46ccb3bd96dad9360f1983"},
+    {"at":"2026-11-04T17:41:13Z","type":"pr_merge","actor":"Lynder063","before":"6746c402589cec88ed46ccb3bd96dad9360f1983","after":"5274a82cccf417b2dc014fab745193910089698f"}
+  ],
+  "pullRequests": [
+    {"number":43,"title":"feat(steam-deck-pack): add handheld controls with built-in Deck button icons","author":"momo1212221","draft":false,"head":"feat/steam-deck-pack-submission","events":["opened","closed"],"mergedBy":null,"additions":1924,"deletions":155,"changedFiles":28,"body":"Adds an experimental, self-contained Steam Deck Pack for RAC1 PAL and NTSC-U. Players get white A/B/X/Y and L1/L2/R1/R2 prompts, Steam Input gyro/right-trackpad camera input, and a minimal page under Pause → Options → Steam Deck in the game's five PAL languages.\nThe pack links its icon painter into its own native library; no separately installed Xbox icon mod is required. The existing Xbox painter is extracted into a shared C11 static library, preserving its colored Xbox layout. Only recognized…"},
+    {"number":44,"title":"feat(modern-controls): add live 1–100 camera slider and adjustable controller movement","author":"momo1212221","draft":false,"head":"feat/modern-controls","events":["opened","closed"],"mergedBy":null,"additions":1119,"deletions":0,"changedFiles":9,"body":"RAC1's original camera response makes mouse/trackpad input feel constrained by stick emulation and gives players limited control over controller speed. This adds an optional Modern Controls mod (0.3.0) for PAL and NTSC-U with direct mouse and controller camera movement, independent axis sensitivity, a radial deadzone, and separate turn, first-person aim, movement-speed and acceleration/braking controls.\nController settings apply to the physical right stick of any gamepad OpenRAC maps to its pad…"},
+    {"number":45,"title":"feat(multiplayer): add co-op rescue, host rally points and team tools","author":"momo1212221","draft":false,"head":"feat/multiplayer-comfort","events":["opened"],"mergedBy":null,"additions":2096,"deletions":154,"changedFiles":18,"body":"The existing co-op mod has no teammate rescue or shared gathering marker. This extends Multiplayer to 0.8.0 with a Team tools child page in the existing lobby and Multiplayer pause Options page, without consuming an additional native Options slot.\n\nCo-op rescue defers a normal lethal on-foot hit at one health when another party member is present. A living teammate on the same level must remain within six game units and hold L3 + R3 continuously for three seconds. The host checks fresh presence…"},
+    {"number":48,"title":"List modern-controls","author":"openrac-bot[bot]","draft":false,"head":"listing/modern-controls","events":["opened","merged"],"mergedBy":"Lynder063","additions":19,"deletions":0,"changedFiles":1,"body":"From #46, checked by the listing bot.\nCloses #46"},
+    {"number":49,"title":"List steam-deck-pack","author":"openrac-bot[bot]","draft":false,"head":"listing/steam-deck-pack","events":["opened","merged"],"mergedBy":"Lynder063","additions":20,"deletions":0,"changedFiles":1,"body":"From #47, checked by the listing bot.\nCloses #47"},
+    {"number":50,"title":"fix(bot): ping maintainers when approval is needed","author":"Lynder063","draft":false,"head":"fix/bot-ping","events":["opened","merged"],"mergedBy":"Lynder063","additions":8,"deletions":2,"changedFiles":4,"body":"The bot only mentioned maintainers when it crashed.\nNew listing PRs and review issues now ping @OpenRAC/maintainers."},
+    {"number":53,"title":"chore(index): approve steam-deck-pack 0.3.0","author":"openrac-bot[bot]","draft":false,"head":"approve/steam-deck-pack-0.3.0","events":["opened","merged"],"mergedBy":"Lynder063","additions":3,"deletions":0,"changedFiles":1,"body":"Opened by the index bot: master did not take a direct push."},
+    {"number":64,"title":"List debug-menu","author":"openrac-bot[bot]","draft":false,"head":"listing/debug-menu","events":["opened"],"mergedBy":null,"additions":24,"deletions":0,"changedFiles":2,"body":"From #63, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #63"}
+  ],
+  "commits": [
+    {"sha":"1dcace3de962314824e6c193d602036205e6211d","headline":"fix(bot): ping maintainers when approval is needed (#50)","author":"Lynder063","committedAt":"2026-11-04T13:37:14Z","merge":false,"landed":true,"additions":8,"deletions":2,"body":"Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>"},
+    {"sha":"c756069a517bb6a5dcb104085c9bd3a2737a6c56","headline":"feat(index): List modern-controls (#48)","author":"openrac-bot[bot]","committedAt":"2026-11-04T13:41:25Z","merge":false,"landed":true,"additions":19,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"},
+    {"sha":"7b70f979208b32e19c31b79df6d577ed4d93fbab","headline":"feat(index): List steam-deck-pack (#49)","author":"openrac-bot[bot]","committedAt":"2026-11-04T13:41:28Z","merge":false,"landed":true,"additions":20,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"},
+    {"sha":"6746c402589cec88ed46ccb3bd96dad9360f1983","headline":"chore(index): approve modern-controls 0.3.0","author":"openrac-bot[bot]","committedAt":"2026-11-04T13:49:47Z","merge":false,"landed":true,"additions":3,"deletions":0},
+    {"sha":"5274a82cccf417b2dc014fab745193910089698f","headline":"chore(index): approve steam-deck-pack 0.3.0 (#53)","author":"openrac-bot[bot]","committedAt":"2026-11-04T17:41:13Z","merge":false,"landed":true,"additions":3,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"}
+  ]
+}
