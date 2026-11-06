@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-05",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 1.0.1 brings Going Commando disc builds, followed by Windows fixes in 1.0.2",
+  "summary": "The stable line took two release pull requests, publishing launcher 1.0.1 and then 1.0.2 (#289, #296). Version 1.0.1 lets an installed launcher download Going Commando's source and build it from the player's own disc, ending the repeated rebuild prompt caused by a missing game program. Version 1.0.2 fixes Windows builds blocked by the bundled Python's path and long installation folders. The first build still needs a C compiler, and the 1.0.1 release notes also require SDL development packages on Linux.",
+  "highlights": [
+    "Version 1.0.2 also fixes development builds repeatedly offering the same update after a release (#296).",
+    "Build problems were still reported on 1.0.2: missing Visual Studio C++ tools on Windows (#313) and missing Ninja on SteamOS (#316)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-05",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-06T00:07:06.067Z",
+  "progress": null,
+  "totals": {"commits":2,"merges":0,"landed":2,"additions":26,"deletions":0,"pushes":2,"forcePushes":0,"authors":["openrac-bot[bot]"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-05T10:08:18Z","type":"pr_merge","actor":"Lynder063","before":"5274a82cccf417b2dc014fab745193910089698f","after":"2d4f5c0273e380a03e85f5cbe4eb79efafddb883"},
+    {"at":"2026-11-05T20:42:38Z","type":"push","actor":"openrac-bot[bot]","before":"2d4f5c0273e380a03e85f5cbe4eb79efafddb883","after":"c29204d09e8446f570419c3415553f300593a24e"}
+  ],
+  "pullRequests": [
+    {"number":64,"title":"List debug-menu","author":"openrac-bot[bot]","draft":false,"head":"listing/debug-menu","events":["merged"],"mergedBy":"Lynder063","additions":24,"deletions":0,"changedFiles":2,"body":"From #63, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #63"},
+    {"number":71,"title":"feat(revolverator): list Revolverator 0.3.3","author":"noire342","draft":false,"head":"feat/list-revolverator","events":["opened"],"mergedBy":null,"additions":20,"deletions":0,"changedFiles":1,"body":"Adds the external Revolverator listing from noire342/openrac-mods/revolverator.\nThe weapon uses the native inventory, ammunition HUD and save flow. Version 0.3.3 adds drill-contact sparks while holding a spinning enemy, automatic local asset preparation, and support for mod interface 1.12 or compatible later minor interfaces. PAL Europe v2.00 is the native reference; NTSC-U keeps its separate binding profile.\nThe listing declares AI assistance. The distributed ammunition model and texture are…"},
+    {"number":76,"title":"List better-pause-menu","author":"openrac-bot[bot]","draft":false,"head":"listing/better-pause-menu","events":["opened"],"mergedBy":null,"additions":20,"deletions":0,"changedFiles":1,"body":"From #75, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #75"},
+    {"number":81,"title":"List cutscene-manager","author":"openrac-bot[bot]","draft":false,"head":"listing/cutscene-manager","events":["opened"],"mergedBy":null,"additions":18,"deletions":0,"changedFiles":1,"body":"From #80, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #80"},
+    {"number":82,"title":"List accessibility-pack","author":"openrac-bot[bot]","draft":false,"head":"listing/accessibility-pack","events":["opened"],"mergedBy":null,"additions":19,"deletions":0,"changedFiles":1,"body":"From #79, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #79"},
+    {"number":83,"title":"List save-manager","author":"openrac-bot[bot]","draft":false,"head":"listing/save-manager","events":["opened"],"mergedBy":null,"additions":18,"deletions":0,"changedFiles":1,"body":"From #78, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #78"},
+    {"number":84,"title":"List fast-travel","author":"openrac-bot[bot]","draft":false,"head":"listing/fast-travel","events":["opened"],"mergedBy":null,"additions":18,"deletions":0,"changedFiles":1,"body":"From #77, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #77"},
+    {"number":88,"title":"List damage-numbers","author":"openrac-bot[bot]","draft":false,"head":"listing/damage-numbers","events":["opened"],"mergedBy":null,"additions":17,"deletions":0,"changedFiles":1,"body":"From #87, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #87"},
+    {"number":90,"title":"List weapon-wheel-pause","author":"openrac-bot[bot]","draft":false,"head":"listing/weapon-wheel-pause","events":["opened"],"mergedBy":null,"additions":19,"deletions":0,"changedFiles":1,"body":"From #89, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #89"}
+  ],
+  "commits": [
+    {"sha":"2d4f5c0273e380a03e85f5cbe4eb79efafddb883","headline":"feat(index): List debug-menu (#64)","author":"openrac-bot[bot]","committedAt":"2026-11-05T10:08:18Z","merge":false,"landed":true,"additions":24,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"},
+    {"sha":"c29204d09e8446f570419c3415553f300593a24e","headline":"chore(index): discussion numbers","author":"openrac-bot[bot]","committedAt":"2026-11-05T20:42:37Z","merge":false,"landed":true,"additions":2,"deletions":0}
+  ]
+}

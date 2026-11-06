@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Restored Debug Menu joins the mod index, with downloads still awaiting review",
+  "summary": "Restored Debug Menu entered the mod index through #64, closing its submission #63. It restores access to Ratchet & Clank's leftover debug menu through the R3 trigger used in prototypes. Its 1.0.0 and 1.0.1 downloads still await review (#68, #67).",
+  "highlights": [
+    "Revolverator 0.3.3's listing is proposed in #71, adding drill-contact sparks and automatic local asset preparation. PAL Europe v2.00 is its native reference, with a separate NTSC-U binding profile.",
+    "QoL Hub, Fast Travel, Save Manager, Accessibility Pack and Cutscene Manager have proposed listings (#76, #84, #83, #82, #81). None had merged.",
+    "Damage Numbers proposes a visible damage number at each hit (#88). Weapon Wheel Pause proposes pausing Ratchet while Quick Select stays responsive (#90). Both listings remain unmerged.",
+    "#70 reports that non-host players in Multiplayer 0.7.3 cannot reliably damage enemies or receive enemy damage, with the symptom following the host role.",
+    "#72 reports modern-controls 0.3.0 and steam-deck-pack 0.3.0 missing from the public index after approval and cooldown, blaming missed scheduled index updates.",
+    "Modern Controls 0.3.3 also awaits download review (#69)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

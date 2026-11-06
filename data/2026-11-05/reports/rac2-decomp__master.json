@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-05",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 rises from 90.31% to 91.80% of code matched",
+  "summary": "Going Commando's progress report puts USA v1.01 at 91.80% of code matched, up from 90.31%, with 8,173 of 8,584 functions matched. A matched function compiles to exactly the same bytes as the original game. Three direct batches supplied matching C for 60 functions, alongside merged work on Joba, Gorn and Damosel.",
+  "highlights": [
+    "#419 adds matching C for the Joba sentry and a shared boss bar, while retaining findings on other Joba state machines.",
+    "#422 matches two USA v1.01 functions, covering a Gorn cutscene controller and a Damosel effect trigger, and carries 18 PAL-only functions into C.",
+    "#423 matches 16 functions present in USA v1.01 and repairs reload and padding accounting.",
+    "A separate progress commit reports 7,242 of 8,677 matched functions for PAL and 7,932 of 8,639 for USA v2.00.",
+    "Further small-function, sky-rendering and PAL batches opened as #424, #425 and #426. None had merged, and some original-assembly classifications in #424 still need review."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

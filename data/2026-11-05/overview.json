@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-05",
+  "headline": "Launcher 1.0.2 fixes Windows disc builds as development brings Going Commando to Android",
+  "summary": "Launcher 1.0.1 and 1.0.2 shipped Going Commando disc builds and follow-up Windows fixes (OpenRAC#289, OpenRAC#296). On develop, Going Commando gained Android disc builds and a bundled Windows compiler, while My mods was reorganised (OpenRAC#300, OpenRAC#326, OpenRAC#314). Ratchet & Clank's NTSC-J and PAL v1.00 reached reported 100% code matching, with two guessed PAL v1.00 functions, while Going Commando's USA v1.01 rose from 90.31% to 91.80% of code matched (rac1-decomp#239). A matched function compiles to exactly the same bytes as the original game. Restored Debug Menu joined the mod index with its downloads still awaiting review, and Deadlocked's PAL proposals remained unmerged (openrac-mods#64, openrac-mods#67, openrac-mods#68, rac4-decomp#100).",
+  "writtenBy": "gpt-6.1-sol"
+}

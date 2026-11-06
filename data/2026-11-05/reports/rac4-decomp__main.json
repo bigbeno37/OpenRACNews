@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-05",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked PAL work proposed across menus, rendering and core helpers",
+  "summary": "Six pull requests opened for Deadlocked's PAL version, covering menus, resources, player helpers, video and core routines. None merged, so main gained no new code that day. The authors describe matching C, where a matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#100 proposes 35 PAL main-image functions and a checker for function signatures and call contracts.",
+    "#101, #102 and #104 each propose 50 PAL resident functions, spanning menus, player helpers, resource handling, rendering and video.",
+    "#103 proposes C for 11 PAL-only functions and an inventory fix for the instruction immediately after a jump.",
+    "#105 proposes 50 PAL core, game and network functions, including decoding and resource parsing."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

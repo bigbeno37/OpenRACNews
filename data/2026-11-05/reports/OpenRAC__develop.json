@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando gains Android disc builds and a bundled Windows compiler on develop",
+  "summary": "Going Commando can now be built from the player's disc on Android, with its remaining assembly compiled on the phone (#300, #310). Windows gains a bundled compiler path too, replacing the need for separately installed build tools (#326). My mods brings gameplay mods, graphics and sound packs, and textures together, while Get mods replaces the built-in browser (#314, #321). These features followed the day's release preparation for launcher 1.0.1 and 1.0.2 (#285, #295).",
+  "highlights": [
+    "Android keeps Going Commando's compiled disc component when its kit is unchanged (#320). Stable-to-Development updates install in place, but returning to Stable still needs a GitHub reinstall (#302).",
+    "Mods can provide their own launcher tool pages (#304), and tools show an Always on switch (#329).",
+    "Per-game Steam entries and Linux shortcuts landed (#324, closing #318). They have unit tests only and have not been tested on real Steam or Steam Deck.",
+    "Drek's Fleet's fighter mission regains its nebula backdrop and missing fleet (#301). HDR becomes Off/On (#308), and freecam's L3+R3 shortcut no longer also opens the map (#330).",
+    "Android pad selection opens a game's page before Play, with visible focus from startup (#305, #309, #312). Context-sensitive touch buttons remain an unmerged draft (#319).",
+    "Vulkan checks reuse caches and a shared build, and run on pushes (#286, #288, #290, #307). Linux builds shed curl, tar and Steam's libraries (#325). The launcher stops creating an unused home folder (#323)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

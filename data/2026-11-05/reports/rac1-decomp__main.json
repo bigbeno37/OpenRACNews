@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-05",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's NTSC-J and PAL v1.00 reach reported 100% code matching, with two PAL guesses",
+  "summary": "Lynder063 brought NTSC-J from 89.57% to a reported 100% of code and brought PAL v1.00 to 100% (#238, #239). A matched function compiles to exactly the same bytes as the original game. Two PAL v1.00 functions reach that result only with guessed code marked FAKEMATCH. The project's PAL v2.00 progress report remains at 100.00% of code, with all 5,118 functions matched.",
+  "highlights": [
+    "#239 reports NTSC-U at 95.1% of code from carried C.",
+    "The PAL v1.00 guesses cover Snagglebeast and pad input (#239). Tooling now records functions finished without C."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

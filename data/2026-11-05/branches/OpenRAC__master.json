@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-05",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "capturedAt": "2026-11-06T00:06:09.564Z",
+  "progress": null,
+  "totals": {"commits":20,"merges":4,"landed":2,"additions":4553,"deletions":754,"pushes":2,"forcePushes":0,"authors":["llesieur99","Lynder063","mateuszklysz","pezzadev","Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-05T02:41:56Z","type":"pr_merge","actor":"Veradictus","before":"36596aace15f558be099fa70bbe091b296b60508","after":"8d5b2670617a1faf17c5b3d0817ef18f706d2d19"},
+    {"at":"2026-11-05T06:02:54Z","type":"pr_merge","actor":"Veradictus","before":"8d5b2670617a1faf17c5b3d0817ef18f706d2d19","after":"9fc860d5ce34b6524e928ca1b6ed2a94ff03e5f2"}
+  ],
+  "pullRequests": [
+    {"number":289,"title":"chore(release): 1.0.1","author":"Veradictus","draft":false,"head":"release/1.0.1","events":["opened","merged"],"mergedBy":"Veradictus","additions":3965,"deletions":663,"changedFiles":170,"body":"Everything on develop since 1.0.0, released as launcher 1.0.1 (notes in launcher/release-notes/1.0.1.md).\nMain change: Going Commando can be built and played from an installed launcher (#276). Before this, an installed launcher had no Going Commando program and kept asking for a rebuild. Also the Rebuild guards (#278, #283, with the CI fixes in #285), the Windows build fixes (#287), and the port changes since 1.0.0.\nThe merge commit keeps develop's tree, as in 1.0.0, because squash merges made…"},
+    {"number":296,"title":"Release launcher 1.0.2","author":"Veradictus","draft":false,"head":"release/master-1.0.2","events":["opened","merged"],"mergedBy":"Veradictus","additions":588,"deletions":91,"changedFiles":26,"body":"Launcher 1.0.2 from develop: Going Commando builds on Windows again (#294, #291); dev builds stop offering the same update after a release (#293). See launcher/release-notes/1.0.2.md."}
+  ],
+  "commits": [
+    {"sha":"e3a70578e5211c304b460e1fdebe8ca6893b607f","headline":"fix(port): easier Field of View slider, keep it in the pause menu (#272)","author":"mateuszklysz","committedAt":"2026-11-04T20:14:37Z","merge":false,"landed":false},
+    {"sha":"66f09ab796436d7d751fecea2e715e7deb4a215e","headline":"style(port): lay out a fur.h comment as clang-format does (#271)","author":"Lynder063","committedAt":"2026-11-04T20:48:42Z","merge":false,"landed":false},
+    {"sha":"489241c8745d16bcb8ca205a19ec79111336cd13","headline":"feat(launcher): build Going Commando from the player's disc (#276)","author":"Lynder063","committedAt":"2026-11-04T21:09:50Z","merge":false,"landed":false},
+    {"sha":"9ad785bd285f12cb6cd9abc248a7c5d63fef7a93","headline":"perf(port): streamline Vulkan rendering and add GPU crash diagnostics (#273)","author":"pezzadev","committedAt":"2026-11-04T21:20:33Z","merge":false,"landed":false},
+    {"sha":"b0f7685d360b149a931cc4b2f77ba344e9cbb5f7","headline":"fix(port): open the game's view tests up and down with a wider Field of View (#277)","author":"mateuszklysz","committedAt":"2026-11-04T22:06:42Z","merge":false,"landed":false},
+    {"sha":"72554a091979897f15aed15ef54dacbd4de72996","headline":"style(port): lay out profile.cpp as clang-format does (#280)","author":"mateuszklysz","committedAt":"2026-11-04T22:52:22Z","merge":false,"landed":false},
+    {"sha":"95cbbdca034e42d5de9dc94c04dfa378f772fdb5","headline":"feat(port): raise the HDR brightness limits (#282)","author":"mateuszklysz","committedAt":"2026-11-04T22:54:34Z","merge":false,"landed":false},
+    {"sha":"b847bcaa68c509aba20f4fe665bde64bfb917a5c","headline":"feat(port): author interior lighting environments (#281)","author":"pezzadev","committedAt":"2026-11-04T23:24:25Z","merge":false,"landed":false},
+    {"sha":"1848be3f20061c588f224c0729d23267b4934e0c","headline":"fix(launcher): never offer a Rebuild that cannot make a missing game program (#283)","author":"Veradictus","committedAt":"2026-11-04T23:27:24Z","merge":false,"landed":false},
+    {"sha":"1d67f491213a5fb4d6eadb32ec72d9be8ba082d6","headline":"fix(launcher): rebuild Going Commando when the launcher's commit changes (#278)","author":"Lynder063","committedAt":"2026-11-04T23:27:49Z","merge":false,"landed":false},
+    {"sha":"c42a81583d4802cfeb191ea95fd6e290cbef0106","headline":"fix(launcher): build Going Commando on a Windows PC without long paths (#287)","author":"Lynder063","committedAt":"2026-11-05T00:55:04Z","merge":false,"landed":false},
+    {"sha":"0f72e5def6e4b2e0c82569076582fedd40005e99","headline":"Speed up Vulkan and documentation-only CI (#286)","author":"pezzadev","committedAt":"2026-11-05T00:59:45Z","merge":false,"landed":false},
+    {"sha":"0553f7a395ce693ebb921f68ecfc1d24d197da82","headline":"perf(port): harden and speed up render graph planning (#284)","author":"pezzadev","committedAt":"2026-11-05T01:33:02Z","merge":false,"landed":false},
+    {"sha":"0bf8effb581274ed44f8cd7481a52abcdf4c70ff","headline":"Reuse compiled caches in Vulkan CI (#288)","author":"pezzadev","committedAt":"2026-11-05T01:34:33Z","merge":false,"landed":false},
+    {"sha":"e3e65093822d9f79940f398369e93ff6109f76ea","headline":"chore(release): 1.0.1 (#285)","author":"Veradictus","committedAt":"2026-11-05T02:15:16Z","merge":false,"landed":false},
+    {"sha":"67771a631dd49caf55a2e5ce0d96548a8bc3a0e4","headline":"chore(release): take develop's tree over master","author":"Veradictus","committedAt":"2026-11-05T02:15:30Z","merge":true,"landed":false},
+    {"sha":"8d5b2670617a1faf17c5b3d0817ef18f706d2d19","headline":"Merge pull request #289 from OpenRAC/release/1.0.1","author":"Veradictus","committedAt":"2026-11-05T02:41:56Z","merge":true,"landed":true,"additions":3965,"deletions":663,"body":"chore(release): 1.0.1"},
+    {"sha":"7ae49f85be1e13435b5a0ab01c2e907551d424c5","headline":"Share the enhanced port build across CI test jobs (#290)","author":"pezzadev","committedAt":"2026-11-05T03:33:41Z","merge":false,"landed":false},
+    {"sha":"cfb107f66f6a2090ef289c534f31789024ed4354","headline":"fix(launcher): build long Windows installations in a short temporary path (#291)","author":"llesieur99","committedAt":"2026-11-05T04:55:57Z","merge":false,"landed":false},
+    {"sha":"1af8e74042421a0362b217c5de02f6971efe8a98","headline":"fix(ci): work out a branch build's launcher version once for its builds and rolling release (#293)","author":"Veradictus","committedAt":"2026-11-05T05:09:43Z","merge":false,"landed":false},
+    {"sha":"891aed7aa5d760103961be96f47e5a26f026b3f7","headline":"fix(launcher): start the bundled Python without the Windows \\\\?\\ prefix (#294)","author":"Veradictus","committedAt":"2026-11-05T05:23:41Z","merge":false,"landed":false},
+    {"sha":"27a350117640b4bb832df91bca8267ca69f265c9","headline":"chore(launcher): release 1.0.2 (#295)","author":"Veradictus","committedAt":"2026-11-05T05:46:50Z","merge":false,"landed":false},
+    {"sha":"8c8a5fb3c358fd8afadb6954c772581804fd273b","headline":"Release launcher 1.0.2","author":"Veradictus","committedAt":"2026-11-05T05:46:53Z","merge":true,"landed":false},
+    {"sha":"9fc860d5ce34b6524e928ca1b6ed2a94ff03e5f2","headline":"Merge pull request #296 from OpenRAC/release/master-1.0.2","author":"Veradictus","committedAt":"2026-11-05T06:02:54Z","merge":true,"landed":true,"additions":588,"deletions":91,"body":"Release launcher 1.0.2"}
+  ]
+}
