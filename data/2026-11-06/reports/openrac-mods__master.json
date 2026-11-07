@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Multiplayer 0.10.0 released with PAL/NTSC co-op, separate saves and host takeover",
+  "summary": "Multiplayer 0.10.0 was released with the co-op round-three work: PAL and NTSC players can share a party, use separate co-op saves, join late and hand over hosting (#22). The pull request merged despite its WIP title and description warning that it was not ready for review or merge. Multiplayer 0.8.0 also released during the day, adding co-op rescue, host rally points and team tools (#45). The later 0.10.0 build uses Mod SDK 1.14.0, while 0.8.0 uses SDK 1.11.0.",
+  "highlights": [
+    "Keyboard and Mouse 1.2.5 lets Menu: Circle, E by default, answer memory-card dialogs. Players can create save data without the broken-manifest workaround described in #118.",
+    "Seven listings landed: QoL Hub (#76), Cutscene Manager (#81), Accessibility Pack (#82), Save Manager (#83), Fast Travel (#84), Damage Numbers (#88) and Weapon Wheel Pause (#90).",
+    "Approved external native mods now wait one hour after release instead of 24 (#91). #115 approves twelve reviewed versions together, replacing the separate bot pull requests.",
+    "Item Randomizer 2.0.0, Archipelago 2.2.0 and Difficulty 1.3.0 are among the releases built against Mod SDK 1.14.0.",
+    "Co-op rescue in #45 requires a living teammate on the same level to stay within six game units and hold L3+R3 for three seconds after a lethal on-foot hit is deferred at one health.",
+    "Revolverator listing #129 remains unmerged. RAC-Board 0.2.1 (#127) and Damage Numbers 0.8.0 and 0.8.1 (#131 and #130) await review."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

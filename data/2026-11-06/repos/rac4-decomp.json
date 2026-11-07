@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-06",
+  "repo": "rac4-decomp",
+  "capturedAt": "2026-11-07T00:06:53.151Z",
+  "issues": [
+    {"number":112,"title":"Function reservations and contributor coordination","author":"ReaperOfVeriod","events":["opened"],"closedAs":null,"body":"Purpose\nCoordinate function matching across contributors, agents, branches and worktrees so the same functions are not attempted in parallel.\nHow to reserve work\n\nEach contributor keeps one comment on this issue and edits only their own comment as their scope changes.\nBefore starting or assigning matching work, read the other active comments and check for overlap.\nReserve a manageable set of functions you intend to attempt next, up to 500 unfinished distinct functions across your branches,…"}
+  ],
+  "releases": []
+}

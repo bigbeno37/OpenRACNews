@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-06",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-07T00:06:03.797Z",
+  "issues": [
+    {"number":340,"title":"Launcher UI lags heavily with no reason to do so.","author":"Nikoroq","events":["opened"],"closedAs":null,"body":"As title.\nIs it a known issue? Planned?"},
+    {"number":342,"title":"Enhanced lighting and level edits","author":"TheWhiteGuardian","events":["opened"],"closedAs":null,"body":"Hi all! I'm seeing some strange behavior and I wanted to ask whether this is intended for now, or whether I'm doing something wrong. As a test I've made some placement edits to Novalis in Godot. I've saved the changes, packed them, and prepared them.\nHowever this has broken enhanced lighting for me. I can open C:\\Users\\[Me]\\OpenRAC\\active\\rac1\\data\\port\\pal\\level_01 and verify that water.bin and water.mesh exist, but they don't seem to be applied in-game. Oddly the log does read enhanced…"},
+    {"number":344,"title":"SteamOS / ROG Ally X – Going Commando NTSC build update","author":"kwfrrb562c-boop","events":["opened"],"closedAs":null,"body":"Just wanted to provide an update on my attempts to get Ratchet & Clank: Going Commando building through OpenRAC on SteamOS (ROG Ally X, Z2 Extreme).\nI've finally managed to get the build process underway, currently sitting at 9% compilation!\nGetting this far was a little more involved than anticipated. SteamOS didn't have Ninja, Clang or CMake available to the launcher, so I had to work around the missing dependencies:\n\nInstalled Ninja 1.13.1 locally in ~/.local/bin.\nReused Clang 22.1.8 from an…"}
+  ],
+  "releases": [
+    {"tag":"sdk-v1.14.0","name":"Mod SDK 1.14.0","prerelease":false,"publishedAt":"2026-11-06T15:47:47Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.14.0, for the mod interface 1.14 (docs/port/MODS.md). SHA-256 of the archive: 9f08b35bb479b15ee94ffbe97a8b32233cf83e5ce6eb001bc98edc9b4d045467"}
+  ]
+}

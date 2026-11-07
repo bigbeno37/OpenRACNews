@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-06",
+  "headline": "Going Commando adds PAL and USA v2.00 disc support as Multiplayer 0.10.0 releases",
+  "summary": "Going Commando's development branch adds PAL and USA v2.00 disc support alongside USA v1.01 (OpenRAC#341), though the merged pull request still describes ongoing build rounds. Multiplayer 0.10.0 released with PAL/NTSC parties, separate co-op saves and host takeover, although the merged round-three pull requests retained WIP warnings (OpenRAC#166, openrac-mods#22). Code matched by size rose from 91.80% to 94.26% for Going Commando USA v1.01, from 7.17% to 9.49% for Deadlocked NTSC-U v1.00 and from 10.40% to 10.42% for Up Your Arsenal PAL v1.00. A matched function compiles to exactly the same bytes as the original game. Mod SDK 1.14.0 and Keyboard and Mouse 1.2.5 also released, while rac1-decomp marked Linux visual-bug and launcher-freeze reports and a surround-sound request completed (rac1-decomp#162, rac1-decomp#164, rac1-decomp#163).",
+  "writtenBy": "gpt-6.1-sol"
+}

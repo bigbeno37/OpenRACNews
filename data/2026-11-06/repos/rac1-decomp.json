@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-06",
+  "repo": "rac1-decomp",
+  "capturedAt": "2026-11-07T00:06:13.453Z",
+  "issues": [
+    {"number":162,"title":"[LINUX] Mixed visual bugs/glitches","author":"StarPepe","events":["closed"],"closedAs":"COMPLETED","body":"I would like to report a number of visual bugs and glitches, which I have experienced in OpenRac 0.10.0. Some of these problems go back a few versions, but affect the 0.10.0 as well.\nScreenshots of the errors\nNovalis - clipping:\n\nGadgetron vendor - pyrocitor texture glitch:\n\nFlying through space - cockpit glass glitch:\n\nRilgar - white line in corner of building (early in level):\n\nEudora - grass doesn't connect to the ground:\n\nMenu font - scaling issues (\"Load Game\" is very smooth in comparison…"},
+    {"number":163,"title":"Suggestion: Support for HRTF and surround sound","author":"StarPepe","events":["closed"],"closedAs":"COMPLETED","body":"It woule be great to have support for HRTF for surround on headphones, as well as support for 4.0, 5.1 and 7.1 surround for those of us equipped with such systems."},
+    {"number":164,"title":"[LINUX] Launcher freezing","author":"StarPepe","events":["closed"],"closedAs":"COMPLETED","body":"When I attempt to access parts of the launcher menu outside of the first game, such as the \"Mods\",\"Settings\" tab or any of the other games, the launcher freezes and eventually crashes.\nThis was not a problem with versions prior to 0.8.0, I believe.\nI have uploaded a log file of the crash in this issue.\nOpenRAC version: 0.10.0\nDistribution: Kubuntu 26.04 LTS\nopenrac_0.10.0_crash.txt"}
+  ],
+  "releases": []
+}

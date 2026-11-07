@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 reaches 94.26% matched code, up from 91.80%",
+  "summary": "Going Commando's USA v1.01 progress report rose from 91.80% to 94.26% of code by size, with 8,360 of 8,527 functions matched. A matched function compiles to exactly the same bytes as the original game. The day's final progress commit separately reports PAL at 8,343 of 8,620 functions and USA v2.00 at 8,359 of 8,586. Catalogue repairs also changed the totals by removing residue and duplicate entries and correcting function boundaries.",
+  "highlights": [
+    "Matching batches cover boot and level code, with extensive PAL and USA v2.00 adaptations. #424, #427 and #430 add small and medium functions, while #426 carries more USA v1.01 C to PAL.",
+    "Level data now uses names based on its own level's addresses. #428 says the old names caused the native port to read a float as a pointer and crash in Joba's second arena.",
+    "#429 tightens matched-C rules. Later commits retain hardware exceptions, restore two sky renderers and return three PAL/USA v2.00 functions to nonmatching because they require volatile access to ordinary data.",
+    "PAL menu boundaries and duplicate rows are repaired, including five duplicates in the starship levels. The later repairs resolve the earlier warning that PAL counted five functions twice.",
+    "#432 removes misleading data progress figures from all three releases. Game data still comes from the original dumps, so the old permanent zero did not measure reconstructed data.",
+    "Documentation-only #433 opened and remains unmerged. #431 opened and closed without merging. Neither adds matched functions."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

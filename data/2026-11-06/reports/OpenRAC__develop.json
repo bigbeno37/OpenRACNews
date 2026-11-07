@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando gains PAL and USA v2.00 disc support on the development channel",
+  "summary": "Going Commando gains PAL and USA v2.00 Greatest Hits disc support through the same setup, build and play flow as USA v1.01 (#341), though the merged pull request still calls it a draft while build rounds finish. A follow-up fixes compilation of the new releases' race and crane HUD wrappers (#345). Touch controls gain an optional Action buttons layout whose icons and actions follow gameplay, vehicles and menus (#319). Mod SDK 1.14.0 was also released for mod interface 1.14.",
+  "highlights": [
+    "RAC1 co-op round three merged with PAL/NTSC parties, co-op saves that leave personal story saves alone, and host takeover (#166). Its WIP description still warns that it is not ready for review or merge.",
+    "Start+Select now opens and closes the in-game menu instead of L3, preserving L3 game actions. A lone Start or Select still reaches the game after at most 100 ms (#337).",
+    "Right-stick sensitivity above 100% now speeds up the follow camera even at full stick deflection, with 300% giving three times the speed (#338).",
+    "Going Commando's hoverbike race HUD, crane camera frame and Thermanator gauge move to the screen edges with HUD: Edges. The crane frame's bottom bar no longer tears (#343).",
+    "Callback-only native Going Commando mods gain test coverage. Game hooks and script bindings remain unsupported by this change (#275).",
+    "A redesign of the launcher and in-game menu opened as draft #339 and has not merged. A new report says Novalis level edits break enhanced lighting (#342)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

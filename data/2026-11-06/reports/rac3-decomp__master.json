@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-06",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal adds NTSC-U level matches and shared hero and camera code",
+  "summary": "Six matching pull requests made this an unusually busy day for the early-stage Up Your Arsenal project. PAL v1.00's progress report moved from 10.40% to 10.42% of code by size, reaching 6,499 of 16,164 functions. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "Five NTSC-U batches add 167 small level functions (#4, #6, #7, #8 and #9). These are part of the remaining small-function catalogue, rather than a claim that it is finished.",
+    "#5 brings shared hero, camera and weapon layouts, 370 symbol names and 16 camera and hero matches, drawing on credited open-rac-engine research. It merged while its description still called the plan a draft.",
+    "#9 checks two NTSC-U functions across all 85 of their level placements and reports a successful build of all 54 targets.",
+    "Matched C now excludes volatile and inline assembly. Assembly-based search passes are off by default and reserved for diagnosis."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

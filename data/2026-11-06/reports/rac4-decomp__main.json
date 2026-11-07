@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-06",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's NTSC-U v1.00 matched code rises from 7.17% to 9.49%",
+  "summary": "Deadlocked's NTSC-U v1.00 progress report climbed from 7.17% to 9.49% of code by size, reaching 6,792 of 18,170 functions. A matched function compiles to exactly the same bytes as the original game. The separate PAL report ended at 7,166 of 18,134 functions. Batches cover engine helpers, menus, networking and shared level code, alongside corrections to source ownership and function interfaces.",
+  "highlights": [
+    "#110 adds 663 NTSC-U functions smaller than 200 bytes. It also corrects eight relocation symbols from #107. Its additional library-map matches come from existing sources, rather than new code.",
+    "#97 adapts 198 NTSC-U functions from PAL C, and #107 adds another 212 NTSC-U functions, mostly shared level code. Later cleanup removes duplicate PAL sources where the US C already matches both releases.",
+    "PAL work includes 165 functions in #96 and batches covering loaders, menus, rendering, video and call contracts (#95, #99, #100, #101, #102, #104 and #105). #106 and #108 add shared level functions.",
+    "#109 enforces plain-C rules and returns 13 functions needing volatile or hardcoded addresses to nonmatching. A separate correction withdraws a core routine that required inline assembly.",
+    "#71 merged 45 NTSC-U helpers. Its description still warned that PAL mapping was needed and PAL retail inputs were unavailable locally.",
+    "#111 proposes 42 US functions and #114 proposes 41 PAL functions. Both opened without merging, so their proposed gains are separate from the final progress figures."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
