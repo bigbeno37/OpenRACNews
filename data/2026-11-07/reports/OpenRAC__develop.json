@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-07",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Game-driven rumble and co-op damage fixes reach development builds",
+  "summary": "Development builds gain controller rumble in Going Commando and Deadlocked, driven by the games' own motor commands (#362). Ratchet & Clank stays without rumble, as on PS2. Ratchet & Clank co-op now carries a guest's weapon and wrench hits to the host and lets enemy shots damage guests (#363). The launcher also recognises the original game's PAL v1.00 and Japanese NTSC-J v1.02 discs (#350).",
+  "highlights": [
+    "Going Commando's USA v1.01 camera responds to the right stick again (#352). Play-through fixes, a decompilation update, a Draw distance setting and a save-editor addition also landed (#354).",
+    "Mod updates reuse GitHub API replies for five minutes to reduce rate-limit failures (#347). Developers can switch among known discs, including prepared versions and checkout baseroms (#349, #351).",
+    "Touch swimming shows ascent and descent, with R1 only when the Hydro-Pack is owned (#357). Ship and jet keep separate layouts. Ratchet & Clank's NTSC Enhanced lighting extends into interiors, ravines and Swingshot routes (#358).",
+    "Launcher builds on develop and master can finish instead of being cancelled by each merge (#353). Linux port checks split by game (#348), and pull requests run checks selected by their changed files (#373).",
+    "Metal support (#370), macOS fixes (#368, #369) and an iPhone/iPad launcher (#375, #376, #377) remain unmerged. OpenGL stays the default in the Metal proposal. The decompilation submodule change (#371) is a draft.",
+    "Going Commando PAL players reported startup crashes (#355) and missing menus (#372). Those reports remain open."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

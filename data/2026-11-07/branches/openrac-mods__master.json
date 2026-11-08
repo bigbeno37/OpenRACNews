@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-07",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-08T00:06:50.385Z",
+  "progress": null,
+  "totals": {"commits":2,"merges":0,"landed":2,"additions":4,"deletions":2,"pushes":2,"forcePushes":0,"authors":["openrac-bot[bot]"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-07T07:11:29Z","type":"push","actor":"openrac-bot[bot]","before":"4670148bfdd306339942c8233b30c34bebb08140","after":"09979111c32c6c6046f2a1300c3a1d28c75ee1f0"},
+    {"at":"2026-11-07T07:13:32Z","type":"push","actor":"openrac-bot[bot]","before":"09979111c32c6c6046f2a1300c3a1d28c75ee1f0","after":"0b2e0ec4928c59fc97a343cbf94bb04a1dcd78d6"}
+  ],
+  "pullRequests": [
+    {"number":132,"title":"chore(index): approve damage-numbers 0.8.1","author":"openrac-bot[bot]","draft":false,"head":"approve/damage-numbers-0.8.1","events":["opened"],"mergedBy":null,"additions":2,"deletions":1,"changedFiles":1,"body":"Opened by the index bot: master did not take a direct push."}
+  ],
+  "commits": [
+    {"sha":"09979111c32c6c6046f2a1300c3a1d28c75ee1f0","headline":"chore(index): approve damage-numbers 0.8.0","author":"openrac-bot[bot]","committedAt":"2026-11-07T07:11:28Z","merge":false,"landed":true,"additions":2,"deletions":1},
+    {"sha":"0b2e0ec4928c59fc97a343cbf94bb04a1dcd78d6","headline":"chore(index): approve rac-board 0.2.1","author":"openrac-bot[bot]","committedAt":"2026-11-07T07:13:31Z","merge":false,"landed":true,"additions":2,"deletions":1}
+  ]
+}

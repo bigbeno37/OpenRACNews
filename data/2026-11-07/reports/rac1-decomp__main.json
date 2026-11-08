@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "OpenRAC's local Ratchet & Clank changes proposed for the decompilation",
+  "summary": "A pull request proposes bringing OpenRAC's local changes back into the Ratchet & Clank decompilation, including tools that run inside an OpenRAC checkout (#240). It remains unmerged, so main gained no commits.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

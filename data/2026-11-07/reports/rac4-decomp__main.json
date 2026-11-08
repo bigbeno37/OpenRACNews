@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds US and PAL matches, with NTSC-U v1.00 at 9.52% of code",
+  "summary": "Deadlocked's NTSC-U v1.00 code match rises from 9.49% to 9.52%, with 6,815 of 18,170 functions in the project's progress report. A matched function compiles to exactly the same bytes as the original game. US level-overlay and resident-code work (#111) and a batch of 41 reviewed PAL functions (#114) landed. The day's final PAL count is 7,228 of 18,134 functions.",
+  "highlights": [
+    "Follow-up review removed duplicate functions and replaced literal addresses with named globals. One PAL hardware-polling function returned to the non-matching drafts because it needed a volatile cast to match.",
+    "New contribution guidance uses #112 as a shared function-reservation noticeboard (#113).",
+    "Unmerged proposals cover 24 US functions that also match PAL (#118), 138 small US functions (#119), and PAL batches of 33 (#115), seven (#117) and 19 (#120). These counts are proposals, not additions to main."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

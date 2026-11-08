@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-08T00:06:06.820Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":240,"title":"feat: upstream OpenRAC's local changes","author":"Veradictus","draft":false,"head":"openrac/upstream-patches","events":["opened"],"mergedBy":null,"additions":335,"deletions":61,"changedFiles":17,"body":"Upstreams OpenRAC's local changes to this repository (games/rac1/pal-patches/ in OpenRAC#371), so OpenRAC can drop them once its pin moves past this. One commit per patch, rebased onto current main (b4a462a). All five applied without conflicts.\n\n\n\nCommit\nReplaces\nWhat\n\n\n\n\nfeat(tools): run the tools from inside OpenRAC\n0001-tools-inside-openrac\ntools/docker/run.sh, lombyte.py, names.py, setup_asm.sh and toolchain.sh find OpenRAC's top as the nearest parent with games/rac1/game.json, at any…"}
+  ],
+  "commits": []
+}

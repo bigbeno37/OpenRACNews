@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-07",
+  "headline": "OpenRAC adds game-driven rumble and co-op damage fixes",
+  "summary": "OpenRAC's development branch gains game-driven rumble for Going Commando and Deadlocked, co-op damage fixes for Ratchet & Clank, and recognition of its PAL v1.00 and Japanese NTSC-J v1.02 discs. Going Commando's last USA v1.01 progress report rises from 94.26% to 96.18% of code matched, while Deadlocked's NTSC-U v1.00 moves from 9.49% to 9.52%. A matched function compiles to exactly the same bytes as the original game. Up Your Arsenal has unmerged PAL v1.00 proposals for Veldin and Florana, and Ratchet & Clank has a proposal to bring back OpenRAC changes. The mod index approves Damage numbers 0.8.0 and RAC-Board 0.2.1, while Going Commando PAL players report startup and menu failures (OpenRAC#355, OpenRAC#372).",
+  "writtenBy": "gpt-6.1-sol"
+}

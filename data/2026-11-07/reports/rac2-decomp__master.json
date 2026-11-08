@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 progress report rises from 94.26% to 96.18% of code matched",
+  "summary": "The project's last progress report puts Going Commando's USA v1.01 at 96.18% of code matched, up from 94.26% the previous day, with 8,420 of 8,527 functions. A matched function compiles to exactly the same bytes as the original game. New compiler options turn previously near-matching C into exact matches, including HUD setup, Maktar Nebula code and the anti-aliased frame-buffer setup. Matching work also carries across to PAL and USA v2.00.",
+  "highlights": [
+    "The last progress update puts PAL at 95.41% of code and 8,476 of 8,607 functions. USA v2.00 is at 95.68% of code and 8,452 of 8,579 functions.",
+    "Further matches landed after that refresh, including work in Oozla, Tabora, Hrugis Cloud, Gorn and Grelbin, followed by batches of seven and five USA v1.01 functions.",
+    "The release catalogue removes leftover entries and corrects function boundaries, changing the PAL and USA v2.00 totals as well as adding matches.",
+    "#434 proposes documentation for a USA v1.01 near miss and adds no match. #435 proposes upstreaming OpenRAC's local changes, including a sound-slot limit fix, without changing progress reports. Neither merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

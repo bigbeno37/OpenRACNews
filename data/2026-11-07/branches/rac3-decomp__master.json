@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-08T00:06:28.973Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":10,"title":"match: 8 frontbin and 12 level functions; near misses to nonmatching","author":"cadelass","draft":false,"head":"pr/small-frontbin-and-level-matches","events":["opened"],"mergedBy":null,"additions":1080,"deletions":864,"changedFiles":36,"body":"Functions\nFrontbin, all in src/frontbin/39A6E0.c (plain C):\n\nfunc_0039E688: plain C (its LINKER_REMNANT func_0039E6A0 was the function's own jr delay slot, so the marker is removed)\nfunc_0039EED8, func_0039BC10, func_0039AF10, func_0039C300, func_0039BDC0, func_0039F348, func_0039F580: plain C. The NTSC decomp needed a single-function @ps2as for these; here they match with the file's own flags (see Notes). func_0039F348 is a switch; its INCLUDE_RODATA jtbl line is deleted because gcc emits the…"},
+    {"number":11,"title":"match: 20 level 1 (Veldin) functions; near misses to nonmatching","author":"cadelass","draft":false,"head":"match/level-01-small","events":["opened"],"mergedBy":null,"additions":1527,"deletions":149,"changedFiles":31,"body":"Matched (level 1, Veldin; all plain C)\nfunc_L01_003B83C0, 003B1DC0, 003B1E88, 003BDF10, 003BDF98, 003B0C60, 00423A10, 0043B960, 003E34F0, 0040D338, 003B8190, 003BDC88, 003E32F8, 0035BB00, 003B0498, 003BE1C8, 003B0D48, 0049DE10, 00356668, 003BD608.\npython tools/build_levels.py 01 prints MATCH (bin sha1 aab9a956..., as the disc stores it 1b44af14...). Unit tests pass (50).\nFlag overrides\n@ps2as added to L01_003E32F8.c and L01_0035B710.c (inline float constants / mixed gp+lui access). Flags stay…"},
+    {"number":12,"title":"match: 24 level 2 (Florana) functions; near misses and patterns","author":"cadelass","draft":false,"head":"match/level-02-florana","events":["opened"],"mergedBy":null,"additions":2433,"deletions":265,"changedFiles":32,"body":"Matches 24 functions in src/levels/02_florana/ (Florana, PAL), adds 11 near-miss drafts to nonmatching/levels/, and a \"Patterns from level 2 (Florana, PAL)\" section to docs/wiki/Matching-Patterns.md.\nMatched (24)\nfunc_L02_ 003AB1F0, 0032F1C8, 003519F0, 003FC828, 0034FC88, 0034C858, 0039E208, 0039D160, 00352320, 003A2620, 0039CD18, 0039D680, 003BB620, 003BBAC0, 00350030, 0034F710, 0032EF80, 0034FE10, 003514D0, 003A23C8, 004BDA00, 00474518, 004722E0, 0039EF28.\nTwo of them have switches (jump…"}
+  ],
+  "commits": []
+}

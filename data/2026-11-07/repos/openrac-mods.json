@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-07",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-08T00:06:50.420Z",
+  "issues": [
+    {"number":127,"title":"Review rac-board 0.2.1","author":"openrac-bot[bot]","events":["closed"],"closedAs":"COMPLETED","body":"A new version of an external native mod waits for review before players get it.\n\nMod: rac-board (RAC-Board), https://github.com/mateuszklysz/RAC-Board\nRelease: https://github.com/mateuszklysz/RAC-Board/releases/tag/v0.2.1 (2026-11-06T09:28:51Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nrac-board-0.2.1-linux-x86_64.zip\nf259841d18d5533f83faa90e7e4912f9b80528e9f4c9717939df5d30cf29508a\n645702\n\n\nlinux-aarch64\nrac-board-0.2.1-linux-aarch64.zip\nd72b8dd7752bbfd20da0816276233750bdf4e3c323f654d5…"},
+    {"number":131,"title":"Review damage-numbers 0.8.0","author":"openrac-bot[bot]","events":["closed"],"closedAs":"COMPLETED","body":"A new version of an external native mod waits for review before players get it.\n\nMod: damage-numbers (Damage numbers), https://github.com/LucienTo/OpenRAC-Damage-Numbers\nRelease: https://github.com/LucienTo/OpenRAC-Damage-Numbers/releases/tag/v0.8.0 (2026-11-06T22:10:29Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\ndamage-numbers-0.8.0-linux-x86_64.zip\n61bb6ba66333d2009ed06de14c0250ef31fc2d1ee376711d213bcbe6a7674aa1\n87974\n\n\nlinux-aarch64\ndamage-numbers-0.8.0-linux-aarch64.zip\n783ca31b441…"}
+  ],
+  "releases": []
+}

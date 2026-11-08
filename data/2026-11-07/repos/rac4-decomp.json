@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac4-decomp",
+  "capturedAt": "2026-11-08T00:06:42.431Z",
+  "issues": [
+    {"number":73,"title":"PAL Gladiator: 5 matching C functions, reconstruction drafts and PS2Recomp findings","author":"Sumaiter","events":["closed"],"closedAs":"COMPLETED","body":"Sharing PAL Gladiator game reconstruction results from a local PS2Recomp-assisted inspection, compared against OpenRAC main at fe6ec0d2e9d209ad3a84dd33a188120ea12f030c.\nThe contribution is 5 new matching C functions (128 bytes), 3 unmatched C drafts, and a classified index of the translated main/frontend inventory. The 13,713 generated ranges are not claimed as 13,713 decompiled functions.\nSource and evidence\n\nMatching C and map/report changes — commit 73abe1b\nResearch package and complete…"},
+    {"number":116,"title":"RESERVE WORK","author":"chistianh","events":["opened","closed"],"closedAs":"NOT_PLANNED","body":"Contributor: @chistianh\nVersion: PAL (SCES_532.85). These reservations apply to PAL only.\nStatus: active. PAL-only functions of 500+ bytes, plus my earlier near misses.\nReserved (46):\n\nfunc_L01_004C8708\nfunc_L06_0049C508\nfunc_L00_006B0A90\nfunc_L01_004F1260\nfunc_L01_004DAA70\nfunc_L01_0048C5D0\nfunc_L02_004030C8\nfunc_00513880\nfunc_L00_005FCB88\nfunc_L01_004DA930\nfunc_L01_004F4050\nfunc_L01_004B5BB8\nfunc_L01_004CC378\nfunc_L15_004A16D0\nfunc_004B31D8\nfunc_L01_004FDE98\nfunc_004F8088\nfunc_L01_003EED90\nfun…"}
+  ],
+  "releases": []
+}

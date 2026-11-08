@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-07",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal proposals cover the front end, Veldin and Florana",
+  "summary": "Three pull requests propose more matching C for Up Your Arsenal's PAL v1.00, covering the front-end program, Veldin and Florana. A matched function compiles to exactly the same bytes as the original game. None merged, so master gained no commits.",
+  "highlights": [
+    "#10 proposes eight front-end functions and 12 level functions, with near misses kept separately as drafts.",
+    "#11 proposes 20 Veldin functions and retains near misses separately. Its author reports that the rebuilt level matches the disc.",
+    "#12 proposes 24 Florana functions, 11 near-miss drafts and notes on matching patterns. The drafts do not count as matches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
