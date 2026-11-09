@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-08",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-09T00:06:10.236Z",
+  "progress": {"sha":"f911d6e4b9711071f0daaad95b4a04c2c8aa3c61","code":{"done":3713584,"total":3713584},"functions":{"done":5118,"total":5118},"data":{"done":698751,"total":699072}},
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":335,"deletions":61,"pushes":1,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-08T17:50:15Z","type":"pr_merge","actor":"Veradictus","before":"b4a462a5325759dd466bebe8cc06747e00d665d2","after":"f911d6e4b9711071f0daaad95b4a04c2c8aa3c61"}
+  ],
+  "pullRequests": [
+    {"number":240,"title":"feat: upstream OpenRAC's local changes","author":"Veradictus","draft":false,"head":"openrac/upstream-patches","events":["merged"],"mergedBy":"Veradictus","additions":335,"deletions":61,"changedFiles":17,"body":"Upstreams OpenRAC's local changes to this repository (games/rac1/pal-patches/ in OpenRAC#371), so OpenRAC can drop them once its pin moves past this. One commit per patch, rebased onto current main (b4a462a). All five applied without conflicts.\n\n\n\nCommit\nReplaces\nWhat\n\n\n\n\nfeat(tools): run the tools from inside OpenRAC\n0001-tools-inside-openrac\ntools/docker/run.sh, lombyte.py, names.py, setup_asm.sh and toolchain.sh find OpenRAC's top as the nearest parent with games/rac1/game.json, at any…"}
+  ],
+  "commits": [
+    {"sha":"f911d6e4b9711071f0daaad95b4a04c2c8aa3c61","headline":"feat: upstream OpenRAC's local changes (#240)","author":"Veradictus","committedAt":"2026-11-08T17:50:14Z","merge":false,"landed":true,"additions":335,"deletions":61,"body":"* feat(tools): run the tools from inside OpenRAC\n\nOpenRAC builds this tree as a subdirectory of its own repository\n(games/rac1 on its develop branch, games/rac1/pal since it became a\nsubmodule). The tools now find OpenRAC's top as the nearest parent\ndirectory with games/rac1/game.json, at any depth, instead of a fixed\npath:\n\n- tools/docker/run.sh mounts all of OpenRAC, so its shared editor/,\n  baserom/ and toolchains/ are visible in the container.\n- tools/lombyte.py and tools/names.py use the…"}
+  ]
+}

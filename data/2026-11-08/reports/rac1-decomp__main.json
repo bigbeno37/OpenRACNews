@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-08",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank takes OpenRAC's local changes upstream",
+  "summary": "Ratchet & Clank's decompilation incorporated OpenRAC's local PAL changes, letting OpenRAC drop those patches when it updates its pinned source (#240). PAL v2.00 remains at 100.00% matched code in the project's progress report. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

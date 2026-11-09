@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-08",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "iPhone and iPad integration lands, and macOS gains a selectable Metal renderer",
+  "summary": "iPhone and iPad gained the shared launcher, local disc import and native platform support (#375, #376, #377). macOS players can select Metal in Advanced settings, with Enhanced graphics still using Vulkan (#370, #382). Going Commando's PAL and USA v2.00 ports now enter levels after headless checks, with USA v2.00's Oozla and Aranos openings fixed too (#401, #405). Mod SDK 1.14.1 and 1.14.2 were released as Going Commando gained multiplayer support and item-randomizer hook points (#385, #386, #387, #390).",
+  "highlights": [
+    "Desktop players can choose a save folder, closing #332 (#388). Individual Steam game entries gain their own artwork and direct launch options, closing #333 (#389).",
+    "Touch controls gain Going Commando-specific actions, an O button for prompts such as manual saving, and a large movie-skip button (#395, #402, #404).",
+    "The launcher and in-game menu adopt the site's gold look, with optional game colours. Gruvbox settings fall back to OpenRAC after that theme's removal (#339, #393, #396).",
+    "#391 reports Novalis Enhanced lighting preparation falling from 184 to 64 seconds with new defaults. Its level 9 tests ran 2.8 times faster with BC6H and 2.5 times faster with ASTC.",
+    "Pinned decompilation submodules replace copied source trees, accounting for most of the day's four million deleted lines. Upstreamed patches are then removed from OpenRAC (#371, #408).",
+    "Hrugis Cloud's giant orange squares are fixed (#392). Up Your Arsenal's PAL disc gains recognition and build support (#381). Enhanced bloom remains an unmerged proposal (#407)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

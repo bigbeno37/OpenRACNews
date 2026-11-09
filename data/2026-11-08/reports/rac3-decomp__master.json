@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-08",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 code progress rises from 10.42% to 19.70%",
+  "summary": "Up Your Arsenal's usually quiet development line had a day of matching work that took PAL v1.00 from 10.42% to 19.70% of code, reaching 7,132 of 16,164 functions. A matched function compiles to exactly the same bytes as the original game. NTSC-U has a separate total of 6,964 of 16,222 functions after the work was carried across. The batch of large functions includes Ratchet's movement states, memory-card handling and the wrench update (#13).",
+  "highlights": [
+    "PAL work covers the front end and several levels (#10), 20 Veldin functions (#11), 24 Florana functions (#12), and 73 Starship Phoenix functions (#14).",
+    "Many routines were adapted from already matched Going Commando and Deadlocked code, with game-specific addresses and constants corrected.",
+    "#13 reports byte-identical builds for all three core programs, all 49 PAL levels and all 54 NTSC-U targets. Near-miss drafts remain separate from matched code.",
+    "#15 opened with proposed Daxx work and more Going Commando ports, but had not merged by the end of the day."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

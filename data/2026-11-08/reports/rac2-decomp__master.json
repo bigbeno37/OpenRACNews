@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-08",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reports 97.38% matched code for USA v1.01",
+  "summary": "Going Commando's refreshed progress report raises USA v1.01 from 96.18% to 97.38% matched code, with 8,452 of 8,527 functions. A matched function compiles to exactly the same bytes as the original game. The other releases have their own figures: PAL reaches 95.57% of code and 8,483 of 8,607 functions, while USA v2.00 reaches 96.17% and 8,468 of 8,579 functions. Compiler corrections unlocked matches for the main level loop, sound-system startup and PAL's tile-board update.",
+  "highlights": [
+    "Further USA v1.01 matches landed after the last progress refresh, so the reported figures do not include that later work.",
+    "OpenRAC's local fixes are upstream, including sound-slot bounds and setting effect colours before their first draw (#435).",
+    "#433 and #436 document near misses rather than adding matches. The strand routine documented in #434 was subsequently matched in a later commit.",
+    "A later correction restored #433, #434 and #435 after rewritten commits accidentally reverted their changes."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

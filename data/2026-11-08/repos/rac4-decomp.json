@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-08",
+  "repo": "rac4-decomp",
+  "capturedAt": "2026-11-09T00:06:57.532Z",
+  "issues": [
+    {"number":134,"title":"Fill word in function sizes, and PAL objects in the US relocation audit","author":"farfeduc","events":["opened"],"closedAs":null,"body":"Two cases where C that builds to retail's bytes still fails the audits. I kept the functions out of my PRs; reporting them here so the tools can decide.\n1. A trailing 0xCDCDCDCD fill word counts in the function's size\nconfig/us/functions.tsv gives these level functions a size that includes one 0xCDCDCDCD word after the last jr $ra and its delay slot:\n\n\n\nFunction\nSize in the table\nCode before the…"}
+  ],
+  "releases": []
+}

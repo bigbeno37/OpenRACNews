@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-08",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked reaches 10.21% matched code with network and cross-game work",
+  "summary": "Deadlocked's NTSC-U v1.00 matched code rose from 9.52% to 10.21% in the project's progress report. A matched function compiles to exactly the same bytes as the original game. That report lists 7,163 of 18,170 functions. The day's separate map tally instead records 7,177 NTSC-U functions and 7,756 of 18,134 PAL functions.",
+  "highlights": [
+    "Network, menu and level routines landed in #119 and #124, including converting existing near misses into exact matches.",
+    "#122 and #125 adapt routines already matched in Going Commando and Up Your Arsenal, covering both NTSC-U and PAL.",
+    "PAL-specific work includes menu and object-setup routines (#115, #117, #120, #126). #120 leaves NTSC-U progress unchanged.",
+    "OpenRAC's local changes are upstream, allowing its Deadlocked submodule to use main without local patches (#127).",
+    "Draft #121 and new batches #128, #129, #130, #131, #132 and #133 remained unmerged.",
+    "#134 reports audit failures involving trailing fill words and PAL objects in the US relocation audit. Its author kept the affected functions out of the pull requests."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-08",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Going Commando gains multiplayer, difficulty and item-randomizer releases",
+  "summary": "Going Commando gains difficulty 1.4.0, multiplayer 0.11.0, item-randomizer 2.2.0 and xbox-icons 1.1.0 across USA v1.01, PAL and USA v2.00. Multiplayer hosts can adopt an existing game, with guests loading its save, following level changes and seeing one another as figures. The item randomizer shuffles gadget locations, the Sheepinator and when weapons enter vendor stock. Difficulty still excludes enemy count and speed for Going Commando, while health-pickup changes and the Nanotech surge event remain Ratchet & Clank-only.",
+  "highlights": [
+    "lock-strafe 1.1.0 brings Going Commando's strafe feel and hip twist to Ratchet & Clank, with Classic behaviour still selectable. Version 1.1.1 corrects the direction of the hip twist.",
+    "#138 fixes Ratchet & Clank Archipelago vendors on NTSC-U and PAL v2.00: buying the last item closes the menu, empty shops cannot open, and new stock restores access.",
+    "Revolverator joins the index, with version 0.3.3 approved (#129, #137). Its submission describes a separate restored weapon for catching, spinning and throwing enemies (#128).",
+    "damage-numbers 0.8.1 was approved for the index (#132).",
+    "Item-randomizer 2.1.0 initially covered Going Commando USA v1.01. Version 2.2.0 adds PAL and USA v2.00 and uses Mod SDK 1.14.2."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-08",
+  "headline": "Up Your Arsenal reaches 19.70% of PAL v1.00 code as OpenRAC gains iPhone and iPad integration",
+  "summary": "Up Your Arsenal's PAL v1.00 rose from 10.42% to 19.70% matched code, with work on Ratchet's movement, the wrench and memory-card handling among the additions (rac3-decomp#13). A matched function compiles to exactly the same bytes as the original game. OpenRAC gained iPhone and iPad launcher integration (OpenRAC#377) and a selectable macOS Metal renderer that leaves Enhanced graphics on Vulkan (OpenRAC#382). Going Commando's mod releases include multiplayer 0.11.0 and item-randomizer 2.2.0 across USA v1.01, PAL and USA v2.00. Going Commando's USA v1.01 progress report rose from 96.18% to 97.38% matched code and Deadlocked's NTSC-U v1.00 from 9.52% to 10.21%, while Ratchet & Clank's PAL v2.00 stayed at 100.00% and took OpenRAC's local changes upstream (rac1-decomp#240).",
+  "writtenBy": "gpt-6.1-sol"
+}
