@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-09",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-10T00:06:37.434Z",
+  "progress": {"sha":"83aa5ed2389cec2a1af211d1a45b3246c04a6975","code":{"done":1496972,"total":7546948},"functions":{"done":7164,"total":16164},"data":null},
+  "totals": {"commits":14,"merges":1,"landed":2,"additions":1981,"deletions":268,"pushes":2,"forcePushes":0,"authors":["cadelass","Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-09T07:06:45Z","type":"pr_merge","actor":"Veradictus","before":"68377e3007a04205ece5166c039e0132f9fbbf6c","after":"29faf79738cf3d3c00e34bc924324e05dc8d4f41"},
+    {"at":"2026-11-09T08:07:27Z","type":"push","actor":"Veradictus","before":"29faf79738cf3d3c00e34bc924324e05dc8d4f41","after":"83aa5ed2389cec2a1af211d1a45b3246c04a6975"}
+  ],
+  "pullRequests": [
+    {"number":15,"title":"match: 23 level 5 (Daxx) functions and 9 ports from rac2-decomp; near misses and patterns","author":"cadelass","draft":false,"head":"match/rac2-ports","events":["merged"],"mergedBy":"Veradictus","additions":1818,"deletions":125,"changedFiles":35,"body":"What\nTwo pieces of work on one branch, on top of origin/master (68377e3, after #13):\n\n9 level functions ported from rac2-decomp. Each one's retail code has the same instructions as matched C in rac2-decomp (rac2's cross_identity(): only linker-filled fields masked). The C was copied with every relocated name renamed to this game's from retail's bytes. Where only immediates differed, the literal was changed and the note says \"constants adapted\". All of them are in files nobody listed in #3 at…"}
+  ],
+  "commits": [
+    {"sha":"f52010ec2d8e9aa7df3168c048d2b702248f3d57","headline":"feat(levels): port 9 functions from rac2-decomp","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"7838db20b42709c7623ea02083efe02257b5378f","headline":"feat(levels): match 7 functions in level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"5183746263b442f1e4f112514771bd325ae888ef","headline":"feat(levels): match 3 more functions in level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"c67b470698a46e55e7e67949c4aaaabfa84a9744","headline":"feat(levels): match 4 more functions in level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"c079fefc366faf72f9668e0228956849e45aabf7","headline":"feat(levels): match 3 more functions in level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"4781be0d22d24014d5109d87ad99f3ceb04a5b31","headline":"docs(nonmatching): stage 10 level 5 (Daxx) near misses","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"40c905f03164c38a772efe762b120cb4243d7237","headline":"docs(wiki): patterns from level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"ed1ffe089ffe5e16e77caf1c96f7508d91b0a04a","headline":"docs(wiki): more level 5 shapes","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T20:38:12Z","merge":false,"landed":false},
+    {"sha":"e1ad90cbea8e70fc67f502c12a1e9f761530ab5d","headline":"feat(levels): match 3 level 5 (Daxx) near misses","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T21:07:35Z","merge":false,"landed":false},
+    {"sha":"410c7c42c7d4303d13f6c088de24984bf4122b7c","headline":"docs(wiki): level 5 second-pass recipes","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T21:07:48Z","merge":false,"landed":false},
+    {"sha":"fd2dab46f55e4f4e117821bbbb0e8339eed52fd8","headline":"feat(levels): match func_L05_003DD3C8 in level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T22:32:04Z","merge":false,"landed":false},
+    {"sha":"68a85a783b83ab3e0c9dc7e4583deb36830b4f46","headline":"feat(levels): match func_L05_003DC320 and func_L05_003DB9F8 in level 5 (Daxx)","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T22:35:35Z","merge":false,"landed":false},
+    {"sha":"1dd1aefe9114de6d9787205d7e03b786fc96babe","headline":"docs(wiki): level 5 third-pass recipes and open problems","author":"cadelass","unlinked":true,"committedAt":"2026-11-08T22:36:03Z","merge":false,"landed":false},
+    {"sha":"29faf79738cf3d3c00e34bc924324e05dc8d4f41","headline":"Merge pull request #15 from cadelass/match/rac2-ports","author":"Veradictus","committedAt":"2026-11-09T07:06:44Z","merge":true,"landed":true,"additions":1818,"deletions":125,"body":"match: 23 level 5 (Daxx) functions and 9 ports from rac2-decomp; near misses and patterns"},
+    {"sha":"83aa5ed2389cec2a1af211d1a45b3246c04a6975","headline":"chore(progress): regenerate the NTSC-U map, built list and reports after #15","author":"Veradictus","committedAt":"2026-11-09T08:07:25Z","merge":false,"landed":true,"additions":163,"deletions":143}
+  ]
+}

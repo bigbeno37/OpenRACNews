@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's NTSC-U v1.00 rises from 10.21% to 12.88% of code",
+  "summary": "Deadlocked's NTSC-U v1.00 now has 12.88% of its code matched, up from 10.21%, with 7,673 of 18,170 functions matched. A matched function compiles to exactly the same bytes as the original game. Eight pull requests merged, covering network routines, menus, game code and PAL level code.",
+  "highlights": [
+    "#131 is the largest batch, bringing menu and resident game function matches alongside fixes to existing declarations and duplicate definitions.",
+    "US matching work clears old drafts in #128, adds small functions in #130 and #132, and resolves more near misses in #135 and #136.",
+    "The PAL release gains nine PAL-only functions in #129 and 24 verified level routines in #133.",
+    "Further US and PAL work in #137, #138, #139 and #142 remains unmerged, so its proposed gains are not part of the branch's progress.",
+    "Draft #140 proposes 42 NTSC-U matches and 20 interface corrections, with seven near misses deferred. It has not merged.",
+    "#141 proposes 13 US level function matches but has not merged. Its author reports incomplete PAL validation and 27 previously observed, unrelated relocation mismatches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

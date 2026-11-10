@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando gains mod menus and editable Mega weapons",
+  "summary": "Going Commando now shows mods' pages in its own menus on all three supported discs (#420). Its save editor can select weapon versions, including Mega weapons, on any save (#423, #425). Outside challenge mode, V3 gains experience but will not advance to V4, which can be chosen directly. Mods also receive the game's calls before loading, fixing randomizer updates and multiplayer loading (#416).",
+  "highlights": [
+    "Mod SDK 1.14.3 and 1.14.4 were released, adding Going Commando hook points for health pickups and item equipping (#414, #415).",
+    "Fixes address Hrugis Cloud's missing ship and HUD in Going Commando v1.01, and the Fizzwidget robot guide stopping on Todano (#410, #418).",
+    "Adding mods from a repository now reads its newest release. The Mods tab's Check for updates button also refreshes the mod index (#409, #421).",
+    "Enhanced lighting gains adaptive baking and mesh emission, with Vulkan GPU baking still opt-in (#411, #412). Nanotech orbs gain lights, and stretched Novalis water on Radeon Vulkan is fixed (#413, #417).",
+    "Android's Files app gains a Mod files folder (#427). Notifications no longer swallow controller presses and holds (#428).",
+    "Game colours are now on by default, giving each game its own launcher and in-game menu colours. Players can still turn them off (#430, closing #426)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

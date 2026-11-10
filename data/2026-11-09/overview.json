@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-09",
+  "headline": "Going Commando gains mod menus and Mega weapon choices as decompilation advances",
+  "summary": "Going Commando gains mod pages in its own menus and editable Mega weapon versions, including outside challenge mode (OpenRAC#420, OpenRAC#423, OpenRAC#425). Item Randomizer 2.4.1 protects existing playthroughs by default, while Multiplayer 0.12.2 keeps parties within the same game's family. Going Commando's USA v1.01 progress report rises from 97.38% to 98.83% of code in a refresh covering November 8 and 9. Up Your Arsenal's PAL v1.00 matched code rises from 19.70% to 19.84%, and Deadlocked's NTSC-U v1.00 rises from 10.21% to 12.88%. A matched function compiles to exactly the same bytes as the original game.",
+  "writtenBy": "gpt-6.1-sol"
+}

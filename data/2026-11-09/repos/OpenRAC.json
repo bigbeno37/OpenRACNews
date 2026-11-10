@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-09",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-10T00:05:59.914Z",
+  "issues": [
+    {"number":426,"title":"Make \"Game colours\" option, on by default in the Launcher settings","author":"nickyyOO","events":["opened","closed"],"closedAs":"COMPLETED","body":"Nothing to add"}
+  ],
+  "releases": [
+    {"tag":"sdk-v1.14.3","name":"Mod SDK 1.14.3","prerelease":false,"publishedAt":"2026-11-09T04:26:52Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.14.3, for the mod interface 1.14 (docs/port/MODS.md). SHA-256 of the archive: 65395ef620ac431d2126bd393d2d5a7d4018cfc88abdae577ec149b2a7b1d845"},
+    {"tag":"sdk-v1.14.4","name":"Mod SDK 1.14.4","prerelease":false,"publishedAt":"2026-11-09T05:13:31Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.14.4, for the mod interface 1.14 (docs/port/MODS.md). SHA-256 of the archive: 02f2c0e94585a80282264f6593d48f024a61bb99f9914d1edef1874e8642fb7f"}
+  ]
+}

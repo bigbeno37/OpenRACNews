@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-09",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's USA v1.01 progress report rises from 97.38% to 98.83% of code",
+  "summary": "Going Commando's refreshed progress report puts USA v1.01 at 98.83% of code, up from 97.38%, with 8,491 of 8,527 functions matched. A matched function compiles to exactly the same bytes as the original game. The refresh counts matches from November 8 and 9 and precedes the day's final PAL matching pull request (#437).",
+  "highlights": [
+    "The same refresh puts the PAL release at 96.60% of code, up from 95.57%, with 8,526 of 8,607 functions matched.",
+    "USA v2.00 reaches 97.53% of code in the refresh, up from 96.17%, with 8,515 of 8,579 functions matched.",
+    "The day's matching work includes HUD panels and functions across several levels.",
+    "Four more PAL functions landed in #437, with three near misses retained separately from matched code.",
+    "Readable names for 105 functions were added using their Ratchet & Clank counterparts (#438).",
+    "#439 closed without merging. Its seven proposed USA v1.01 functions already have C implementations on master, and the author reports conflicts with the current branch."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

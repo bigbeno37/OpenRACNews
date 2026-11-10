@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-09",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal adds Daxx matches and functions carried over from Going Commando",
+  "summary": "Up Your Arsenal merged 23 Daxx function matches and nine level functions adapted from Going Commando (#15). PAL v1.00's matched code rises from 19.70% to 19.84%, with 7,164 of 16,164 functions matched. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "The work also documents Daxx near misses and compiler patterns. Near misses remain separate from the matching additions (#15)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-09",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Item Randomizer protects existing saves, and lock-strafe can share the shoulder buttons",
+  "summary": "Item Randomizer 2.4.1 was released with New games only enabled by default, keeping a playthrough unchanged unless its save carries the current seed's tag. Going Commando also gets vendor stock refreshed on every level, the host's seed in a party, and fixes for equipping randomized rewards. Multiplayer 0.12.2 was released with Going Commando menu pages and parties restricted to the same game's family.",
+  "highlights": [
+    "Difficulty 1.5.0 brings its Health pickups slider and Chaos's Nanotech surge to Going Commando. Xbox Icons 1.2.0 fixes buttons in that game's title menus.",
+    "Item Randomizer 2.4.1 puts its files in the port's mod folder, accessible through Mod files on Android. The equivalent Multiplayer 0.12.3 change landed but was not released that day (#148).",
+    "Lock-strafe 1.2.0 was released with L2-only, R2-only or both as the strafe button. Choosing one leaves the other available to the game and other mods, including Wrench Throw (#153).",
+    "The index now lists Wrench Throw, for throwing the OmniWrench while moving, and Weapon Wheel Pause, for pausing gameplay while Quick Select stays responsive (#143, #144).",
+    "#145 proposes a fix for an Archipelago Gadgetron PDA crash when no vendor items can be bought. It remains unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
