@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-10",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-11T00:05:55.485Z",
+  "issues": [
+    {"number":342,"title":"Enhanced lighting and level edits","author":"TheWhiteGuardian","events":["closed"],"closedAs":"COMPLETED","body":"Hi all! I'm seeing some strange behavior and I wanted to ask whether this is intended for now, or whether I'm doing something wrong. As a test I've made some placement edits to Novalis in Godot. I've saved the changes, packed them, and prepared them.\nHowever this has broken enhanced lighting for me. I can open C:\\Users\\[Me]\\OpenRAC\\active\\rac1\\data\\port\\pal\\level_01 and verify that water.bin and water.mesh exist, but they don't seem to be applied in-game. Oddly the log does read enhanced…"}
+  ],
+  "releases": [
+    {"tag":"sdk-v1.14.5","name":"Mod SDK 1.14.5","prerelease":false,"publishedAt":"2026-11-10T13:11:16Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.14.5, for the mod interface 1.14 (docs/port/MODS.md). SHA-256 of the archive: 9a43649e0c64341ee54867205efda758e011953beb03c5aa0ddb59882b8c98da"}
+  ]
+}

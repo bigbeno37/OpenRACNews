@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-10",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando adds matches across releases and repairs fresh compiler builds",
+  "summary": "Matching work landed for Going Commando's USA v1.01, PAL and USA v2.00 releases, including the latter's Grelbin status HUD. A matched function compiles to exactly the same bytes as the original game. The project's recorded progress figure for USA v1.01 remains 98.83% of code, unchanged from the previous day.",
+  "highlights": [
+    "A shorter README and organised documentation replace the long setup guide and hand-maintained progress tables (#440).",
+    "A follow-up repairs fresh compiler builds after the documentation move changed a comment in the patched compiler source without updating its expected checksum.",
+    "Open #441 and #442 propose more PAL and USA v2.00 C ports, with near misses kept separately. #441 also marks three functions as original assembly. Neither pull request has merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-10",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-11T00:06:07.778Z",
+  "progress": {"sha":"a8df73e50684cf451cdbb78b05233eda0e1f9003","code":{"done":3713584,"total":3713584},"functions":{"done":5118,"total":5118},"data":{"done":698751,"total":699072}},
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":845,"deletions":777,"pushes":1,"forcePushes":0,"authors":["nickyyOO"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-10T09:46:18Z","type":"pr_merge","actor":"Lynder063","before":"f911d6e4b9711071f0daaad95b4a04c2c8aa3c61","after":"a8df73e50684cf451cdbb78b05233eda0e1f9003"}
+  ],
+  "pullRequests": [
+    {"number":241,"title":"docs: short README and docs sorted into folders","author":"nickyyOO","draft":false,"head":"docs/readme-cleanup","events":["opened","merged"],"mergedBy":"Lynder063","additions":845,"deletions":777,"changedFiles":304,"body":"Before\nA 131-line README with long setup steps, and docs in one flat folder with mixed-case names.\nAfter\nA short README like Lombyte's: the OpenRAC logo with \"decompilation project\" under it, a code badge for each version, progress, quick setup, credits and license (96 lines). The details moved to docs/, now sorted into docs/build, docs/contributing, docs/game, docs/agents and docs/history (with the old notes/ folder), with lowercase names and a docs/README.md index.\nHow\nFiles moved with git…"}
+  ],
+  "commits": [
+    {"sha":"a8df73e50684cf451cdbb78b05233eda0e1f9003","headline":"docs: short README and docs sorted into folders (#241)","author":"nickyyOO","committedAt":"2026-11-10T09:46:18Z","merge":false,"landed":true,"additions":845,"deletions":777,"body":"* docs: short README and docs sorted into folders\n\nRewrite the README in the style of Lombyte's: OpenRAC logo, a short intro,\nprogress, supported versions, quick setup, credits and license. The full\nsetup moves to docs/build/building.md.\n\nSort every doc into docs/build, docs/contributing, docs/game, docs/agents\nand docs/history (notes/ included), with lowercase names, and fix every\nlink and path mention.\n\n* docs: a code badge for each version in the README\n\n* docs: commit the OpenRAC logo the…"}
+  ]
+}

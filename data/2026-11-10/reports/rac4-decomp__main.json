@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-10",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked simplifies its README and groups its documentation",
+  "summary": "Deadlocked's README now offers quick setup and progress badges in place of a long guide with hand-maintained progress tables (#143). Detailed documentation is grouped into folders for building, contributing, agents and history.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-10",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 rises from 19.84% to 21.64% of matched code",
+  "summary": "A sustained run of multiplayer-menu matching made this a busy day for Up Your Arsenal's usually quiet branch. PAL v1.00's matched code rises from 19.84% to 21.64%, with 7,733 of 16,164 functions matched. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "The multiplayer-menu work also splits source files where functions need different compiler settings.",
+    "A shorter README and grouped documentation replace the long setup guide and hand-maintained progress tables (#16).",
+    "Open #17 proposes 31 function matches for Annihilation Nation. It has not merged.",
+    "For Clank's Holostar Studios level, open #18 proposes 19 function matches. #19 builds on it with 28 more, and #20 adds another nine. All three remain unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

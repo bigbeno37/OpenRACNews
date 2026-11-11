@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-10",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank gets a shorter README and organised documentation",
+  "summary": "Ratchet & Clank's README now focuses on quick setup, progress badges and project credits (#241). Detailed guidance has moved into folders for building, contributing, game information, agents and history, with a documentation index to find it.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

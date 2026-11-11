@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-10",
+  "headline": "Up Your Arsenal advances multiplayer-menu matching as the launcher gains bloom and lighting fixes",
+  "summary": "Up Your Arsenal's PAL v1.00 rose from 19.84% to 21.64% of matched code as multiplayer-menu matching landed. A matched function compiles to exactly the same bytes as the original game. Launcher development brought bloom, lighting fixes for edited levels and Mod SDK 1.14.5 (OpenRAC#407, OpenRAC#433, OpenRAC#438). All four decompilations shortened their READMEs and organised their detailed documentation. Wrench Throw 1.0.1 was approved for the launcher index, while 1.0.2 still awaited review (openrac-mods#154, openrac-mods#155).",
+  "writtenBy": "gpt-6.1-sol"
+}

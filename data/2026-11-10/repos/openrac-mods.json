@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-10",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-11T00:07:08.539Z",
+  "issues": [
+    {"number":154,"title":"Review wrench-throw 1.0.1","author":"openrac-bot[bot]","events":["opened","closed"],"closedAs":"COMPLETED","body":"A new version of an external native mod waits for review before players get it.\n\nMod: wrench-throw (Wrench Throw), https://github.com/chistianh/wrench-throw\nRelease: https://github.com/chistianh/wrench-throw/releases/tag/v1.0.1 (2026-11-09T19:10:12Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nwrench-throw-1.0.1-linux-x86_64.zip\n770f72805af1663aa10928c011f0bad9fa22f4adcc6fa011ec7c5d4068e71b5d\n28262\n\n\nlinux-aarch64\nwrench-throw-1.0.1-linux-aarch64.zip\nac6ee9ca999bb1d512d95886b042a378c83ab…"},
+    {"number":155,"title":"Review wrench-throw 1.0.2","author":"openrac-bot[bot]","events":["opened"],"closedAs":null,"body":"A new version of an external native mod waits for review before players get it.\n\nMod: wrench-throw (Wrench Throw), https://github.com/chistianh/wrench-throw\nRelease: https://github.com/chistianh/wrench-throw/releases/tag/v1.0.2 (2026-11-10T16:04:26Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nwrench-throw-1.0.2-linux-x86_64.zip\nede0daf98609f1eec65d51f27c591c87dd86a30e2147b3a427891a94aa91494f\n29034\n\n\nlinux-aarch64\nwrench-throw-1.0.2-linux-aarch64.zip\nc407101c01104f40f744de0eba15f4ad2e8c8…"}
+  ],
+  "releases": []
+}

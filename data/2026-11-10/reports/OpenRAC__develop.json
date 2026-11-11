@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-10",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Edited levels get lighting fixes, and enhanced rendering gains bloom",
+  "summary": "Enhanced rendering gains subtle bloom (#407). With Mods enabled, edited levels now prepare lighting from the same overrides used for Play, closing #342 (#433). Gameplay levels with exported collision and gameplay data bake reflections by default, with opt-outs and local lighting retained where no safe reflection capture is available (#432).",
+  "highlights": [
+    "Going Commando gets fixes for armour vendor previews and distant objects running their logic beyond the console's draw distance (#436).",
+    "Effect textures are copied once per frame instead of once per effect quad, cutting repeated work (#437).",
+    "#439 fixes New Game and Load Game hangs in Ratchet & Clank's Japanese release by registering missing executable copies of level functions.",
+    "Mod SDK 1.14.5 adds a hook for mods to intercept Ratchet & Clank's Gadgetron PDA menu on NTSC-U and PAL v2.00, including when no vendor items are available (#422, #438).",
+    "Builds using newer Going Commando decompilation code now handle newly matched functions and their return types (#434, #435).",
+    "Baked lighting and reflections gain optional lossless LZ4 storage compression, requiring a build with LZ4 support and an explicit baking option (#440)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

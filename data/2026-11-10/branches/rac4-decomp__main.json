@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-10",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-11T00:06:58.949Z",
+  "progress": {"sha":"cf4b0ed92a8c0a3bcd4f63f50825dde370e44d38","code":{"done":744880,"total":5781432},"functions":{"done":7673,"total":18170},"data":null},
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":307,"deletions":437,"pushes":1,"forcePushes":0,"authors":["nickyyOO"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-10T09:50:03Z","type":"pr_merge","actor":"Lynder063","before":"0bddadfd0832b633c69c2ee14e3c54ea41afa72d","after":"cf4b0ed92a8c0a3bcd4f63f50825dde370e44d38"}
+  ],
+  "pullRequests": [
+    {"number":143,"title":"docs: short README and docs sorted into folders","author":"nickyyOO","draft":false,"head":"docs/readme-cleanup","events":["opened","merged"],"mergedBy":"Lynder063","additions":307,"deletions":437,"changedFiles":806,"body":"Before\nA long README with setup steps and hand-updated progress tables, and docs in one flat folder with mixed-case names.\nAfter\nA short README like Lombyte's: the OpenRAC logo with \" decompilation project\" under it, a code badge and a note for each version, quick setup, credits and license. Progress comes only from the ByteMatch badges, so the README needs no commit when progress moves. The details moved to docs/, now sorted into docs/build, docs/contributing, docs/agents and docs/history…"}
+  ],
+  "commits": [
+    {"sha":"cf4b0ed92a8c0a3bcd4f63f50825dde370e44d38","headline":"docs: short README and docs sorted into folders (#143)","author":"nickyyOO","committedAt":"2026-11-10T09:50:03Z","merge":false,"landed":true,"additions":307,"deletions":437,"body":"* docs: short README and docs sorted into folders\n\nRewrite the README in the style of Lombyte's: OpenRAC logo, a short intro,\nthe progress tables (still written by tools/progress.py), supported\nversions with a code badge each, quick setup, credits and license. The\nbadges by part and by level move to docs/build/progress.md, the full setup\nto docs/build/building.md.\n\nSort every doc into docs/build, docs/contributing, docs/agents and\ndocs/history (notes/ included), with lowercase names, and fix…"}
+  ]
+}
