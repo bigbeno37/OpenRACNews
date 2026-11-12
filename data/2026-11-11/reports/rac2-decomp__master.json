@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reaches 98.99% of USA v1.01 code and adds Japan and Korea build support",
+  "summary": "Going Commando's progress report puts USA v1.01 at 98.99% of code, up from 98.83%, with 8,501 of 8,527 functions matched. A matched function compiles to exactly the same bytes as the original game. Japan and Korea gain decompilation build support and their own progress reports. Most of the day's added lines come from registering those releases and generating their reports.",
+  "highlights": [
+    "Yeedil's object call and spawner now pass their arguments correctly for the PC port while retaining the original PS2 bytes (#444, #445).",
+    "Boldan's window shutters find Ratchet at the correct address (#447), and the Lava Gun's muzzle glow reads the level camera correctly (#448).",
+    "USA v2.00 gains HUD and menu matches (#443, #452). Europe/Australia and USA v2.00 also receive regional C implementations, with near misses retained separately (#441, #442).",
+    "Research into six preserved 2003 prototypes recovers engine names and layout information (#449, #450). A timed-text and credits controller then matches across the boot program and all 27 levels (#451).",
+    "Further USA v1.01 matches cover shared level code, Dobbo Orbit ship movement and Endako, using new compiler options to reproduce the original instruction ordering.",
+    "The Barlow save-import documentation corrects which first-game weapons are given away (#446). The Europe/Australia menu-accessor catalogue issue is closed as completed (#421)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

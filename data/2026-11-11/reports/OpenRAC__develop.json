@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "PCSX2 texture packs arrive as Going Commando gains save bonuses and fixes",
+  "summary": "Development builds can use native PCSX2 PNG and DDS texture packs chosen per game version, with OpenRAC packs taking priority (#443). Older level exports may need regenerating to retain palette alpha. Going Commando now sees Ratchet & Clank saves for the Barlow vendor's free weapons (#447). Its Yeedil freeze and end-credits picture, trails and skip controls are also fixed (#445, #446).",
+  "highlights": [
+    "Android's Games tab becomes a disc shelf with pad and touch navigation, while the desktop launcher and in-game menus gain a shared look (#454).",
+    "Large menu text gains smoother curves (#449), and HUD: Edges no longer exposes parked pause-menu panels as black boxes (#463).",
+    "#451 fills missing function bindings for Ratchet & Clank PAL v1 and NTSC-J. NTSC-U's overwrite-save prompt and two library bindings are repaired after the Lombyte update (#429, #461, #462).",
+    "Draw distance is unified across games, with a Kalebo dome-glass fix (#452). The title world's shrubs stay visible beneath the main menu at Original distance (#455).",
+    "Lossless LZ4 asset storage becomes the default (#441). Vulkan rendering checks reuse more work, and empty animated scenery no longer invalidates static shadow depth (#442). The shadow cache remains off by default.",
+    "Enhanced graphics presets (#453) and weapon-target hooks (#464) remain drafts. Gold-bolt accounting (#444), persistent mod settings (#460) and pause-menu stick fixes (#459) were proposed but have not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

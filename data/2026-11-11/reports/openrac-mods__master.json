@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Lock-strafe 1.2.1 fixes stopping, flips and fixed-camera behaviour",
+  "summary": "Lock-strafe 1.2.1 is released with movement fixes (#164). Ratchet follows the stick without a forward push when strafing stops, flips go straight, and he faces ahead during running and double jumps. Strafing is disabled under a level's fixed camera, including Kalebo III's wall camera, while L2 input is still taken.",
+  "highlights": [
+    "Item-randomizer vendor and Gadgetron PDA crash fixes (#156), plus Archipelago starting options and shuffled gold-weapon cases (#157), were proposed but have not merged.",
+    "A native Cheats mod with pause-menu controls is proposed in #163. Multiplayer 0.12.4's proposed stick-navigation fix also remains unmerged (#165).",
+    "Bolt Grabber V2, which lets hyper-strikes smash nearby crates and props, is submitted in #159. Its listing pull request #160 awaits review.",
+    "Weapon Wheel Pause 1.0.2 (#158) and Restored Debug Menu 1.1.1 (#161) await review before players receive the external mod updates.",
+    "The mod-index build failure issue #162 opened and closed as completed. Its report says the last good index stays live when a build fails.",
+    "The Archipelago logic play-test issue closes as completed (#25)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

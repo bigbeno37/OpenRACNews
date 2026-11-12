@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's NTSC-U v1.00 code rises from 12.88% to 14.84%",
+  "summary": "Deadlocked's progress report puts NTSC-U v1.00 at 14.84% of code, up from 12.88%, with 8,241 of 18,172 functions matched. A matched function compiles to exactly the same bytes as the original game. The batch includes code shared with Up Your Arsenal and work on the PAL release. Most of the day's line churn comes from regenerating matching maps and progress reports after the merges.",
+  "highlights": [
+    "#142 matches 298 NTSC-U functions and 24 PAL functions, mostly by adapting already matched C to functions with the same instruction patterns.",
+    "#144 brings over 105 functions already matched in Up Your Arsenal, where the two games use the same instructions with different addresses.",
+    "PAL gains 23 strictly verified overlay routines (#137) and C implementations for 11 PAL-only functions (#139).",
+    "#146 and #147 carry #121's 40 and #140's 42 NTSC-U matches, with allocator and helper-interface repairs. Seven near misses in #140 remain deferred.",
+    "#138 adds 26 NTSC-U matches and retains near misses separately. Another 30 NTSC-U functions land in #145.",
+    "#141 adds 13 NTSC-U overlay matches. Its author could not complete PAL validation without the base executable and reports 27 previously observed relocation mismatches in unrelated code."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

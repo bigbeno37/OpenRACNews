@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-11",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-12T00:05:56.130Z",
+  "issues": [
+    {"number":257,"title":"Will there be support for a HD texture  pack? E.g the one that can be used in PCSX2?","author":"kwfrrb562c-boop","events":["closed"],"closedAs":"COMPLETED"}
+  ],
+  "releases": []
+}

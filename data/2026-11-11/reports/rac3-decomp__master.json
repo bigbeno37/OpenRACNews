@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-11",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 code rises from 21.64% to 22.88%",
+  "summary": "Up Your Arsenal's progress report puts PAL v1.00 at 22.88% of code, up from 21.64%, with 8,054 of 16,164 functions matched. A matched function compiles to exactly the same bytes as the original game. Six matching pull requests landed across shared level code, Clank's Holostar Studios and Annihilation Nation.",
+  "highlights": [
+    "#22 matches 109 shared PAL v1.00 level functions and carries 66 matches to NTSC-U. Another 100 PAL level functions land in #21.",
+    "Clank's Holostar Studios gains successive PAL v1.00 batches of 19, 28 and 34 additional functions (#18, #19, #20). Annihilation Nation gains 31 PAL v1.00 matches (#17).",
+    "Object and hero layout documentation improves without changing compiled game code (#23). A follow-up restores Holostar Studios type definitions and a four-argument function declaration after the merges.",
+    "A vidcomic hero state-machine match (#24), three near misses (#25) and Marcadia work (#26) are proposed but have not merged.",
+    "More work for Obani Draco, the final boss, Aquatos, Kerwan and vidcomics remains unmerged (#27, #28, #29). The near-miss proposal #30 depends on those three pull requests."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

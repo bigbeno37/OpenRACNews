@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-11",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-12T00:06:20.810Z",
+  "issues": [
+    {"number":421,"title":"PAL catalogue: menu accessor places shifted by one in levels 05, 10, 15 and 25","author":"cadelass","events":["closed"],"closedAs":"COMPLETED","body":"What\nIn the PAL catalogue (config/pal/levels/functions.tsv), the 24 menu accessors func_PAL_L00_0030F090 … func_PAL_L00_0030FE60 share one fingerprint (69b27b9a024d3fc2). In levels 05, 10, 15 and 25, their places are shifted by one function.\nEach accessor is 60 bytes and does the same thing:\nint value = D_L00_001A904C_2;\nif (value != 0)\n    return handler(value + OFFSET, argument);\nreturn 0;\nOnly OFFSET (lui $a0, 0x3 / ori $a0, $a0, …) and the handler differ between them. The fingerprint hides…"}
+  ],
+  "releases": []
+}

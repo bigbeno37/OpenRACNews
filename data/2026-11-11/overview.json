@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-11",
+  "headline": "OpenRAC adds PCSX2 texture packs and fixes Going Commando saves, credits and freezes",
+  "summary": "OpenRAC's Development builds gain native PCSX2 texture packs, Barlow's first-game save bonuses and Going Commando fixes for Yeedil freezes and end credits (OpenRAC#443, OpenRAC#447, OpenRAC#445, OpenRAC#446). Project progress reports put matched code at 98.99% for Going Commando USA v1.01, up from 98.83%, at 22.88% for Up Your Arsenal PAL v1.00, up from 21.64%, and at 14.84% for Deadlocked NTSC-U v1.00, up from 12.88%. A matched function compiles to exactly the same bytes as the original game. Japan and Korea gain Going Commando decompilation build support and their own progress reports. Lock-strafe 1.2.1 ships fixes for stopping, flips, fixed cameras and jumps (openrac-mods#164), while randomizer changes and a new Cheats mod remain unmerged (openrac-mods#156, openrac-mods#157, openrac-mods#163).",
+  "writtenBy": "gpt-6.1-sol"
+}
