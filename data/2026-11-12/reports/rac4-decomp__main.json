@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-12",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked proposes a batch of twelve US function matches",
+  "summary": "#148 proposes twelve NTSC-U v1.00 function matches across core, network and overlay code, correcting earlier attempts that were close to the originals. A matched function compiles to exactly the same bytes as the original game. The pull request remains unmerged, and no commits landed on the branch today.",
+  "highlights": [],
+  "writtenBy": "gpt-6.1-sol"
+}

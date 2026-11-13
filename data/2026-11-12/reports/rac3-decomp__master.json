@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 code rises from 22.88% to 25.24%",
+  "summary": "Up Your Arsenal's progress report puts PAL v1.00 at 25.24% of code, up from 22.88%, with 8,487 of 16,164 functions matched. A matched function compiles to exactly the same bytes as the original game. The usually occasional development branch had a busy day of work across vidcomics, story levels and the multiplayer menu.",
+  "highlights": [
+    "The vidcomic hero's per-frame state machine lands as matching source (#24), alongside three near misses corrected using the game's absolute-value operation (#25).",
+    "Marcadia and Obani Moons gain matching source (#26, #31). Other batches cover Obani Draco, the final boss, Aquatos, Kerwan, Tyhrranosis and vidcomics (#27, #28, #29, #30).",
+    "#32 closed without merging, but its multi-level work landed in a direct commit. A follow-up reverted Koros's `func_L14_003F9A10` to assembly because its inline assembly broke the level's build.",
+    "Five direct batches add matching PAL v1.00 functions in the multiplayer menu and shared multiplayer code. File splits and compiler-flag corrections support that work.",
+    "NTSC-U core functions are recorded as built from C again after missing build objects had caused progress bookkeeping to lose existing matches. Their source code had not changed.",
+    "Further work for Florana, Crash Site, shared multiplayer code, Zeldrin Starport and Rilgar remains unmerged (#33, #34, #36). Other open batches cover Koros, Starship Phoenix, the Museum, Aquatos and more (#37, #38, #39, #40, #41, #42, #43, #44, #45, #46)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

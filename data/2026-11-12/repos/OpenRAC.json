@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-12",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-13T00:05:44.752Z",
+  "issues": [
+    {"number":279,"title":"Stick sensitivity doesn't seem to work? ","author":"Billabong1985","events":["closed"],"closedAs":"COMPLETED","body":"The new in game menu for customising controls is great as I no longer have to do it in Steam input, but the stick sensitivity setting doesn't seem to do anything, I was really hoping I could increase the camera movement sensitivity a bit but even if I wind it up to 300% right stick sensitivity, the camera moves at the same speed"},
+    {"number":355,"title":"Going Commando PAL: HUD aliases call no-C stubs and crash at startup","author":"Sumaiter","events":["closed"],"closedAs":"COMPLETED","body":"Summary\nThe Going Commando PAL native port crashes during startup in the title/menu path at frame 231 with a write to unmapped game address 0xCDCDCDCD.\nThe crash is reproducible with the verified PAL disc SCES_516.07. The log points to func_003383F0 in the HUD widget initialization.\nRoot cause\nSeveral same-address alias names used by the HUD constructors have no C definition selected by hostgen, so calls are generated as empty no-c stubs:\n\nF081de6c9_FUN_00335FC8\nF36efd143_FUN_00335FC8\nthe…"}
+  ],
+  "releases": [
+    {"tag":"sdk-v1.14.6","name":"Mod SDK 1.14.6","prerelease":false,"publishedAt":"2026-11-12T05:33:13Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.14.6, for the mod interface 1.14 (docs/port/MODS.md). SHA-256 of the archive: d10450b719a96f17744bb5cdf77db0817a5bd0bafe5e3bbeb45df0dbe2bdb6bc"}
+  ]
+}

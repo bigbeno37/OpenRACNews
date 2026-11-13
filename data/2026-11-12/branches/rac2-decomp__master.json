@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-12",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-13T00:06:07.120Z",
+  "progress": {"sha":"be855139f0c06445dc6caf36628756f6cc1aecc8","code":{"done":5468348,"total":5524052},"functions":{"done":8501,"total":8527},"data":null},
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":7,"deletions":0,"pushes":1,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-12T03:02:50Z","type":"pr_merge","actor":"Veradictus","before":"156030068896bc7124f138fb912f2b06cc4c717c","after":"be855139f0c06445dc6caf36628756f6cc1aecc8"}
+  ],
+  "pullRequests": [
+    {"number":453,"title":"ci(progress): leave jp and kr out of the releases' agreement check for now","author":"Veradictus","draft":false,"head":"ci/skip-jp-kr-sync","events":["opened","merged"],"mergedBy":"Veradictus","additions":7,"deletions":0,"changedFiles":1,"body":"The jp and kr discs (SCPS_150.56, SCKA_200.11) aren't available here, so their reports can't be rebuilt after each batch, and the agreement check failed master. This adds a SYNC_SKIP set to leave them out. Each release's own --check still runs. Remove the set once someone with those discs rebuilds the reports."},
+    {"number":454,"title":"feat(us2): match five USA v2.00 menu functions","author":"gelatinous-bullion","draft":false,"head":"match/us2-batch3","events":["opened"],"mergedBy":null,"additions":1213,"deletions":5,"changedFiles":11,"body":"Five USA v2.00 functions, 17,528 bytes. Four are v2.00 copies of matched or near-matched USA v1.01 functions, written from that C with v2.00's data and changes.\n\n\n\nFunction\nBytes\nPlaces\nUnit\nSource of the C\n\n\n\n\nfunc_US2_L15_00430500\n5024\n1\nsrc/us2/levels/15_gorn/L15_00430500-g8.c\nv1.01 func_L15_0042EFE0 (Gorn menu panel)\n\n\nfunc_US2_L10_00423CB8\n5036\n1\nsrc/us2/levels/10_hrugis_cloud/L10_00423CB8-g8.c\nv1.01 func_L10_004227A0 (Hrugis…"},
+    {"number":456,"title":"feat(pal): match twelve PAL functions and one USA v2.00 function from related C","author":"gelatinous-bullion","draft":false,"head":"match/us2-batch4","events":["opened"],"mergedBy":null,"additions":2174,"deletions":13,"changedFiles":26,"body":"Thirteen functions, all ports of C that already matches in a related release: one USA v2.00 function and twelve PAL ones. They are checked against my PAL disc, whose SHA-256 is the one in docs/build/versions.md.\n\n\n\nFunction\nBytes\nPlaces\nUnit\nFrom\n\n\n\n\nfunc_US2_L02_003C58E0\n844\n8\nsrc/us2/levels/shared/L02_003C58E0-menu-g8.c\nv1.01 func_L02_003C43F0 (c1991e6)\n\n\nfunc_PAL_L02_004029E0\n1412\n1\nsrc/pal/levels/02_maktar_nebula/L02_004029E0-g8.c\nv2.00…"},
+    {"number":457,"title":"feat(pal): match four PAL menu and timer functions","author":"gelatinous-bullion","draft":false,"head":"match/batch5","events":["opened"],"mergedBy":null,"additions":1182,"deletions":4,"changedFiles":9,"body":"Four PAL functions, 17,668 bytes. Each is the PAL copy of a USA v2.00 function that already matches, rebuilt with PAL's changes. All four are checked against my PAL disc, whose SHA-256 is the one in docs/build/versions.md.\n\n\n\nFunction\nBytes\nPlaces\nUnit\nFrom\n\n\n\n\nfunc_PAL_L15_004342E0\n5276\n1\nsrc/pal/levels/15_gorn/L15_004342E0-g8.c\nv2.00 func_US2_L15_00430500 (PR #454)\n\n\nfunc_PAL_L10_00427628\n5572\n1\nsrc/pal/levels/10_hrugis_cloud/L10_00427628-g8.c\nv2.00 func_US2_L10_00423CB8 (PR…"}
+  ],
+  "commits": [
+    {"sha":"be855139f0c06445dc6caf36628756f6cc1aecc8","headline":"ci(progress): leave jp and kr out of the releases' agreement check for now (#453)","author":"Veradictus","committedAt":"2026-11-12T03:02:49Z","merge":false,"landed":true,"additions":7,"deletions":0,"body":"Their discs (SCPS_150.56, SCKA_200.11) aren't on any maintainer machine, so their reports can't be rebuilt after each batch and the check failed master. Each still gets its own --check."}
+  ]
+}

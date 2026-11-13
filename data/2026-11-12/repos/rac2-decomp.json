@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-12",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-13T00:06:07.121Z",
+  "issues": [
+    {"number":455,"title":"Game Crash on arena","author":"adamkevinsky-ops","events":["opened"],"closedAs":null,"body":"I have crash on planet Joba, on second challange right after I jump on magneboots wall. I have this crash every time on my setup. Can't progress game.\ni5 12400f, rtx 4060, 16gb ram, win 10.\nlog:\n==== OpenRAC crash report ====\nReason:   read at game address 0x3EC00002, which is not mapped\nKind:     exception\nWhen:     2026-11-12 18:12:08 +0100 (the session began 2026-11-12 18:10:19 +0100)\nProgram:  openrac-rac2-ntsc, OpenRAC 1.0.2, commit unknown\nSymbols:  unavailable: matching local PDB not…"}
+  ],
+  "releases": []
+}

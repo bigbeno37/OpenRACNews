@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-12",
+  "headline": "NG++ brings Going Commando new weapon tiers, and handheld Enhanced graphics gets faster",
+  "summary": "Going Commando gets NG++ 0.1.10 with Alpha-to-Omega weapon tiers and tougher repeat runs, while Ratchet & Clank's Archipelago 2.3.0 adds shuffled gold cases and NPC Infobots (openrac-mods#177). OpenRAC's Development builds gain faster handheld Enhanced graphics and Going Commando save-editor controls for races, cutscenes and Aranos Prison progress (OpenRAC#453, OpenRAC#485). Up Your Arsenal's PAL v1.00 rises from 22.88% to 25.24% of code, with 8,487 of 16,164 functions matched, meaning they compile to exactly the same bytes as the original game. Going Commando's USA v1.01 code remains 98.99% matched as Japan and Korea temporarily leave its cross-release progress agreement check because their discs were unavailable (rac2-decomp#453). Deadlocked's proposed twelve NTSC-U v1.00 function matches remain unmerged (rac4-decomp#148).",
+  "writtenBy": "gpt-6.1-sol"
+}

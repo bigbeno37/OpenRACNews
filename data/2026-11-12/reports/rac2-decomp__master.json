@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-12",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando temporarily skips Japan and Korea in cross-release progress checks",
+  "summary": "Going Commando's cross-release progress agreement check now skips Japan and Korea because their discs were unavailable for rebuilding reports (#453). Each release's own check still runs, and the exclusion should be removed once someone with those discs rebuilds the reports. USA v1.01 remains at 98.99% of code, with 8,501 of 8,527 functions matched. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "Three unmerged proposals cover five USA v2.00 menu functions (#454), twelve PAL functions and one USA v2.00 function (#456), and four PAL menu and timer functions (#457). They do not change the branch's progress yet.",
+    "A player reports a repeatable crash after jumping onto the Magneboots wall in Joba's second arena challenge, blocking progress on their Windows 10 setup with OpenRAC 1.0.2 (#455)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

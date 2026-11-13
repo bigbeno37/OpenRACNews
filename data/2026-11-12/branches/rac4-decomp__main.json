@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-12",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-13T00:06:40.964Z",
+  "totals": {"commits":0,"merges":0,"landed":0,"additions":0,"deletions":0,"pushes":0,"forcePushes":0,"authors":[]},
+  "warnings": [],
+  "pushes": [],
+  "pullRequests": [
+    {"number":148,"title":"Match 12 US near misses (1 core, 9 net, 2 overlay)","author":"farfeduc","draft":false,"head":"decomp/near-miss-fixes","events":["opened"],"mergedBy":null,"additions":1113,"deletions":426,"changedFiles":18,"body":"12 US functions that earlier rounds had left as near misses (same size, a few words off). Most drafts computed something slightly different from retail; reading retail's code fixed them:\n\n\n\nFunction\nWhat was wrong\n\n\n\n\nfunc_0012AB60\n64-byte stride instead of 16, and the result is computed before the last call\n\n\nfunc_01EC3DE0\nC already in src/ that did not match: the r == 0 branch holds the body\n\n\nfunc_01EE1A60\neach loop re-reads its global (while ((p = D_x) != 0))\n\n\nfunc_01EF05A4\na loop over…"}
+  ],
+  "commits": []
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-12",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "NG++ launches for Going Commando, adding Alpha-to-Omega weapon tiers and tougher repeat runs",
+  "summary": "NG++ arrives for Going Commando with Alpha-to-Omega weapon tiers and tougher enemies each new game, reaching release 0.1.10. Follow-up fixes preserve tiers across restarts and updates, add save-editor weapon pickers and show the game's own level-up popup for tiers earned through experience. Ratchet & Clank gains a Cheats pause-menu page with invincibility, infinite ammunition and infinite oxygen (#163). Archipelago 2.3.0 lands starting-weapon options, fresh-inventory New Game+, shuffled gold cases and NPC Infobot rewards through replacement pull request #177.",
+  "highlights": [
+    "The item randomizer and Archipelago fix empty vendors and Gadgetron PDA crashes, including ammunition generated for owned weapons (#145, #156). #177 also carries Bomb Glove shortcut fixes and preserves old seed associations when save overwrites fail or cancel.",
+    "Difficulty leaves Gaspar and Hoven's rideable turrets unchanged (#166). Copies stacked on their original are removed, but that fix is not yet checked in game (#175). Broader enemy-copy and party-host fixes remain draft work (#167).",
+    "Multiplayer's pause pages stop choosing rows while the stick moves the cursor (#165, version 0.12.4). Version 0.12.5 sends Ratchet's scale to peers, fixing stale wide figures, but client hit and hurt synchronization remains unresolved (#181).",
+    "The index adds Bolt Grabber V2 1.0.0, Gadget Quick Use 1.0.0 and Expanded Quick Select through 1.0.1 (#160, #173, #180). Expanded Quick Select offers up to eight configurable wheels. Auto Swingshot is proposed but not listed yet (#183).",
+    "Native-mod approvals now bind to archive hashes, so a replaced archive waits for review again (#174). Review issues also show library capabilities and changes from the published version (#176)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

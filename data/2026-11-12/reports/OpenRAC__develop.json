@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Enhanced graphics runs faster on handhelds, and Going Commando's save editor gains level progress",
+  "summary": "OpenRAC's Development builds gain faster Enhanced graphics and more controls for Going Commando saves. In a standing Novalis test on Odin 3, #453 reports GPU frame time falling from 27.6 ms to about 12.2 ms with the Low preset and Performance upscaling. The save editor now handles hoverbike races, per-planet cutscenes, Aranos Prison escape and switches, with mod fields alongside weapon versions (#485).",
+  "highlights": [
+    "Going Commando gains an Active distance setting for enemies that froze beyond the original simulation range (#467). Four HDR sliders control SDR hue, SDR chrominance, highlights and blowout (#480).",
+    "HUD: Edges fixes the Suck Cannon's empty tube and Aridia's counters, while Unlimited draw distance fixes Pokitaru's sky and survives restarts (#473, #481). Aridia's fix does not cover NTSC-J.",
+    "#477 addresses the Eudora takeoff crash with a full object pool and Linux Copy report failures, but neither was checked in game or on a Linux desktop. Save report now finds Linux's configured Downloads folder (#483).",
+    "Mod SDK 1.14.6 ships Going Commando hooks for NG++ (#466). Further vendor, text and save-editor support lands in #472. Ratchet & Clank mods can track unspent gold bolts separately from received gold weapons on PAL v2.00 and NTSC-U (#444).",
+    "Developers can opt into incremental builds when updating a game (#471). Linux and macOS reject native mod libraries writable by everyone (#478), and refused mods have their callbacks cleared before unloading (#482).",
+    "Moving the pause-menu cursor with a stick no longer changes the row it reaches (#488). The connected nanotech HUD panel, save-carried mod data and mod collision queries remain proposals (#486, #487, #489)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
