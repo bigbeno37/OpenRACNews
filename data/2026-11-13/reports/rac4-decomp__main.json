@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-13",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked receives ten proposals for US and PAL code, with no merges",
+  "summary": "Ten pull requests opened for Deadlocked, but none merged and main gained no commits. The proposals cover US network and game routines alongside PAL menus and overlays, so they do not yet change the branch's matched code. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "Six proposals target 162 functions in the US release, mostly network code (#149, #150, #152, #153, #155, #157).",
+    "#156 proposes 18 more US functions: eight networking routines, two resident game routines and eight in level overlays.",
+    "#151 proposes six PAL functions for network configuration, menus, bone modes, nearest-value selection and context readers.",
+    "PAL-only work includes proposals for 12 functions and initial-value fixes in three files (#154), plus seven functions mainly in the multiplayer menu (#158)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

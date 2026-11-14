@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-13",
+  "headline": "Up Your Arsenal reaches 32.22% of PAL v1.00 code as launcher fixes land",
+  "summary": "Up Your Arsenal's PAL v1.00 matched code rose from 25.24% to 32.22%, alongside NTSC-U level work (rac3-decomp#52, rac3-decomp#53, rac3-decomp#57). A matched function compiles to exactly the same bytes as the original game. Launcher development builds fixed Discord screen-sharing crashes, Steam Deck HDR and widescreen pool water, and gained a render graph (OpenRAC#502, OpenRAC#492, OpenRAC#495, OpenRAC#491). Going Commando added matches for USA v2.00 and PAL while its USA v1.01 code figure stayed at 98.99%, and Deadlocked's ten new proposals remained unmerged. Auto Use Gadgets 1.0.1 was approved in the mod index (openrac-mods#186), while a SteamOS Going Commando install report raised a missing-Ninja error (rac2-decomp#459).",
+  "writtenBy": "gpt-6.1-sol"
+}

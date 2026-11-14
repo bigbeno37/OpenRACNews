@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-13",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Development builds fix Discord crashes, Steam Deck HDR and widescreen water",
+  "summary": "Windows native builds avoid a compiler failure (#490), and starting a Discord screen share no longer ends the game (#502). HDR is now controlled only in the game, with On trying HDR wherever the display offers it, addressing a Steam Deck regression (#492). Pool water now reaches the widescreen picture's edges on Rilgar, Umbris, Pokitaru, Hoven and Gemlik (#495). Vulkan rendering now runs through a render graph that checks resources and reuses work, with MSAA disabled during temporal reconstruction (#491).",
+  "highlights": [
+    "Android tab changes gain smoother slides, less flicker and less repeated background work (#494, #499).",
+    "Levels now use their own sky routine instead of the title screen's, fixing the wrong routine behind stationary Novalis clouds (#500).",
+    "Freecam now draws enemies, NPCs and other moving objects within draw distance in every direction (#484), closing #366.",
+    "Mod interface 1.15 lets mods save settings through the launcher (#460). Mod loading fixes permissions on a player's own files and folders, addressing Steam Deck refusals (#493). Files owned by other users besides root remain refused.",
+    "The NTSC-U nanotech HUD gains a connected rounded backplate, enabled by default and switchable independently of Enhanced Graphics (#486).",
+    "The SDR Hue option preserves a flame's yellow core in HDR (#498). The debug overlay also loses corrupted text and stray triangles on Adreno with MSAA (#501)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

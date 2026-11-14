@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-13",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-14T00:06:21.781Z",
+  "issues": [
+    {"number":459,"title":"[STEAMOS] Game won't install","author":"SoraKazooie24","events":["opened"],"closedAs":null,"body":"What you are trying to do\ninstall r&c2\nWhat you ran, and what it printed\n/tmp/.mount_OpenRAfodKLm/usr/lib/OpenRAC Launcher/openrac/python/bin/python3\" tools/build_game.py rac2-ntsc --disc /run/media/deck/SN01T/Emulation/OpenRAC/active/rac2/data/iso_data/rac2/disc.iso --out /run/media/deck/SN01T/Emulation/OpenRAC/active/rac2/data/program/9fc860d5\ndownloading the source of 9fc860d5\nerror: Ninja was not found. Install it (apt install ninja-build, or brew install ninja), then build again.\nYour…"}
+  ],
+  "releases": []
+}

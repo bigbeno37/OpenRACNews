@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-13",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-14T00:06:01.406Z",
+  "issues": [
+    {"number":366,"title":"Mobies behind Ratchet are not rendered when using freecam","author":"stentines","events":["closed"],"closedAs":"COMPLETED","body":"Can you please fix this? Mobies are moving objects like npcs, enemies, projectiles, ships. It's a term used by insomniac. How to reproduce: Open freecam and explore the level, you will see that in some parts of the level enemies/npcs will not appear.\n\n\nThank you"}
+  ],
+  "releases": []
+}

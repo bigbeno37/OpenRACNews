@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-13",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 code matching rises from 25.24% to 32.22%",
+  "summary": "Up Your Arsenal's PAL v1.00 progress report rose from 25.24% to 32.22% of code, reaching 9,667 of 16,164 matched functions. A matched function compiles to exactly the same bytes as the original game. Unusually for this early, occasional-activity branch, the day's work covered multiplayer menus, shared level code and single-player levels.",
+  "highlights": [
+    "Multiplayer menus and shared code gained repeated batches of matches, with further work on the shared object pool and Siege Ranger (#34).",
+    "A batch of 188 PAL functions landed across shared code, Marcadia, Thran Asteroid Belt and Vid-comic 1 (#56), replacing the closed #55.",
+    "PAL work also covers Crash Site, Florana, Zeldrin Starport, Rilgar, Koros and the Insomniac Museum (#33, #36, #37, #39).",
+    "NTSC-U work added 123 single-player counterparts (#47), another 123 single-player functions (#52), 223 multiplayer-level functions (#53) and eight more, including five hero state machines (#57).",
+    "Windows tools now preserve LF line endings (#48, #49). Other fixes preserve NTSC-U assembly during setup (#50) and case labels when porting PAL constants (#54).",
+    "Further shared-code, Aridia and Thran Asteroid Belt work (#58) and level 23 work (#59) remained open and unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
