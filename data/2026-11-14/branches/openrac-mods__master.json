@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-14",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-15T00:07:12.282Z",
+  "progress": null,
+  "totals": {"commits":4,"merges":0,"landed":4,"additions":205,"deletions":23,"pushes":4,"forcePushes":0,"authors":["openrac-bot[bot]","SavedbyBlood9"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-14T19:22:08Z","type":"pr_merge","actor":"Lynder063","before":"8038f3913aaa49400a87d73d40acdda9dd6829f9","after":"74d5033c61596c13696a1bce59a3f52bd2c516e7"},
+    {"at":"2026-11-14T19:22:12Z","type":"pr_merge","actor":"Lynder063","before":"74d5033c61596c13696a1bce59a3f52bd2c516e7","after":"d51e17012d098d2ec9e5528476176c0b55dd6fad"},
+    {"at":"2026-11-14T19:23:01Z","type":"pr_merge","actor":"Lynder063","before":"d51e17012d098d2ec9e5528476176c0b55dd6fad","after":"4cc017c78fdabbfec1494618d27bb5eb08bdff7b"},
+    {"at":"2026-11-14T19:28:23Z","type":"push","actor":"openrac-bot[bot]","before":"4cc017c78fdabbfec1494618d27bb5eb08bdff7b","after":"6a147f2bc32c1e0415cdd9389101eaa5544470fd"}
+  ],
+  "pullRequests": [
+    {"number":183,"title":"List auto-swingshot","author":"openrac-bot[bot]","draft":false,"head":"listing/auto-swingshot","events":["merged"],"mergedBy":"Lynder063","additions":27,"deletions":0,"changedFiles":1,"body":"From #182, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #182"},
+    {"number":187,"title":"fix(archipelago): allow ammo drops for owned out-of-order weapons","author":"SavedbyBlood9","draft":false,"head":"fix/archipelago-owned-ammo-drops","events":["opened","merged"],"mergedBy":"Lynder063","additions":86,"deletions":2,"changedFiles":4,"body":"Archipelago can grant a starting weapon before its normal planet, but ammo selection still reads the retail vendor stock. Add an Ammo_ChooseDrop hook that temporarily supplies a terminated list of owned ammo-supporting weapons, then restores the real stock.\nThe retail selector still handles assigned first-break ammo, low-ammo priority, pickup count and the Bomb Glove fallback. Add PAL/NTSC selector-spy regression coverage for out-of-order weapons, exclusion of unowned/non-ammo items,…"},
+    {"number":188,"title":"fix(item-randomizer): select ammo from all owned ammo weapons","author":"SavedbyBlood9","draft":false,"head":"fix/item-randomizer-owned-ammo-drops","events":["opened","merged"],"mergedBy":"Lynder063","additions":79,"deletions":21,"changedFiles":4,"body":"RAC1 ammo drops currently borrow the vendor-menu stock, which can omit an owned weapon received before its normal planet. Build the ammo selector's temporary stock directly from all owned ammo-supporting weapons instead, retaining a terminator and restoring the real vendor stock afterward.\nKeep the existing rando_on gate so saves outside this seed use the unmodified selector. Delegate assigned first-break ammo, low-ammo priority, pickup count and the Bomb Glove fallback to the retail routine.…"}
+  ],
+  "commits": [
+    {"sha":"74d5033c61596c13696a1bce59a3f52bd2c516e7","headline":"fix(item-randomizer): include all owned ammo weapons in drops (#188)","author":"SavedbyBlood9","committedAt":"2026-11-14T19:22:08Z","merge":false,"landed":true,"additions":79,"deletions":21},
+    {"sha":"d51e17012d098d2ec9e5528476176c0b55dd6fad","headline":"fix(archipelago): include owned weapons in ammo drop candidates (#187)","author":"SavedbyBlood9","committedAt":"2026-11-14T19:22:11Z","merge":false,"landed":true,"additions":86,"deletions":2},
+    {"sha":"4cc017c78fdabbfec1494618d27bb5eb08bdff7b","headline":"feat(index): List auto-swingshot (#183)","author":"openrac-bot[bot]","committedAt":"2026-11-14T19:23:01Z","merge":false,"landed":true,"additions":27,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"},
+    {"sha":"6a147f2bc32c1e0415cdd9389101eaa5544470fd","headline":"chore(index): approve auto-swingshot 1.0.0","author":"openrac-bot[bot]","committedAt":"2026-11-14T19:28:22Z","merge":false,"landed":true,"additions":13,"deletions":0}
+  ]
+}

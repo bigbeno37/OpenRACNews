@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Shared materials, SVG texture packs and a more responsive launcher land on develop",
+  "summary": "Material Studio now lets creators reuse named materials across surfaces, including glass, fur and foliage, with shared edits and an option to make independent copies (#503). Texture packs gain SVG and KTX2 images, with KTX2 limited to Basis Universal or plain RGBA8 for portability (#506). The launcher now batches program output so navigation and Cancel stay responsive while the game or lighting baker runs (#510). Prebuilt Going Commando for USA v1.01, PAL and USA v2.00 is proposed in draft #511, which has not merged.",
+  "highlights": [
+    "Ratchet & Clank and Going Commando's Video pages now draw a shorter list of settings from the in-game menu's entries (#508).",
+    "Ratchet & Clank's NTSC-J and PAL v1 builds work again after receiving missing memory-card wrappers and mod hooks (#507).",
+    "HDR's SDR Hue option produces less orange and pink banding in pale effects such as metal-detector rings (#509).",
+    "Mods and saves arrive with their launcher page, and the selected game's disc stays marked during the transition to Mods (#505, #512).",
+    "The update dialog's main button stays gold and readable when hovered, including in the OLED theme (#513).",
+    "Regression traces now include frames that retain the previous picture, fixing Gaspar's false exit result. Testing used Ratchet & Clank NTSC with software GL in a container (#504)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

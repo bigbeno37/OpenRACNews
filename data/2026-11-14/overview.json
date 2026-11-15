@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-14",
+  "headline": "Going Commando reports complete function counts for all three releases",
+  "summary": "Going Commando reports full function counts for USA v1.01, PAL and USA v2.00, with USA v1.01's matched code rising from 98.99% to 100.00% using C or original assembly. A matched function compiles to exactly the same bytes as the original game, and some of the last PAL and USA v2.00 functions use fakematches with instruction-order hints. Up Your Arsenal's PAL v1.00 matched code rose from 32.22% to 36.93%, while Deadlocked's eight new proposals remain unmerged. The launcher gained shared materials, SVG/KTX2 textures and responsiveness fixes, but prebuilt Going Commando remains a draft (OpenRAC#511). The mods added early-weapon ammo fixes and approved Auto Swingshot 1.0.0 (openrac-mods#187, openrac-mods#188, openrac-mods#189).",
+  "writtenBy": "gpt-6.1-sol"
+}

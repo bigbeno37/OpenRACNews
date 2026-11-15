@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-14",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-15T00:07:12.983Z",
+  "issues": [
+    {"number":182,"title":"Submit: Auto Swingshot","author":"glawks","events":["closed"],"closedAs":"COMPLETED","body":"Kind\nMod\nRepository\nhttps://github.com/glawks/auto-swingshot\nMod ids\nauto-swingshot\nModpack name\nNo response\nShort description\nAutomatically equips the Swingshot when pressing Circle near a Versa-Target in Ratchet & Clank 1, then restores your previous weapon. Supports swinging and pulling targets, airborne chaining, and configurable activation range.\nTags\ngameplay,controls,qol,accessibility\nImpact\ngameplay\nAI assistance\nYes\nBug tracker\nhttps://github.com/glawks/auto-swingshot/issues\nDiscord\nNo…"},
+    {"number":189,"title":"Review auto-swingshot 1.0.0","author":"openrac-bot[bot]","events":["opened","closed"],"closedAs":"COMPLETED","body":"A new version of an external native mod waits for review before players get it.\n\nMod: auto-swingshot (Auto Swingshot), https://github.com/glawks/auto-swingshot\nRelease: https://github.com/glawks/auto-swingshot/releases/tag/v1.0.0 (2026-11-12T21:17:52Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nauto-swingshot-1.0.0-linux-x86_64.zip\ndd0bd939dd81d11d25397bf45dcbd0179aa263a1f9f383f7c8ccfddd4489635a\n25557\n\n\nlinux-aarch64\nauto-swingshot-1.0.0-linux-aarch64.zip\n215f64acc96c23525d5d883838aa451…"}
+  ],
+  "releases": []
+}

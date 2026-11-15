@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-14",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Ammo drops now consider weapons received early in Ratchet & Clank randomizers",
+  "summary": "Archipelago and Item Randomizer now include every owned ammo-using weapon when choosing drops, including weapons received before their normal planet (#187, #188). The original game's low-ammo priorities and pickup counts remain in charge. Auto Swingshot 1.0.0 was also approved for the launcher index (#183, #189). Pressing Circle near a Versa-Target equips the Swingshot automatically, then restores the previous weapon (#182).",
+  "highlights": [
+    "The ammo fixes preserve assigned first-break ammo and the Bomb Glove fallback. Item Randomizer keeps the change limited to an active randomizer seed (#187, #188).",
+    "Auto Swingshot supports swinging and pulling targets, airborne chaining and a configurable activation range (#182)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

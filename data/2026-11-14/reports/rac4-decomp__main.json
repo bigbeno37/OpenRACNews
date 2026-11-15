@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-14",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's new proposals cover networking, Battledome and shared game code",
+  "summary": "Eight pull requests opened for Ratchet: Deadlocked, but none merged and no commits landed on main. Their authors report matches for NTSC-U v1.00 and PAL. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#166 proposes 348 matched functions for NTSC-U v1.00, with 336 also matching PAL.",
+    "#159 proposes 25 matched functions for NTSC-U v1.00, with 23 also matching PAL.",
+    "Networking proposals for NTSC-U v1.00 report 58 functions in #160, 41 in #162 and 25 in #163, covering sockets, packets and session requests.",
+    "#165 proposes 99 NTSC-U v1.00 functions across game, network and core code.",
+    "PAL proposals #161 and #164 each report 20 new functions. They cover core and shared code, networking and Battledome."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

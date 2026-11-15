@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 matched code rises from 32.22% to 36.93%",
+  "summary": "Up Your Arsenal's progress report puts PAL v1.00 at 36.93% matched code, up from 32.22%, with 10,105 of 16,124 functions. A matched function compiles to exactly the same bytes as the original game. This was a busy day for a branch usually seeing occasional updates, with work across levels, menus and startup code.",
+  "highlights": [
+    "#63 brings 17 matched PAL functions to Obani Moons, including vector-unit work. Seven functions remain in assembly.",
+    "PAL work from #58, #59 and #61 landed as commits, covering Aridia, Thran Asteroid Belt, level 23 and shared level 6 code.",
+    "Two PAL routines from #62 landed for Daxx and shared vector code. Its submission said NTSC-U carry was required before merge and no NTSC-U disc was available locally.",
+    "NTSC-U's latest progress commit lists 10,204 of 16,169 functions, with more matches landing afterward. Another 231 NTSC-U drafts remain outside the matched build.",
+    "Level work also covers Aquatos, the special-edition first vidcomic and the multiplayer menu.",
+    "#64 proposes readable function names and comments on NTSC-U functions. It remains open and adds no matches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

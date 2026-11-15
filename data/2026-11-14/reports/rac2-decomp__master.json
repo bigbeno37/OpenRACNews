@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-14",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando reports full function counts across USA v1.01, PAL and USA v2.00",
+  "summary": "The project's progress report puts USA v1.01 at 100.00% matched code, up from 98.99%, with 8,527 of 8,527 functions accounted for as C or original assembly. A matched function compiles to exactly the same bytes as the original game. The final progress update also reports PAL at 8,607 of 8,607 functions and USA v2.00 at 8,579 of 8,579. The last PAL and USA v2.00 work includes functions labelled as fakematches, which use instruction-order hints to reproduce the original bytes.",
+  "highlights": [
+    "USA v1.01's last 26 functions landed using opt-in compiler rules.",
+    "PAL and USA v2.00 gain timed text page controllers (#460), HUD counters for levels 22/23 (#461), and race-challenge panels for levels 04/11 (#462).",
+    "The race-challenge panels in #462 use plain C without additional compiler switches.",
+    "The final progress commit reports strict builds passing for all three releases."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
