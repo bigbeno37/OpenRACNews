@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-16T00:06:22.236Z",
+  "issues": [
+    {"number":455,"title":"Game Crash on arena","author":"adamkevinsky-ops","events":["closed"],"closedAs":"COMPLETED","body":"I have crash on planet Joba, on second challange right after I jump on magneboots wall. I have this crash every time on my setup. Can't progress game.\ni5 12400f, rtx 4060, 16gb ram, win 10.\nlog:\n==== OpenRAC crash report ====\nReason:   read at game address 0x3EC00002, which is not mapped\nKind:     exception\nWhen:     2026-11-12 18:12:08 +0100 (the session began 2026-11-12 18:10:19 +0100)\nProgram:  openrac-rac2-ntsc, OpenRAC 1.0.2, commit unknown\nSymbols:  unavailable: matching local PDB not…"},
+    {"number":459,"title":"[STEAMOS] Game won't install","author":"SoraKazooie24","events":["closed"],"closedAs":"COMPLETED","body":"What you are trying to do\ninstall r&c2\nWhat you ran, and what it printed\n/tmp/.mount_OpenRAfodKLm/usr/lib/OpenRAC Launcher/openrac/python/bin/python3\" tools/build_game.py rac2-ntsc --disc /run/media/deck/SN01T/Emulation/OpenRAC/active/rac2/data/iso_data/rac2/disc.iso --out /run/media/deck/SN01T/Emulation/OpenRAC/active/rac2/data/program/9fc860d5\ndownloading the source of 9fc860d5\nerror: Ninja was not found. Install it (apt install ninja-build, or brew install ninja), then build again.\nYour…"},
+    {"number":465,"title":"OpenRAC: Ratchet & Clank 2: Locked and Loaded stopped","author":"AngelMM99","events":["opened"],"closedAs":null,"body":"**\n\n\n**\nWhen testing the European version of Ratchet & Clank: Going Commando (Ratchet & Clank 2), I noticed that the game has improved compared to previous builds. Previously, Ratchet couldn't move at all, but now he can move a little before the game eventually crashes. Additionally, dialogue boxes are not displayed. The American version works perfectly, so this issue seems to be specific to the European version.\n\nWhat happened: it ended with exit code -805306369, without a crash…"}
+  ],
+  "releases": []
+}

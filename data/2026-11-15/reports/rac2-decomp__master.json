@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando source gets readable names and fixes for conflicting return types",
+  "summary": "Going Commando's USA v1.01 source is easier to read after #464 added plain-English function comments, meaningful local names and game-object labels. Further commits standardized names and fixed disagreements between function definitions and callers, including a sound-volume return type that had silenced weapon fire in the native port. USA v1.01 remains at 100.00% matched code and 8,527 of 8,527 functions. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "The large line totals mainly reflect the source-wide naming and comment pass, rather than new gameplay features. An earlier work-in-progress proposal, #463, closed without merging.",
+    "The Joba arena crash report (#455) and SteamOS installation report about missing Ninja (#459) closed as completed.",
+    "A new player report says European Going Commando still crashes after brief movement and lacks dialogue boxes, while the American version works on that player's setup (#465)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "capturedAt": "2026-11-16T00:06:07.536Z",
+  "progress": {"sha":"84bd565ff5d079384f1b673ac8e39ea3e06c68b7","code":{"done":3713584,"total":3713584},"functions":{"done":5118,"total":5118},"data":{"done":699072,"total":699072}},
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":307,"deletions":302,"pushes":1,"forcePushes":0,"authors":["noire342"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-15T16:04:49Z","type":"pr_merge","actor":"Lynder063","before":"a8df73e50684cf451cdbb78b05233eda0e1f9003","after":"84bd565ff5d079384f1b673ac8e39ea3e06c68b7"}
+  ],
+  "pullRequests": [
+    {"number":242,"title":"feat(data): complete PAL executable data matching","author":"noire342","draft":false,"head":"decomp/pal-data-matching","events":["opened","merged"],"mergedBy":"Lynder063","additions":307,"deletions":302,"changedFiles":17,"body":"I checked what was left in the PAL v2.00 data report. I gave the 24-byte HUD clock format at 0x001E7DC0 its own data block and let the SN linker generate the remaining 297 padding bytes. The report now matches 699,072 of 699,072 bytes (100.00%).\nThe linker uses normal section alignment, with explicit rules for the kprintf and init_once jump tables. The Python and Windows entry points also use the same clean build script.\nValidation\n\nRebuilt PAL v2.00 from scratch. All 1,229,744 reconstructed…"},
+    {"number":243,"title":"refactor(hud): name PAL selector slot fields","author":"noire342","draft":false,"head":"decomp/pal-quick-select-slot-names","events":["opened"],"mergedBy":null,"additions":71,"deletions":74,"changedFiles":1,"body":"I gave the PAL HUD selectors a shared HudSelectorSlot layout with names for the icon, directional neighbours and selection ID. The eight-slot wheel uses the ID to queue an item, while the four-slot selector uses it for a Gadgebot command. The comment explains when the wheel queues an item and how the Drone Device requests replenishment.\nValidation\n\nRebuilt PAL v2.00 with the SN toolchain and checked the affected overlay against retail. The executable and the complete overlay object, including…"},
+    {"number":244,"title":"refactor(vendor): share pricing and ammo records","author":"noire342","draft":false,"head":"decomp/gadgetron-pricing-record","events":["opened"],"mergedBy":null,"additions":231,"deletions":269,"changedFiles":21,"body":"I reused VendorItemPrice for the 24-byte entries read by Gadgetron, the HUD and the other overlay readers of the same table. The fields now identify the item and ammo prices, the PDA rate, ammo capacity, the default pickup amount and the minimum ammo granted on first acquisition. The existing offsets and regional declarations stay the same.\nValidation\n\nRebuilt PAL v2.00 with the SN toolchain. The ELF is byte-for-byte identical to the base build and all ten affected overlays match…"},
+    {"number":245,"title":"refactor(input): use PadState in ClearPadInput","author":"noire342","draft":false,"head":"decomp/pal-clear-pad-input","events":["opened"],"mergedBy":null,"additions":17,"deletions":31,"changedFiles":1,"body":"I switched ClearPadInput to the shared PadState and removed the duplicate layout. The reset now uses the same field names as the rest of the controller code and keeps the retail write order.\nValidation\n\nRebuilt PAL v2.00 from scratch. The linked ELF is byte-for-byte identical to the upstream build. The 100 bytes of ClearPadInput match the retail executable and all 19 overlays on PAL v2.00 and NTSC-U.\nRegenerated the PAL v2.00 and NTSC-U progress reports and confirmed they match the committed…"}
+  ],
+  "commits": [
+    {"sha":"84bd565ff5d079384f1b673ac8e39ea3e06c68b7","headline":"feat(data): complete PAL executable data matching (#242)","author":"noire342","committedAt":"2026-11-15T16:04:49Z","merge":false,"landed":true,"additions":307,"deletions":302,"body":"* feat(data): move the PAL HUD clock format into C\n\n* feat(data): generate and verify PAL linker padding"}
+  ]
+}

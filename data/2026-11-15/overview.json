@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-15",
+  "headline": "Going Commando goes prebuilt as Up Your Arsenal's matching advances",
+  "summary": "Going Commando's USA v1.01, PAL and USA v2.00 releases now come prebuilt on the launcher's Development line, leaving players to supply their ISO without compiling (OpenRAC#511). Up Your Arsenal's PAL v1.00 code matching rose from 36.93% to 50.70%, while Ratchet & Clank's PAL v2.00 data matching rose from 99.95% to 100.00% (rac1-decomp#242). A matched function compiles to exactly the same bytes as the original game. Going Commando gained readable source and return-type fixes, while Deadlocked's six new pull requests remained unmerged. Bolt Multiplier joined the mod index, offering up to x20 bolts for defeating enemies without taking damage in Ratchet & Clank, with versions 0.2.4 and 0.3.0 still awaiting review (openrac-mods#190, openrac-mods#191, openrac-mods#193, openrac-mods#194).",
+  "writtenBy": "gpt-6.1-sol"
+}

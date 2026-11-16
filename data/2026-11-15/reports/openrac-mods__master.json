@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-15",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Bolt Multiplier joins the mod index for Ratchet & Clank",
+  "summary": "Bolt Multiplier joined the mod index through #191. Its submission describes earning up to x20 bolts by defeating enemies without taking damage in Ratchet & Clank, with multiplied crate rewards, configurable activation and an in-game counter (#190). Versions 0.2.4 (#193) and 0.3.0 (#194) await review before players receive those updates.",
+  "highlights": [
+    "#192 proposes saving the real inventory during randomized NPC rewards in both the randomizer and Archipelago, including Helga's autosave and nested saves. It has not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-15",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-16T00:07:10.302Z",
+  "progress": null,
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":24,"deletions":0,"pushes":1,"forcePushes":0,"authors":["openrac-bot[bot]"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-15T08:08:13Z","type":"pr_merge","actor":"Lynder063","before":"6a147f2bc32c1e0415cdd9389101eaa5544470fd","after":"9af2554a782d277b8f47f07351ed7f03bf6eb122"}
+  ],
+  "pullRequests": [
+    {"number":191,"title":"List bolt-multiplier","author":"openrac-bot[bot]","draft":false,"head":"listing/bolt-multiplier","events":["opened","merged"],"mergedBy":"Lynder063","additions":24,"deletions":0,"changedFiles":2,"body":"From #190, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #190"},
+    {"number":192,"title":"fix(rac1): save real inventory during randomized NPC rewards","author":"llesieur99","draft":false,"head":"fix/rac1-npc-save-inventory","events":["opened"],"mergedBy":null,"additions":212,"deletions":12,"changedFiles":11,"body":"Helga can request an autosave before her update returns, while the randomizer temporarily presents the Swingshot ownership byte as the location's collection state. That temporary value can be saved alongside the randomized reward. Archipelago uses the same substitutions, and its existing explicit-serialization guard can resume them too early when save calls are nested.\nGuard save preparation, autosave requests and explicit serialization for the complete outer save call in both mods. Nested…"}
+  ],
+  "commits": [
+    {"sha":"9af2554a782d277b8f47f07351ed7f03bf6eb122","headline":"feat(index): List bolt-multiplier (#191)","author":"openrac-bot[bot]","committedAt":"2026-11-15T08:08:13Z","merge":false,"landed":true,"additions":24,"deletions":0,"body":"Co-authored-by: openrac-bot[bot] <350890583+openrac-bot[bot]@users.noreply.github.com>"}
+  ]
+}

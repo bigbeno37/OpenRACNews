@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-15",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-16T00:07:10.303Z",
+  "issues": [
+    {"number":190,"title":"Submit: Bolt Multiplier","author":"glawks","events":["opened","closed"],"closedAs":"COMPLETED","body":"Kind\nMod\nRepository\nhttps://github.com/glawks/bolt-multiplier\nMod ids\nbolt-multiplier\nModpack name\nNo response\nShort description\nEarn up to x20 bolts by defeating enemies without taking damage in Ratchet & Clank 1. Includes multiplied crate rewards, configurable activation modes, and an in-game multiplier HUD.\nTags\ngameplay,ui\nImpact\ngameplay\nAI assistance\nYes\nBug tracker\nhttps://github.com/glawks/bolt-multiplier/issues\nDiscord\nNo response\nDocs\nNo response\nYouTube video\nNo…"},
+    {"number":193,"title":"Review bolt-multiplier 0.2.4","author":"openrac-bot[bot]","events":["opened"],"closedAs":null,"body":"A new version of an external native mod waits for review before players get it.\n\nMod: bolt-multiplier (Bolt Multiplier), https://github.com/glawks/bolt-multiplier\nRelease: https://github.com/glawks/bolt-multiplier/releases/tag/v0.2.4 (2026-11-15T03:32:59Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nbolt-multiplier-0.2.4-linux-x86_64.zip\nf54ed843a6906769fbb7b5993bd885efb3fd464a85ca779266a340ad2a2f7fca\n40845\n\n\nlinux-aarch64\nbolt-multiplier-0.2.4-linux-aarch64.zip\n946320698a7478a440a1cdce1…"},
+    {"number":194,"title":"Review bolt-multiplier 0.3.0","author":"openrac-bot[bot]","events":["opened"],"closedAs":null,"body":"A new version of an external native mod waits for review before players get it.\n\nMod: bolt-multiplier (Bolt Multiplier), https://github.com/glawks/bolt-multiplier\nRelease: https://github.com/glawks/bolt-multiplier/releases/tag/v0.3.0 (2026-11-15T19:40:52Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nbolt-multiplier-0.3.0-linux-x86_64.zip\n6665f1fba0cea90ccaee2c93127125181f4bb7dd13e5f3252ca1e5c956c0b4ae\n41254\n\n\nlinux-aarch64\nbolt-multiplier-0.3.0-linux-aarch64.zip\na5d1da46ec4e1d7fe93ed299d…"}
+  ],
+  "releases": []
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-15",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando joins the prebuilt games, with no compiler needed",
+  "summary": "Going Commando's USA v1.01, PAL and USA v2.00 releases now come prebuilt on the launcher's Development line, so players need only their ISO instead of a compiler and local build (#511). Windows source builds can install missing development tools automatically (#514). Texture-pack stutter fixes also landed, with #526 reporting shorter frames and faster Novalis loading, followed by a Linux and Linux arm64 compilation fix (#528). The separate prerelease v1.0.3-dev.956 was published for the prebuilt-game work.",
+  "highlights": [
+    "Going Commando restores Press START, pause, weapon sounds and level AI (#532), fixes Aranos' hatch opening too early (#533), and adds touch Retry and Quit buttons in minigames (#524).",
+    "Ratchet & Clank's raised Hoven pool now lifts its visible water, tested on Windows PAL v2.00 (#515). Visibomb signal-loss static now covers widescreen views (#516).",
+    "FSR gets steadier scenery motion and enhanced rendering caps its effective scale at 100%, keeping the saved preference (#517). Offscreen Going Commando scenery keeps casting shadows (#530).",
+    "SDK interface 1.16 keeps mod data with game saves (#487), and 1.17 adds the game's collision queries (#489). Ratchet & Clank gets weapon-target hooks (#464). Refused mods have their callbacks cleared before unloading (#476).",
+    "The launcher keeps header buttons visible during tab changes (#519), scrolls crowded top bars and contains long Settings paths (#529). Configure repairs stale decomp paths and missing submodules (#531).",
+    "Texture and held-weapon exports (#518) and revised distant-object activity (#534) opened as drafts. Gadgetron icon customization (#535) is also proposed. None of these three merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

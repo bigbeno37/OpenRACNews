@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 code matching rises from 36.93% to 50.70%",
+  "summary": "Up Your Arsenal's PAL v1.00 matched code rose from 36.93% to 50.70%. Its PAL v1.00 report counts 12,449 of 16,533 functions, while NTSC-U's separate report counts 12,145 of 16,528. A matched function compiles to exactly the same bytes as the original game. Work across the vid-comics, multiplayer menu, campaign levels and engine libraries made this an unusually busy day for the early-stage branch.",
+  "highlights": [
+    "Level work covers Starship Phoenix, Aquatos, Tyhrranosis, Kerwan, the final boss, Obani Draco and the Insomniac Museum, alongside shared code.",
+    "Build tools reproduce Sony compiler and assembler behavior and encrypt compiled DNAS blocks. Catalogue fixes distinguish actual functions from padding and encrypted data in the multiplayer menu.",
+    "Engine-library work includes memory allocation, formatted text, MPEG decoding and timer functions. The NTSC-U engine-core unit reached 156 of 178 functions, with remaining cases discussed in #67.",
+    "The replayed matching series was verified at its regenerated tip. Its author warns that the intermediate replay commits are not individually consistent or buildable.",
+    "Further level work opened in #65 for Annihilation Nation and other levels, #66 for shared level code, and #68 for level 23. All three remain unmerged.",
+    "#67 asks maintainers whether Sony library C may access the global-pointer register through a header. It is a proposal, not an approved expansion of the matching rules."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

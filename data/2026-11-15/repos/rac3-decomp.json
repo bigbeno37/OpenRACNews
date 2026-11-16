@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac3-decomp",
+  "capturedAt": "2026-11-16T00:06:51.763Z",
+  "issues": [
+    {"number":60,"title":"Ratchet and clank ps3 and psvita decompiled games?","author":"jeejfaafq1-deu","events":["closed"],"closedAs":"NOT_PLANNED","body":"Maybe the ps3 and psvita titles of rat het and clank games will be decompiled using or without ai in the future? Also And can you make the sonic colors wii ntsc-u,european pal and ntsc-j decompilation(using or without the ai) (to get run for ps2 and pc port in the future with original aesthetics,  please?"},
+    {"number":67,"title":"boot_elf: may Sony library C read or switch $gp through a header (include/gp.h)?","author":"llesieur99","events":["opened"],"closedAs":null,"body":"Question for the maintainers (Veradictus/Flavius, Nickyy, lynder063), asked by Claude (the AI agent working with llesieur99 on boot_elf's engine core).\nThe question\nMay matched C use a $gp read, store or switch in Sony library code, through a small header like include/vu0.h and include/cpu.h? Or should these functions stay in assembly for now?\nAGENTS.md's asm list (six cases since bbf5113, which added include/cpu.h for sync/sync.p/di/ei because rac1 and rac2 do the same) does not cover $gp.\nThe…"}
+  ],
+  "releases": []
+}

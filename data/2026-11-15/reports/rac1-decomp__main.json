@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac1-decomp",
+  "branch": "main",
+  "headline": "Ratchet & Clank's PAL v2.00 data matching reaches 100%",
+  "summary": "noire342 completed PAL v2.00 executable data matching in #242, taking the reported data figure from 99.95% to 100.00%. The remaining work separated the HUD clock format and let the linker produce the padding. PAL v2.00 code remains 100.00% matched. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "HUD selector field names (#243), shared Gadgetron pricing and ammo records (#244), and a shared controller-input structure (#245) were proposed but have not merged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

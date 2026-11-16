@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-15",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-16T00:05:56.691Z",
+  "issues": [
+    {"number":372,"title":"Going Commando PAL: main menu never drawn (func_V1_002CA070 is a no-C stub), plus more HUD aliases to map","author":"JuanjoAvila","events":["closed"],"closedAs":"COMPLETED","body":"Summary\nOn the Going Commando PAL disc (SCES_516.07), the main menu is never drawn. The intro movies play and can be skipped with Start, the level-0 backdrop renders and the game keeps running, but no menu or HUD appears. You cannot reach \"Load game\" or \"New game\".\nRight after the movies are skipped, the log shows:\n[info] movie at sector 568474: Start pressed (pad 0xfff7)\n[info] movie at sector 568474: skipped\n[warning] func_V1_002CA070 has no C in the port yet; it does nothing\n\nfunc_002CA070…"},
+    {"number":379,"title":"Suggestion: Support for HRTF and surround sound","author":"StarPepe","events":["closed"],"closedAs":"COMPLETED","body":"It would be great to have support for HRTF for surround on headphones, as well as support for 4.0, 5.1 and 7.1 surround audio."}
+  ],
+  "releases": [
+    {"tag":"launcher-dev-feat-rac2-prebuilt","name":"v1.0.3-dev.956 (feat/rac2-prebuilt)","prerelease":true,"publishedAt":"2026-11-15T10:32:58Z","author":"github-actions[bot]","body":"The launchers built from feat/rac2-prebuilt at 8582728096bd6f4cbc00fcb584dcccc6421257d6; launchers built from this branch update from here."}
+  ]
+}

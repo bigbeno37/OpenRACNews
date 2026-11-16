@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-15",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked opens six proposals, with no work merged yet",
+  "summary": "Six pull requests opened for Deadlocked, covering new matching work and preserved C drafts for further decompilation. Nothing landed on main, so these proposals do not advance its published progress. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#172 reports 167 matched functions for NTSC-U v1.00, with 161 also matching PAL. The pull request remains open.",
+    "#167 proposes 52 PAL functions. On NTSC-U v1.00, #168 proposes 20 functions across game, network and core code, and #169 proposes 26 across core, network, game and level code. None merged.",
+    "Draft #170 offers 20 independently reviewed PAL reconstructions, covering text-output allocation, menus and message helpers. It has not merged.",
+    "#171 preserves 91 nonmatching PAL C drafts with reproduction commands and unresolved review questions. These are proposals for further work, rather than completed matches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
