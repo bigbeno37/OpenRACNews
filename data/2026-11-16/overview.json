@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-16",
+  "headline": "Going Commando port repairs land as Up Your Arsenal's PAL code matching reaches 54.75%",
+  "summary": "Going Commando's PAL and USA v2.00 ports now reach New Game and every level, according to OpenRAC#545, which also addresses black movies across its versions. Up Your Arsenal's PAL v1.00 matched code rose from 50.70% to 54.75%, with work across Annihilation Nation, shared levels and the engine alongside separate NTSC-U conversions. A matched function compiles to exactly the same bytes as the original game. Going Commando's decompilation stays at 100.00% matched code for USA v1.01 while PAL and USA v2.00 sources gain readable names and comments. Ratchet & Clank's randomizers fix NPC-reward saves (openrac-mods#192), while an index-build failure was reported and closed with a notice that the last good mod index stays live (openrac-mods#200).",
+  "writtenBy": "gpt-6.1-sol"
+}

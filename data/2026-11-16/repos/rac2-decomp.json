@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-16",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-17T00:06:46.321Z",
+  "issues": [
+    {"number":467,"title":"[STEAMOS] R&C2 still not building iso disc on new launcher update","author":"SoraKazooie24","events":["opened"],"closedAs":null,"body":"What you are trying to do\nUsing OpenRAC launcher to install R&C2 v1.01\n$ \"/tmp/.mount_OpenRAjCKkdj/usr/lib/OpenRAC Launcher/openrac/python/bin/python3\" tools/build_game.py rac2-ntsc --disc \"/run/media/deck/SN01T/Emulation/OpenRAC Launcher/OpenRAC/active/rac2/data/iso_data/rac2/disc.iso\" --out \"/run/media/deck/SN01T/Emulation/OpenRAC Launcher/OpenRAC/active/rac2/data/program/9fc860d5\"\ndownloading the source of 9fc860d5\nerror: Ninja was not found. Install it (apt install ninja-build, or brew…"}
+  ],
+  "releases": []
+}

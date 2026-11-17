@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 code matching rises from 50.70% to 54.75%",
+  "summary": "Up Your Arsenal's PAL v1.00 code matching rose from 50.70% to 54.75%, with 13,067 of 16,533 functions in the day's final progress report. A matched function compiles to exactly the same bytes as the original game. Large batches cover Annihilation Nation, shared level code and the engine, making this an unusually busy day for the early-stage branch. Separate NTSC-U work added native C for hundreds of functions whose code differs from PAL.",
+  "highlights": [
+    "#65 brings 108 PAL functions: 102 in Annihilation Nation, five in Aquatos Base and one in a vid-comic level. Near misses remain separate from the matched code.",
+    "#72 converts 46 shared PAL level functions. #76 adds PAL work in Annihilation Nation and Final Boss, plus five NTSC-U implementations.",
+    "NTSC-U batches include 288 level counterparts of existing PAL C and further engine and level functions. Some PAL matches still leave differing NTSC-U counterparts in assembly.",
+    "Readable names and NTSC-U comments landed (#64). New tools find code already reconstructed in sister games (#80) and flag conflicting return types (#81), while #79 fixes renaming when moving PAL code to NTSC-U.",
+    "Build tools reuse unchanged function checks and level setup. Separate non-matching drafts landed as study material, including functions that match alone but fail in complete builds. These drafts do not add to the match total.",
+    "Draft #77 proposes 11 more PAL Annihilation Nation functions, and #78 proposes 24 level functions. Neither merged. #76 also includes unlinked reconstruction drafts, which do not count as matches."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

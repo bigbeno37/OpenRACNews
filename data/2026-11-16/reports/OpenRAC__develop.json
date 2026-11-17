@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando's PAL and USA v2.00 ports get past title-screen crashes",
+  "summary": "Going Commando's PAL and USA v2.00 ports now reach the title screen, New Game and every level, according to #545, following release-table repairs in #538. #545 also addresses black pre-rendered movies across all Going Commando versions after #543 changed movie texture handling. In Ratchet & Clank and Going Commando, object activity again follows console distances, keeping distant visual animation from changing game logic (#534). These changes landed on the development branch.",
+  "highlights": [
+    "Nanotech effects stay with Siberius's moving trucks (#537). Going Commando also gets aligned pause-menu rows and movies that fill a 16:9 window on black (#542).",
+    "Going Commando movie frames refill an existing texture instead of creating a new one each frame (#543).",
+    "Mods can customize Ratchet & Clank's Gadgetron item and ammo icon strip through C, C++ and Luau hooks on all four releases (#535).",
+    "SDK interface 1.18 lets mods attach a prop to a character's joint and inspect where it was last drawn (#547).",
+    "#536 fixes the assembly guard that blocked disc-based Ratchet & Clank builds. Texture dumping skips transparent textures recreated every tick (#546).",
+    "Randomized reward presentation is a draft (#540). MODS save-slot badges are proposed for Going Commando USA v1.01 only (#544), with PAL and v2.00 tables still needed. Further blank-texture export filtering remains proposed (#548)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

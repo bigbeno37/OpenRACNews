@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Ratchet & Clank randomizers preserve real inventory during NPC-reward saves",
+  "summary": "Ratchet & Clank's item randomizer and Archipelago now keep the real inventory throughout nested saves during NPC rewards (#192). This fixes a case where Helga's autosave could record a temporary Swingshot ownership value. Bolt Multiplier 0.2.4 and 0.3.0 were approved for the mod index, but an index-build failure was reported and closed in #200, whose notice says the last good index stays live.",
+  "highlights": [
+    "#201 makes Ratchet & Clank's Archipelago item-placement test fill progression items as a real solo game does. The pull request reports 920 seeded test runs passing.",
+    "Drafts #195 and #196 propose showing and animating the actual randomized rewards at pickups and vendors in Archipelago and the item randomizer. Neither has merged.",
+    "#197 proposes an optional Ratchet & Clank New Game+ start, off by default, without granting gold weapons or completed-save inventory. It remains unmerged.",
+    "Unmerged #198 proposes Archipelago gold-case purchase and shop-access fixes. #199 proposes an optional gold-weapon case pool for the item randomizer, off by default, retaining normal bolt and Gold Bolt costs.",
+    "#202 proposes a separate Items-menu pool for both Ratchet & Clank randomizers, including Premium and Ultra Nanotech. It defaults off and remains unmerged.",
+    "#203 proposes Cheats 0.4.0 controls in OpenRAC's own in-game menu as well as the pause page. It has not merged or been released here."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

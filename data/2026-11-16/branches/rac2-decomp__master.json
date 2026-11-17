@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-16",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-17T00:06:46.314Z",
+  "progress": {"sha":"7ef0c488dfc60ad930b9541c6c7048a9bfb3e709","code":{"done":5524052,"total":5524052},"functions":{"done":8527,"total":8527},"data":null},
+  "totals": {"commits":2,"merges":0,"landed":2,"additions":305966,"deletions":245539,"pushes":1,"forcePushes":0,"authors":["Lynder063"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-16T09:02:25Z","type":"push","actor":"Lynder063","before":"005bfc4dd3b0d715dcbffabdb8835e356e34474a","after":"7ef0c488dfc60ad930b9541c6c7048a9bfb3e709"}
+  ],
+  "pullRequests": [
+    {"number":466,"title":"fix(carry): name the release's empty level hooks by their callers","author":"nickyyOO","draft":false,"head":"fix/hook-names-by-callers","events":["opened"],"mergedBy":null,"additions":846,"deletions":1417,"changedFiles":92,"body":"Before: the boot's empty 8-byte level hooks were paired with v1.01's by order. USA v2.00 has its hooks 8 bytes on and one more, and PAL has its own run, so many release hooks had another hook's name (func_0026F748, the hero's state change hook, among them). OpenRAC had to pair them again by their callers (pair_stubs).\nAfter: carry.py pairs each hook by the calls to it. A v1.01 function with a place in the release, or the one release function of the same shape, calls the release's hook at the…"}
+  ],
+  "commits": [
+    {"sha":"d553ee14b7b0bd93762d08c8178b2be61767433f","headline":"refactor(names): name globals and PAL/USA v2.00 functions, rac1 style","author":"Lynder063","committedAt":"2026-11-16T07:48:50Z","merge":false,"landed":true,"additions":185914,"deletions":136197,"body":"- 14,367 globals get g_snake_case names: 14,072 USA v1.01 data symbols and\n  295 that only the PAL or USA v2.00 sources use. A name several levels\n  share takes _lNN after its first word. 24 compiler jump tables keep their\n  address names.\n- 2,101 PAL/USA v2.00 functions that are a release's version of a named\n  v1.01 function take its name plus _pal or _us2 (build/<version>/carry.json\n  changed code, or an identical fingerprint).\n- tools/names.py and tools/srcnames.py accept…"},
+    {"sha":"7ef0c488dfc60ad930b9541c6c7048a9bfb3e709","headline":"docs(src): readable PAL and USA v2.00 sources, rac1 style","author":"Lynder063","committedAt":"2026-11-16T09:01:18Z","merge":false,"landed":true,"additions":120052,"deletions":109342,"body":"- 2,545 functions only PAL or USA v2.00 has get snake_case names, system\n  first; a release's version of a v1.01 function takes its name plus _pal\n  or _us2. They go in include/names/pal.h and us2.h.\n- Simple English comments above the release functions that had none (about\n  4,500 of 4,990 definitions now have one), reusing the v1.01 counterpart's\n  comment where it still fits.\n- Locals, parameters and in-file struct fields renamed to snake_case;\n  260 moby class ids written as MOBY_CLASS_*…"}
+  ]
+}

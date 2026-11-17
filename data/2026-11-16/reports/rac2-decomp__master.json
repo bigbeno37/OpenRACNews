@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-16",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando's PAL and USA v2.00 sources gain readable names and comments",
+  "summary": "Going Commando's PAL and USA v2.00 sources gained readable function names and English comments, alongside named globals across releases. The large source rewrite is naming and documentation work, while the USA v1.01 progress report remains at 100.00% of code and 8,527 of 8,527 functions. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#466 proposes identifying empty level hooks by their callers rather than their order, correcting names in USA v2.00 and PAL. It has not merged.",
+    "#467 reports a SteamOS installation failure for USA v1.01, with the error saying the Ninja build tool was not found."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
