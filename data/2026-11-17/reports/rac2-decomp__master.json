@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-17",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "headline": "Going Commando corrects the taxi routine behind Boldan's port crash",
+  "summary": "Going Commando's shared taxi-path routine now names the correct vector operation (#468). The old name made OpenRAC call a different function, corrupting Boldan's paths and causing a crash when the rail ships started after the lift. USA v2.00 and PAL's empty level hooks are also paired with their USA v1.01 counterparts by their callers rather than their order (#466).",
+  "highlights": [
+    "#468 corrects the shared routine carried by levels 6, 9, 11, 13 and 18. The original decompilation still matched because its build read the encoded call, which concealed the naming error from that check.",
+    "The European-version crash and missing-dialogue report #465 was closed as completed."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

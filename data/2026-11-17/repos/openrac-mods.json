@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-17",
+  "repo": "openrac-mods",
+  "capturedAt": "2026-11-18T00:08:15.655Z",
+  "issues": [
+    {"number":208,"title":"Submit: rac1-enhanced-movement","author":"kmomoney","events":["opened"],"closedAs":null,"body":"Kind\nMod\nRepository\nhttps://github.com/kmomoney/rac1-enhanced-movement\nMod ids\nrac1-enhanced-movement\nModpack name\nNo response\nShort description\nRatchet moves like he does in Going Commando: speed follows the stick, quicker starts and stops, no skid, more air control, an L2/R2 strafe with flips, Going Commando wrench timing, a faster camera and better Clank controls. Jump heights and damage stay the same.\nTags\ngameplay, controls, camera\nImpact\ngameplay\nAI assistance\nYes\nBug…"},
+    {"number":209,"title":"Submit: rac1-travel-anywhere","author":"kmomoney","events":["opened"],"closedAs":null,"body":"Kind\nMod\nRepository\nhttps://github.com/kmomoney/rac1-travel-anywhere\nMod ids\nrac1-travel-anywhere\nModpack name\nNo response\nShort description\nOpen the ship's planet select from anywhere: hold L1 + R1 and press Select. Pick a planet to fly there as usual, back out to carry on right where you were, or pick the planet you're on to restart its level.\nTags\nqol, controls\nImpact\ngameplay, touches-saves\nAI assistance\nYes\nBug tracker\nhttps://github.com/kmomoney/rac1-travel-anywhere/issues\nDiscord\nNo…"},
+    {"number":213,"title":"Review wrench-throw 1.0.3","author":"openrac-bot[bot]","events":["opened"],"closedAs":null,"body":"A new version of an external native mod waits for review before players get it.\n\nMod: wrench-throw (Wrench Throw), https://github.com/chistianh/wrench-throw\nRelease: https://github.com/chistianh/wrench-throw/releases/tag/v1.0.3 (2026-11-17T15:54:42Z)\n\n\n\n\nPlatform\nArchive\nSHA-256\nBytes\n\n\n\n\nlinux-x86_64\nwrench-throw-1.0.3-linux-x86_64.zip\n27081d81aa404efc7ec13395a7548ccd34638fa282f6cf27a5f96b0b475f6f24\n29304\n\n\nlinux-aarch64\nwrench-throw-1.0.3-linux-aarch64.zip\n7f10bafeebf524d044391529bf12bd298f788…"}
+  ],
+  "releases": []
+}

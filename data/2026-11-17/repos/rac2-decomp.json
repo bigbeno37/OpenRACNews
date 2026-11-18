@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-17",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-18T00:06:43.551Z",
+  "issues": [
+    {"number":465,"title":"OpenRAC: Ratchet & Clank 2: Locked and Loaded stopped","author":"AngelMM99","events":["closed"],"closedAs":"COMPLETED","body":"**\n\n\n**\nWhen testing the European version of Ratchet & Clank: Going Commando (Ratchet & Clank 2), I noticed that the game has improved compared to previous builds. Previously, Ratchet couldn't move at all, but now he can move a little before the game eventually crashes. Additionally, dialogue boxes are not displayed. The American version works perfectly, so this issue seems to be specific to the European version.\n\nWhat happened: it ended with exit code -805306369, without a crash…"}
+  ],
+  "releases": []
+}

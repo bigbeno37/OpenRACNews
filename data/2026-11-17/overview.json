@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-17",
+  "headline": "Up Your Arsenal reaches 58.58% of PAL v1.00 code as Deadlocked advances",
+  "summary": "Up Your Arsenal's progress report puts PAL v1.00 at 58.58% of code matched, up from 54.75%. Deadlocked's NTSC-U v1.00 reaches 18.25%, up from 14.84% at its previous report on November 11. A matched function compiles to exactly the same bytes as the original game. OpenRAC's Development line adds Tabora crystal and Grelbin moonstone map markers to Going Commando's USA v1.01 and PAL releases, fixes Boldan's taxi-path crash and PAL's Aranos hang, and adds touch strafing (OpenRAC#561, OpenRAC#567, OpenRAC#574, OpenRAC#577, OpenRAC#580). Ratchet & Clank's item randomizer gains optional gold-weapon case shuffling and a New Game+ start, while Cheats 0.4.0 gains controls in OpenRAC's own menu (openrac-mods#199, openrac-mods#197, openrac-mods#203).",
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-17",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Going Commando gains collectible map markers, touch strafing and crash fixes",
+  "summary": "Going Commando's USA v1.01 and PAL maps now mark Tabora crystals and Grelbin moonstones, bringing over USA v2.00's Mapper markers as an always-on PC feature (#574, #577). Touch players get a strafe toggle that resets during menus, loads, scenes and death (#567). The Development line also fixes Boldan's taxi-path corruption and resulting rail-ship crash, PAL level-hook crashes and the PAL Aranos robot-room hang (#549, #561, #580). Its save editor gains bulk weapon, gadget and platinum-bolt controls, with confirmation and a story-item warning before removing all gadgets, while saves written with mods get a MODS badge on USA v1.01 only (#544, #555).",
+  "highlights": [
+    "Space missions show enemies on the minimap and Feltzin counts its ships correctly (#557). Maktar slot-machine prizes and Joba arena titles now follow the discs across all three releases (#558, #560).",
+    "Going Commando fixes restore vendor ammo previews, Damosel's ice rail and the Shield Charger bubble (#550, #565, #572). Cockpit glass moves with the ship between ticks, checked at 120 fps on USA v1.01 and v2.00 (#578).",
+    "Launcher shortcuts can update mods before playing with `--update-mods` beside `--play` (#554). Every game's Mods tab gains hub buttons, and Android's Games wave stays in place during tab changes (#562, #556).",
+    "SDK interface 1.19 lets mod menus use switches and choices that respond while the game is paused (#569). Documentation now reflects existing Android native-mod support when an android-arm64 build is supplied (#570).",
+    "Ratchet & Clank's Clank antenna and Gadgebot glows stay with their bodies above 60 fps, checked on four PAL levels with GL and Vulkan (#566). Going Commando's equipped items join Ratchet's hero shadow map (#571).",
+    "Draft #576 proposes a PCSX2 texture-pack stutter fix but has not merged. A separate change already landed to skip provably invisible blank texture exports while preserving replacement hashes (#548)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-17",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 reaches 58.58% of code, up from 54.75%",
+  "summary": "Up Your Arsenal's progress report now records 58.58% of PAL v1.00 code matched, up from 54.75%, with 13,537 of 16,533 functions matched. A matched function compiles to exactly the same bytes as the original game. Work spans shared level code, Annihilation Nation, Aquatos, the multiplayer menu and the game's startup programs. Alongside the matching work, the tools now reuse long-lived checking processes and avoid repeating checks after unrelated tool changes.",
+  "highlights": [
+    "#82 adds 111 shared-level functions, checked at every placement across the 49 PAL levels and against their NTSC-U counterparts. Work from closed #78 also landed directly, covering 24 level functions.",
+    "New C covers the cutscene/movie player, dialog state machines and an Aquatos sewers turret state machine, alongside batches across Daxx, Koros, the Obani moons and the Insomniac Museum.",
+    "Checking tools now reject stale cached results when inputs change and stop if a worker changes a table it was meant to preserve. The documentation warns that the faster workers use more memory.",
+    "#83 and #85 propose further level matches. #84 and #86 cover startup and level code, while #87 includes Annihilation Nation and Aquatos sewers. All five remained unmerged."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

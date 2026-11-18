@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-17",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "RAC1 randomizer gains gold-weapon case shuffling and an optional New Game+ start",
+  "summary": "Ratchet & Clank's item randomizer gains optional gold-weapon case shuffling and a separate New Game+ start, both off by default (#199, #197). Shuffling opens the Novalis shop without New Game+ and lets players buy a gold case without its base weapon, while retaining the normal bolt price and four Gold Bolts. Archipelago gets the same gold-case purchase and shop-access fixes (#198). Cheats 0.4.0 also lands, adding its controls to OpenRAC's own in-game menu (#203).",
+  "highlights": [
+    "The New Game+ option enables the retail mode flag and Goodies menu without granting gold weapons or completed-save inventory. It respects the existing seed/save gate and never downgrades an earned New Game+ save (#197).",
+    "Both RAC1 randomizers open Big Al's door when the Heli-Pack is owned or his randomized reward is bought. Helga's return taxi stays available until the Swingshot is owned, even after buying her reward (#204).",
+    "#207 proposes randomized reward names in NPC prompts, including Archipelago recipient names for other players' items. It remained unmerged.",
+    "Draft #212 proposes immediate switches and a choice for Cheats 0.4.1. It awaits a released SDK interface 1.19 or later. The merged 0.4.0 menu applies presses when the game ticks again after the menu closes.",
+    "Enhanced Movement 1.0.0 and Travel Anywhere 0.1.2 were submitted for listing, with replacement listing PRs #210 and #211 still open. Wrench Throw 1.0.3 also awaits review before players receive the update (#213)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

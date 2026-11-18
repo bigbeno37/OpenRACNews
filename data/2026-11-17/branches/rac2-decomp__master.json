@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-17",
+  "repo": "rac2-decomp",
+  "branch": "master",
+  "capturedAt": "2026-11-18T00:06:43.511Z",
+  "progress": {"sha":"4ea93ceaf43aec055e19211d36512e847860bac2","code":{"done":5524052,"total":5524052},"functions":{"done":8527,"total":8527},"data":null},
+  "totals": {"commits":2,"merges":0,"landed":2,"additions":848,"deletions":1419,"pushes":2,"forcePushes":0,"authors":["nickyyOO"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-17T08:41:05Z","type":"pr_merge","actor":"Lynder063","before":"7ef0c488dfc60ad930b9541c6c7048a9bfb3e709","after":"f9181cdd8f6bdd005ff5f35eac0638989462d9fb"},
+    {"at":"2026-11-17T11:34:12Z","type":"pr_merge","actor":"Lynder063","before":"f9181cdd8f6bdd005ff5f35eac0638989462d9fb","after":"4ea93ceaf43aec055e19211d36512e847860bac2"}
+  ],
+  "pullRequests": [
+    {"number":466,"title":"fix(carry): name the release's empty level hooks by their callers","author":"nickyyOO","draft":false,"head":"fix/hook-names-by-callers","events":["merged"],"mergedBy":"Lynder063","additions":846,"deletions":1417,"changedFiles":92,"body":"Before: the boot's empty 8-byte level hooks were paired with v1.01's by order. USA v2.00 has its hooks 8 bytes on and one more, and PAL has its own run, so many release hooks had another hook's name (func_0026F748, the hero's state change hook, among them). OpenRAC had to pair them again by their callers (pair_stubs).\nAfter: carry.py pairs each hook by the calls to it. A v1.01 function with a place in the release, or the one release function of the same shape, calls the release's hook at the…"},
+    {"number":468,"title":"fix(L06): call FastVecAdd in path_update_attached_point_table","author":"nickyyOO","draft":false,"head":"fix/taxi-points-vec-add","events":["opened","merged"],"mergedBy":"Lynder063","additions":2,"deletions":2,"changedFiles":1,"body":"Before: path_update_attached_point_table called func_2EEEB8, a name copied from level 17. It is FastVecAdd only there. The decomp still matched (the build reads the jal), but OpenRAC read the name as level 0's function at that address (quaternion_to_rotation_basis). On Boldan the taxi then wrote matrices over the path table, and the rail ships crashed the game when the hero went down the lift.\nAfter: the function calls FastVecAdd. Each level that carries it (6, 9, 11, 13, 18) resolves that to…"}
+  ],
+  "commits": [
+    {"sha":"f9181cdd8f6bdd005ff5f35eac0638989462d9fb","headline":"fix(carry): name the release's empty level hooks by their callers (#466)","author":"nickyyOO","committedAt":"2026-11-17T08:41:04Z","merge":false,"landed":true,"additions":846,"deletions":1417,"body":"* fix(carry): name the release's empty level hooks by their callers\n\nThe boot's empty 8-byte functions (the level hooks each level fills) are\nalike, so the alignment paired them by order. The order does not hold:\nUSA v2.00 has its hooks 8 bytes on and one more, PAL its own run, so many\nrelease hooks had another hook's name (func_0026F748, the hero's state\nchange hook, among them).\n\ncarry.py now pairs each hook by the calls to it: a v1.01 function with a\nplace in the release (or one function of…"},
+    {"sha":"4ea93ceaf43aec055e19211d36512e847860bac2","headline":"fix(L06): call FastVecAdd in path_update_attached_point_table (#468)","author":"nickyyOO","committedAt":"2026-11-17T11:34:12Z","merge":false,"landed":true,"additions":2,"deletions":2,"body":"func_2EEEB8 is FastVecAdd only in level 17. In the levels that carry this\nfunction (6, 9, 11, 13, 18) the retail jal goes to each level's own\nFastVecAdd copy, and OpenRAC read the name as level 0's function at\n0x2EEEB8 (quaternion_to_rotation_basis), which overwrote path data on\nBoldan's taxi."}
+  ]
+}
