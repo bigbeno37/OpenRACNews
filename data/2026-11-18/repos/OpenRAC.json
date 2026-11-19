@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-18",
+  "repo": "OpenRAC",
+  "capturedAt": "2026-11-19T00:06:12.479Z",
+  "issues": [],
+  "releases": [
+    {"tag":"decomp-facts","name":"Decomp build facts","prerelease":true,"publishedAt":"2026-11-18T09:17:25Z","author":"Lynder063","body":"Build facts of the decomps (tools/facts.py): names, addresses, sizes and hashes; no retail bytes. Do not delete."},
+    {"tag":"launcher-v1.1.0","name":"v1.1.0","prerelease":false,"publishedAt":"2026-11-18T12:48:56Z","author":"github-actions[bot]","body":"## Highlights\n\n- **Going Commando on every disc.** The PAL and USA v2.00 discs play alongside USA v1.01, and Going Commando ships prebuilt for all three (#341, #401, #405, #511, #538, #549, #561).\n- **Going Commando on Android**, its assembly built from the disc on the device (#300, #310, #320).\n- **Going Commando builds on Windows with a carried compiler**, and the launcher installs missing Windows build dependencies (#326, #514).\n- **A Metal renderer for macOS**, offered in Settings (#370,…"},
+    {"tag":"sdk-v1.20.0","name":"Mod SDK 1.20.0","prerelease":false,"publishedAt":"2026-11-18T13:00:25Z","author":"github-actions[bot]","body":"The OpenRAC mod SDK 1.20.0, for the mod interface 1.20 (docs/port/MODS.md). SHA-256 of the archive: 4a9f042597d895802d00eca0571a5d6d378ca6e995b2f3a55d59bb90919e0eba"}
+  ]
+}

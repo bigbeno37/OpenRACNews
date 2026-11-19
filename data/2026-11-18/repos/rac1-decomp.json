@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-18",
+  "repo": "rac1-decomp",
+  "capturedAt": "2026-11-19T00:06:21.584Z",
+  "issues": [
+    {"number":246,"title":"Levels not building in setup","author":"OtoshiGamiPrime","events":["opened"],"closedAs":null,"body":"$ \"F:\\PC Rip\\Ratchet & Clank 1-3 (OpenRAC)\\openrac\\python\\python.exe\" editor/extract.py port \"C:\\Users\\OpenRAC\\active\\rac1\\data\\iso_data\\rac1\\disc.iso\" \"C:\\Users\\OpenRAC\\active\\rac1\\data/port/ntsc\" --anywhere --replace\nTraceback (most recent call last):\nFile \"F:\\PC Rip\\Ratchet & Clank 1-3 (OpenRAC)\\openrac\\editor\\extract.py\", line 31, in \nfrom concurrent.futures import ProcessPoolExecutor\nFile \"F:\\PC Rip\\Ratchet & Clank 1-3 (OpenRAC)\\openrac\\python\\Lib\\concurrent\\futures_init_.py\", line 45, in…"}
+  ],
+  "releases": []
+}

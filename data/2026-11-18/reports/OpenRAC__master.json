@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-18",
+  "repo": "OpenRAC",
+  "branch": "master",
+  "headline": "Launcher 1.1.0 releases with Going Commando on all three supported discs",
+  "summary": "Launcher 1.1.0 is released, bringing Going Commando's PAL and USA v2.00 discs to the stable line alongside USA v1.01 (#584). All three now ship prebuilt, and Android can build Going Commando's assembly from the player's disc. The regular release pull request brings together 249 pull requests since 1.0.2, with Mod SDK 1.20.0 released alongside it.",
+  "highlights": [
+    "macOS gains a Metal renderer selectable in Settings (#370, #382).",
+    "Going Commando builds on Windows with a bundled compiler, and the launcher can install missing Windows build dependencies (#326, #514).",
+    "Players can use native PCSX2 texture packs, including SVG and KTX2 pictures, with fixes for texture-pack stutters (#443, #506, #526).",
+    "Enhanced graphics gains bloom and faster handheld presets, while reflection baking becomes the default for gameplay levels (#407, #453, #432).",
+    "Players can choose a custom save folder and start a game from its own shortcut or Steam entry (#388, #324, #389).",
+    "Native mods targeting API 1.20 must declare Vulkan access. Opting in keeps rendering and queue submission on the game thread, while older API targets keep their existing behavior (#582)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

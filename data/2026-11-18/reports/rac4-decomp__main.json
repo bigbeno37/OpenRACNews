@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked's NTSC-U v1.00 reaches 18.54% matched code as PAL batches also land",
+  "summary": "Deadlocked's NTSC-U v1.00 rose from 18.25% to 18.54% matched code by size. Its progress report now counts 9,408 matched functions out of 18,172 for NTSC-U v1.00, while the PAL release has 9,724 matched functions out of 18,136. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "#176 adds 15 NTSC-U v1.00 functions in game and network code, also matching on PAL. #179 adds another 56 functions that match both releases.",
+    "#177 adds 69 PAL functions and preserves three exact PAL variants.",
+    "Seven PAL-only functions cover DreadZone Station, multiplayer menus, game code and shared level code (#178).",
+    "Six PAL multiplayer-menu record helpers now match. The separate candidate `func_L00_00533D30` remains a near miss outside the compiled sources (#180)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

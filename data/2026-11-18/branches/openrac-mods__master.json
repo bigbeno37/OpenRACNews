@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-18",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "capturedAt": "2026-11-19T00:07:23.592Z",
+  "progress": null,
+  "totals": {"commits":1,"merges":0,"landed":1,"additions":59,"deletions":10,"pushes":1,"forcePushes":0,"authors":["Veradictus"]},
+  "warnings": [],
+  "pushes": [
+    {"at":"2026-11-18T08:38:35Z","type":"push","actor":"Veradictus","before":"d2163d380fe27619b86f8454f1956afdd480fc46","after":"856852d54d51cf6c86403c3855bdbcfb0cbf61a2"}
+  ],
+  "pullRequests": [
+    {"number":216,"title":"List ryno-ammo-drops","author":"openrac-bot[bot]","draft":false,"head":"listing/ryno-ammo-drops","events":["opened"],"mergedBy":null,"additions":17,"deletions":0,"changedFiles":1,"body":"From #215, checked by the listing bot. @OpenRAC/maintainers, please review.\nCloses #215"},
+    {"number":218,"title":"List auto-head-gear","author":"Promises","draft":false,"head":"list-auto-head-gear","events":["opened"],"mergedBy":null,"additions":25,"deletions":0,"changedFiles":1,"body":"Lists Auto Head Gear, https://github.com/Promises/rac1-auto-head-gear (v1.0.0, released by the SDK 1.20.0 workflow on every platform, with SHA256SUMS).\nThe Sonic Summoner and the O2 Mask work as soon as they are owned, as if worn, like in the later games. The game checks the head slot inside six moby updates: the sand mice and their houses for the Summoner, Blarg's toxic gas vents and Rilgar's extermibot and extermitank for the mask. The mod wraps those updates. When the item is owned, the head…"}
+  ],
+  "commits": [
+    {"sha":"856852d54d51cf6c86403c3855bdbcfb0cbf61a2","headline":"fix(ng-plus-plus): play the in-hand level-up, keep experience across new games, name a bought tier after the purchase, 0.1.11","author":"Veradictus","committedAt":"2026-11-18T08:37:51Z","merge":false,"landed":true,"additions":59,"deletions":10,"body":"A tier reached by experience on the weapon in hand now plays the game's own upgrade animation (gfx_set_screen_pair_run_effect, as hero_update_collection_progress does), waiting like the game until the hero can play it; the game's own popup and line follow at its end. While the save's clock is all zeros (a new game or a new challenge mode before the game stamps it) the mod no longer marks weapons as seen and zeroes their experience, which wiped what the RYNO II and the tiered weapons had earned.…"}
+  ]
+}

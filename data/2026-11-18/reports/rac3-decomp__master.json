@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-18",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 reaches 60.90% matched code, up from 58.58%",
+  "summary": "A day of shared-level batches took Up Your Arsenal's PAL v1.00 from 58.58% to 60.90% matched code by size. Its progress report now counts 13,815 matched functions out of 16,533 for PAL v1.00. A matched function compiles to exactly the same bytes as the original game.",
+  "highlights": [
+    "PAL v1.00 shared-code batches include 83 functions in #107, 48 in #85, 36 in #101 and 26 in #92, alongside smaller level and boot-program batches.",
+    "NTSC-U fixes let more existing C link in Vidcomics, Obani Moons and shared Florana code, with further repairs for native level 39 functions (#90, #91, #93, #95, #97, #98, #100, #104, #105).",
+    "Two PAL matches from #77 and #83 still lack matching NTSC-U C. Final checks nevertheless rebuilt all 49 PAL levels and all 54 NTSC-U targets to match, using assembly where C is unfinished.",
+    "A conflicting camera-table declaration introduced by #94 and #99 was fixed so level 20, the final boss, builds again.",
+    "Open #106 proposes 20 NTSC-U-only functions. #108 proposes five PAL Holostar Studios functions and #109 proposes 22 PAL shared-code functions. These have not landed.",
+    "#84 adds six PAL v1.00 boot-program functions. Their NTSC-U counterparts remain drafts, and the corresponding front-end copies still use assembly."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

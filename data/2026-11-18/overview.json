@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-18",
+  "headline": "Launcher 1.1.0 brings Going Commando's three supported discs to stable builds",
+  "summary": "Launcher 1.1.0 brings Going Commando's PAL, USA v1.01 and USA v2.00 discs to stable builds with prebuilt games, alongside Mod SDK 1.20.0 (OpenRAC#584). Up Your Arsenal's PAL v1.00 rises from 58.58% to 60.90% matched code by size, while Deadlocked's NTSC-U v1.00 moves from 18.25% to 18.54%. A matched function compiles to exactly the same bytes as the original game. NG++ 0.1.11 preserves weapon experience when starting a new game or challenge mode. New build-failure reports concern Ratchet & Clank level setup on Windows and Going Commando's USA v1.01 build (rac1-decomp#246, rac2-decomp#469).",
+  "writtenBy": "gpt-6.1-sol"
+}

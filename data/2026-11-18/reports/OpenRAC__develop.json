@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-18",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Sheepinator fix stops Joba's Impossible Challenge from getting stuck on USA v1.01",
+  "summary": "Going Commando's USA v1.01 no longer loses recycled Joba arena robots to the Sheepinator, which could leave the Impossible Challenge round unable to end (#587). The launcher exposes this as an always-on Game fix alongside the Mapper markers. The custom field of view also stays in place while Going Commando's weapon wheel is open (#588).",
+  "highlights": [
+    "Hoven's ice now draws beneath its scuff decals. The fix was verified in Ratchet & Clank NTSC-U gameplay on Windows with Vulkan (#581).",
+    "Native mods targeting API 1.20 must declare Vulkan access. Opting in keeps rendering and queue submission on the game thread for the session. Older API targets retain their behavior (#582).",
+    "The launcher uses the shorter Secret Agent Clank title and keeps game subtitles together when a desktop title wraps (#583).",
+    "Open #586 would let other mods update when an installed native mod has no archive for the current platform. Open #589 proposes copying saves from another disc's memory card. Neither has landed.",
+    "Open #590 proposes Ratchet & Clank hooks for hero state, gravity and item updates. Open #591 proposes interface 1.21 calls through a hook point's mod chain. Both remain proposals.",
+    "The Sheepinator bug also occurs on PS2. PAL and USA v2.00 already kept the recycled robots (#587)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

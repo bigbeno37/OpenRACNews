@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "NG++ 0.1.11 preserves weapon experience across new games and challenge mode",
+  "summary": "The NG++ mod's 0.1.11 release keeps weapon experience when starting a new game or challenge mode. Experience-earned upgrades on the weapon in hand now use the game's own animation, followed by its popup and message.",
+  "highlights": [
+    "RYNO Ammo Drops would let random ammo crates supply R.Y.N.O. ammunition once the weapon is owned. Its submission and listing pull request remain open (#215, #216).",
+    "Auto Head Gear v1.0.0 awaits listing. It applies owned Sonic Summoner and O2 Mask effects without equipping them, covering sand mice, Blarg gas vents and Rilgar's extermibots and extermitanks (#218).",
+    "Bolt Multiplier 0.3.1, Expanded Quick Select 1.0.2 and Weapon Wheel Pause 1.0.3 await review before players receive those external native-mod updates (#219, #220, #221).",
+    "An index build failure was reported and the issue closed. The report says the last good index stayed live (#217)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

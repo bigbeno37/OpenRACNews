@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-18",
+  "repo": "rac2-decomp",
+  "capturedAt": "2026-11-19T00:06:32.590Z",
+  "issues": [
+    {"number":469,"title":"Build rac2 fails have all dependencies","author":"prototype6006-hash","events":["opened"],"closedAs":null,"body":"What you are trying to do\nWhat you ran, and what it printed\n\nYour setup\n\nDisc: USA v1.01 (SCUS_972.68), SHA-256 matching docs/build/building.md?\nHost: (macOS / Linux / Windows + WSL), Docker or native\n$ \"/tmp/.mount_OpenRAnnLeJI/usr/lib/OpenRAC Launcher/openrac/python/bin/python3\" tools/build_game.py rac2-ntsc --disc /home/dmitry/OpenRAC/active/rac2/data/iso_data/rac2/disc.iso --out /home/dmitry/OpenRAC/active/rac2/data/program/9fc860d5\nsource of 9fc860d5: already here\nrac2-ntsc: from…"}
+  ],
+  "releases": []
+}
