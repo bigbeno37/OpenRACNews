@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-19",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Copy saves across discs, edit Going Commando equipment and export interface textures",
+  "summary": "Launcher development can now copy saves from another disc of the same game and preserve mods' save records through export and import (#589, #599, #601). Going Commando's editor can edit every weapon's XP in the units used by upgrade goals and choose Ratchet's held weapon, pack and boots (#599, #608, #606). Texture-pack makers gain interface-texture and held-weapon exports (#518). Rendering fixes address PCSX2 texture-pack stutter and Mac Vulkan black screens, while Metal gains HDR on HDR-capable Mac displays (#576, #603, #607).",
+  "highlights": [
+    "Mods gain Ratchet & Clank movement-state and gravity hooks, hooks that call through other mods, randomized reward presentation, and Going Commando bolt hooks through interface 1.23 (#590, #591, #593, #600). #605 fixes the bolt-collection hook signature.",
+    "Background windows now pace frames to the game's tick to stop consuming unbounded CPU and GPU time. The author had not tested this on Windows (#592).",
+    "Vulkan anti-aliasing uses less memory traffic (#602). Draw-distance exceptions address Pokitaru's sky and distant Grelbin enemies, while Orxon's barriers stay visible at wide screen edges (#614, #615).",
+    "Going Commando can read PCSX2 folder-card saves and find a save after a one-slot import (#609, #612). Movies now use the chosen language, falling back to English when that audio is absent (#616).",
+    "Installed native mods without an indexed archive for this platform no longer block other mods' updates. Game, disc, API and revocation checks remain (#586). Invalid weapon/gadget classes are skipped to prevent mod-triggered crashes (#611).",
+    "Up Your Arsenal PAL gains a headless menu test, excluded from the port, launcher and releases (#619). Separate draft #618 reaches an interactive menu with only its boxes visible and is explicitly an experiment, not ready to merge."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

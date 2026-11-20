@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-19",
+  "repo": "rac1-decomp",
+  "capturedAt": "2026-11-20T00:11:42.190Z",
+  "issues": [
+    {"number":247,"title":"[RAC1] Chairman Drek’s final boss music does not play in NTSC-U (OpenRAC and PCSX2)","author":"kwfrrb562c-boop","events":["opened"],"closedAs":null,"body":"Hi developers,\nI’ve been doing some testing with the PAL and NTSC-U versions of Ratchet & Clank 1, specifically regarding an issue where Chairman Drek’s final boss battle music fails to play.\nInitially, I suspected this might be an OpenRAC issue. However, after testing both regional versions in OpenRAC and PCSX2, I’ve found that the problem appears to be specific to the NTSC-U release.\nTest results\nGame version\tPCSX2\tOpenRAC\nPAL (SCES-50916)\tMusic plays correctly\tMusic plays correctly\nNTSC-U…"}
+  ],
+  "releases": []
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-19",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "Randomizers show actual rewards, while NG++ 0.3.4 brings platinum bolts to challenge mode",
+  "summary": "Item Randomizer 2.6.1 and Archipelago 2.5.1 were released with Ratchet & Clank rewards presented as the items actually received and an optional Items-menu shuffle pool, off by default (#195, #196, #202). Both now open Aridia's puzzle exit after its reward is collected, regardless of which item it gives (#239, #240). NG++ 0.3.4 was released with platinum bolt drops for Going Commando's challenge mode, alongside fixes for save-specific weapon tiers and damage scaling. Item Randomizer's access-rule fixes also landed as 2.6.2, without a release that day (#241).",
+  "highlights": [
+    "Reward presentation requires OpenRAC interface 1.22, while NG++'s platinum bolts use interface 1.23. NG++ 0.3.1 and 0.3.2 packaged nothing because the released SDK rejected the bolt hooks, corrected for 0.3.3.",
+    "The randomizers fix gold rewards and vendor previews, and clear transient notices after three seconds (#237, #238, #244, #245). NPC handoff scenes and models stay native even when prompts name a different reward (#195, #196, #207).",
+    "Enhanced Movement, Travel Anywhere, RYNO Ammo Drops, Auto Head Gear and Going Commando Magneboots were listed. Their native releases still await review before delivery (#223, #224, #229, #232, #235).",
+    "Cheats gains live switches and a choice in OpenRAC's menu, with version 0.4.1 changes landed but no release that day (#212). Two mod-index build-failure issues closed, having kept the last good index live (#222, #233).",
+    "Archipelago 2.5.2 access rules, duplicate-coordinate rewards, Thruster-Pack gliding and Blarg's O2 Mask gates remain open proposals (#242, #246, #249, #250). Thruster Charge's listing is still a draft (#243)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

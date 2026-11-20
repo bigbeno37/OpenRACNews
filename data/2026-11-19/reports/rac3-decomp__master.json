@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-19",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's PAL v1.00 rises from 60.90% to 65.89% matched code",
+  "summary": "Up Your Arsenal's usually quiet branch had a busy day of matching work across boot code, menus and levels. The project's progress report puts PAL v1.00 at 65.89% matched code by size, up from 60.90%, with 14,277 of 16,533 functions matched. A matched function compiles to exactly the same bytes as the original game. NTSC-U also gained native matches and refreshed code carried over from PAL, separately from that PAL v1.00 percentage.",
+  "highlights": [
+    "#110 matches 49 shared PAL level functions, including Quantum Whip code. #108 and #112 add five and nine PAL Holostar Studios (Clank) functions respectively, with their commits landing on master.",
+    "Further batches land shared level and boot/menu matches, including work in Starship Phoenix, Daxx, Tyhrranosis, Koros, the final boss, Aquatos sewers, the Insomniac Museum and the multiplayer menu.",
+    "Draft #111 proposes restoring 354 NTSC-U C placements across 55 already-matched functions. It had not merged by day's end.",
+    "Draft #115 adds non-matching C for native-port work without changing the matching build or progress report. Its functional checks remain pending, so these drafts are separate from the matched-code gain.",
+    "Open #117 proposes 23 PAL vid-comic and multiplayer shared-code matches, with NTSC-U carried over. Open #118 proposes another 14 shared PAL level matches. Neither had landed by day's end."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

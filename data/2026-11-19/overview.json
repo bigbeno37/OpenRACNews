@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-19",
+  "headline": "Randomizers show actual rewards as launcher development gains save copying and Metal HDR",
+  "summary": "Ratchet & Clank's Item Randomizer 2.6.1 and Archipelago 2.5.1 bring actual-reward displays and an optional Items-menu shuffle pool, while NG++ 0.3.4 adds platinum bolts for Going Commando challenge runs. Launcher development adds cross-disc save copying, interface-texture exports and Mac Metal HDR (OpenRAC#589, OpenRAC#518, OpenRAC#607). Up Your Arsenal's normally quiet branch moves PAL v1.00 from 60.90% to 65.89% matched code by size, while Deadlocked's NTSC-U v1.00 rises from 18.54% to 18.63%. A matched function compiles to exactly the same bytes as the original game. A player reports missing NTSC-U Chairman Drek boss music in both OpenRAC and PCSX2 (rac1-decomp#247).",
+  "writtenBy": "gpt-6.1-sol"
+}
