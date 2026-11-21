@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-20",
+  "repo": "rac3-decomp",
+  "branch": "master",
+  "headline": "Up Your Arsenal's recorded PAL v1.00 code progress rises from 65.89% to 71.41%",
+  "summary": "Up Your Arsenal's recorded progress report puts PAL v1.00 at 71.41% of code, up from 65.89%, with 14,584 of 16,533 functions in that report. A matched function compiles to exactly the same bytes as the original game. The usually occasional branch had a busy day of matching across campaign levels, the multiplayer menu, vid-comics and shared code. Further matches and progress updates landed after the report behind that percentage.",
+  "highlights": [
+    "The latest NTSC-U carry commit reports 14,061 of 16,529 functions for that release, followed by another batch of 14 native NTSC-U function matches.",
+    "#111 restores 353 NTSC-U C placements across 54 already-matched functions. These are places where existing C is built, rather than 353 newly matched functions.",
+    "The work from closed pull requests #117, #118 and #119 still landed through commits, covering vid-comic, multiplayer and other shared level functions.",
+    "Four more PAL v1.00 functions in Holostar Studios' Clank section are matched in #121. Ten shared-level functions land in #122, exact at every place they occur in the 49 PAL levels.",
+    "Multiplayer network-object, Ranger and turret code gains names and a new structure header in #120. This is documentation and naming work, not new matching code."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

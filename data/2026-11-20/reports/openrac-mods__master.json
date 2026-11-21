@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-20",
+  "repo": "openrac-mods",
+  "branch": "master",
+  "headline": "NG++ 0.4.1 brings obsidian bolts and extra enemies to Going Commando",
+  "summary": "NG++ 0.4.1 was released for Going Commando with obsidian bolts, tougher enemies, extra enemies and tier-coloured weapon effects. Collector, race and arena rewards, seller prices and weapon experience now scale with later challenge runs. Archipelago 2.5.3 and Item Randomizer 2.6.4 were also released, removing duplicate Rilgar and Batalia coordinate rewards (#246). Mod-index builds continued to fail, leaving the last good list live while a repository-address fix remains proposed (#268, #269).",
+  "highlights": [
+    "From the second challenge run, NG++ adds obsidian coins worth 25 times their gold class. Their material needs OpenRAC interface 1.24, while tier-coloured weapon effects use 1.25.",
+    "NG++ adds one enemy copy from challenge run two and two from run four, excluding bosses, turrets, spawners, crystal creatures and scripted foes. The launcher's interface 1.26 fixes copies that did not wake or fight.",
+    "Archipelago 2.5.2 corrects access rules (#242). Later fixes let a lone Thruster-Pack glide, open Blarg's gates with an early O2 Mask, correct Platinum Zoomerator and CodeBot models, and block empty vendors (#249, #250, #254, #255).",
+    "Difficulty fixes enemy-copy overlap and restores Chaos events and copying when a party's host leaves (#167).",
+    "Thruster Charge joins the index, bringing a double-tap-and-hold R1 charge with the Thruster-Pack (#243). Version 1.0.2 was approved for the index.",
+    "An Orxon arrival reload is proposed for early-O2-Mask randomizer runs (#267). Revolverator 0.3.6 awaits review (#266)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

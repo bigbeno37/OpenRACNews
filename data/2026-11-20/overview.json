@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-20",
+  "headline": "Ratchet & Clank and Going Commando gain built-in keyboard and mouse controls on develop",
+  "summary": "Ratchet & Clank and Going Commando gain built-in keyboard and mouse controls on the launcher's development line, including clickable menus and automatic pad switching (OpenRAC#647). Going Commando's Android install falls from about 9.4 GB to 5.2 GB, and PAL Ratchet: Gladiator gains disc-tool support (OpenRAC#656, OpenRAC#649). Up Your Arsenal's recorded PAL v1.00 code progress rises from 65.89% to 71.41%, while Deadlocked lands PAL menu and helper matches without changing its NTSC-U v1.00 code figure of 18.63% (rac4-decomp#183, rac4-decomp#187). A matched function compiles to exactly the same bytes as the original game. NG++ 0.4.1, Archipelago 2.5.3 and Item Randomizer 2.6.4 were released, but mod-index failures leave the last good list live while a proposed fix awaits merging (openrac-mods#268, openrac-mods#269).",
+  "writtenBy": "gpt-6.1-sol"
+}

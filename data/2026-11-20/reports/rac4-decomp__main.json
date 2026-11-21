@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-20",
+  "repo": "rac4-decomp",
+  "branch": "main",
+  "headline": "Deadlocked adds PAL menu and helper code while NTSC-U stays at 18.63%",
+  "summary": "Deadlocked gains 31 PAL overlay function matches, including multiplayer menu code, plus C for 29 PAL-only menu, network and game-helper functions (#183, #187). A matched function compiles to exactly the same bytes as the original game. These PAL additions do not move the project's NTSC-U v1.00 code figure, which remains at 18.63%.",
+  "highlights": [
+    "#186 corrects data and call targets in 26 PAL-native functions while preserving their byte matches. #184 adds an audit that checks PAL relocation targets.",
+    "Draft #191 proposes 18 NTSC-U resident-menu matches for cryptography and large-number routines. Its author reports no new relocation mismatches, with the same 27 already on main. It has not merged.",
+    "#189 proposes ten near misses that need inline assembly, which the project's matched-C rules do not allow. #190 proposes more PAL nonmatching drafts. Neither adds to the landed match count.",
+    "A player reports that a Ratchet: Gladiator disc is rejected as unsupported in #188."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-20",
+  "repo": "rac4-decomp",
+  "capturedAt": "2026-11-21T00:07:28.116Z",
+  "issues": [
+    {"number":185,"title":"Ratchet deadlocked has debug symbols left by the developers inside one of the protos","author":"stentines","events":["opened"],"closedAs":null,"body":"someone told me that one of the ratchet deadlocked prototypes has leftover symbols inside by mistake by the developers (function names, data types, global variables). Did you know about this? could help a lot with the decomp? idk\nhttps://hiddenpalace.org/Ratchet:_Deadlocked_(Aug_23,_2005_prototype)\nhttps://hiddenpalace.org/Ratchet:_Deadlocked_(Sep_13,_2005_prototype)\nhttps://hiddenpalace.org/Ratchet:_Deadlocked_(Oct_10,_2005_prototype)"},
+    {"number":188,"title":"Unsupported disc for rac4","author":"StarPepe","events":["opened"],"closedAs":null,"body":"I have a log from a disc I've been attempting to build rac4 from below:\n$ \"/tmp/.mount_OpenRAmDLkDA/usr/lib/OpenRAC Launcher/openrac/python/bin/python3\" tools/extractor.py \"/home/sidney/Applications/Programs/OpenRAC/Ratchet - Gladiator.iso\" --game rac4 --extract --validate --proj-path /home/sidney/OpenRAC/active/rac4/data\nRatchet - Gladiator.iso: 38 files on the disc, boot executable SCES_532.85\n  SYSTEM.CNF: 59 bytes\n  SCES_532.85: 1696356 bytes\n  IOPRP300.IMG: 275345 bytes\n  DNAS300.IMG:…"}
+  ],
+  "releases": []
+}

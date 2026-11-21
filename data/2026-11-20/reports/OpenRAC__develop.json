@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-20",
+  "repo": "OpenRAC",
+  "branch": "develop",
+  "headline": "Built-in keyboard and mouse controls reach Ratchet & Clank and Going Commando",
+  "summary": "Ratchet & Clank and Going Commando gain built-in keyboard and mouse controls on develop, with automatic pad switching, adjustable mouse sensitivity and clickable menus, vendors, quick select and maps (#647). Development builds now use 1.1.1-dev.N, correcting versions that looked older than stable 1.1.0 (#620). Going Commando's Android install falls from about 9.4 GB to 5.2 GB, and the desktop launcher bundles a smaller Python (#656, #658). Going Commando packs can now replace sounds, while later games still reject audio overrides (#640).",
+  "highlights": [
+    "Ratchet & Clank gets fixes for crashes during ship travel and loading, and for PAL v1 crashes near Veldin's bridge (#632, #644).",
+    "Going Commando fixes cover PAL's Yeedil Protopet fight, Todano Spider Bot explosions and floating Chickenbots, plus Damosel map decompression (#642, #645, #646, #653).",
+    "Vulkan rendering and presentation move to a render worker, except when a mod uses the native Vulkan queue. Apple platforms use MoltenVK, with the macOS OpenGL fallback retained (#657).",
+    "Ratchet: Gladiator's PAL disc gains recognition for setup, verification, level editing, models, textures and override packs. This is disc-tool support (#649).",
+    "Mods gain Ratchet & Clank movement and effect hooks, an obsidian material and Going Commando arena and enemy-copy support. Interface 1.26 fixes copies that did not wake and fight with their squad (#617, #637, #648, #659).",
+    "Moving the editor into OpenRAC Editor, AI game control and tables shared between mods remain draft proposals, not merged features (#639, #655)."
+  ],
+  "writtenBy": "gpt-6.1-sol"
+}
